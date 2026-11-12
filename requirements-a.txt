@@ -1,0 +1,6 @@
+# A / visual-perception module dependencies
+numpy>=1.24
+opencv-python>=4.8
+ultralytics>=8.3
+mediapipe>=0.10
+

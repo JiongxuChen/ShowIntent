@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+outputs/
+received_media/
+received_media_1080/
+*.mp4
+*.avi
+*.mov
+*.webm
+*.zip
+.pytest_cache/
