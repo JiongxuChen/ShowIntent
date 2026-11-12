@@ -46,3 +46,13 @@ python -m src.camera.run --video clip.mp4 --perception p.jsonl --intent i.jsonl 
 ```
 
 The preview render applies the container rotation exactly once, matching A's coordinate frame. The full A→B→C contract is specified in `docs/intent_camera_interface.md`.
+
+## Evaluation (Phase 3)
+
+The P0 evaluation over all 12 received clips, per-clip statistics, defect analysis (CANDIDATE lock starvation, ENDING deadlock) and known-limitation list is in `docs/p0_evaluation_report.md`. Per-clip statistics can be regenerated with:
+
+```bash
+python -m scripts.p0_stats
+```
+
+B's timing thresholds are frame counts by default; millisecond equivalents (`--candidate-min-ms`, `--showing-min-ms`, `--missing-tolerance-ms`, `--ending-min-ms`) measure the observed packet rate and keep wall-clock semantics consistent across 5 FPS mock data and 30 FPS video.

@@ -158,3 +158,37 @@ def test_baseline_pickup_triggers_but_schema_matches():
     ]
     out2 = feed(engine2, carry)
     assert all(o["state"] == "NONE" for o in out2)
+
+
+def test_ms_thresholds_equivalent_to_frame_thresholds_at_30fps():
+    # 30 fps: 33 ms per frame. ms thresholds chosen to round up to the same
+    # frame counts as the legacy defaults (3 / 8), so behaviour must match.
+    ms_kwargs = {"candidate_min_ms": 99, "showing_min_ms": 264}
+    sm_frame = ShowIntentStateMachine()
+    sm_ms = ShowIntentStateMachine(**ms_kwargs)
+    packets = [packet(i * 33, i, objects=[obj("obj_1")]) for i in range(6)]
+    packets += [
+        packet(6 * 33 + j * 33, 6 + j, objects=[obj("obj_1", center=(0.47, 0.45))], relations=[rel("hand_right", "obj_1")], hands=[hand()])
+        for j in range(15)
+    ]
+    states_frame = [o["state"] for o in feed(sm_frame, packets)]
+    states_ms = [o["state"] for o in feed(sm_ms, packets)]
+    assert states_frame == states_ms
+    assert "SHOWING" in states_ms
+
+
+def test_ms_thresholds_scale_with_packet_rate():
+    # Same wall-clock ms thresholds at 5 fps (200 ms/frame): SHOWING must be
+    # reached after ~showing_min_ms of evidence instead of 8 frames = 1.6 s.
+    ms_kwargs = {"candidate_min_ms": 100, "showing_min_ms": 267}
+    sm_ms = ShowIntentStateMachine(**ms_kwargs)
+    packets = [packet(i * 200, i, objects=[obj("obj_1")]) for i in range(6)]
+    packets += [
+        packet(6 * 200 + j * 200, 6 + j, objects=[obj("obj_1", center=(0.47, 0.45))], relations=[rel("hand_right", "obj_1")], hands=[hand()])
+        for j in range(8)
+    ]
+    out = feed(sm_ms, packets)
+    states = [o["state"] for o in out]
+    assert "SHOWING" in states
+    # legacy frame-based machine needs 8 candidate frames, ms-based needs 2
+    assert states.index("SHOWING") < 12

@@ -13,6 +13,7 @@ height and therefore never reaches SHOWING.
 
 from __future__ import annotations
 
+import math
 from dataclasses import dataclass, field
 from statistics import median
 
@@ -134,6 +135,10 @@ class ShowIntentStateMachine:
         step_tolerance: float = 0.05,
         raised_fallback_y: float = 0.72,
         table_fallback_y: float = 0.75,
+        candidate_min_ms: float | None = None,
+        showing_min_ms: float | None = None,
+        missing_tolerance_ms: float | None = None,
+        ending_min_ms: float | None = None,
     ) -> None:
         self.candidate_frames = candidate_frames
         self.showing_frames = showing_frames
@@ -147,6 +152,17 @@ class ShowIntentStateMachine:
         self.step_tolerance = step_tolerance
         self.raised_fallback_y = raised_fallback_y
         self.table_fallback_y = table_fallback_y
+        # Optional millisecond thresholds. When provided, the corresponding
+        # frame-count thresholds are recomputed from the observed packet rate
+        # (median inter-packet timestamp gap), so "3 frames" means the same
+        # wall-clock time at 5 FPS mock data and 30 FPS real video. When
+        # None (default), the legacy frame-count semantics are kept.
+        self.candidate_min_ms = candidate_min_ms
+        self.showing_min_ms = showing_min_ms
+        self.missing_tolerance_ms = missing_tolerance_ms
+        self.ending_min_ms = ending_min_ms
+        self._ts_gaps: list[int] = []
+        self._ms_per_frame: float | None = None
 
         self.state = "NONE"
         self.target_id: str | None = None
@@ -159,8 +175,28 @@ class ShowIntentStateMachine:
         self._putdown_streak = 0
         self._end_streak = 0
         self._last_relation_score = 0.0
+        self._last_ts: int | None = None
 
     # -- helpers ---------------------------------------------------------
+
+    def _observe_rate(self, ts: int) -> None:
+        """Track the median inter-packet gap to convert ms thresholds to frames."""
+        if not self._ts_gaps and self._last_ts is None:
+            self._last_ts = ts
+            return
+        gap = ts - int(self._last_ts)
+        self._last_ts = ts
+        if 0 < gap <= 2000:  # ignore playback jumps / out-of-order ts
+            self._ts_gaps.append(gap)
+            if len(self._ts_gaps) > 60:
+                del self._ts_gaps[:30]
+            self._ms_per_frame = median(self._ts_gaps)
+
+    def _thr(self, frame_value: int, ms_value: float | None) -> int:
+        """Effective frame threshold: ms-based when available, else legacy frames."""
+        if ms_value is None or self._ms_per_frame is None or self._ms_per_frame <= 0:
+            return frame_value
+        return max(1, math.ceil(ms_value / self._ms_per_frame))
 
     def _related_map(self, packet: dict) -> dict[str, float]:
         out: dict[str, float] = {}
@@ -189,7 +225,8 @@ class ShowIntentStateMachine:
         track = self._tracks.get(track_id)
         if track is None:
             return False
-        step = track.history.max_step(max(self.showing_frames, 4))
+        window = max(self._thr(self.showing_frames, self.showing_min_ms), 4)
+        step = track.history.max_step(window)
         return step is not None and step <= self.step_tolerance
 
     def _packet(self, ts: int, state: str, score: float, reasons: list[str], target: str | None = None) -> dict:
@@ -200,6 +237,7 @@ class ShowIntentStateMachine:
     def update(self, packet: dict) -> dict:
         frame_id = int(packet.get("frame_id", 0))
         ts = int(packet.get("timestamp_ms", frame_id * 1000 // 30))
+        self._observe_rate(ts)
         objects = {o["track_id"]: o for o in packet.get("objects", [])}
         related = self._related_map(packet)
 
@@ -229,7 +267,7 @@ class ShowIntentStateMachine:
             streak = self._tracks[track_id].related_streak
             if streak > best_streak:
                 best_id, best_streak = track_id, streak
-        if best_id is not None and best_streak >= self.candidate_frames:
+        if best_id is not None and best_streak >= self._thr(self.candidate_frames, self.candidate_min_ms):
             self.state = "CANDIDATE"
             self.target_id = best_id
             self._candidate_streak = best_streak
@@ -263,7 +301,7 @@ class ShowIntentStateMachine:
             reasons.append(REASON_HOLD)
         # _candidate_age >= 1 guarantees every target visibly passes through
         # CANDIDATE for at least one frame before SHOWING can be announced.
-        if self._candidate_age >= 1 and self._candidate_streak >= self.showing_frames and raised and stable:
+        if self._candidate_age >= 1 and self._candidate_streak >= self._thr(self.showing_frames, self.showing_min_ms) and raised and stable:
             self.state = "SHOWING"
             self._miss = 0
             self._putdown_streak = 0
@@ -275,7 +313,7 @@ class ShowIntentStateMachine:
         obj = objects.get(track_id)
         if obj is None:
             self._miss += 1
-            if self._miss > self.miss_tolerance:
+            if self._miss > self._thr(self.miss_tolerance, self.missing_tolerance_ms):
                 self.state = "ENDING"
                 self._end_streak = 0
                 return self._packet(ts, "ENDING", 0.0, [REASON_TARGET_LOST])
@@ -310,7 +348,7 @@ class ShowIntentStateMachine:
         else:
             reliable = False
         self._end_streak = 0 if reliable else self._end_streak + 1
-        if self._end_streak >= self.end_frames:
+        if self._end_streak >= self._thr(self.end_frames, self.ending_min_ms):
             self._reset_to_none()
             return self._packet(ts, "NONE", 0.0, [REASON_INSUFFICIENT])
         reason = REASON_TARGET_LOST if obj is None else REASON_BACK_ON_TABLE

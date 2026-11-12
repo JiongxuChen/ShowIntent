@@ -17,16 +17,16 @@ from .baseline import PickupBaseline
 from .state_machine import STATES, ShowIntentStateMachine
 
 
-def build_engine(mode: str):
+def build_engine(mode: str, ms_kwargs: dict | None = None):
     if mode == "showintent":
-        return ShowIntentStateMachine()
+        return ShowIntentStateMachine(**(ms_kwargs or {}))
     if mode == "pickup-baseline":
         return PickupBaseline()
     raise ValueError(f"unknown mode: {mode} (expected showintent or pickup-baseline)")
 
 
-def run(perception_path: Path, out_path: Path, mode: str) -> int:
-    engine = build_engine(mode)
+def run(perception_path: Path, out_path: Path, mode: str, ms_kwargs: dict | None = None) -> int:
+    engine = build_engine(mode, ms_kwargs)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     count = 0
     with perception_path.open("r", encoding="utf-8") as src, out_path.open("w", encoding="utf-8") as dst:
@@ -49,8 +49,21 @@ def main() -> None:
     parser.add_argument("--perception", required=True, type=Path, help="PerceptionPacket JSONL from module A")
     parser.add_argument("--out", required=True, type=Path, help="Output IntentPacket JSONL")
     parser.add_argument("--mode", default="showintent", choices=["showintent", "pickup-baseline"])
+    parser.add_argument("--candidate-min-ms", type=float, default=None,
+                        help="Millisecond equivalent of candidate_frames (time-based thresholds; default: frame-based)")
+    parser.add_argument("--showing-min-ms", type=float, default=None,
+                        help="Millisecond equivalent of showing_frames")
+    parser.add_argument("--missing-tolerance-ms", type=float, default=None,
+                        help="Millisecond equivalent of miss_tolerance")
+    parser.add_argument("--ending-min-ms", type=float, default=None,
+                        help="Millisecond equivalent of end_frames")
     args = parser.parse_args()
-    run(args.perception, args.out, args.mode)
+    ms_kwargs = {}
+    for name in ("candidate_min_ms", "showing_min_ms", "missing_tolerance_ms", "ending_min_ms"):
+        value = getattr(args, name)
+        if value is not None:
+            ms_kwargs[name] = value
+    run(args.perception, args.out, args.mode, ms_kwargs or None)
 
 
 if __name__ == "__main__":
