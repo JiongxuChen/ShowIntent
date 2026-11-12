@@ -57,9 +57,11 @@ def main() -> None:
                         help="Millisecond equivalent of miss_tolerance")
     parser.add_argument("--ending-min-ms", type=float, default=None,
                         help="Millisecond equivalent of end_frames")
+    parser.add_argument("--ending-max-ms", type=float, default=None,
+                        help="Millisecond equivalent of ending_max_frames (hard cap on ENDING duration)")
     args = parser.parse_args()
     ms_kwargs = {}
-    for name in ("candidate_min_ms", "showing_min_ms", "missing_tolerance_ms", "ending_min_ms"):
+    for name in ("candidate_min_ms", "showing_min_ms", "missing_tolerance_ms", "ending_min_ms", "ending_max_ms"):
         value = getattr(args, name)
         if value is not None:
             ms_kwargs[name] = value

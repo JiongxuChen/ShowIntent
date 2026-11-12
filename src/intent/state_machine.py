@@ -25,6 +25,8 @@ REASON_HOLD = "TEMPORAL_HOLD"
 REASON_TARGET_LOST = "TARGET_LOST"
 REASON_BACK_ON_TABLE = "BACK_ON_TABLE"
 REASON_INSUFFICIENT = "INSUFFICIENT_EVIDENCE"
+REASON_CANDIDATE_REPLACED = "CANDIDATE_REPLACED"
+REASON_RELINKED = "TARGET_RELINKED"
 
 
 @dataclass(frozen=True)
@@ -108,6 +110,9 @@ class TrackHistory:
         ys = [p[2] for p in pts]
         return max(max(xs) - min(xs), max(ys) - min(ys))
 
+    def last_point(self) -> tuple[int, float, float] | None:
+        return self._points[-1] if self._points else None
+
 
 class _TrackState:
     __slots__ = ("related_streak", "history", "unrelated_streak")
@@ -139,6 +144,11 @@ class ShowIntentStateMachine:
         showing_min_ms: float | None = None,
         missing_tolerance_ms: float | None = None,
         ending_min_ms: float | None = None,
+        candidate_switch_frames: int = 90,
+        ending_max_frames: int = 60,
+        ending_max_ms: float | None = None,
+        relink_max_frames: int = 45,
+        relink_max_dist: float = 0.15,
     ) -> None:
         self.candidate_frames = candidate_frames
         self.showing_frames = showing_frames
@@ -161,6 +171,16 @@ class ShowIntentStateMachine:
         self.showing_min_ms = showing_min_ms
         self.missing_tolerance_ms = missing_tolerance_ms
         self.ending_min_ms = ending_min_ms
+        # D1: a candidate that fails to promote for this many frames may be
+        # replaced by another object that currently satisfies the full
+        # qualification (related + raised + stable).
+        self.candidate_switch_frames = candidate_switch_frames
+        # D2: hard cap on how long ENDING may last, and a bounded window in
+        # which a same-class nearby raised track may resume the presentation.
+        self.ending_max_frames = ending_max_frames
+        self.ending_max_ms = ending_max_ms
+        self.relink_max_frames = relink_max_frames
+        self.relink_max_dist = relink_max_dist
         self._ts_gaps: list[int] = []
         self._ms_per_frame: float | None = None
 
@@ -174,8 +194,10 @@ class ShowIntentStateMachine:
         self._miss = 0
         self._putdown_streak = 0
         self._end_streak = 0
+        self._ending_frames = 0
         self._last_relation_score = 0.0
         self._last_ts: int | None = None
+        self._track_classes: dict[str, str] = {}
 
     # -- helpers ---------------------------------------------------------
 
@@ -244,6 +266,8 @@ class ShowIntentStateMachine:
         for track_id, obj in objects.items():
             cx, cy = bbox_center(obj["bbox_norm"])
             track = self._tracks.setdefault(track_id, _TrackState())
+            if obj.get("class_name"):
+                self._track_classes[track_id] = obj["class_name"]
             is_related = track_id in related
             track.related_streak = track.related_streak + 1 if is_related else 0
             track.unrelated_streak = 0 if is_related else track.unrelated_streak + 1
@@ -287,6 +311,26 @@ class ShowIntentStateMachine:
                 self._reset_to_none()
                 return self._packet(ts, "NONE", 0.0, [REASON_INSUFFICIENT])
             return self._packet(ts, "CANDIDATE", 0.0, [REASON_INSUFFICIENT])
+        # D1: re-evaluate every frame. If the current candidate has been
+        # stuck below promotion for candidate_switch_frames while another
+        # object fully qualifies (related + raised + stable), replace it.
+        # The replacement emits CANDIDATE (never SHOWING) and must earn its
+        # own promotion streak afterwards.
+        if self._candidate_age >= self.candidate_switch_frames:
+            for tid, other in objects.items():
+                if tid == track_id or tid not in related:
+                    continue
+                ocx, ocy = bbox_center(other["bbox_norm"])
+                if (
+                    self._tracks[tid].related_streak >= self.candidate_frames
+                    and self._is_raised(tid, ocy)
+                    and self._is_stable(tid)
+                ):
+                    self.target_id = tid
+                    self._candidate_streak = self._tracks[tid].related_streak
+                    self._candidate_age = 0
+                    self._candidate_decay = 0
+                    return self._packet(ts, "CANDIDATE", related[tid], [REASON_HAND_ASSOCIATED, REASON_CANDIDATE_REPLACED])
         self._candidate_decay = 0
         self._candidate_streak += 1
         self._candidate_age += 1
@@ -316,6 +360,7 @@ class ShowIntentStateMachine:
             if self._miss > self._thr(self.miss_tolerance, self.missing_tolerance_ms):
                 self.state = "ENDING"
                 self._end_streak = 0
+                self._ending_frames = 0
                 return self._packet(ts, "ENDING", 0.0, [REASON_TARGET_LOST])
             return self._packet(ts, "SHOWING", self._last_relation_score, [REASON_HAND_ASSOCIATED])
         self._miss = 0
@@ -329,11 +374,17 @@ class ShowIntentStateMachine:
         if self._putdown_streak >= self.putdown_frames:
             self.state = "ENDING"
             self._end_streak = 0
+            self._ending_frames = 0
             return self._packet(ts, "ENDING", score, [REASON_BACK_ON_TABLE])
         return self._packet(ts, "SHOWING", score, [REASON_HAND_ASSOCIATED, REASON_RAISED, REASON_HOLD])
 
     def _update_ending(self, ts, objects, related) -> dict:
-        track_id = self.target_id
+        # D2: hard cap — ENDING must never outlive ending_max_frames.
+        self._ending_frames += 1
+        if self._ending_frames > self._thr(self.ending_max_frames, self.ending_max_ms):
+            self._reset_to_none()
+            return self._packet(ts, "NONE", 0.0, [REASON_TARGET_LOST, REASON_INSUFFICIENT])
+        track_id = self.target_id  # the original SHOWING target
         obj = objects.get(track_id)
         if obj is not None:
             cx, cy = bbox_center(obj["bbox_norm"])
@@ -342,17 +393,56 @@ class ShowIntentStateMachine:
                 self.state = "SHOWING"
                 self._miss = 0
                 self._putdown_streak = 0
+                self._ending_frames = 0
                 self._last_relation_score = related.get(track_id, 0.0)
                 return self._packet(ts, "SHOWING", self._last_relation_score, [REASON_HAND_ASSOCIATED, REASON_RAISED, REASON_HOLD])
-            reliable = not self._is_on_table(track_id, cy)
+            # still visible but either back on the table or floating without a
+            # relation: in both cases the presentation evidence is fading.
+            self._end_streak += 1
         else:
-            reliable = False
-        self._end_streak = 0 if reliable else self._end_streak + 1
+            # D2: the original track is gone (perception ID fragmentation).
+            # Within a short window, allow an explicit re-link to a track that
+            # is the same class, spatially close to the last known position,
+            # currently raised and hand-related. Any other new track must not
+            # reset the ending timer.
+            if self._ending_frames <= self.relink_max_frames:
+                relinked = self._try_relink(objects, related)
+                if relinked is not None:
+                    self.state = "SHOWING"
+                    self._miss = 0
+                    self._putdown_streak = 0
+                    self._ending_frames = 0
+                    self._last_relation_score = related.get(relinked, 0.0)
+                    return self._packet(ts, "SHOWING", self._last_relation_score,
+                                        [REASON_HAND_ASSOCIATED, REASON_RAISED, REASON_HOLD, REASON_RELINKED])
+            self._end_streak += 1
         if self._end_streak >= self._thr(self.end_frames, self.ending_min_ms):
             self._reset_to_none()
             return self._packet(ts, "NONE", 0.0, [REASON_INSUFFICIENT])
         reason = REASON_TARGET_LOST if obj is None else REASON_BACK_ON_TABLE
         return self._packet(ts, "ENDING", 0.0, [reason])
+
+    def _try_relink(self, objects, related) -> str | None:
+        orig_class = self._track_classes.get(self.target_id)
+        track = self._tracks.get(self.target_id)
+        if orig_class is None or track is None:
+            return None
+        last = track.history.last_point()
+        if last is None:
+            return None
+        best_id, best_dist = None, self.relink_max_dist
+        for tid, o in objects.items():
+            if tid == self.target_id or tid not in related:
+                continue
+            if self._track_classes.get(tid) != orig_class:
+                continue
+            cx, cy = bbox_center(o["bbox_norm"])
+            dist = ((cx - last[1]) ** 2 + (cy - last[2]) ** 2) ** 0.5
+            if dist <= best_dist and self._is_raised(tid, cy):
+                best_id, best_dist = tid, dist
+        if best_id is not None:
+            self.target_id = best_id
+        return best_id
 
     def _reset_to_none(self) -> None:
         self.state = "NONE"
@@ -363,3 +453,4 @@ class ShowIntentStateMachine:
         self._miss = 0
         self._putdown_streak = 0
         self._end_streak = 0
+        self._ending_frames = 0
