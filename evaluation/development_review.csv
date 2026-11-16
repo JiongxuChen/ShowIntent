@@ -1,0 +1,35 @@
+clip_id,start_ms,end_ms,label,allowed_classes,review_source,review_status,sampling_ms,notes
+A01,4500,12500,SHOWING,apple,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,1000,Conservative interior interval; not exact event boundaries or instance truth
+A01,0,3000,NON_SHOWING,,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,1000,Transition intervals excluded; full negatives follow collection brief and sampled review
+A01,14000,15262,NON_SHOWING,,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,1000,Transition intervals excluded; full negatives follow collection brief and sampled review
+A02,5000,13500,SHOWING,orange,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,1000,Conservative interior interval; not exact event boundaries or instance truth
+A02,0,3000,NON_SHOWING,,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,1000,Transition intervals excluded; full negatives follow collection brief and sampled review
+A02,16000,18228,NON_SHOWING,,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,1000,Transition intervals excluded; full negatives follow collection brief and sampled review
+A03,3500,10500,SHOWING,apple,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,1000,Conservative interior interval; not exact event boundaries or instance truth
+A03,0,2000,NON_SHOWING,,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,1000,Transition intervals excluded; full negatives follow collection brief and sampled review
+A03,12000,14862,NON_SHOWING,,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,1000,Transition intervals excluded; full negatives follow collection brief and sampled review
+A04,3500,9000,SHOWING,orange,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,1000,Conservative interior interval; not exact event boundaries or instance truth
+A04,0,2000,NON_SHOWING,,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,1000,Transition intervals excluded; full negatives follow collection brief and sampled review
+A04,11000,13063,NON_SHOWING,,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,1000,Transition intervals excluded; full negatives follow collection brief and sampled review
+B01,0,15329,NON_SHOWING,,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,1000,Transition intervals excluded; full negatives follow collection brief and sampled review
+B02,0,13296,NON_SHOWING,,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,1000,Transition intervals excluded; full negatives follow collection brief and sampled review
+B03,0,13063,NON_SHOWING,,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,1000,Transition intervals excluded; full negatives follow collection brief and sampled review
+C01,3500,11500,SHOWING,apple,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,1000,Conservative interior interval; not exact event boundaries or instance truth
+C01,0,2000,NON_SHOWING,,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,1000,Transition intervals excluded; full negatives follow collection brief and sampled review
+C01,14000,17695,NON_SHOWING,,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,1000,Transition intervals excluded; full negatives follow collection brief and sampled review
+C02,5000,10000,SHOWING,apple,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,1000,Conservative interior interval; not exact event boundaries or instance truth
+C02,14000,19500,SHOWING,orange,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,1000,Conservative interior interval; not exact event boundaries or instance truth
+C02,0,2500,NON_SHOWING,,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,1000,Transition intervals excluded; full negatives follow collection brief and sampled review
+C02,24000,28792,NON_SHOWING,,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,1000,Transition intervals excluded; full negatives follow collection brief and sampled review
+C03,3500,16000,SHOWING,orange,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,1000,Conservative interior interval; not exact event boundaries or instance truth
+C03,0,1000,NON_SHOWING,,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,1000,Transition intervals excluded; full negatives follow collection brief and sampled review
+C03,18000,19594,NON_SHOWING,,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,1000,Transition intervals excluded; full negatives follow collection brief and sampled review
+C04,4000,14000,SHOWING,orange,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,1000,Conservative interior interval; not exact event boundaries or instance truth
+C04,0,2000,NON_SHOWING,,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,1000,Transition intervals excluded; full negatives follow collection brief and sampled review
+C04,16000,17862,NON_SHOWING,,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,1000,Transition intervals excluded; full negatives follow collection brief and sampled review
+D01,16000,28000,SHOWING,apple,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,2000,Conservative interior interval; not exact event boundaries or instance truth
+D01,36000,52000,SHOWING,orange,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,2000,Conservative interior interval; not exact event boundaries or instance truth
+D01,58000,66000,SHOWING,apple|orange,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,2000,Conservative interior interval; not exact event boundaries or instance truth
+D01,0,12000,NON_SHOWING,,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,2000,Transition intervals excluded; full negatives follow collection brief and sampled review
+D01,31000,33000,NON_SHOWING,,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,2000,Transition intervals excluded; full negatives follow collection brief and sampled review
+D01,55000,56000,NON_SHOWING,,assistant_visual_contact_sheet,NEEDS_HUMAN_REVIEW,2000,Transition intervals excluded; full negatives follow collection brief and sampled review

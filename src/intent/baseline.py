@@ -11,9 +11,7 @@ evaluation harness can consume either one interchangeably.
 
 from __future__ import annotations
 
-from statistics import median
-
-from .state_machine import (
+from .types import (
     REASON_BACK_ON_TABLE,
     REASON_HAND_ASSOCIATED,
     REASON_INSUFFICIENT,
@@ -21,7 +19,6 @@ from .state_machine import (
     REASON_TARGET_LOST,
     IntentPacket,
     TableBaseline,
-    TrackHistory,
     bbox_center,
 )
 
@@ -44,7 +41,6 @@ class PickupBaseline:
         self.end_frames = end_frames
         self.miss_tolerance = miss_tolerance
         self._baseline = TableBaseline(min_samples=baseline_min_samples)
-        self._histories: dict[str, TrackHistory] = {}
         self.state = STATE_NONE
         self.target_id: str | None = None
         self._miss = 0
@@ -64,7 +60,6 @@ class PickupBaseline:
 
         for track_id, obj in objects.items():
             cx, cy = bbox_center(obj["bbox_norm"])
-            self._histories.setdefault(track_id, TrackHistory()).add(frame_id, cx, cy)
             self._baseline.observe(track_id, cy, track_id in related_ids)
 
         if self.state == STATE_NONE:

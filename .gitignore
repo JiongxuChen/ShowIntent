@@ -11,3 +11,10 @@ received_media_1080/
 *.webm
 *.zip
 .pytest_cache/
+.venv-b/
+.venv-perception/
+models/
+.local_archive/
+github_repository/
+Example_Data/
+dist/
