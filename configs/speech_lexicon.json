@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "description": "Closed bilingual vocabulary for optional member-D lexical evidence; not an intent model.",
+  "classes": {
+    "apple": ["苹果", "蘋果", "apple", "apples"],
+    "cup": ["水杯", "杯子", "保温杯", "保溫杯", "马克杯", "馬克杯", "cup", "cups", "mug", "mugs"],
+    "bottle": ["水瓶", "瓶子", "宝特瓶", "寶特瓶", "矿泉水瓶", "礦泉水瓶", "water bottle", "bottle", "bottles"],
+    "orange": ["橙子", "橘子", "桔子", "orange", "oranges"],
+    "cell phone": ["手机", "手機", "cell phone", "cellphone", "mobile phone", "smartphone"],
+    "book": ["书", "書", "书本", "書本", "book", "books"]
+  },
+  "excluded_phrases": ["苹果汁", "蘋果汁", "苹果手机", "蘋果手機", "苹果电脑", "蘋果電腦", "apple juice", "apple inc", "orange juice", "orange color"],
+  "presentation_patterns": ["大家看看", "给大家看", "給大家看", "看这里", "看這裡", "看看这个", "看看這個", "展示", "\\blook\\s+at\\s+(?:this|the)\\b", "\\blet\\s+me\\s+show\\b"],
+  "negative_patterns": ["(?:不|别|別|勿|不要|不是|並不).{0,5}(?:展示|给.{0,3}看|給.{0,3}看|看看|看这里|看這裡)", "还没展示完", "還沒展示完", "\\b(?:do\\s+not|don't|not)\\s+(?:show|look)\\b"],
+  "ending_patterns": ["(?:展示|演示|介绍|介紹|讲解|講解)(?:就|先)?到[这這][里裡](?:为止|為止)?(?:[了啦吧啊喔哦])?(?=[\\s，。！？,.!?；;]|$)", "(?:展示|演示|介绍|介紹|讲解|講解)(?:已经|已經|已)?(?:结束|結束|完毕|完畢|完了)", "\\b(?:that(?:'s|\\s+is)|this\\s+is)\\s+(?:all|it)\\s+for\\s+(?:today|now)\\b"],
+  "topic_change_patterns": ["换一个", "换下一个", "換一個", "換下一個", "先放下", "放到旁边", "放到旁邊", "\\b(?:next\\s+(?:item|object)|move\\s+on)\\b"]
+}
