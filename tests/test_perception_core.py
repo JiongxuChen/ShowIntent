@@ -22,3 +22,16 @@ def test_relation_is_candidate_only_when_hand_is_near_object():
 def test_validator_accepts_a_minimum_packet():
     value = {"timestamp_ms": 0, "frame_id": 0, "objects": [], "hands": [], "relations": []}
     assert validate_packet(value, 1) == []
+
+
+def test_validator_rejects_dangling_relation():
+    value = {"timestamp_ms": 0, "frame_id": 0, "objects": [], "hands": [],
+             "relations": [{"hand_id": "h", "object_id": "o", "type": "near", "score": 0.8}]}
+    assert any("missing object or hand" in error for error in validate_packet(value, 1))
+
+
+def test_validator_rejects_invalid_object_confidence():
+    value = {"timestamp_ms": 0, "frame_id": 0, "objects": [
+        {"track_id": "o", "class_name": "apple", "bbox_norm": [0.1, 0.1, 0.2, 0.2], "score": float("nan")}],
+        "hands": [], "relations": []}
+    assert any("score" in error for error in validate_packet(value, 1))

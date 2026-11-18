@@ -18,3 +18,4 @@ models/
 github_repository/
 Example_Data/
 dist/
+*.pt

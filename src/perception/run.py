@@ -9,6 +9,7 @@ from __future__ import annotations
 import argparse
 import json
 import time
+import math
 from pathlib import Path
 from typing import Iterable
 
@@ -17,6 +18,7 @@ import numpy as np
 
 from .relations import infer_relations
 from .tracker import SimpleObjectTracker
+from .relink_tracker import RelinkObjectTracker
 from .types import Detection, HandDetection, PerceptionPacket
 
 
@@ -126,6 +128,8 @@ def main() -> None:
     parser.add_argument("--overlay-out", type=Path, help="Optional annotated MP4")
     parser.add_argument("--yolo-model", default="yolo11n.pt")
     parser.add_argument("--confidence", type=float, default=0.35)
+    parser.add_argument("--tracker", choices=["simple", "relink"], default="simple", help="Opt-in conservative short-gap reassociation")
+    parser.add_argument("--track-keep-ms", type=int, default=1600, help="Relink retention duration, converted using source FPS for full-frame replay")
     parser.add_argument("--imgsz", type=int, default=1280, help="YOLO inference size; 1280 keeps small fruit visible in 4K frames")
     parser.add_argument("--rotate", default="auto", choices=["auto", "cw", "ccw", "180", "none"], help="Upright-orientation handling; auto follows the container rotation flag")
     parser.add_argument("--no-hands", action="store_true", help="Run object detection only")
@@ -133,6 +137,8 @@ def main() -> None:
     parser.add_argument("--max-frames", type=int, default=0, help="Useful for a short smoke test")
     parser.add_argument("--metrics-out", type=Path, help="Optional JSON file with throughput and input metadata")
     args = parser.parse_args()
+    if args.track_keep_ms < 0:
+        parser.error("--track-keep-ms must be non-negative")
 
     models = PerceptionModels(args.yolo_model, args.confidence, not args.no_hands)
     capture = cv2.VideoCapture(parse_source(args.input))
@@ -142,7 +148,8 @@ def main() -> None:
     rotation_code, rotation_name = resolve_rotation(capture.get(cv2.CAP_PROP_ORIENTATION_META), args.rotate)
     args.out.parent.mkdir(parents=True, exist_ok=True)
     writer = None
-    tracker = SimpleObjectTracker()
+    keep_frames = math.ceil(args.track_keep_ms * fps / 1000)
+    tracker = RelinkObjectTracker(max_missed=keep_frames) if args.tracker == "relink" else SimpleObjectTracker()
     frame_id = 0
     started = time.perf_counter()
 
@@ -181,6 +188,9 @@ def main() -> None:
     cv2.destroyAllWindows()
     elapsed = time.perf_counter() - started
     metrics = {
+        "tracker": args.tracker,
+        "track_keep_ms": args.track_keep_ms if args.tracker == "relink" else None,
+        "track_keep_frames": keep_frames if args.tracker == "relink" else tracker.max_missed,
         "frames_processed": frame_id,
         "elapsed_seconds": round(elapsed, 3),
         "processing_fps": round(frame_id / max(elapsed, 1e-6), 2),

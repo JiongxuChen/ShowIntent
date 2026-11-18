@@ -18,6 +18,8 @@ B 只有一套正式实现，位于 `src/intent/temporal.py`。`pickup-baseline`
 
 ## 快速运行 B
 
+A 的当前验收状态见 `docs/a_completion_status.md`。检测与追踪改进仍为开发候选；全帧联合回归可运行 `python -m scripts.a_full_regression`（需要本地原视频、YOLO small 权重及 A 依赖），输出到 `outputs/a_final_candidate/`。统一候选入口为 `scripts.a_unified_replay`，保留现有 PerceptionPacket 格式并重算手物关系；真实视频及模型权重不随 Git 提供。
+
 需要 Python 3.10 或更高版本。B 的规则计算和 JSONL 回放仅使用标准库，不需要安装检测模型。以下命令均在仓库根目录执行。
 
 先用仓库自带的模拟感知输入验证接口：
