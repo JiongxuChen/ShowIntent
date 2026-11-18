@@ -1,8 +1,10 @@
-"""Small inspectable bilingual lexical rules for member D.
+"""Small, inspectable bilingual lexical cues for D3.
 
-Lexical results describe words that were recognized; they do not decide visual
-presentation intent, an object track, B's state, or any camera action.
+The ASR engine and the visual intent module remain separate. These rules find
+words and presentation-like expressions, not a person's intent or object ID.
 """
+
+from __future__ import annotations
 
 from dataclasses import asdict, dataclass, replace
 from functools import lru_cache
@@ -12,7 +14,8 @@ import re
 
 from .events import SpeechEvent
 
-DEFAULT_LEXICON = Path(__file__).resolve().parents[2] / "configs" / "speech_lexicon.json"
+
+DEFAULT_LEXICON = Path(__file__).resolve().parents[2] / "config" / "speech_lexicon.json"
 
 
 @dataclass(frozen=True)
@@ -24,72 +27,117 @@ class LanguageCues:
         return asdict(self)
 
 
-def _phrased(pattern: str) -> re.Pattern:
-    expression = re.escape(pattern).replace(r"\ ", r"\s+")
-    if re.match(r"[A-Za-z0-9]", pattern):
-        expression = r"\b" + expression
-    if re.search(r"[A-Za-z0-9]$", pattern):
-        expression += r"\b"
-    return re.compile(expression, re.IGNORECASE)
+def _phrase_pattern(phrase: str) -> re.Pattern:
+    """English phrases use word boundaries; Chinese aliases use literal spans."""
+    pattern = re.escape(phrase)
+    pattern = pattern.replace(r"\ ", r"\s+")
+    if re.match(r"[a-zA-Z0-9]", phrase):
+        pattern = r"\b" + pattern
+    if re.search(r"[a-zA-Z0-9]$", phrase):
+        pattern += r"\b"
+    return re.compile(pattern, re.IGNORECASE)
 
 
-def _list(value, name: str, *, allow_empty: bool = False) -> list[str]:
-    if not isinstance(value, list) or (not allow_empty and not value) or any(not isinstance(x, str) or not x.strip() for x in value):
-        raise ValueError(f"lexicon {name} must be a {'possibly empty ' if allow_empty else 'non-empty '}list of strings")
+def _string_list(value, field: str) -> list[str]:
+    if not isinstance(value, list) or not value or any(
+        not isinstance(item, str) or not item.strip() for item in value
+    ):
+        raise ValueError(f"lexicon {field} must be a non-empty list of strings")
     return value
 
 
 class LanguageCueExtractor:
     def __init__(self, lexicon_path: str | Path | None = None):
-        path = Path(lexicon_path) if lexicon_path else DEFAULT_LEXICON
-        config = json.loads(path.read_text(encoding="utf-8-sig"))
-        if not isinstance(config, dict) or config.get("version") != 1 or not isinstance(config.get("classes"), dict):
-            raise ValueError("lexicon must be version 1 with classes")
-        self.aliases = [(name, [_phrased(x) for x in _list(words, f"classes.{name}")]) for name, words in config["classes"].items()]
-        self.excluded = [_phrased(x) for x in _list(config.get("excluded_phrases"), "excluded_phrases", allow_empty=True)]
-        self.patterns = {}
-        for field, cue in (("presentation_patterns", "PRESENTATION_LANGUAGE"), ("negative_patterns", "NEGATED_LANGUAGE"), ("ending_patterns", "ENDING_LANGUAGE"), ("topic_change_patterns", "TOPIC_CHANGE")):
+        self.lexicon_path = Path(lexicon_path) if lexicon_path else DEFAULT_LEXICON
+        config = json.loads(self.lexicon_path.read_text(encoding="utf-8-sig"))
+        if not isinstance(config, dict) or type(config.get("version")) is not int or config["version"] != 1:
+            raise ValueError("lexicon must be an object with version=1")
+        classes = config.get("classes")
+        if not isinstance(classes, dict) or not classes:
+            raise ValueError("lexicon classes must be a non-empty object")
+        self._aliases = []
+        for class_name, aliases in classes.items():
+            if not isinstance(class_name, str) or not class_name.strip():
+                raise ValueError("lexicon class names must be non-empty strings")
+            self._aliases.append((class_name, [
+                _phrase_pattern(alias) for alias in _string_list(aliases, f"classes.{class_name}")
+            ]))
+        self._excluded = [
+            _phrase_pattern(phrase)
+            for phrase in _string_list(config.get("excluded_phrases"), "excluded_phrases")
+        ]
+        self._cue_patterns = {}
+        for field, cue_type in (
+            ("presentation_patterns", "PRESENTATION_LANGUAGE"),
+            ("negative_patterns", "NEGATED_LANGUAGE"),
+            ("topic_change_patterns", "TOPIC_CHANGE"),
+            ("ending_patterns", "ENDING_LANGUAGE"),
+        ):
             try:
-                self.patterns[cue] = [re.compile(x, re.IGNORECASE) for x in _list(config.get(field, []), field, allow_empty=field == "ending_patterns")]
+                # Version-1 custom dictionaries written before ending cues stay
+                # valid. Missing/empty ending_patterns explicitly disables them.
+                patterns = config.get(field, []) if field == "ending_patterns" else config.get(field)
+                if field != "ending_patterns" or patterns != []:
+                    patterns = _string_list(patterns, field)
+                self._cue_patterns[cue_type] = [
+                    re.compile(pattern, re.IGNORECASE)
+                    for pattern in patterns
+                ]
             except re.error as exc:
-                raise ValueError(f"invalid regex in {field}: {exc}") from exc
+                raise ValueError(f"invalid regex in lexicon {field}: {exc}") from exc
 
     def extract(self, text: str) -> LanguageCues:
         if not isinstance(text, str):
             raise ValueError("text must be a string")
+        # Spaces in excluded spans preserve word positions and prevent substring
+        # aliases such as 苹果 in 苹果汁; a later independent 苹果 still matches.
         masked = text
-        for pattern in self.excluded:
-            masked = pattern.sub(lambda item: " " * len(item.group()), masked)
-        mentioned = []
-        for name, patterns in self.aliases:
+        for pattern in self._excluded:
+            masked = pattern.sub(lambda match: " " * len(match.group()), masked)
+        found = []
+        for class_name, patterns in self._aliases:
             positions = [match.start() for pattern in patterns for match in pattern.finditer(masked)]
             if positions:
-                mentioned.append((min(positions), name))
-        hit = {cue: any(pattern.search(text) for pattern in patterns) for cue, patterns in self.patterns.items()}
-        cues = []
-        if hit["PRESENTATION_LANGUAGE"] and not hit["NEGATED_LANGUAGE"] and not hit["ENDING_LANGUAGE"]:
-            cues.append("PRESENTATION_LANGUAGE")
-        if hit["NEGATED_LANGUAGE"]:
-            cues.append("NEGATED_LANGUAGE")
-        elif hit["ENDING_LANGUAGE"]:
-            cues.append("ENDING_LANGUAGE")
-        if hit["TOPIC_CHANGE"]:
-            cues.append("TOPIC_CHANGE")
-        return LanguageCues([name for _, name in sorted(mentioned)], cues)
+                found.append((min(positions), class_name))
+        mentioned_classes = [name for _, name in sorted(found)]
+        negated = any(p.search(text) for p in self._cue_patterns["NEGATED_LANGUAGE"])
+        topic_change = any(p.search(text) for p in self._cue_patterns["TOPIC_CHANGE"])
+        presentation = any(p.search(text) for p in self._cue_patterns["PRESENTATION_LANGUAGE"])
+        ending = any(p.search(text) for p in self._cue_patterns["ENDING_LANGUAGE"])
+        cue_types = []
+        # Sentence-level rejection is deliberate: mixed closing/opening or
+        # positive/negative clauses need richer grounding. Closing is a lexical
+        # cue for B, never an instruction to put B's state into ENDING.
+        if presentation and not negated and not ending:
+            cue_types.append("PRESENTATION_LANGUAGE")
+        if negated:
+            cue_types.append("NEGATED_LANGUAGE")
+        elif ending:
+            cue_types.append("ENDING_LANGUAGE")
+        if topic_change:
+            cue_types.append("TOPIC_CHANGE")
+        return LanguageCues(mentioned_classes, cue_types)
 
     def enrich(self, event: SpeechEvent) -> SpeechEvent:
+        event.to_dict()  # validate mutable nested fields before accepting input
         cues = self.extract(event.text)
+        # Extraction replaces fixture annotations; it never trusts a positive
+        # hand-written label more than the current text's negation checks.
         return replace(event, mentioned_classes=cues.mentioned_classes, cue_types=cues.cue_types)
 
 
 @lru_cache(maxsize=8)
-def _cached(path: str | None) -> LanguageCueExtractor:
-    return LanguageCueExtractor(path)
+def _extractor(lexicon_path: str | None) -> LanguageCueExtractor:
+    return LanguageCueExtractor(lexicon_path)
 
 
 def extract_cues(text: str, lexicon_path: str | Path | None = None) -> LanguageCues:
-    return _cached(str(Path(lexicon_path).resolve()) if lexicon_path else None).extract(text)
+    """Extract lexical categories and cues using the bundled or supplied rules."""
+    path = str(Path(lexicon_path).resolve()) if lexicon_path else None
+    return _extractor(path).extract(text)
 
 
 def enrich_event(event: SpeechEvent, *, lexicon_path: str | Path | None = None) -> SpeechEvent:
-    return _cached(str(Path(lexicon_path).resolve()) if lexicon_path else None).enrich(event)
+    """Keep timing/text unchanged while replacing semantic fields with D3 rules."""
+    path = str(Path(lexicon_path).resolve()) if lexicon_path else None
+    return _extractor(path).enrich(event)

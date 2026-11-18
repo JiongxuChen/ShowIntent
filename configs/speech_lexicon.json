@@ -1,17 +1,58 @@
 {
   "version": 1,
-  "description": "Closed bilingual vocabulary for optional member-D lexical evidence; not an intent model.",
+  "description": "Small bilingual closed-vocabulary cue rules; lexical evidence only, not presentation intent.",
   "classes": {
     "apple": ["苹果", "蘋果", "apple", "apples"],
-    "cup": ["水杯", "杯子", "保温杯", "保溫杯", "马克杯", "馬克杯", "cup", "cups", "mug", "mugs"],
-    "bottle": ["水瓶", "瓶子", "宝特瓶", "寶特瓶", "矿泉水瓶", "礦泉水瓶", "water bottle", "bottle", "bottles"],
+    "cup": ["水杯", "杯子", "保温杯", "保溫杯", "马克杯", "馬克杯", "马口杯", "馬口杯", "茶杯", "咖啡杯", "water cup", "coffee cup", "tea cup", "cup", "cups", "mug", "mugs"],
+    "bottle": ["水瓶", "瓶子", "宝特瓶", "寶特瓶", "塑料瓶", "塑膠瓶", "保温瓶", "保溫瓶", "矿泉水瓶", "礦泉水瓶", "water bottle", "bottle", "bottles"],
     "orange": ["橙子", "橘子", "桔子", "orange", "oranges"],
-    "cell phone": ["手机", "手機", "cell phone", "cellphone", "mobile phone", "smartphone"],
-    "book": ["书", "書", "书本", "書本", "book", "books"]
+    "cell phone": ["手机", "手機", "移动电话", "移動電話", "cell phone", "cellphone", "mobile phone", "smartphone"],
+    "book": ["书本", "書本", "这本书", "這本書", "那本书", "那本書", "book", "books"]
   },
-  "excluded_phrases": ["苹果汁", "蘋果汁", "苹果手机", "蘋果手機", "苹果电脑", "蘋果電腦", "apple juice", "apple inc", "orange juice", "orange color"],
-  "presentation_patterns": ["大家看看", "给大家看", "給大家看", "看这里", "看這裡", "看看这个", "看看這個", "展示", "\\blook\\s+at\\s+(?:this|the)\\b", "\\blet\\s+me\\s+show\\b"],
-  "negative_patterns": ["(?:不|别|別|勿|不要|不是|並不).{0,5}(?:展示|给.{0,3}看|給.{0,3}看|看看|看这里|看這裡)", "还没展示完", "還沒展示完", "\\b(?:do\\s+not|don't|not)\\s+(?:show|look)\\b"],
-  "ending_patterns": ["(?:展示|演示|介绍|介紹|讲解|講解)(?:就|先)?到[这這][里裡](?:为止|為止)?(?:[了啦吧啊喔哦])?(?=[\\s，。！？,.!?；;]|$)", "(?:展示|演示|介绍|介紹|讲解|講解)(?:已经|已經|已)?(?:结束|結束|完毕|完畢|完了)", "\\b(?:that(?:'s|\\s+is)|this\\s+is)\\s+(?:all|it)\\s+for\\s+(?:today|now)\\b"],
-  "topic_change_patterns": ["换一个", "换下一个", "換一個", "換下一個", "先放下", "放到旁边", "放到旁邊", "\\b(?:next\\s+(?:item|object)|move\\s+on)\\b"]
+  "excluded_phrases": [
+    "苹果汁", "苹果醋", "苹果酱", "苹果派", "苹果手机", "苹果电脑", "苹果公司",
+    "蘋果汁", "蘋果醋", "蘋果醬", "蘋果派", "蘋果手機", "蘋果電腦", "蘋果公司",
+    "橙汁", "橙子汁", "橘子汁", "桔子汁",
+    "apple juice", "apple cider", "apple sauce", "applesauce", "apple pie", "apple inc", "apple computer",
+    "orange juice", "orange color", "orange colour", "orange shirt"
+  ],
+  "presentation_patterns": [
+    "大家看看", "给大家看", "给你们看", "给你看", "看这里", "看看这个", "看一下这个", "来看看", "展示",
+    "給大家看", "給你們看", "給你看", "看這裡", "看看這個", "看一下這個", "來看看",
+    "\\blook\\s+at\\s+(?:this|the)\\b",
+    "\\bhave\\s+a\\s+look\\b",
+    "\\blet\\s+me\\s+show\\b",
+    "\\bi(?:['’]ll|\\s+will)\\s+show\\b",
+    "\\bhere\\s+is\\b", "\\bhere['’]s\\b"
+  ],
+  "negative_patterns": [
+    "(?:不|别|勿|无需|不用|不要|并非|并不|没有|没在|不是).{0,5}(?:展示|给.{0,3}看|看看|看这里)",
+    "(?:不|別|勿|無需|不用|不要|並非|並不|沒有|沒在|不是).{0,5}(?:展示|給.{0,3}看|看看|看這裡)",
+    "不是这个", "不是这[个只本瓶杯]", "不要看", "别看", "先不看", "不展示", "不能展示",
+    "不是這個", "不是這[個隻本瓶杯]", "別看",
+    "(?:还没|還沒|还未|還未|尚未).{0,6}(?:展示|演示|介绍|介紹|讲解|講解).{0,3}(?:完|结束|結束)",
+    "(?:展示|演示|介绍|介紹|讲解|講解)(?:还没|還沒|还未|還未|尚未|没有|沒有)(?:结束|結束|完成|完)",
+    "(?:还没|還沒|还未|還未|尚未)(?:完成|结束|結束|停止)(?:展示|演示|介绍|介紹|讲解|講解)",
+    "\\b(?:do\\s+not|don['’]t|will\\s+not|won['’]t|cannot|can['’]t|never|not)\\s+(?:\\w+\\s+){0,3}(?:show(?:ing)?|display(?:ing)?|look(?:ing)?|present(?:ing)?)\\b",
+    "\\b(?:do\\s+not|don['’]t|will\\s+not|won['’]t|cannot|can['’]t|never|not)\\s+(?:\\w+\\s+){0,2}(?:end|stop|finish)\\s+(?:\\w+\\s+){0,3}(?:demonstration|presentation|demo|showing|demonstrating|presenting)\\b",
+    "\\b(?:not|haven['’]t|hasn['’]t|isn['’]t|aren['’]t|have\\s+not|has\\s+not)\\s+(?:yet\\s+)?(?:done|finished|ended)\\s+(?:showing|demonstrating|presenting)\\b",
+    "\\b(?:demonstration|presentation|demo)\\s+(?:is|has)\\s+not\\s+(?:yet\\s+)?(?:over|finished|ended)\\b",
+    "\\bnot\\s+(?:this|that|the\\s+(?:cup|bottle|apple|orange|book))\\b",
+    "\\b(?:isn['’]t|is\\s+not|wasn['’]t|was\\s+not)\\s+(?:the\\s+)?(?:cup|bottle|apple|orange|book)\\b"
+  ],
+  "ending_patterns": [
+    "(?:展示|演示|介绍|介紹|讲解|講解)(?:就|先)?到[这這][里裡](?:为止|為止)?(?:[了啦吧啊喔哦])?(?=[\\s，。！？,.!?；;]|$)",
+    "(?:展示|演示|介绍|介紹|讲解|講解)(?:已经|已經|已)?(?:结束|結束|完毕|完畢|完了)(?:[了啦吧])?(?=[\\s，。！？,.!?；;]|$)",
+    "(?:^|[。！？!?；;，,])\\s*(?:(?:好了|好|那么|那麼|今天|现在|現在|我们|我們|我|就|先|请|請)[，,\\s]*){0,4}(?:结束|結束|停止)(?:本次|这次|這次)?的?(?:展示|演示|介绍|介紹|讲解|講解)(?:[了啦吧])?(?=[\\s，。！？,.!?；;]|$)",
+    "\\b(?:that(?:['’]s|\\s+is)|this\\s+is)\\s+(?:all|it)\\s+for\\s+(?:today|now|this\\s+(?:demonstration|presentation|demo))\\b",
+    "\\b(?:the|this|our)\\s+(?:demonstration|presentation|demo)\\s+(?:is|has)\\s+(?:now\\s+)?(?:over|finished|ended)\\b",
+    "\\b(?:i|we)(?:['’]m|['’]re|\\s+am|\\s+are)\\s+(?:now\\s+)?(?:done|finished)\\s+(?:showing|demonstrating|presenting)\\b",
+    "\\b(?:i|we)(?:\\s+will|['’]ll)\\s+(?:now\\s+)?(?:stop|end|finish)\\s+(?:showing|demonstrating|presenting|this\\s+(?:demonstration|presentation|demo))\\b",
+    "\\b(?:let['’]s|let\\s+us)\\s+(?:stop|end|finish)\\s+(?:showing|demonstrating|presenting|(?:the|this)\\s+(?:demonstration|presentation|demo))\\b"
+  ],
+  "topic_change_patterns": [
+    "换一个", "换下一个", "换个", "下一个物品", "先放下", "放到旁边", "移到旁边", "先不展示",
+    "換一個", "換下一個", "換個", "下一個物品", "放到旁邊", "移到旁邊",
+    "\\b(?:next\\s+(?:item|object|product)|move\\s+on|put\\s+(?:it|this|the\\s+\\w+)\\s+(?:down|aside))\\b"
+  ]
 }

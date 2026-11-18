@@ -1,5 +1,2 @@
-# Optional runtime for member D ASR adapters. The core evidence contract is stdlib-only.
-faster-whisper==1.2.1
-av==16.1.0
-numpy==2.5.4
-soundfile==0.13.1
+# Optional runtime for member D; A/B/C requirements remain independent.
+-r requirements-asr.txt

@@ -1,0 +1,22 @@
+{
+  "repository": "https://github.com/ufal/whisper_streaming",
+  "commit": "6da90b44b7e50d79695e68166d2a2c7609c75abb",
+  "license": "MIT",
+  "retrieved_on": "2026-11-12",
+  "upstream_files": {
+    "whisper_online.py": {
+      "url": "https://raw.githubusercontent.com/ufal/whisper_streaming/6da90b44b7e50d79695e68166d2a2c7609c75abb/whisper_online.py",
+      "sha256": "f0a7bd26bff879cf1e2ee4589bd88c38275c678d8773a47563ceb0e7d970b850"
+    },
+    "LICENSE": {
+      "url": "https://raw.githubusercontent.com/ufal/whisper_streaming/6da90b44b7e50d79695e68166d2a2c7609c75abb/LICENSE",
+      "sha256": "4ab642ac3c53867fb3516de7de602f0e86117ead78f0851a9f871dbe40823e85"
+    }
+  },
+  "vendored": "third_party/whisper_streaming/hypothesis.py",
+  "vendored_sha256": "b41bc970bd29c3a5c77cfb67ae98444559eae170deb164cb626c3300eb9f8025",
+  "reuse": "HypothesisBuffer class extracted verbatim from whisper_online.py; only standard-library imports/logger plumbing added",
+  "excluded": "Other ASR backends, CLI, socket server, VAC and sentence-tokenization integrations omitted",
+  "project_adaptation": "src/speech/streaming.py: bounded arriving-audio buffer, explicit EOF flush, ShowIntent event conversion; actual availability assigned by root timing driver",
+  "maintenance_note": "Upstream README says complete WhisperStreaming is superseded by SimulStreaming; this project intentionally reuses only the small MIT LocalAgreement primitive with its existing pinned Faster-Whisper backend"
+}

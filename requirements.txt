@@ -1,0 +1,2 @@
+# Audio decoding is reused from python-soundfile; srt is vendored unchanged.
+soundfile==0.13.1

@@ -1,0 +1,28 @@
+{
+  "resources": [
+    {
+      "name": "srt", "version": "3.5.3", "license": "MIT",
+      "repository": "https://github.com/cdown/srt",
+      "commit": "434d0c1c9d5c26d5c3fb1ce979fc05b478e9253c",
+      "url": "https://codeload.github.com/cdown/srt/zip/434d0c1c9d5c26d5c3fb1ce979fc05b478e9253c",
+      "sha256": "89fdc39f51c9835e67fce72ea7fabdde1f54f95a652aa6ac7bbfb8063bfbe19a",
+      "usage": "D1 runtime: unchanged srt.py and LICENSE vendored; upstream tools/tests/docs omitted from runtime"
+    },
+    {
+      "name": "python-soundfile", "version": "0.13.1", "license": "BSD-3-Clause",
+      "repository": "https://github.com/bastibe/python-soundfile",
+      "commit": "1aee0c3cbbbb3f2ef8947b19e713b019fc7291f6",
+      "url": "https://codeload.github.com/bastibe/python-soundfile/zip/1aee0c3cbbbb3f2ef8947b19e713b019fc7291f6",
+      "sha256": "374e9a6542027a668e28ff2acfc0225ebaefe29b360483aa56961b700d8f8c76",
+      "usage": "D1 runtime: pinned PyPI binary wheel; source archive for inspection, not copied into application"
+    },
+    {
+      "name": "faster-whisper", "version": "1.2.1", "license": "MIT",
+      "repository": "https://github.com/SYSTRAN/faster-whisper",
+      "commit": "65882eee9f5cdbeeb2d877f1131d48cf241b327d",
+      "url": "https://codeload.github.com/SYSTRAN/faster-whisper/zip/65882eee9f5cdbeeb2d877f1131d48cf241b327d",
+      "sha256": "fa75e227ec1bedb3f4e4a0dbb660e77251c1364453575e25c6808884b89b52ee",
+      "usage": "D2/D4 runtime dependency faster-whisper==1.2.1; unmodified pretrained ASR reused by src/speech/asr.py; local source archive retained"
+    }
+  ]
+}
