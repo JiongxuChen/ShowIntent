@@ -1,0 +1,2 @@
+# Optional runtime for member D; A/B/C requirements remain independent.
+-r requirements-asr.txt

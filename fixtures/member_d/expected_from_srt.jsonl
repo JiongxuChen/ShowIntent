@@ -1,0 +1,4 @@
+{"start_ms": 300, "end_ms": 1100, "available_at_ms": 1300, "text": "桌上有苹果、杯子和瓶子。", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 3300, "end_ms": 4100, "available_at_ms": 4300, "text": "大家看看这个杯子。", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 7100, "end_ms": 8100, "available_at_ms": 8300, "text": "我把苹果移到旁边，先不展示。", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 9500, "end_ms": 10400, "available_at_ms": 10600, "text": "Here is the apple.", "mentioned_classes": [], "cue_types": [], "is_final": true}

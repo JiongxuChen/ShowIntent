@@ -1,0 +1,5 @@
+{"timestamp_ms":4200,"frame_id":126,"objects":[{"track_id":"cup_1","class_name":"cup"},{"track_id":"apple_1","class_name":"apple"}],"hands":[],"relations":[]}
+{"timestamp_ms":4300,"frame_id":129,"objects":[{"track_id":"cup_1","class_name":"cup"},{"track_id":"apple_1","class_name":"apple"}],"hands":[],"relations":[]}
+{"timestamp_ms":4400,"frame_id":132,"objects":[{"track_id":"cup_1","class_name":"cup"},{"track_id":"cup_2","class_name":"cup"}],"hands":[],"relations":[]}
+{"timestamp_ms":8500,"frame_id":255,"objects":[{"track_id":"apple_1","class_name":"apple"}],"hands":[],"relations":[]}
+{"timestamp_ms":10600,"frame_id":318,"objects":[{"track_id":"cup_1","class_name":"cup"},{"track_id":"apple_1","class_name":"apple"}],"hands":[],"relations":[]}

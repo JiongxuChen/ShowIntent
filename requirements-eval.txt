@@ -1,0 +1,3 @@
+-r requirements-asr.txt
+jiwer==4.0.0
+opencc-python-reimplemented==0.1.7
