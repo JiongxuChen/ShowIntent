@@ -2,6 +2,7 @@ from src.perception.relations import infer_relations
 from src.perception.tracker import SimpleObjectTracker
 from src.perception.types import Detection, HandDetection
 from src.perception.validate_jsonl import validate_packet
+from src.perception.run import open_capture_without_auto_rotation
 
 
 def test_tracker_keeps_id_for_nearby_same_class_detection():
@@ -35,3 +36,62 @@ def test_validator_rejects_invalid_object_confidence():
         {"track_id": "o", "class_name": "apple", "bbox_norm": [0.1, 0.1, 0.2, 0.2], "score": float("nan")}],
         "hands": [], "relations": []}
     assert any("score" in error for error in validate_packet(value, 1))
+
+
+def test_capture_disables_opencv_automatic_video_rotation(monkeypatch):
+    import cv2
+
+    class FakeCapture:
+        def __init__(self):
+            self.auto_rotation = 1.0
+            self.released = False
+
+        def isOpened(self):
+            return True
+
+        def get(self, prop):
+            assert prop == cv2.CAP_PROP_ORIENTATION_AUTO
+            return self.auto_rotation
+
+        def set(self, prop, value):
+            assert prop == cv2.CAP_PROP_ORIENTATION_AUTO
+            self.auto_rotation = value
+            return True
+
+        def release(self):
+            self.released = True
+
+    fake = FakeCapture()
+    monkeypatch.setattr(cv2, "VideoCapture", lambda source: fake)
+
+    capture = open_capture_without_auto_rotation("phone.mp4")
+
+    assert capture is fake
+    assert fake.auto_rotation == 0
+
+
+def test_capture_fails_safely_if_auto_rotation_cannot_be_disabled(monkeypatch):
+    import cv2
+    import pytest
+
+    class FakeCapture:
+        released = False
+
+        def isOpened(self):
+            return True
+
+        def get(self, prop):
+            return 1.0
+
+        def set(self, prop, value):
+            return False
+
+        def release(self):
+            self.released = True
+
+    fake = FakeCapture()
+    monkeypatch.setattr(cv2, "VideoCapture", lambda source: fake)
+
+    with pytest.raises(RuntimeError, match="auto-rotation"):
+        open_capture_without_auto_rotation("phone.mp4")
+    assert fake.released

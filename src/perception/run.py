@@ -60,6 +60,24 @@ def apply_rotation(frame: np.ndarray, rotation_code: int | None) -> np.ndarray:
     return cv2.rotate(frame, rotation_code) if rotation_code is not None else frame
 
 
+def open_capture_without_auto_rotation(source: str | int) -> cv2.VideoCapture:
+    """Open a capture with raw decoded frames so metadata is applied exactly once.
+
+    Some OpenCV builds auto-rotate phone video frames by default while others do
+    not. This pipeline handles orientation explicitly to keep boxes and output
+    dimensions consistent across builds.
+    """
+    capture = cv2.VideoCapture(source)
+    if not capture.isOpened():
+        return capture
+    orientation_auto = getattr(cv2, "CAP_PROP_ORIENTATION_AUTO", None)
+    if orientation_auto is not None and capture.get(orientation_auto):
+        if not capture.set(orientation_auto, 0):
+            capture.release()
+            raise RuntimeError("OpenCV auto-rotation is enabled but could not be disabled; refusing to risk double-rotating frames")
+    return capture
+
+
 class PerceptionModels:
     def __init__(self, yolo_model: str, confidence: float, use_hands: bool) -> None:
         try:
@@ -141,7 +159,7 @@ def main() -> None:
         parser.error("--track-keep-ms must be non-negative")
 
     models = PerceptionModels(args.yolo_model, args.confidence, not args.no_hands)
-    capture = cv2.VideoCapture(parse_source(args.input))
+    capture = open_capture_without_auto_rotation(parse_source(args.input))
     if not capture.isOpened():
         raise RuntimeError(f"Could not open input: {args.input}")
     fps = capture.get(cv2.CAP_PROP_FPS) or 30.0

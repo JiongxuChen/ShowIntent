@@ -7,7 +7,7 @@ Date: 2026-11-13. Scope: end-to-end evaluation of A (perception) → B (intent) 
 - Windows 11, project venv (Python 3.12.10, `--system-site-packages`), PyTorch 2.13/cu126 on an NVIDIA GPU.
 - A: YOLO11n (`yolo11n.pt`), `imgsz=1280`, `conf=0.35`, MediaPipe Hands 0.10.21; ~4 FPS on 4K input.
 - B/C: rule-based, CPU only, real-time (>100x faster than playback on JSONL input).
-- Videos: 2160×3840 containers with rot=90 metadata; A outputs coordinates in the upright 3840×2160 frame (clockwise rotation applied once, in A only).
+- Videos: encoded frames are 3840×2160 with rot=90 metadata; A outputs coordinates in the upright 2160×3840 portrait frame (clockwise rotation applied once, in A only). OpenCV builds may auto-apply orientation metadata, so the runner explicitly disables that behavior before applying rotation.
 
 ## 2. Clips
 
