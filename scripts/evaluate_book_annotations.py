@@ -39,22 +39,32 @@ def box_iou(a, b) -> float:
 
 
 def match_boxes(ground_truth, predictions):
-    pairs = sorted(
-        ((box_iou(gt, pred[0]), gi, pi)
-         for gi, gt in enumerate(ground_truth)
-         for pi, pred in enumerate(predictions)),
-        reverse=True,
-    )
-    used_gt, used_pred, matches = set(), set(), []
-    for overlap, gi, pi in pairs:
-        if gi in used_gt or pi in used_pred:
-            continue
-        used_gt.add(gi)
-        used_pred.add(pi)
-        matches.append({"gt_index": gi, "prediction_index": pi,
-                        "iou": round(overlap, 4),
-                        "score": round(predictions[pi][1], 4)})
-    return matches
+    # Maximum-cardinality bipartite matching over qualifying IoU edges avoids
+    # a greedy high-IoU pair hiding two valid lower-IoU matches.
+    overlaps = [[box_iou(gt, pred[0]) for pred in predictions]
+                for gt in ground_truth]
+    pred_to_gt: dict[int, int] = {}
+
+    def assign(gi: int, visited: set[int]) -> bool:
+        candidates = sorted(range(len(predictions)),
+                            key=lambda pi: overlaps[gi][pi], reverse=True)
+        for pi in candidates:
+            if overlaps[gi][pi] < 0.5 or pi in visited:
+                continue
+            visited.add(pi)
+            if pi not in pred_to_gt or assign(pred_to_gt[pi], visited):
+                pred_to_gt[pi] = gi
+                return True
+        return False
+
+    for gi in range(len(ground_truth)):
+        assign(gi, set())
+    return [
+        {"gt_index": gi, "prediction_index": pi,
+         "iou": round(overlaps[gi][pi], 4),
+         "score": round(predictions[pi][1], 4)}
+        for pi, gi in sorted(pred_to_gt.items())
+    ]
 
 
 def draw_box(image, box, label, color):
@@ -72,8 +82,12 @@ def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     model = YOLO(str(MODEL))
     report = []
-    for image_path in sorted((DATA / "images").glob("20261118_184102_t[35]*.jpg")):
-        if image_path.stem not in {"20261118_184102_t30s", "20261118_184102_t35s"}:
+    labelled_stems = {
+        path.stem for path in (DATA / "labels").glob("*.txt")
+        if path.read_text(encoding="utf-8").strip()
+    }
+    for image_path in sorted((DATA / "images").glob("*.jpg")):
+        if image_path.stem not in labelled_stems:
             continue
         image = cv2.imread(str(image_path))
         if image is None:
