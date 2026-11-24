@@ -53,7 +53,9 @@ def main() -> None:
                 image_path = images_dir / f"{stem}.jpg"
                 if not cv2.imwrite(str(image_path), frame, [cv2.IMWRITE_JPEG_QUALITY, 94]):
                     raise RuntimeError(f"Could not write {image_path}")
-                (labels_dir / f"{stem}.txt").write_text("", encoding="utf-8")
+                label_path = labels_dir / f"{stem}.txt"
+                if not label_path.exists():
+                    label_path.write_text("", encoding="utf-8")
                 rows.append({
                     "image": f"images/{image_path.name}",
                     "label": f"labels/{stem}.txt",
