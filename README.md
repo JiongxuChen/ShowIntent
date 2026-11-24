@@ -104,6 +104,7 @@ SHOWINTENT_PERCEPTION_DIR=data/perception python -m pytest -q
 以下文件保留原仓库内容，记录早期实现和历史实验；当前 B 的方法与结果以本文链接的新说明为准。
 
 - [A 的视觉感知报告](docs/perception_video_report.md)
+- [书本检测微调试验与下一批标注说明](docs/book_detector_training_pilot.md)
 - [原 P0 评价报告](docs/p0_evaluation_report.md)及[中文阅读版](docs/p0_evaluation_report.zh-CN.md)
 - [原仓库逐项核对记录](docs/original_repository_inventory.md)
 
