@@ -53,6 +53,14 @@ including visible spines. Do not merge adjacent books into one stack box. For a
 partly occluded book, box the visible extent if the individual book can still
 be distinguished. Preserve the source image and return a marked-up copy.
 
+Import a marked screenshot into the local annotation seed and refresh the
+video-disjoint YOLO dataset with:
+
+```powershell
+python -m scripts.import_book_annotation --annotation C:\path\to\marked.png --image book_batch3_01_20261118_183631_t25s.jpg
+python scripts\prepare_book_training_dataset.py
+```
+
 ## Reproduce locally
 
 ```powershell
