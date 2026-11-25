@@ -9,7 +9,6 @@ from __future__ import annotations
 import argparse
 import json
 import time
-import math
 from pathlib import Path
 from typing import Iterable
 
@@ -18,11 +17,9 @@ import numpy as np
 
 from .relations import infer_relations
 from .tracker import SimpleObjectTracker
-from .relink_tracker import RelinkObjectTracker
+from .timing import load_timestamps
 from .types import Detection, HandDetection, PerceptionPacket
 
-
-COCO_INTERESTING = {"apple", "banana", "bottle", "cup", "orange", "cell phone", "remote", "book", "scissors"}
 
 
 def normalize_box(box: Iterable[float], width: int, height: int) -> list[float]:
@@ -60,24 +57,6 @@ def apply_rotation(frame: np.ndarray, rotation_code: int | None) -> np.ndarray:
     return cv2.rotate(frame, rotation_code) if rotation_code is not None else frame
 
 
-def open_capture_without_auto_rotation(source: str | int) -> cv2.VideoCapture:
-    """Open a capture with raw decoded frames so metadata is applied exactly once.
-
-    Some OpenCV builds auto-rotate phone video frames by default while others do
-    not. This pipeline handles orientation explicitly to keep boxes and output
-    dimensions consistent across builds.
-    """
-    capture = cv2.VideoCapture(source)
-    if not capture.isOpened():
-        return capture
-    orientation_auto = getattr(cv2, "CAP_PROP_ORIENTATION_AUTO", None)
-    if orientation_auto is not None and capture.get(orientation_auto):
-        if not capture.set(orientation_auto, 0):
-            capture.release()
-            raise RuntimeError("OpenCV auto-rotation is enabled but could not be disabled; refusing to risk double-rotating frames")
-    return capture
-
-
 class PerceptionModels:
     def __init__(self, yolo_model: str, confidence: float, use_hands: bool) -> None:
         try:
@@ -99,8 +78,6 @@ class PerceptionModels:
         output = []
         for box in result.boxes:
             class_name = result.names[int(box.cls[0])]
-            if class_name not in COCO_INTERESTING:
-                continue
             x1, y1, x2, y2 = (float(value) for value in box.xyxy[0].tolist())
             output.append((class_name, (x1, y1, x2, y2), float(box.conf[0])))
         return output
@@ -142,12 +119,11 @@ def parse_source(value: str) -> str | int:
 def main() -> None:
     parser = argparse.ArgumentParser(description="ShowIntent A/P0 visual perception")
     parser.add_argument("--input", required=True, help="Video path or camera index, e.g. 0")
+    parser.add_argument("--timestamp-map", type=Path, help="Optional decoded-video PTS JSON; used by the full-video runner")
     parser.add_argument("--out", required=True, type=Path, help="Output PerceptionPacket JSONL")
     parser.add_argument("--overlay-out", type=Path, help="Optional annotated MP4")
     parser.add_argument("--yolo-model", default="yolo11n.pt")
     parser.add_argument("--confidence", type=float, default=0.35)
-    parser.add_argument("--tracker", choices=["simple", "relink"], default="simple", help="Opt-in conservative short-gap reassociation")
-    parser.add_argument("--track-keep-ms", type=int, default=1600, help="Relink retention duration, converted using source FPS for full-frame replay")
     parser.add_argument("--imgsz", type=int, default=1280, help="YOLO inference size; 1280 keeps small fruit visible in 4K frames")
     parser.add_argument("--rotate", default="auto", choices=["auto", "cw", "ccw", "180", "none"], help="Upright-orientation handling; auto follows the container rotation flag")
     parser.add_argument("--no-hands", action="store_true", help="Run object detection only")
@@ -155,19 +131,17 @@ def main() -> None:
     parser.add_argument("--max-frames", type=int, default=0, help="Useful for a short smoke test")
     parser.add_argument("--metrics-out", type=Path, help="Optional JSON file with throughput and input metadata")
     args = parser.parse_args()
-    if args.track_keep_ms < 0:
-        parser.error("--track-keep-ms must be non-negative")
 
+    timestamps = load_timestamps(args.timestamp_map) if args.timestamp_map else None
     models = PerceptionModels(args.yolo_model, args.confidence, not args.no_hands)
-    capture = open_capture_without_auto_rotation(parse_source(args.input))
+    capture = cv2.VideoCapture(parse_source(args.input))
     if not capture.isOpened():
         raise RuntimeError(f"Could not open input: {args.input}")
     fps = capture.get(cv2.CAP_PROP_FPS) or 30.0
     rotation_code, rotation_name = resolve_rotation(capture.get(cv2.CAP_PROP_ORIENTATION_META), args.rotate)
     args.out.parent.mkdir(parents=True, exist_ok=True)
     writer = None
-    keep_frames = math.ceil(args.track_keep_ms * fps / 1000)
-    tracker = RelinkObjectTracker(max_missed=keep_frames) if args.tracker == "relink" else SimpleObjectTracker()
+    tracker = SimpleObjectTracker()
     frame_id = 0
     started = time.perf_counter()
 
@@ -179,6 +153,9 @@ def main() -> None:
             frame = apply_rotation(frame, rotation_code)
             height, width = frame.shape[:2]
             timestamp_ms = int(capture.get(cv2.CAP_PROP_POS_MSEC)) if not isinstance(parse_source(args.input), int) else int(frame_id * 1000 / fps)
+            if timestamps is not None:
+                if frame_id >= len(timestamps):raise ValueError('decoded more frames than the timestamp map')
+                timestamp_ms = timestamps[frame_id]
             raw_objects = models.detect_objects(frame, args.imgsz)
             tracked = tracker.update([(name, normalize_box(box, width, height), score) for name, box, score in raw_objects])
             objects = [Detection(track_id, name, list(box), round(score, 3)) for track_id, name, box, score in tracked]
@@ -205,11 +182,12 @@ def main() -> None:
         writer.release()
     cv2.destroyAllWindows()
     elapsed = time.perf_counter() - started
+    if timestamps is not None and not args.max_frames and frame_id != len(timestamps):
+        raise ValueError("decoded frame count differs from timestamp map; refusing incomplete output")
     metrics = {
-        "tracker": args.tracker,
-        "track_keep_ms": args.track_keep_ms if args.tracker == "relink" else None,
-        "track_keep_frames": keep_frames if args.tracker == "relink" else tracker.max_missed,
         "frames_processed": frame_id,
+        "class_policy": "all_detector_classes",
+        "timestamp_source": "decoded_video_pts" if timestamps is not None else "opencv_position",
         "elapsed_seconds": round(elapsed, 3),
         "processing_fps": round(frame_id / max(elapsed, 1e-6), 2),
         "input_fps": round(float(fps), 2),

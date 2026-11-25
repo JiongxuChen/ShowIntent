@@ -1,0 +1,5 @@
+{"start_ms": 1330, "end_ms": 5970, "available_at_ms": 71629, "text": "我平时会在桌子上放一个杯子,不然忙起来,", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 5900, "end_ms": 7460, "available_at_ms": 77809, "text": "来经常想不起喝水", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 7460, "end_ms": 10360, "available_at_ms": 77809, "text": "有的时候杯子太大也挺占地方", "mentioned_classes": ["cup"], "cue_types": [], "is_final": true}
+{"start_ms": 10360, "end_ms": 11820, "available_at_ms": 77809, "text": "所以桌上", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 12070, "end_ms": 14170, "available_at_ms": 78466, "text": "东西的时候还需要留点位置", "mentioned_classes": [], "cue_types": [], "is_final": true}

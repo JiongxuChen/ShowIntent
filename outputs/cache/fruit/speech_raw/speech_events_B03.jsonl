@@ -1,0 +1,5 @@
+{"start_ms": 940, "end_ms": 3600, "available_at_ms": 6828, "text": "这个直播间的苹果是我们的注农产品", "mentioned_classes": ["apple"], "cue_types": ["REFERENCE_LANGUAGE"], "is_final": true}
+{"start_ms": 3600, "end_ms": 5960, "available_at_ms": 6828, "text": "为了优惠新老客户", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 6040, "end_ms": 8420, "available_at_ms": 12518, "text": "此刻正推出福利奖", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 8420, "end_ms": 9500, "available_at_ms": 12518, "text": "一斤三块", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 9500, "end_ms": 10580, "available_at_ms": 12518, "text": "两斤五块", "mentioned_classes": [], "cue_types": [], "is_final": true}

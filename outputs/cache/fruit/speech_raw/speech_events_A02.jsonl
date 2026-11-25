@@ -1,0 +1,7 @@
+{"start_ms": 1300, "end_ms": 3500, "available_at_ms": 6815, "text": "接下来给大家看一下这个橘子", "mentioned_classes": ["orange"], "cue_types": ["PRESENTATION_LANGUAGE", "REFERENCE_LANGUAGE", "INTRODUCTION_LANGUAGE"], "is_final": true}
+{"start_ms": 4100, "end_ms": 5840, "available_at_ms": 6815, "text": "它和苹果的表面不一样", "mentioned_classes": ["apple"], "cue_types": [], "is_final": true}
+{"start_ms": 6300, "end_ms": 8800, "available_at_ms": 12595, "text": "你们可以看到它有很多细小的纹理", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 9340, "end_ms": 11660, "available_at_ms": 12595, "text": "我撞动一下给大家看一下", "mentioned_classes": [], "cue_types": ["PRESENTATION_LANGUAGE"], "is_final": true}
+{"start_ms": 11960, "end_ms": 12740, "available_at_ms": 18367, "text": "不同角度", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 13320, "end_ms": 13820, "available_at_ms": 18367, "text": "好", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 13820, "end_ms": 15040, "available_at_ms": 18367, "text": "我先放到桌上", "mentioned_classes": [], "cue_types": [], "is_final": true}

@@ -1,0 +1,5 @@
+{"start_ms": 1300, "end_ms": 3060, "available_at_ms": 7021, "text": "大家先看一下这个苹果", "mentioned_classes": ["apple"], "cue_types": ["PRESENTATION_LANGUAGE", "REFERENCE_LANGUAGE", "INTRODUCTION_LANGUAGE"], "is_final": true}
+{"start_ms": 3580, "end_ms": 5040, "available_at_ms": 7021, "text": "颜色非常饱满", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 5040, "end_ms": 5920, "available_at_ms": 7021, "text": "吃起来", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 6020, "end_ms": 10120, "available_at_ms": 12433, "text": "汁水十足,酸甜可口,健康又美味", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 12010, "end_ms": 15470, "available_at_ms": 18051, "text": "苹果就先介绍到这里,我们继续聊一聊其他东西。", "mentioned_classes": ["apple"], "cue_types": ["ENDING_LANGUAGE"], "is_final": true}

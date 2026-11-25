@@ -1,0 +1,26 @@
+{
+  "version": "closed-set-v1",
+  "training_dataset": "COCO pretrained, 80 closed classes",
+  "imgsz": 1280,
+  "crop_imgsz": 960,
+  "confidence": 0.25,
+  "hand_crops": true,
+  "models": {
+    "yolo11n": {
+      "backend": "yolo",
+      "weights": "models/yolo11n.pt"
+    },
+    "yolo11m": {
+      "backend": "yolo",
+      "weights": "models/yolo11m.pt"
+    },
+    "yolo11l": {
+      "backend": "yolo",
+      "weights": "models/yolo11l.pt"
+    },
+    "rtdetr-l": {
+      "backend": "rtdetr",
+      "weights": "models/rtdetr-l.pt"
+    }
+  }
+}

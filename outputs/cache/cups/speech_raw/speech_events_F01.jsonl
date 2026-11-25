@@ -1,0 +1,12 @@
+{"start_ms": 590, "end_ms": 3510, "available_at_ms": 13155, "text": "这是我平常经常使用的三个杯子", "mentioned_classes": ["cup"], "cue_types": ["REFERENCE_LANGUAGE"], "is_final": true}
+{"start_ms": 3510, "end_ms": 5830, "available_at_ms": 13155, "text": "最大的这个看起来比较", "mentioned_classes": [], "cue_types": ["REFERENCE_LANGUAGE"], "is_final": true}
+{"start_ms": 6000, "end_ms": 6380, "available_at_ms": 77668, "text": "量感", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 6380, "end_ms": 8960, "available_at_ms": 77668, "text": "旁边还有一个黑色的提手", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 11940, "end_ms": 13340, "available_at_ms": 78843, "text": "的呢就紧缩一些", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 13980, "end_ms": 15740, "available_at_ms": 78843, "text": "盖子旁边也有一条绳子", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 15740, "end_ms": 17180, "available_at_ms": 78843, "text": "要是出门带着", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 17980, "end_ms": 19520, "available_at_ms": 85238, "text": "会更偏向这种小的", "mentioned_classes": [], "cue_types": ["REFERENCE_LANGUAGE"], "is_final": true}
+{"start_ms": 21530, "end_ms": 23770, "available_at_ms": 85238, "text": "最后这个是一个咖啡杯", "mentioned_classes": [], "cue_types": ["REFERENCE_LANGUAGE"], "is_final": true}
+{"start_ms": 23800, "end_ms": 26200, "available_at_ms": 149681, "text": "前面有一个蓝色的小图案", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 26200, "end_ms": 27600, "available_at_ms": 149681, "text": "有一个杯套", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 27600, "end_ms": 29180, "available_at_ms": 149681, "text": "拿起来比较舒服", "mentioned_classes": [], "cue_types": [], "is_final": true}

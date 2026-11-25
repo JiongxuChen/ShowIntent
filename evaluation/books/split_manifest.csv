@@ -1,0 +1,4 @@
+clip_id,participant_id,session_id,split,source_offset_ms,notes,allow_development_test,independence
+E01,,,test,0,User explicitly designates books as test despite prior development use; no independent-holdout claim,true,previously_used_for_development
+E02,,,test,0,User explicitly designates books as test despite prior development use; no independent-holdout claim,true,previously_used_for_development
+E03,,,test,0,User explicitly designates books as test despite prior development use; no independent-holdout claim,true,previously_used_for_development

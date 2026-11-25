@@ -1,4 +1,4 @@
-"""Create 1080x1920 portrait derivatives without touching original videos."""
+"""Create portrait 1080x1920 derivatives without touching original videos."""
 
 from __future__ import annotations
 
@@ -7,11 +7,11 @@ from pathlib import Path
 
 import cv2
 
-from .run import apply_rotation, open_capture_without_auto_rotation, resolve_rotation
+from .run import apply_rotation, resolve_rotation
 
 
 def convert(source: Path, destination: Path, width: int = 1080, height: int = 1920, rotate: str = "auto") -> None:
-    capture = open_capture_without_auto_rotation(str(source))
+    capture = cv2.VideoCapture(str(source))
     if not capture.isOpened():
         raise RuntimeError(f"Could not open {source}")
     fps = capture.get(cv2.CAP_PROP_FPS) or 30.0
@@ -26,10 +26,11 @@ def convert(source: Path, destination: Path, width: int = 1080, height: int = 19
                 break
             frame = apply_rotation(frame, rotation_code)
             if writer is None:
-                writer = cv2.VideoWriter(str(destination), cv2.VideoWriter_fourcc(*"mp4v"), fps, (width, height))
+                out_height, out_width = frame.shape[:2]
+                writer = cv2.VideoWriter(str(destination), cv2.VideoWriter_fourcc(*"mp4v"), fps, (out_width, out_height))
                 if not writer.isOpened():
                     raise RuntimeError(f"Could not create {destination}")
-            writer.write(cv2.resize(frame, (width, height), interpolation=cv2.INTER_AREA))
+            writer.write(cv2.resize(frame, (out_width, out_height), interpolation=cv2.INTER_AREA))
             frames += 1
     finally:
         capture.release()
@@ -39,7 +40,7 @@ def convert(source: Path, destination: Path, width: int = 1080, height: int = 19
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Downsample upright portrait ShowIntent videos")
+    parser = argparse.ArgumentParser(description="Downsample portrait ShowIntent videos")
     parser.add_argument("--input-dir", type=Path, required=True)
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--width", type=int, default=1080)

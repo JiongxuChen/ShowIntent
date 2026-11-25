@@ -55,7 +55,8 @@ class PickupBaseline:
     def update(self, packet: dict) -> dict:
         frame_id = int(packet.get("frame_id", 0))
         ts = int(packet.get("timestamp_ms", frame_id * 1000 // 30))
-        objects = {o["track_id"]: o for o in packet.get("objects", [])}
+        objects = {o["track_id"]: o for o in packet.get("objects", [])
+                   if o.get('class_name','').casefold() != 'person'}
         related_ids = {r.get("object_id") for r in packet.get("relations", [])}
 
         for track_id, obj in objects.items():

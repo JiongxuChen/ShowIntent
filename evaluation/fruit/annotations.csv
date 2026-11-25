@@ -1,0 +1,33 @@
+clip_id,event_id,start_ms,end_ms,physical_target_id,class_name,label,confidence,review_status,notes,annotator,reviewer
+A01,A01_draft_1,83,3650,,,NON_SHOWING,MEDIUM,REVIEWED,Original-video visual first pass; best estimated transition boundaries per user instruction; user review approved.,assistant_original_video_review,project_owner
+A01,A01_draft_2,3650,12600,apple_1,apple,SHOWING,MEDIUM,REVIEWED,Original-video visual first pass; best estimated transition boundaries per user instruction; user review approved.,assistant_original_video_review,project_owner
+A01,A01_draft_3,12600,15346,,,NON_SHOWING,MEDIUM,REVIEWED,Original-video visual first pass; best estimated transition boundaries per user instruction; user review approved.,assistant_original_video_review,project_owner
+A02,A02_draft_1,97,4400,,,NON_SHOWING,MEDIUM,REVIEWED,"Assistant reviewed all original-video contact sheets at 500ms spacing. Definite best-estimate transition boundary per user instruction, approved by user; no B output used.",assistant_original_video_review,project_owner
+A02,A02_draft_2,4400,14000,orange_1,orange,SHOWING,MEDIUM,REVIEWED,"Assistant reviewed all original-video contact sheets at 500ms spacing. Definite best-estimate transition boundary per user instruction, approved by user; no B output used.",assistant_original_video_review,project_owner
+A02,A02_draft_3,14000,18325,,,NON_SHOWING,MEDIUM,REVIEWED,"Assistant reviewed all original-video contact sheets at 500ms spacing. Definite best-estimate transition boundary per user instruction, approved by user; no B output used.",assistant_original_video_review,project_owner
+A03,A03_draft_1,74,3800,,,NON_SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。,assistant_original_video_review,project_owner
+A03,A03_draft_2,3800,10500,apple_1,apple,SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。,assistant_original_video_review,project_owner
+A03,A03_draft_3,10500,14937,,,NON_SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。,assistant_original_video_review,project_owner
+B01,B01_draft_1,0,15329,,,NON_SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。,assistant_original_video_review,project_owner
+B02,B02_draft_1,0,13296,,,NON_SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。,assistant_original_video_review,project_owner
+B03,B03_draft_1,0,13063,,,NON_SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。,assistant_original_video_review,project_owner
+C01,C01_draft_1,0,3300,,,NON_SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。,assistant_original_video_review,project_owner
+C01,C01_draft_2,3300,11700,apple_1,apple,SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。,assistant_original_video_review,project_owner
+C01,C01_draft_3,11700,17695,,,NON_SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。,assistant_original_video_review,project_owner
+C02,C02_draft_1,93,4400,,,NON_SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。,assistant_original_video_review,project_owner
+C02,C02_draft_2,4400,10450,apple_1,apple,SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。,assistant_original_video_review,project_owner
+C02,C02_draft_3,10450,13200,,,NON_SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。,assistant_original_video_review,project_owner
+C02,C02_draft_4,13200,22400,orange_1,orange,SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。,assistant_original_video_review,project_owner
+C02,C02_draft_5,22400,28886,,,NON_SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。,assistant_original_video_review,project_owner
+C03,C03_draft_1,93,2700,,,NON_SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。,assistant_original_video_review,project_owner
+C03,C03_draft_2,2700,15800,orange_1,orange,SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。,assistant_original_video_review,project_owner
+C03,C03_draft_3,15800,19687,,,NON_SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。,assistant_original_video_review,project_owner
+C04,C04_draft_1,74,3600,,,NON_SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。,assistant_original_video_review,project_owner
+C04,C04_draft_2,3600,14600,orange_1,orange,SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。,assistant_original_video_review,project_owner
+C04,C04_draft_3,14600,17936,,,NON_SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。,assistant_original_video_review,project_owner
+D01,D01_draft_1,43,14600,,,NON_SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。,assistant_original_video_review,project_owner
+D01,D01_draft_2,14600,28700,apple_1,apple,SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。,assistant_original_video_review,project_owner
+D01,D01_draft_3,28700,34700,,,NON_SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。,assistant_original_video_review,project_owner
+D01,D01_draft_4,34700,52300,orange_1,orange,SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。,assistant_original_video_review,project_owner
+D01,D01_draft_5,52300,56200,,,NON_SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。,assistant_original_video_review,project_owner
+D01,D01_draft_6,56200,67459,fruit_pair_1,fruit_group,SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。双手同时展示apple_1与orange_1，确认为展示；fruit_pair_1是组合目标，不可按单一物品身份评分。,assistant_original_video_review,project_owner

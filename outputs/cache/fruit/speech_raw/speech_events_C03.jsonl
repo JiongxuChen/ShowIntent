@@ -1,0 +1,6 @@
+{"start_ms": 1740, "end_ms": 3320, "available_at_ms": 6926, "text": "你们看一下这个举子", "mentioned_classes": [], "cue_types": ["PRESENTATION_LANGUAGE", "REFERENCE_LANGUAGE"], "is_final": true}
+{"start_ms": 4060, "end_ms": 5300, "available_at_ms": 6926, "text": "镜头展示的这一面", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 5300, "end_ms": 5760, "available_at_ms": 6926, "text": "虽然", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 5860, "end_ms": 11100, "available_at_ms": 12510, "text": "很多斑点,但这不影响品质,这是因为日照不足导致的。", "mentioned_classes": [], "cue_types": ["REFERENCE_LANGUAGE"], "is_final": true}
+{"start_ms": 12120, "end_ms": 14740, "available_at_ms": 18378, "text": "看一下这一面就没有很多斑点了", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 14740, "end_ms": 16920, "available_at_ms": 18378, "text": "整体情况就是这样", "mentioned_classes": [], "cue_types": [], "is_final": true}

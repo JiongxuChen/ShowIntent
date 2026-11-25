@@ -1,0 +1,17 @@
+{
+  "version": "drinks-v1-frozen-before-inference",
+  "annotation_interval": "half_open",
+  "event_iou_threshold": 0.3,
+  "physical_match_min_correct_overlap_fraction": 0.5,
+  "uncertain": "excluded; predictions clipped to reviewed intervals",
+  "prediction_end": "next perception timestamp; last packet not extrapolated",
+  "event_matching": "maximum-cardinality one-to-one; deterministic descending-IoU edge order",
+  "split_group": "recording_session",
+  "existing_material_split": "4 new drink clips kept as one new-scene test group",
+  "parameter_changes_after_test": "new protocol version required; report old and new separately",
+  "test_independence": "New scene before tuning; recording-session and participant independence unverified",
+  "dataset_revision": "4-new-drink-clips",
+  "excluded_clips": [],
+  "exclusion_reason": "",
+  "annotation_status": "ASSISTANT_ANNOTATED_PENDING_USER_REVIEW"
+}

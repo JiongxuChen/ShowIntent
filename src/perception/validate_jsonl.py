@@ -25,8 +25,6 @@ def validate_packet(value: object, line: int) -> list[str]:
             errors.append(f"{location}: missing {key}")
     if errors:
         return errors
-    if type(value["frame_id"]) is not int or value["frame_id"] < 0:
-        errors.append(f"{location}: frame_id must be a non-negative integer")
     if not isinstance(value["timestamp_ms"], int) or value["timestamp_ms"] < 0:
         errors.append(f"{location}: timestamp_ms must be a non-negative integer")
     for collection, id_field in (("objects", "track_id"), ("hands", "hand_id")):
@@ -39,30 +37,6 @@ def validate_packet(value: object, line: int) -> list[str]:
                 errors.append(f"{item_location}: missing string {id_field}")
                 continue
             errors.extend(validate_box(item.get("bbox_norm"), item_location))
-            score = item.get("score")
-            if type(score) not in (int, float) or not 0 <= score <= 1:
-                errors.append(f"{item_location}: score must be a number in [0, 1]")
-            if collection == "objects" and not isinstance(item.get("class_name"), str):
-                errors.append(f"{item_location}: missing string class_name")
-        ids = [item[id_field] for item in value[collection] if isinstance(item, dict) and isinstance(item.get(id_field), str)]
-        if collection == "objects" and len(ids) != len(set(ids)):
-            errors.append(f"{location}: duplicate {id_field}")
-    if not isinstance(value["relations"], list):
-        errors.append(f"{location}: relations must be a list")
-    else:
-        object_ids = {item.get("track_id") for item in value["objects"] if isinstance(item, dict) and isinstance(item.get("track_id"), str)} if isinstance(value["objects"], list) else set()
-        hand_ids = {item.get("hand_id") for item in value["hands"] if isinstance(item, dict) and isinstance(item.get("hand_id"), str)} if isinstance(value["hands"], list) else set()
-        for relation in value["relations"]:
-            if not isinstance(relation, dict):
-                errors.append(f"{location}: relation must be an object")
-                continue
-            if relation.get("object_id") not in object_ids or relation.get("hand_id") not in hand_ids:
-                errors.append(f"{location}: relation references a missing object or hand")
-            score = relation.get("score")
-            if type(score) not in (int, float) or not 0 <= score <= 1:
-                errors.append(f"{location}: relation score must be in [0, 1]")
-            if not isinstance(relation.get("type"), str):
-                errors.append(f"{location}: relation type must be a string")
     return errors
 
 

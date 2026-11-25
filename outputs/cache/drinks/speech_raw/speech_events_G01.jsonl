@@ -1,0 +1,14 @@
+{"start_ms": 1070, "end_ms": 4010, "available_at_ms": 71298, "text": "想买茉莉乌兰的朋友可以注意一下", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 4010, "end_ms": 5610, "available_at_ms": 71298, "text": "我这里拿到的是", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 6100, "end_ms": 6660, "available_at_ms": 77442, "text": "个版本", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 7380, "end_ms": 9800, "available_at_ms": 77442, "text": "光看外包装还挺容易混的", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 10360, "end_ms": 11920, "available_at_ms": 77442, "text": "这瓶是无糖的", "mentioned_classes": [], "cue_types": ["REFERENCE_LANGUAGE"], "is_final": true}
+{"start_ms": 12080, "end_ms": 16080, "available_at_ms": 84406, "text": "比较适合平时就爱喝不带甜味馋饮的人。", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 16380, "end_ms": 17980, "available_at_ms": 84406, "text": "而这瓶是无糖的,比较适合平时就爱喝不带甜味馋饮的人。", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 17920, "end_ms": 18560, "available_at_ms": 149018, "text": "微甜的", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 18560, "end_ms": 22240, "available_at_ms": 149018, "text": "如果你平时不太习惯完全没有甜味的茶", "mentioned_classes": [], "cue_types": ["NON_CURRENT_LANGUAGE"], "is_final": true}
+{"start_ms": 22240, "end_ms": 23780, "available_at_ms": 149018, "text": "就可以看看这个吧", "mentioned_classes": [], "cue_types": ["PRESENTATION_LANGUAGE", "REFERENCE_LANGUAGE"], "is_final": true}
+{"start_ms": 25180, "end_ms": 26940, "available_at_ms": 149697, "text": "两瓶都是茉莉乌龙", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 26940, "end_ms": 29040, "available_at_ms": 149697, "text": "所以去便利店购买的时候", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 29040, "end_ms": 29720, "available_at_ms": 149697, "text": "可", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 30200, "end_ms": 32360, "available_at_ms": 162357, "text": "别光凭包装颜色水", "mentioned_classes": [], "cue_types": [], "is_final": true}

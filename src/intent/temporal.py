@@ -1,4 +1,4 @@
-"""Causal visual triggering calibrated on the current development recordings.
+"""Shared visual/language intent transitions with optional peer evidence fusion.
 
 Combines lift/hand context, presentation-region geometry, bounded track links,
 robust motion and object-scale evidence. The public entry point is src.intent.run; no pretrained model is needed here.
@@ -11,6 +11,8 @@ from statistics import median
 from dataclasses import asdict, dataclass, field, replace
 
 from .types import IntentPacket, bbox_center
+from .fusion import EvidenceFusion, FusionConfig
+from src.perception.appearance_tracker import appearance_distance
 
 
 @dataclass(frozen=True)
@@ -85,11 +87,20 @@ class _Track:
     first_seen_ms: int = 0
     approach: bool = False
     cold_start_allowed: bool = False
+    appearance: list = field(default_factory=list)
 
 
 class TemporalIntentStateMachine:
-    def __init__(self, config: IntentConfig | None = None, **overrides) -> None:
+    def __init__(self, config: IntentConfig | None = None, *, fusion_config: FusionConfig | None = None,
+                 language_only: bool = False, **overrides) -> None:
         self.config = replace(config or IntentConfig(), **overrides)
+        self.fusion = EvidenceFusion(fusion_config) if fusion_config is not None else None
+        if language_only and self.fusion is None:
+            raise ValueError('language ablation requires speech fusion')
+        self.language_only=language_only
+        if self.fusion is not None:self.fusion.language_only=language_only
+        self._track_ids = {}
+        self._last_related = {}
         self.state = "NONE"
         self.target_id: str | None = None
         self._tracks: dict[str, _Track] = {}
@@ -105,6 +116,9 @@ class TemporalIntentStateMachine:
         self._next_hand = 0
         self._size_references: dict[str, dict[str, tuple[int, float]]] = {}
         self._session_start_ts: int | None = None
+        self.episode_id = None
+        self.episode_started_ms = None
+        self._episode_counter = 0
 
     def _observe_hands(self, ts: int, detections: list[dict]) -> None:
         # MediaPipe handedness is not an instance ID (both hands may be "left").
@@ -130,9 +144,30 @@ class TemporalIntentStateMachine:
             self._hand_centers[k]=(cx,cy);self._hand_anchors[k]=anchor
 
     def _packet(self, ts: int, score: float, reasons: list[str]) -> dict:
+        if self.fusion is not None:
+            self.fusion.diagnostics.update(episode_id=self.episode_id,episode_started_ms=self.episode_started_ms)
+            track = self._tracks.get(self.target_id)
+            if self.target_id not in self._last_related:
+                reasons = [r for r in reasons if r != 'HAND_OBJECT_ASSOCIATED']
+            if track is None or not self._raised(track):
+                reasons = [r for r in reasons if r != 'RAISED_IN_FRAME']
+            view = self.fusion.view(self.target_id)
+            if (view.get('speech', 0) or view.get('blocked') or view.get('ambiguous') or view.get('semantic_conflict')
+                    or 'SPEECH_REFERENT_RETURNED' in view.get('reasons', [])):
+                reasons = list(dict.fromkeys(reasons + view.get('reasons', [])))
+                score = 0. if view.get('blocked') or view.get('ambiguous') or view.get('semantic_conflict') else max(score, min(1., view.get('total', 0)))
         return IntentPacket(ts, self.state, self.target_id, score, reasons).to_dict()
 
     def _transition(self, state: str, ts: int, target: str | None = None) -> None:
+        if state=='NONE':
+            self.episode_id=self.episode_started_ms=None
+        elif state=='SHOWING' and self.episode_id is None:
+            self._episode_counter+=1
+            self.episode_id=f'episode_{self._episode_counter}'
+            track=self._tracks.get(target)
+            starts=[self._state_since]
+            if track is not None and track.related_since is not None:starts.append(track.related_since)
+            self.episode_started_ms=min(starts)
         self.state, self.target_id, self._state_since = state, target, ts
         self._candidate_lost_since = self._putdown_since = self._weak_since = None
 
@@ -141,7 +176,25 @@ class TemporalIntentStateMachine:
         return bool(track.points) and track.points[-1][2] < track.anchor_y - margin
 
     def _ready(self, track: _Track, ts: int) -> bool:
-        return track.qualified_since is not None and track.good_ms >= self.config.showing_min_ms
+        visual_ms=(max(self.config.showing_min_ms,self.fusion.config.visual_confirmation_ms)
+                   if self.fusion is not None else self.config.showing_min_ms)
+        visual_ready = (not self.language_only and track.qualified_since is not None
+                        and track.good_ms >= visual_ms)
+        if self.fusion is None:
+            return visual_ready
+        tid = self._track_ids.get(id(track))
+        if self.fusion.blocked(tid):
+            return False
+        view = self.fusion.view(tid)
+        if view.get('ambiguous'):
+            return False
+        return visual_ready or (view.get('speech', 0) > 0 and view.get('ready', False))
+
+    def _language_support(self, tid):
+        if self.fusion is None:
+            return False
+        view = self.fusion.view(tid)
+        return view.get('speech', 0) > 0 and view.get('supported', False) and not view.get('ambiguous')
 
     def _observe(self, ts: int, objects: dict, related: dict) -> None:
         cfg = self.config
@@ -166,6 +219,8 @@ class TemporalIntentStateMachine:
                     continue
                 if old_id == self.target_id and self.state in ('SHOWING', 'ENDING'):
                     continue
+                visual_distance=appearance_distance(old.appearance,obj.get('appearance',[]))
+                if visual_distance is not None and visual_distance>.5:continue
                 distance = math.hypot(cx-old.points[-1][1], cy-old.points[-1][2])
                 if ts-old.last_seen_ms <= cfg.prelink_max_ms and distance <= cfg.prelink_max_dist:
                     options.append((distance, old_id, old))
@@ -204,6 +259,7 @@ class TemporalIntentStateMachine:
             previous = track.points[-1] if track.points else None
             track.anchor_y = max(track.anchor_y, cy)
             track.class_name = obj.get("class_name", "")
+            track.appearance=obj.get('appearance',[])
             track.last_seen_ms = ts
             track.points.append((ts, cx, cy))
             track.points[:] = [p for p in track.points if ts - p[0] <= cfg.history_window_ms]
@@ -264,12 +320,19 @@ class TemporalIntentStateMachine:
     def _best(self, ts: int, objects: dict, related: dict) -> str | None:
         candidates = [tid for tid in objects if tid in related and self._tracks[tid].related_since is not None
                       and ts - self._tracks[tid].related_since >= self.config.candidate_min_ms]
+        if self.fusion is not None:
+            candidates = [tid for tid in candidates if not self.fusion.blocked(tid)]
+            candidates += [tid for tid in objects if tid not in candidates
+                           and self.fusion.view(tid).get('speech', 0) > 0
+                           and self.fusion.view(tid).get('candidate', False)]
         if not candidates:
             return None
+        has_language=bool(self.fusion and any(self.fusion.view(tid).get('speech',0)>0 for tid in candidates))
         def rank(tid):
             track = self._tracks[tid]
             progress = 0 if track.qualified_since is None else ts - track.qualified_since
-            return (self._ready(track, ts), progress, track.lift_seen and self._raised(track), related[tid])
+            support = self.fusion.view(tid).get('total', 0) if has_language else 0
+            return (self._ready(track, ts), support, progress, track.lift_seen and self._raised(track), related.get(tid, 0.))
         return max(candidates, key=rank)
 
     def _candidate_reasons(self, track: _Track, ts: int) -> list[str]:
@@ -294,6 +357,8 @@ class TemporalIntentStateMachine:
         return reasons
 
     def _relink(self, ts: int, objects: dict, related: dict) -> str | None:
+        if self.fusion is not None and self.fusion.blocked(self.target_id):
+            return None
         original = self._tracks.get(self.target_id)
         if original is None or not original.points or ts - original.last_seen_ms > self.config.relink_max_ms:
             return None
@@ -303,6 +368,8 @@ class TemporalIntentStateMachine:
         for tid, obj in objects.items():
             if tid == self.target_id or tid not in related or not original.class_name or obj.get("class_name") != original.class_name:
                 continue
+            visual_distance=appearance_distance(original.appearance,obj.get('appearance',[]))
+            if visual_distance is not None and visual_distance>.5:continue
             cx, cy = bbox_center(obj["bbox_norm"])
             distance = math.hypot(cx - ox, cy - oy)
             if distance <= best_distance and cy < min(self.config.display_region_max_y, original.anchor_y - self.config.raise_margin):
@@ -315,7 +382,7 @@ class TemporalIntentStateMachine:
             track.anchor_y, track.lift_seen = original.anchor_y, True
         return best
 
-    def update(self, packet: dict) -> dict:
+    def update(self, packet: dict, *, speech_evidence: dict | None = None) -> dict:
         ts = packet.get("timestamp_ms")
         if isinstance(ts, bool) or not isinstance(ts, int) or ts < 0:
             raise ValueError("timestamp_ms must be a non-negative integer")
@@ -324,6 +391,9 @@ class TemporalIntentStateMachine:
         gap = self._last_ts is not None and ts - self._last_ts > self.config.observation_gap_ms
         if gap:
             self._transition("NONE", ts)
+            if self.fusion is not None:
+                self.fusion.reset()
+                self.fusion.language_only=self.language_only
             self._tracks.clear()
             self._hand_anchors.clear()
             self._hand_tracks.clear()
@@ -332,7 +402,9 @@ class TemporalIntentStateMachine:
         if self._session_start_ts is None or gap:
             self._session_start_ts = ts
         self._observe_hands(ts, packet.get('hands', []))
-        objects = {o["track_id"]: o for o in packet.get("objects", [])}
+        # Person detections remain in A's facts, but a presenter is not an item target.
+        objects = {o["track_id"]: o for o in packet.get("objects", [])
+                   if o.get('class_name', '').casefold() != 'person'}
         related = {}
         for rel in packet.get("relations", []):
             score = rel.get("score", 0.)
@@ -341,12 +413,29 @@ class TemporalIntentStateMachine:
                     and isinstance(score, (int, float)) and math.isfinite(score)
                     and self.config.relation_min_score <= score <= 1):
                 related[tid] = max(related.get(tid, 0.), score)
+        self._last_related = related
         self._observe(ts, objects, related)
+        self._track_ids = {id(track): tid for tid, track in self._tracks.items()}
+        if self.fusion is not None:
+            self.fusion.update(ts, objects, self._tracks, related, self.target_id,
+                               speech_evidence, self._raised,
+                               confirmed=self.target_id if self.state in ('SHOWING', 'ENDING') else None,
+                               episode_started_ms=self.episode_started_ms)
+            if self.fusion.blocked(self.target_id) and self.state in ('SHOWING', 'CANDIDATE'):
+                was_showing = self.state == 'SHOWING'
+                self._transition('ENDING' if was_showing else 'NONE', ts,
+                                 self.target_id if was_showing else None)
+                reasons = (['CROSS_MODAL_CATEGORY_MISMATCH'] if self.fusion.view(self.target_id).get('semantic_conflict') else ['SPEECH_STOP'])
+                if self.fusion.view(self.target_id).get('visual_full', False):
+                    reasons.append('CROSS_MODAL_CONFLICT')
+                return self._packet(ts, 0., reasons)
+        elif speech_evidence is not None:
+            raise ValueError('speech evidence requires fusion_config')
         if self.state == "NONE":
             best = self._best(ts, objects, related)
             if best is not None:
                 self._transition("CANDIDATE", ts, best)
-                return self._packet(ts, related[best], self._candidate_reasons(self._tracks[best], ts))
+                return self._packet(ts, related.get(best, 0.), self._candidate_reasons(self._tracks[best], ts))
             return self._packet(ts, 0., ["EVIDENCE_GAP" if gap else "INSUFFICIENT_EVIDENCE"])
         if self.state == "CANDIDATE":
             best = self._best(ts, objects, related)
@@ -356,8 +445,8 @@ class TemporalIntentStateMachine:
                     and (current is None or not self._ready(current, ts))
                     and ts - self._state_since >= self.config.candidate_switch_ms):
                 self._transition("CANDIDATE", ts, best)
-                return self._packet(ts, related[best], ["CANDIDATE_REPLACED"] + self._candidate_reasons(self._tracks[best], ts))
-            if self.target_id not in related:
+                return self._packet(ts, related.get(best, 0.), ["CANDIDATE_REPLACED"] + self._candidate_reasons(self._tracks[best], ts))
+            if self.target_id not in related and not self._language_support(self.target_id):
                 if self._candidate_lost_since is None:
                     self._candidate_lost_since = ts
                 if ts - self._candidate_lost_since >= self.config.candidate_decay_ms:
@@ -365,10 +454,10 @@ class TemporalIntentStateMachine:
                 return self._packet(ts, 0., ["INSUFFICIENT_EVIDENCE"])
             self._candidate_lost_since = None
             if current is not None and self._ready(current, ts):
-                self._last_score = related[self.target_id]
+                self._last_score = related.get(self.target_id, 0.)
                 self._transition("SHOWING", ts, self.target_id)
                 return self._packet(ts, self._last_score, self._candidate_reasons(current, ts))
-            return self._packet(ts, related[self.target_id], self._candidate_reasons(current, ts))
+            return self._packet(ts, related.get(self.target_id, 0.), self._candidate_reasons(current, ts))
         if self.state == "SHOWING":
             track = self._tracks[self.target_id]
             if self.target_id not in objects:
@@ -382,7 +471,7 @@ class TemporalIntentStateMachine:
                 return self._packet(ts, self._last_score, ["TARGET_LOST"])
             self._last_score = related.get(self.target_id, 0.)
             on_table = track.points[-1][2] >= track.anchor_y - self.config.putdown_margin
-            if on_table:
+            if on_table and not self._language_support(self.target_id):
                 if self._putdown_since is None:
                     self._putdown_since = ts
                 if ts - self._putdown_since >= self.config.putdown_min_ms:
@@ -392,6 +481,7 @@ class TemporalIntentStateMachine:
                 self._putdown_since = None
             weak = (self.target_id not in related or (track.moving and not track.approach)
                     or not self._raised(track) or track.points[-1][2]>=self.config.display_exit_y)
+            weak = weak and not self._language_support(self.target_id)
             if weak:
                 if self._weak_since is None:
                     self._weak_since = ts
@@ -406,8 +496,9 @@ class TemporalIntentStateMachine:
             self._transition("NONE", ts)
             return self._packet(ts, 0., ["ENDING_TIMEOUT"])
         track = self._tracks.get(self.target_id)
-        if self.target_id in objects and self.target_id in related and track is not None and self._ready(track, ts):
-            self._last_score = related[self.target_id]
+        if (self.target_id in objects and (self.target_id in related or self._language_support(self.target_id))
+                and track is not None and self._ready(track, ts)):
+            self._last_score = related.get(self.target_id, 0.)
             self._transition("SHOWING", ts, self.target_id)
             return self._packet(ts, self._last_score, ["TEMPORAL_HOLD", "TARGET_RESUMED"])
         if self.target_id not in objects:

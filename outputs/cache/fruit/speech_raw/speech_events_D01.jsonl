@@ -1,0 +1,23 @@
+{"start_ms": 1040, "end_ms": 5780, "available_at_ms": 7084, "text": "大家好,今天我们来简单看一下两种日常水果", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 5900, "end_ms": 7980, "available_at_ms": 12730, "text": "就是苹果和橘子。", "mentioned_classes": ["apple", "orange"], "cue_types": [], "is_final": true}
+{"start_ms": 8320, "end_ms": 10180, "available_at_ms": 12730, "text": "我们先来看一下它们的外观,", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 10280, "end_ms": 11980, "available_at_ms": 12730, "text": "等会再比较有什么不一样。", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 12680, "end_ms": 14720, "available_at_ms": 26342, "text": "先给大家看一下这个苹果", "mentioned_classes": ["apple"], "cue_types": ["PRESENTATION_LANGUAGE", "REFERENCE_LANGUAGE"], "is_final": true}
+{"start_ms": 14720, "end_ms": 16060, "available_at_ms": 26342, "text": "你们可以看到", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 16060, "end_ms": 17980, "available_at_ms": 26342, "text": "它的颜色非常鲜艳", "mentioned_classes": [], "cue_types": ["ATTRIBUTE_LANGUAGE"], "is_final": true}
+{"start_ms": 18060, "end_ms": 23980, "available_at_ms": 28156, "text": "表面看起来非常光滑,我把苹果慢慢转过来,大家可以看看它另一面。", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 24000, "end_ms": 24540, "available_at_ms": 30513, "text": "面的样子", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 24540, "end_ms": 25580, "available_at_ms": 30513, "text": "整体上看", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 25580, "end_ms": 27940, "available_at_ms": 30513, "text": "这个苹果的形状非常圆润", "mentioned_classes": ["apple"], "cue_types": ["REFERENCE_LANGUAGE"], "is_final": true}
+{"start_ms": 29220, "end_ms": 29660, "available_at_ms": 30513, "text": "好", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 30080, "end_ms": 35500, "available_at_ms": 36459, "text": "果的外观我们先介绍到这里,接下来我们看一下这个橘子,大家可以看到。", "mentioned_classes": ["orange"], "cue_types": ["PRESENTATION_LANGUAGE", "REFERENCE_LANGUAGE", "INTRODUCTION_LANGUAGE"], "is_final": true}
+{"start_ms": 36170, "end_ms": 36970, "available_at_ms": 42504, "text": "苹果相比", "mentioned_classes": ["apple"], "cue_types": [], "is_final": true}
+{"start_ms": 36970, "end_ms": 39950, "available_at_ms": 42504, "text": "橘子的表面就有很多细小的斑点了", "mentioned_classes": ["orange"], "cue_types": [], "is_final": true}
+{"start_ms": 40410, "end_ms": 41670, "available_at_ms": 42504, "text": "我慢慢转动一下", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 42420, "end_ms": 44600, "available_at_ms": 48465, "text": "让大家看看橘子的不同角度", "mentioned_classes": ["orange"], "cue_types": ["PRESENTATION_LANGUAGE"], "is_final": true}
+{"start_ms": 45140, "end_ms": 47800, "available_at_ms": 48465, "text": "大家可以看到侧面其实也有很多", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 47840, "end_ms": 48840, "available_at_ms": 54471, "text": "类似的斑点", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 48840, "end_ms": 51840, "available_at_ms": 54471, "text": "但这都完全不影响橘子的品质", "mentioned_classes": ["orange"], "cue_types": [], "is_final": true}
+{"start_ms": 53990, "end_ms": 59970, "available_at_ms": 60519, "text": "种水果都是大家比较熟悉的东西,但它们的表面纹理和整体外观还是不一样的。", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 59880, "end_ms": 61020, "available_at_ms": 66439, "text": "有明显区别的", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 61760, "end_ms": 64160, "available_at_ms": 66439, "text": "今天就先给大家展示到这里", "mentioned_classes": [], "cue_types": ["ENDING_LANGUAGE"], "is_final": true}

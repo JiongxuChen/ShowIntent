@@ -1,0 +1,10 @@
+{
+  "visual_weight": 1.0,
+  "speech_weight": 2.0,
+  "support_threshold": 1.0,
+  "candidate_threshold": 0.5,
+  "confirmation_ms": 350,
+  "return_margin": 0.06,
+  "visual_full_strength": 1.0,
+  "visual_confirmation_ms": 600
+}

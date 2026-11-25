@@ -1,0 +1,14 @@
+{
+  "excluded": [
+    {
+      "clip_id": "A04",
+      "source_path": "Example_Data1/A04.mp4",
+      "reason": "用户要求排除：无声展示与A03场景相近，仅物品不同",
+      "raw_file_preserved": true
+    }
+  ],
+  "snapshot": "evaluation/history/before_A04_exclusion",
+  "active_clips": 14,
+  "development_clips": 11,
+  "test_clips": 3
+}

@@ -1,0 +1,4 @@
+{"start_ms": 1680, "end_ms": 4380, "available_at_ms": 6658, "text": "大家可以看一下这个举者的表皮", "mentioned_classes": [], "cue_types": ["PRESENTATION_LANGUAGE", "REFERENCE_LANGUAGE"], "is_final": true}
+{"start_ms": 7520, "end_ms": 10540, "available_at_ms": 12328, "text": "虽然这个表皮有很多黑点", "mentioned_classes": [], "cue_types": ["REFERENCE_LANGUAGE"], "is_final": true}
+{"start_ms": 10540, "end_ms": 11580, "available_at_ms": 12328, "text": "但是这完全", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 11960, "end_ms": 13960, "available_at_ms": 18252, "text": "影响我们橘子的品质", "mentioned_classes": ["orange"], "cue_types": [], "is_final": true}

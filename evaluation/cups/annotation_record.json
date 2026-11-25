@@ -1,0 +1,78 @@
+{
+  "phase": "BEFORE_MODEL_INFERENCE",
+  "annotations_sha256": "8039061785030f14a751cd146a486dc3dfdf856be3f8580c40a94a24465b5e49",
+  "video_sha256": {
+    "F04": "da76fcb35d29c8362bfa61b5008e4cd5a8c0d150aea360d0c95f110654191af0",
+    "F03": "6599df8a0a20aca1829870c05b72e8b4c84244ff5f6e5a022f165cc07cc941df",
+    "F02": "608569edfd609ba41d6b2105b0386ee185842260bc3f60e9277ef9fe088e9dd5",
+    "F01": "9dd94cc7906869427facd159a5a3cb42886f87713bda6e19480e1ff1a1acaf0e"
+  },
+  "label_source": "Original video images only; not ASR or B predictions",
+  "human_review": false,
+  "annotation_scope": "Definite visual display intervals, non-display handling/desk work excluded",
+  "sheet_manifest": "outputs/cups_annotation_sheets/manifest.json",
+  "boundary_sampling_ms": 250,
+  "whole_clip_sampling_ms": 1000,
+  "boundary_review_windows_ms": {
+    "F02": [
+      [
+        250,
+        1750
+      ],
+      [
+        14000,
+        16500
+      ]
+    ],
+    "F01": [
+      [
+        3750,
+        5500
+      ],
+      [
+        9000,
+        12250
+      ],
+      [
+        19000,
+        23250
+      ],
+      [
+        28500,
+        31000
+      ]
+    ]
+  },
+  "cup_identity_descriptions": {
+    "cup_patterned_small": "浅色矮杯，杯身有彩色图案",
+    "cup_cream_tall": "米色高杯",
+    "cup_white_black_lid": "白色高杯，黑色盖与把手"
+  },
+  "audio_streams": {
+    "F04": [
+      {
+        "codec": "aac",
+        "sample_rate": 44100
+      }
+    ],
+    "F03": [
+      {
+        "codec": "aac",
+        "sample_rate": 44100
+      }
+    ],
+    "F02": [
+      {
+        "codec": "aac",
+        "sample_rate": 44100
+      }
+    ],
+    "F01": [
+      {
+        "codec": "aac",
+        "sample_rate": 44100
+      }
+    ]
+  },
+  "release_revision": "identifier rename only; temporal labels unchanged"
+}

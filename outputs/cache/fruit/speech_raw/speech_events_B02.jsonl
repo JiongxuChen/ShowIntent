@@ -1,0 +1,4 @@
+{"start_ms": 1200, "end_ms": 3300, "available_at_ms": 6817, "text": "接下来我先整理一下桌面", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 3300, "end_ms": 5060, "available_at_ms": 6817, "text": "把这个苹果挪过去", "mentioned_classes": ["apple"], "cue_types": ["REFERENCE_LANGUAGE"], "is_final": true}
+{"start_ms": 5060, "end_ms": 5940, "available_at_ms": 6817, "text": "才出现", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 5940, "end_ms": 11080, "available_at_ms": 12505, "text": "空间,把接下来要分享的橘子挪过来,等会再正式介绍。", "mentioned_classes": [], "cue_types": [], "is_final": true}

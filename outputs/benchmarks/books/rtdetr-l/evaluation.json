@@ -1,0 +1,547 @@
+{
+  "scope": "BINARY_TEMPORAL_DETECTOR_COMPARISON_NOT_mAP_NOT_INSTANCE_ACCURACY",
+  "physical_metrics": null,
+  "physical_metric_status": "NEW_DETECTOR_MAPPING_PENDING",
+  "collection": "books",
+  "clips": {
+    "E01": {
+      "visual-only": {
+        "temporal_events": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "positive_ms": 22900,
+        "negative_ms": 17430,
+        "false_showing_ms": 2727,
+        "showing_ms": 24098,
+        "matched_boundary_errors": [
+          {
+            "event_id": "E01_draft_2",
+            "start_error_ms": 965,
+            "end_error_ms": 1364
+          },
+          {
+            "event_id": "E01_draft_4",
+            "start_error_ms": 564,
+            "end_error_ms": 1363
+          }
+        ]
+      },
+      "showintent": {
+        "temporal_events": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "positive_ms": 22900,
+        "negative_ms": 17430,
+        "false_showing_ms": 2727,
+        "showing_ms": 24098,
+        "matched_boundary_errors": [
+          {
+            "event_id": "E01_draft_2",
+            "start_error_ms": 965,
+            "end_error_ms": 1364
+          },
+          {
+            "event_id": "E01_draft_4",
+            "start_error_ms": 564,
+            "end_error_ms": 1363
+          }
+        ]
+      }
+    },
+    "E02": {
+      "visual-only": {
+        "temporal_events": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "positive_ms": 41600,
+        "negative_ms": 41260,
+        "false_showing_ms": 7791,
+        "showing_ms": 48064,
+        "matched_boundary_errors": [
+          {
+            "event_id": "E02_draft_2",
+            "start_error_ms": 732,
+            "end_error_ms": 1465
+          },
+          {
+            "event_id": "E02_draft_4",
+            "start_error_ms": -802,
+            "end_error_ms": 1564
+          },
+          {
+            "event_id": "E02_draft_6",
+            "start_error_ms": -170,
+            "end_error_ms": 1363
+          },
+          {
+            "event_id": "E02_draft_8",
+            "start_error_ms": -71,
+            "end_error_ms": 1162
+          },
+          {
+            "event_id": "E02_draft_10",
+            "start_error_ms": 595,
+            "end_error_ms": 1194
+          }
+        ]
+      },
+      "showintent": {
+        "temporal_events": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "positive_ms": 41600,
+        "negative_ms": 41260,
+        "false_showing_ms": 7791,
+        "showing_ms": 48064,
+        "matched_boundary_errors": [
+          {
+            "event_id": "E02_draft_2",
+            "start_error_ms": 732,
+            "end_error_ms": 1465
+          },
+          {
+            "event_id": "E02_draft_4",
+            "start_error_ms": -802,
+            "end_error_ms": 1564
+          },
+          {
+            "event_id": "E02_draft_6",
+            "start_error_ms": -170,
+            "end_error_ms": 1363
+          },
+          {
+            "event_id": "E02_draft_8",
+            "start_error_ms": -71,
+            "end_error_ms": 1162
+          },
+          {
+            "event_id": "E02_draft_10",
+            "start_error_ms": 595,
+            "end_error_ms": 1194
+          }
+        ]
+      }
+    },
+    "E03": {
+      "visual-only": {
+        "temporal_events": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "positive_ms": 29200,
+        "negative_ms": 27362,
+        "false_showing_ms": 5061,
+        "showing_ms": 33531,
+        "matched_boundary_errors": [
+          {
+            "event_id": "E03_draft_2",
+            "start_error_ms": 332,
+            "end_error_ms": 1465
+          },
+          {
+            "event_id": "E03_draft_4",
+            "start_error_ms": 398,
+            "end_error_ms": 1363
+          },
+          {
+            "event_id": "E03_draft_6",
+            "start_error_ms": -1237,
+            "end_error_ms": 996
+          }
+        ]
+      },
+      "showintent": {
+        "temporal_events": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "positive_ms": 29200,
+        "negative_ms": 27362,
+        "false_showing_ms": 5061,
+        "showing_ms": 33531,
+        "matched_boundary_errors": [
+          {
+            "event_id": "E03_draft_2",
+            "start_error_ms": 332,
+            "end_error_ms": 1465
+          },
+          {
+            "event_id": "E03_draft_4",
+            "start_error_ms": 398,
+            "end_error_ms": 1363
+          },
+          {
+            "event_id": "E03_draft_6",
+            "start_error_ms": -1237,
+            "end_error_ms": 996
+          }
+        ]
+      }
+    }
+  },
+  "summary": {
+    "visual-only": {
+      "events": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "temporal_coverage": 0.9617289220917823,
+      "false_seconds": 15.579,
+      "false_seconds_per_negative_minute": 10.862501743132059,
+      "boundary_mae_ms": {
+        "start": 586.6,
+        "end": 1329.9
+      }
+    },
+    "showintent": {
+      "events": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "temporal_coverage": 0.9617289220917823,
+      "false_seconds": 15.579,
+      "false_seconds_per_negative_minute": 10.862501743132059,
+      "boundary_mae_ms": {
+        "start": 586.6,
+        "end": 1329.9
+      }
+    }
+  },
+  "processing_metrics": {
+    "E01": {
+      "frames_processed": 1211,
+      "elapsed_seconds": 370.16557170264423,
+      "processing_fps": 3.271509001849589,
+      "class_policy": "all_detector_classes",
+      "adapter": "enhanced_hand_crops_appearance",
+      "detector_classes": [
+        "person",
+        "bicycle",
+        "car",
+        "motorcycle",
+        "airplane",
+        "bus",
+        "train",
+        "truck",
+        "boat",
+        "traffic light",
+        "fire hydrant",
+        "stop sign",
+        "parking meter",
+        "bench",
+        "bird",
+        "cat",
+        "dog",
+        "horse",
+        "sheep",
+        "cow",
+        "elephant",
+        "bear",
+        "zebra",
+        "giraffe",
+        "backpack",
+        "umbrella",
+        "handbag",
+        "tie",
+        "suitcase",
+        "frisbee",
+        "skis",
+        "snowboard",
+        "sports ball",
+        "kite",
+        "baseball bat",
+        "baseball glove",
+        "skateboard",
+        "surfboard",
+        "tennis racket",
+        "bottle",
+        "wine glass",
+        "cup",
+        "fork",
+        "knife",
+        "spoon",
+        "bowl",
+        "banana",
+        "apple",
+        "sandwich",
+        "orange",
+        "broccoli",
+        "carrot",
+        "hot dog",
+        "pizza",
+        "donut",
+        "cake",
+        "chair",
+        "couch",
+        "potted plant",
+        "bed",
+        "dining table",
+        "toilet",
+        "tv",
+        "laptop",
+        "mouse",
+        "remote",
+        "keyboard",
+        "cell phone",
+        "microwave",
+        "oven",
+        "toaster",
+        "sink",
+        "refrigerator",
+        "book",
+        "clock",
+        "vase",
+        "scissors",
+        "teddy bear",
+        "hair drier",
+        "toothbrush"
+      ],
+      "timestamp_source": "decoded_video_pts",
+      "crop_inference_calls": 2802,
+      "rotation_applied": "cw",
+      "width": 2160,
+      "height": 3840,
+      "yolo_model": "models/rtdetr-l.pt",
+      "imgsz": 1280,
+      "crop_imgsz": 960,
+      "detector_backend": "rtdetr",
+      "device": "0"
+    },
+    "E02": {
+      "frames_processed": 2487,
+      "elapsed_seconds": 578.2711589001119,
+      "processing_fps": 4.300750541891704,
+      "class_policy": "all_detector_classes",
+      "adapter": "enhanced_hand_crops_appearance",
+      "detector_classes": [
+        "person",
+        "bicycle",
+        "car",
+        "motorcycle",
+        "airplane",
+        "bus",
+        "train",
+        "truck",
+        "boat",
+        "traffic light",
+        "fire hydrant",
+        "stop sign",
+        "parking meter",
+        "bench",
+        "bird",
+        "cat",
+        "dog",
+        "horse",
+        "sheep",
+        "cow",
+        "elephant",
+        "bear",
+        "zebra",
+        "giraffe",
+        "backpack",
+        "umbrella",
+        "handbag",
+        "tie",
+        "suitcase",
+        "frisbee",
+        "skis",
+        "snowboard",
+        "sports ball",
+        "kite",
+        "baseball bat",
+        "baseball glove",
+        "skateboard",
+        "surfboard",
+        "tennis racket",
+        "bottle",
+        "wine glass",
+        "cup",
+        "fork",
+        "knife",
+        "spoon",
+        "bowl",
+        "banana",
+        "apple",
+        "sandwich",
+        "orange",
+        "broccoli",
+        "carrot",
+        "hot dog",
+        "pizza",
+        "donut",
+        "cake",
+        "chair",
+        "couch",
+        "potted plant",
+        "bed",
+        "dining table",
+        "toilet",
+        "tv",
+        "laptop",
+        "mouse",
+        "remote",
+        "keyboard",
+        "cell phone",
+        "microwave",
+        "oven",
+        "toaster",
+        "sink",
+        "refrigerator",
+        "book",
+        "clock",
+        "vase",
+        "scissors",
+        "teddy bear",
+        "hair drier",
+        "toothbrush"
+      ],
+      "timestamp_source": "decoded_video_pts",
+      "crop_inference_calls": 4960,
+      "rotation_applied": "cw",
+      "width": 2160,
+      "height": 3840,
+      "yolo_model": "models/rtdetr-l.pt",
+      "imgsz": 1280,
+      "crop_imgsz": 960,
+      "detector_backend": "rtdetr",
+      "device": "0"
+    },
+    "E03": {
+      "frames_processed": 1698,
+      "elapsed_seconds": 399.71693962812424,
+      "processing_fps": 4.248006105469862,
+      "class_policy": "all_detector_classes",
+      "adapter": "enhanced_hand_crops_appearance",
+      "detector_classes": [
+        "person",
+        "bicycle",
+        "car",
+        "motorcycle",
+        "airplane",
+        "bus",
+        "train",
+        "truck",
+        "boat",
+        "traffic light",
+        "fire hydrant",
+        "stop sign",
+        "parking meter",
+        "bench",
+        "bird",
+        "cat",
+        "dog",
+        "horse",
+        "sheep",
+        "cow",
+        "elephant",
+        "bear",
+        "zebra",
+        "giraffe",
+        "backpack",
+        "umbrella",
+        "handbag",
+        "tie",
+        "suitcase",
+        "frisbee",
+        "skis",
+        "snowboard",
+        "sports ball",
+        "kite",
+        "baseball bat",
+        "baseball glove",
+        "skateboard",
+        "surfboard",
+        "tennis racket",
+        "bottle",
+        "wine glass",
+        "cup",
+        "fork",
+        "knife",
+        "spoon",
+        "bowl",
+        "banana",
+        "apple",
+        "sandwich",
+        "orange",
+        "broccoli",
+        "carrot",
+        "hot dog",
+        "pizza",
+        "donut",
+        "cake",
+        "chair",
+        "couch",
+        "potted plant",
+        "bed",
+        "dining table",
+        "toilet",
+        "tv",
+        "laptop",
+        "mouse",
+        "remote",
+        "keyboard",
+        "cell phone",
+        "microwave",
+        "oven",
+        "toaster",
+        "sink",
+        "refrigerator",
+        "book",
+        "clock",
+        "vase",
+        "scissors",
+        "teddy bear",
+        "hair drier",
+        "toothbrush"
+      ],
+      "timestamp_source": "decoded_video_pts",
+      "crop_inference_calls": 3297,
+      "rotation_applied": "cw",
+      "width": 2160,
+      "height": 3840,
+      "yolo_model": "models/rtdetr-l.pt",
+      "imgsz": 1280,
+      "crop_imgsz": 960,
+      "detector_backend": "rtdetr",
+      "device": "0"
+    }
+  },
+  "b_profile": "baseline",
+  "evaluation_scope": "Fixed detector comparison configuration; see docs/model_comparison.md"
+}

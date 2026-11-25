@@ -1,0 +1,18 @@
+{
+  "version": "audio-priority-v1",
+  "hand_memory_ms": 3000,
+  "profiles": {
+    "speech_priority": {
+      "visual_confirmation_ms": 600,
+      "speech_weight": 2.0,
+      "confirmation_ms": 350
+    },
+    "conservative_visual": {
+      "visual_confirmation_ms": 1200,
+      "speech_weight": 2.0,
+      "confirmation_ms": 350
+    }
+  },
+  "speech_delay_control_ms": 5000,
+  "scope": "Development experiment; preserve the original visual and audiovisual reference results"
+}

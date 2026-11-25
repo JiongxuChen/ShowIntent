@@ -1,0 +1,7 @@
+{"start_ms": 1170, "end_ms": 1790, "available_at_ms": 7720, "text": "大家好", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 2250, "end_ms": 4050, "available_at_ms": 7720, "text": "先给大家看一下这个苹果", "mentioned_classes": ["apple"], "cue_types": ["PRESENTATION_LANGUAGE", "REFERENCE_LANGUAGE"], "is_final": true}
+{"start_ms": 4050, "end_ms": 5690, "available_at_ms": 7720, "text": "你们看它的颜色", "mentioned_classes": [], "cue_types": ["ATTRIBUTE_LANGUAGE"], "is_final": true}
+{"start_ms": 5780, "end_ms": 7300, "available_at_ms": 12448, "text": "表面比较光滑", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 7300, "end_ms": 10840, "available_at_ms": 12448, "text": "我慢慢转过来,让大家看看背面", "mentioned_classes": [], "cue_types": ["PRESENTATION_LANGUAGE"], "is_final": true}
+{"start_ms": 11900, "end_ms": 12240, "available_at_ms": 15682, "text": "好", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 12240, "end_ms": 13720, "available_at_ms": 15682, "text": "这个苹果先放在这里", "mentioned_classes": ["apple"], "cue_types": ["REFERENCE_LANGUAGE"], "is_final": true}

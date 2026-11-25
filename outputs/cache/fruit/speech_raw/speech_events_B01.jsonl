@@ -1,0 +1,7 @@
+{"start_ms": 1330, "end_ms": 3930, "available_at_ms": 6839, "text": "今天桌上准备了苹果和橘子", "mentioned_classes": ["apple", "orange"], "cue_types": [], "is_final": true}
+{"start_ms": 3930, "end_ms": 5970, "available_at_ms": 6839, "text": "这是大家平时最常见的水果", "mentioned_classes": [], "cue_types": ["REFERENCE_LANGUAGE"], "is_final": true}
+{"start_ms": 5980, "end_ms": 6200, "available_at_ms": 12719, "text": "果", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 6200, "end_ms": 8020, "available_at_ms": 12719, "text": "我们等一下会分别介绍", "mentioned_classes": [], "cue_types": ["NON_CURRENT_LANGUAGE"], "is_final": true}
+{"start_ms": 8020, "end_ms": 9900, "available_at_ms": 12719, "text": "它们的外观和一些特点", "mentioned_classes": [], "cue_types": ["ATTRIBUTE_LANGUAGE"], "is_final": true}
+{"start_ms": 9900, "end_ms": 11980, "available_at_ms": 12719, "text": "后面我们再拿起来详细", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 11920, "end_ms": 12240, "available_at_ms": 15572, "text": "细看", "mentioned_classes": [], "cue_types": [], "is_final": true}

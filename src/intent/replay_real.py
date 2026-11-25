@@ -20,8 +20,9 @@ from src.perception.validate_jsonl import validate_packet
 from .diagnose import intent_contract_errors, showing_segments
 from .run import build_engine
 from .temporal import IntentConfig
+from .fusion import FusionConfig
 
-CLIPS = ("A01", "A02", "A03", "A04", "B01", "B02", "B03", "C01", "C02", "C03", "C04", "D01")
+CLIPS = ("A01", "A02", "A03", "B01", "B02", "B03", "C01", "C02", "C03", "C04", "D01")
 
 
 def load_and_check(path: Path) -> tuple[list[dict], dict]:
@@ -82,7 +83,9 @@ def load_and_check(path: Path) -> tuple[list[dict], dict]:
     return rows, quality
 
 
-def replay_clip(source: Path, destination: Path, config: dict) -> dict:
+def replay_clip(source: Path, destination: Path, config: dict, *,
+                speech_source: Path | None = None, fusion_config: FusionConfig | None = None,
+                include_speech_ablation: bool = False) -> dict:
     rows, quality = load_and_check(source)
     digest = hashlib.sha256(source.read_bytes()).hexdigest()
     marker = source.with_name(source.stem.replace("perception_", "completion_", 1)+".json")
@@ -91,14 +94,41 @@ def replay_clip(source: Path, destination: Path, config: dict) -> dict:
         provenance = json.loads(marker.read_text(encoding="utf-8"))
         if provenance.get("perception_sha256") != digest:
             raise ValueError(f"input differs from completion record: {source}")
-    names = [f"intent_{mode}.jsonl" for mode in ("showintent", "pickup-baseline")]+["report.json"]
+    bridge = None
+    if speech_source is not None:
+        from src.speech.bridge import SpeechEvidenceBridge
+        bridge = SpeechEvidenceBridge.from_jsonl(speech_source, enabled=True)
+        fusion_config = fusion_config or FusionConfig()
+    elif fusion_config is not None:
+        raise ValueError('fusion config requires a speech source')
+    modes = ('visual-only', 'showintent', 'pickup-baseline') if bridge else ('showintent', 'pickup-baseline')
+    if include_speech_ablation:
+        if bridge is None:raise ValueError('speech ablation requires speech observations')
+        modes=modes+('speech-with-localization','visual-policy-only')
+    names = [f'intent_{mode}.jsonl' for mode in modes]+['report.json']
+    if bridge:
+        names.append('evidence_showintent.jsonl')
     if any((destination / name).exists() for name in names):
         raise FileExistsError(f"refusing to overwrite replay artifacts: {destination}")
-    results, outputs = {}, {}
-    for mode in ("showintent", "pickup-baseline"):
-        engine = build_engine(mode, config if mode == "showintent" else None)
+    results, outputs, traces = {}, {}, []
+    for mode in modes:
+        fused = bridge is not None and mode in ('showintent','speech-with-localization','visual-policy-only')
+        engine = build_engine('showintent' if mode in ('visual-only','speech-with-localization','visual-policy-only') else mode,
+                              config if mode != 'pickup-baseline' else None,
+                              fusion_config=fusion_config if fused else None)
+        if mode=='speech-with-localization':
+            engine.language_only=True;engine.fusion.language_only=True
         started = time.perf_counter()
-        intents = [engine.update(p) for p in rows]
+        intents = []
+        for p in rows:
+            if fused:
+                observation=(dict(timestamp_ms=p['timestamp_ms'],enabled=True,has_evidence=False,
+                                  suggested_classes=[],cue_types=[]) if mode=='visual-policy-only' else bridge.evidence_for(p))
+                intent = engine.update(p, speech_evidence=observation)
+                if mode=='showintent':traces.append({**engine.fusion.diagnostics, 'intent': intent})
+            else:
+                intent = engine.update(p)
+            intents.append(intent)
         elapsed = (time.perf_counter()-started)*1000
         errors = intent_contract_errors(rows, intents)
         if errors:
@@ -114,10 +144,27 @@ def replay_clip(source: Path, destination: Path, config: dict) -> dict:
         "source_kind": provenance.get("source_kind", "unverified") if provenance else "provided_perception_video_origin_unverified",
         "quality": quality, "showintent_config": asdict(IntentConfig(**config)), "methods": results,
         "b_source_sha256": {name: hashlib.sha256(Path(__file__).with_name(name).read_bytes()).hexdigest()
-                            for name in ("temporal.py", "types.py", "baseline.py", "replay_real.py")},
+                            for name in ("temporal.py", "types.py", "baseline.py", "replay_real.py", "fusion.py", "grounding.py", "run.py")},
         "evaluation_status": "diagnostics_only_no_reviewed_event_annotations_no_accuracy_or_event_latency",
     }
+    report['instance_association_sha256']=hashlib.sha256(
+        Path(__file__).parents[1].joinpath('perception/appearance_tracker.py').read_bytes()).hexdigest()
+    if bridge:
+        report['fusion_config'] = asdict(fusion_config)
+        report['speech_sha256'] = hashlib.sha256(speech_source.read_bytes()).hexdigest()
+        report['comparison'] = 'identical_perception_visual_only_vs_peer_fusion_vs_pickup'
+        report['speech_config'] = {'ttl_ms': bridge.adapter.ttl_ms,
+                                   'max_source_age_ms': bridge.adapter.max_source_age_ms}
+        speech_dir = Path(__file__).resolve().parents[1] / 'speech'
+        report['speech_source_sha256'] = {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
+                                          for p in sorted(speech_dir.glob('*.py'))}
+        lexicon = Path(__file__).resolve().parents[2] / 'configs' / 'speech_lexicon.json'
+        report['speech_lexicon_sha256'] = hashlib.sha256(lexicon.read_bytes()).hexdigest()
+        report['b_source_sha256']['fusion.py'] = hashlib.sha256(Path(__file__).with_name('fusion.py').read_bytes()).hexdigest()
     destination.mkdir(parents=True, exist_ok=True)
+    if bridge:
+        (destination / 'evidence_showintent.jsonl').write_text(
+            ''.join(json.dumps(row, ensure_ascii=False)+'\n' for row in traces), encoding='utf-8')
     for mode, intents in outputs.items():
         (destination / f"intent_{mode}.jsonl").write_text(
             "".join(json.dumps(i, ensure_ascii=False)+"\n" for i in intents), encoding="utf-8")
@@ -131,14 +178,23 @@ def main() -> None:
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--clips", nargs="+", choices=CLIPS, default=list(CLIPS))
     parser.add_argument("--config", type=Path, default=Path("configs/presentation_intent.json"))
+    parser.add_argument('--speech-dir', type=Path, help='Optional speech_events_<clip>.jsonl; enables peer fusion and visual ablation')
+    parser.add_argument('--fusion-config', type=Path, help='Optional JSON FusionConfig; requires --speech-dir')
     args = parser.parse_args()
+    if args.fusion_config and not args.speech_dir:
+        parser.error('--fusion-config requires --speech-dir')
+    fusion = FusionConfig(**json.loads(args.fusion_config.read_text(encoding='utf-8'))) if args.fusion_config else None
     config = json.loads(args.config.read_text(encoding="utf-8"))
     IntentConfig(**config)
     sources = {clip: args.perception_dir/f"perception_{clip}.jsonl" for clip in dict.fromkeys(args.clips)}
     if any(not p.is_file() for p in sources.values()):
         parser.error("missing perception files: " + ", ".join(str(p) for p in sources.values() if not p.is_file()))
+    speech_sources = {clip: args.speech_dir/f'speech_events_{clip}.jsonl' for clip in sources} if args.speech_dir else {}
+    if any(not p.is_file() for p in speech_sources.values()):
+        parser.error('missing speech files: '+', '.join(str(p) for p in speech_sources.values() if not p.is_file()))
     for clip, path in sources.items():
-        result = replay_clip(path, args.out/clip, config)
+        result = replay_clip(path, args.out/clip, config,
+                             speech_source=speech_sources.get(clip), fusion_config=fusion)
         print(f"{clip}: {result['quality']['packet_count']} packets; "
               f"SHOWING segments={len(result['methods']['showintent']['showing_segments'])}; "
               f"source_kind={result['source_kind']}")

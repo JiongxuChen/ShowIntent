@@ -1,0 +1,15 @@
+{"start_ms": 110, "end_ms": 3410, "available_at_ms": 7214, "text": "我还给大家推荐两本跟新型态数相关的书籍", "mentioned_classes": ["book"], "cue_types": [], "is_final": true}
+{"start_ms": 3410, "end_ms": 5870, "available_at_ms": 7214, "text": "一本比较适合学习基础概念", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 6060, "end_ms": 8440, "available_at_ms": 12629, "text": "一本可以用来做一些进一步的练习", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 8440, "end_ms": 11980, "available_at_ms": 12629, "text": "先来看这本斯特朗的新兴代数导论", "mentioned_classes": [], "cue_types": ["REFERENCE_LANGUAGE"], "is_final": true}
+{"start_ms": 12940, "end_ms": 17980, "available_at_ms": 18441, "text": "吝点赞 订阅 转发 打赏支持明镜与点点栏目", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 17920, "end_ms": 18500, "available_at_ms": 24567, "text": "际意义", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 18500, "end_ms": 19960, "available_at_ms": 24567, "text": "如果你有这样的困惑", "mentioned_classes": [], "cue_types": ["NON_CURRENT_LANGUAGE"], "is_final": true}
+{"start_ms": 19960, "end_ms": 21500, "available_at_ms": 24567, "text": "不妨看看这本书", "mentioned_classes": ["book"], "cue_types": ["PRESENTATION_LANGUAGE", "REFERENCE_LANGUAGE"], "is_final": true}
+{"start_ms": 21500, "end_ms": 22940, "available_at_ms": 24567, "text": "第二本呢是", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 23900, "end_ms": 24960, "available_at_ms": 30489, "text": "数习题集", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 26000, "end_ms": 28380, "available_at_ms": 30489, "text": "如果你已经学过一些基本的概念", "mentioned_classes": [], "cue_types": ["NON_CURRENT_LANGUAGE"], "is_final": true}
+{"start_ms": 28380, "end_ms": 29980, "available_at_ms": 30489, "text": "可以通过做题看看自己的概念", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 29880, "end_ms": 31060, "available_at_ms": 44494, "text": "到底有没有理解", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 31060, "end_ms": 35280, "available_at_ms": 44494, "text": "除了计算也可以尝试解释每一步为什么成立", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 36120, "end_ms": 38020, "available_at_ms": 46049, "text": "大家都能够学好信心代数", "mentioned_classes": [], "cue_types": [], "is_final": true}

@@ -1,0 +1,4 @@
+{"start_ms": 1100, "end_ms": 3740, "available_at_ms": 15422, "text": "关于三个杯子我就先分享到这里", "mentioned_classes": ["cup"], "cue_types": [], "is_final": true}
+{"start_ms": 3740, "end_ms": 5880, "available_at_ms": 15422, "text": "接下来我把桌子上的", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 6020, "end_ms": 6880, "available_at_ms": 77762, "text": "西收拾一下", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 6880, "end_ms": 8840, "available_at_ms": 77762, "text": "给大家分享其他东西", "mentioned_classes": [], "cue_types": [], "is_final": true}

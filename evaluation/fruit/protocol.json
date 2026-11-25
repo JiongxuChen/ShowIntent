@@ -1,0 +1,18 @@
+{
+  "version": "formal-v3-exclude-A04",
+  "annotation_interval": "half_open",
+  "event_iou_threshold": 0.3,
+  "physical_match_min_correct_overlap_fraction": 0.5,
+  "uncertain": "excluded; predictions clipped to reviewed intervals",
+  "prediction_end": "next perception timestamp; last packet not extrapolated",
+  "event_matching": "maximum-cardinality one-to-one; deterministic descending-IoU edge order",
+  "split_group": "recording_session",
+  "existing_material_split": "fruit: 11 development; books: 3 user-designated test, previously used for development",
+  "parameter_changes_after_test": "new protocol version required; report old and new separately",
+  "test_independence": "not independent; unknown recording sessions are not fabricated",
+  "dataset_revision": "14-clips-exclude-A04",
+  "excluded_clips": [
+    "A04"
+  ],
+  "exclusion_reason": "User requested removal: silent orange example redundant with silent apple A03"
+}

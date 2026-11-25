@@ -1,0 +1,33 @@
+{
+  "phase": "BEFORE_MODEL_INFERENCE",
+  "annotations_sha256": "e86b7afb4c1665fd477c9ba4e548156081be8d0c6d20e85367270b67bc6ea3c6",
+  "video_sha256": {
+    "G04": "e55feb45c0f0462bc5b2eb49719f793596bc5dd77dfd1c9b8a1480b12fb6d22d",
+    "G03": "7c6e5ed7cfe821f3626facee0fffd734e3fb600230589ab2603fa06f67340228",
+    "G02": "3e04c757f52a07d560d7a1085fe13193eb27e416e8e2a87dbbbd18dd31912372",
+    "G01": "4fc789f76cbab65f3b9fe70949386490804eb54cb3c3918117b48273bc57dfd6"
+  },
+  "human_review": false,
+  "label_source": "Original-video images only, without prediction or ASR",
+  "whole_clip_sampling_ms": 1000,
+  "boundary_sampling_ms": 250,
+  "sheet_manifest": "outputs/drinks_annotation_sheets/manifest.json",
+  "boundary_manifests": [
+    "outputs/drinks_annotation_sheets/G03/boundary_manifest.json",
+    "outputs/drinks_annotation_sheets/G02/boundary_manifest.json",
+    "outputs/drinks_annotation_sheets/G01/boundary_manifest.json"
+  ],
+  "identity_descriptions": {
+    "drink_dark_label": "深色茶液，红褐色为主的标签",
+    "drink_light_label": "浅色瓶身标签，上方有深色字样",
+    "drink_blue_label": "带明显蓝色字块的标签"
+  },
+  "baseline_reference": "outputs/cups_evaluation/evaluation.json",
+  "baseline_reference_sha256": "b6d597c68e8499dd1d83370ea055f4d6c6a61eec153aa8b8a32a4b7a467f63c0",
+  "frozen_config_sha256": {
+    "configs/presentation_intent.json": "c3c8b2b25e86890d6bfadd08d30834bd605b1255a6cbc8664da89a8fba2878a1",
+    "configs/stable_fusion.json": "fd5c68a3c33ac20c0955ba86644af5f2129c8e6f53333dfdfb0d5c218b44c71c",
+    "configs/speech_lexicon.json": "417fe082f7d276db0343f600ff31e089631ec439040609130d446201318931b7"
+  },
+  "release_revision": "identifier rename only; temporal labels unchanged"
+}

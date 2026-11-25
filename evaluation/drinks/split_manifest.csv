@@ -1,0 +1,5 @@
+clip_id,participant_id,session_id,split,source_offset_ms,notes,allow_development_test,independence
+G04,,,test,0,New drinks scene before tuning; keep four clips together. Participant/session independence unverified.,false,new_scene_before_parameter_tuning_not_verified_independent_session
+G03,,,test,0,New drinks scene before tuning; keep four clips together. Participant/session independence unverified.,false,new_scene_before_parameter_tuning_not_verified_independent_session
+G02,,,test,0,New drinks scene before tuning; keep four clips together. Participant/session independence unverified.,false,new_scene_before_parameter_tuning_not_verified_independent_session
+G01,,,test,0,New drinks scene before tuning; keep four clips together. Participant/session independence unverified.,false,new_scene_before_parameter_tuning_not_verified_independent_session

@@ -1,0 +1,10 @@
+{
+  "designation_source": "project_owner",
+  "reporting_roles": {
+    "fruit": "development",
+    "books": "evaluation",
+    "cups": "evaluation",
+    "drinks": "evaluation"
+  },
+  "scope": "Reporting designation; not a claim of unseen or statistically independent data"
+}

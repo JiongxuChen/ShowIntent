@@ -1,0 +1,4 @@
+{"start_ms": 1800, "end_ms": 2200, "available_at_ms": 2600, "text": "给大家看这个杯子", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 6000, "end_ms": 6500, "available_at_ms": 6800, "text": "杯子展示结束", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 8200, "end_ms": 8500, "available_at_ms": 9000, "text": "给大家看这个苹果", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 10800, "end_ms": 11200, "available_at_ms": 11600, "text": "苹果展示结束", "mentioned_classes": [], "cue_types": [], "is_final": true}

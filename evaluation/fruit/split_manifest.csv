@@ -1,0 +1,12 @@
+clip_id,participant_id,session_id,split,source_offset_ms,notes,allow_development_test,independence
+A01,,,development,0,Already used for development; cannot be reassigned to holdout,false,development
+A02,,,development,0,Already used for development; cannot be reassigned to holdout,false,development
+A03,,,development,0,Already used for development; cannot be reassigned to holdout,false,development
+B01,,,development,0,Already used for development; cannot be reassigned to holdout,false,development
+B02,,,development,0,Already used for development; cannot be reassigned to holdout,false,development
+B03,,,development,0,Already used for development; cannot be reassigned to holdout,false,development
+C01,,,development,0,Already used for development; cannot be reassigned to holdout,false,development
+C02,,,development,0,Already used for development; cannot be reassigned to holdout,false,development
+C03,,,development,0,Already used for development; cannot be reassigned to holdout,false,development
+C04,,,development,0,Already used for development; cannot be reassigned to holdout,false,development
+D01,,,development,0,Already used for development; cannot be reassigned to holdout,false,development

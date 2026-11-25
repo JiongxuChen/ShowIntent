@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-23",
+  "reviewer": "project_owner",
+  "evidence": "用户消息：我复核通过。",
+  "scope": "14 remaining clips, approved behavior labels unchanged; A04 excluded by explicit user request",
+  "before_sha256": "dc5836483899898755082604695a87a4e364788fbea99887dc0167b3def0c451",
+  "approved_sha256": "6712ebb338f0e31c5fbbc1d5fe609834a0ea7abf7deba4486b4e7687bbf9e819",
+  "intervals": 55,
+  "track_mapping_reviewed": false,
+  "browser_alignment_reviewed": false,
+  "media_timebase_audit": "evaluation/media_timebase_audit.json",
+  "previous_approved_sha256": "df007f94351aa1dc68d095b4168b84d6a724abd742f0550d1b38a2c97b45938c",
+  "release_annotations_sha256": "79e9612a811995b30b2e75a12c49e63a83fea17179a86112c27ab5207b40c4dd",
+  "release_revision": "Identifier and relative-path rename only; original approval hashes remain historical"
+}

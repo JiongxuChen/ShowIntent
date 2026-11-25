@@ -1,0 +1,14 @@
+{"start_ms": 1230, "end_ms": 5610, "available_at_ms": 76367, "text": "好,我们先看一下这个苹果,它的颜色非常鲜艳。", "mentioned_classes": ["apple"], "cue_types": ["PRESENTATION_LANGUAGE", "REFERENCE_LANGUAGE", "INTRODUCTION_LANGUAGE"], "is_final": true}
+{"start_ms": 6240, "end_ms": 7500, "available_at_ms": 77515, "text": "我给他转过来", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 7500, "end_ms": 8600, "available_at_ms": 77515, "text": "让大家看另一面", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 9380, "end_ms": 9740, "available_at_ms": 77515, "text": "好", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 9740, "end_ms": 11120, "available_at_ms": 77515, "text": "苹果先放到这里", "mentioned_classes": ["apple"], "cue_types": [], "is_final": true}
+{"start_ms": 11120, "end_ms": 11980, "available_at_ms": 77515, "text": "接下来", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 11940, "end_ms": 13060, "available_at_ms": 151663, "text": "来我们看橘子", "mentioned_classes": ["orange"], "cue_types": [], "is_final": true}
+{"start_ms": 13820, "end_ms": 14740, "available_at_ms": 151663, "text": "橘子的表面呢", "mentioned_classes": ["orange"], "cue_types": [], "is_final": true}
+{"start_ms": 14740, "end_ms": 16220, "available_at_ms": 151663, "text": "就和苹果很不一样了", "mentioned_classes": ["apple"], "cue_types": [], "is_final": true}
+{"start_ms": 16220, "end_ms": 17980, "available_at_ms": 151663, "text": "能看到很多细小的味道", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 18060, "end_ms": 18200, "available_at_ms": 152894, "text": "理", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 18700, "end_ms": 20200, "available_at_ms": 152894, "text": "我也给大家展示一下", "mentioned_classes": [], "cue_types": ["PRESENTATION_LANGUAGE"], "is_final": true}
+{"start_ms": 23170, "end_ms": 23610, "available_at_ms": 152894, "text": "好", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 23790, "end_ms": 25590, "available_at_ms": 219011, "text": "两种水果都介绍完了", "mentioned_classes": [], "cue_types": ["ENDING_LANGUAGE"], "is_final": true}

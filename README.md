@@ -1,111 +1,77 @@
 # ShowIntent
 
-ShowIntent 根据讲解者自然的手物交互，判断是否正在展示某个物品，并为镜头模块提供展示状态和目标实例。无需预先指定商品名称、展示顺序或目标 ID。
+数据用途按场景区分：水果组用于开发；书籍、水杯、饮料三组用于评价。指标仍按四个场景分别报告。
 
-```text
-A：视觉感知 → PerceptionPacket → B：展示意图 → IntentPacket → C：取景与输出
-                                      ↑ D：自然语音线索（可选）
-```
+ShowIntent根据讲解者的手部动作、物体轨迹和语音线索，判断何时展示哪个物品，并生成平滑放大的离线预览。
 
-## 当前模块
+- A：全类别物体检测、手部感知、交互关系和追踪。
+- B：视觉为主、语音辅助的展示意图判断，当前使用`semantic-priority-rest`。
+- 简易C：根据B的目标生成保持、缩放和退出预览，供观察触发效果；不是最终镜头模块。
+- D：Whisper语音转写与轻量展示语言分析，不依赖语言大模型。
 
-- **A**：检测手和候选物体，维护短期跟踪 ID，输出手物关系。
-- **B**：综合举起、呈现位置、运动、尺度和时序证据，输出展示状态与目标。
-- **C**：根据 B 的决定平滑进入、保持和退出特写，并提供人工覆盖。
-- **D**：负责语音识别与自然语言线索。当前 B 可独立运行，语音融合尚未实现。
+## 数据与结果
 
-B 只有一套正式实现，位于 `src/intent/temporal.py`。`pickup-baseline` 是实验用的“拿起即触发”对照，不是另一个正式版本。
+| 目录 | 场景 | 视频编号 |
+|---|---|---|
+| Example_Data1 | 水果 | A01–A03、B01–B03、C01–C04、D01，共11段；排除A04 |
+| Example_Data2 | 书籍 | E01–E03 |
+| Example_Data3 | 水杯 | F01–F04 |
+| Example_Data4 | 饮料 | G01–G04 |
 
-## 快速运行 B
+视频和模型权重不随仓库分发。原名对应关系见[evaluation/metadata/video_name_mapping.csv](evaluation/metadata/video_name_mapping.csv)。仓库包含22段的标注、缓存感知、语音事件、逐帧B结果及评价，可直接重放B。
 
-A 的当前验收状态见 `docs/a_completion_status.md`。检测与追踪改进仍为开发候选；全帧联合回归可运行 `python -m scripts.a_full_regression`（需要本地原视频、YOLO small 权重及 A 依赖），输出到 `outputs/a_final_candidate/`。统一候选入口为 `scripts.a_unified_replay`，保留现有 PerceptionPacket 格式并重算手物关系；真实视频及模型权重不随 Git 提供。
+[逐视频指标](docs/evaluation.md)列出纯视觉、纯语音、视听三种模式。全量覆盖率分别为85.73%、54.89%、88.10%；视听事件F1为0.9508。覆盖率仅表示展示时间覆盖，不表示目标身份或放大框正确率。水杯、饮料标签仍待复核。
 
-需要 Python 3.10 或更高版本。B 的规则计算和 JSONL 回放仅使用标准库，不需要安装检测模型。以下命令均在仓库根目录执行。
+## 快速复现B（无需视频、模型或GPU）
 
-先用仓库自带的模拟感知输入验证接口：
-
-```bash
-python -m src.perception.validate_jsonl fixtures/demo_object_show/perception.jsonl
-python -m src.intent.run --perception fixtures/demo_object_show/perception.jsonl --out outputs/intent.jsonl --config configs/presentation_intent.json
-```
-
-得到的 `outputs/intent.jsonl` 每行对应一个输入包，保留输入时间戳。
-
-使用 A 已生成的真实感知结果：
+在仓库根目录使用Python 3.10或3.11：
 
 ```bash
-python -m src.intent.run --perception data/perception_A01.jsonl --out outputs/intent_A01.jsonl --config configs/presentation_intent.json
+python -m scripts.run_refined_b --profile semantic-priority-rest --out outputs/replay
 ```
 
-`data/perception_A01.jsonl` 是本地数据路径示例，需要替换成实际文件。原视频、模型权重和真实感知日志不随代码提供。
+输出目录必须是新目录。三个模式分别输出为`visual-only.jsonl`、`audio-only.jsonl`、`showintent.jsonl`，另有`evaluation.json`。B重放只需标准库；测试可安装`requirements-b-dev.txt`后运行`python -m pytest -q`。
 
-当前样例集的批量回放及基线对照：
+## 从原视频运行A与D
+
+完整流程需要自行准备视频及模型。建议新建Python 3.10或3.11虚拟环境，按PyTorch官方说明安装适合设备的PyTorch，再安装：
 
 ```bash
-python -m src.intent.replay_real --perception-dir data/perception --out outputs/intent_batch --clips A01 A02
-python -m src.intent.run --perception data/perception_A01.jsonl --out outputs/intent_A01_pickup.jsonl --mode pickup-baseline
+python -m pip install -r requirements.txt
+python -m scripts.run_complementary --input-dir Example_Data2 --out outputs/new_books --vision-model models/yolo11m.pt --speech-model models/faster-whisper-large-v3
 ```
 
-批量入口读取 `perception_<编号>.jsonl`，输出主方法、基线和输入质量报告；已有结果不会被静默覆盖。没有复核标签时，报告只作诊断，不计算准确率。
+视觉权重使用YOLO11m；ASR目录需为可供faster-whisper加载的本地large-v3模型。该入口生成感知、语音及原融合流程结果；其内置B属于较早基线，当前v3重放以上节入口为准。迁入当前数据集时需先在manifest登记新缓存路径，再运行v3，不能把旧入口的B评分当作当前v3。
 
-## 交给 C 运行
+## 生成简易C预览
 
-C 需要 B 的 `intent.jsonl` 和生成它的**同一份** `perception.jsonl`。先验证结构化链路，无需视频依赖：
+本地放好E01.mp4后：
 
 ```bash
-python -m src.camera.run --perception fixtures/demo_object_show/perception.jsonl --intent outputs/intent.jsonl --out outputs/shot.jsonl
+python -m scripts.render_b_preview --video Example_Data2/E01.mp4 --perception outputs/cache/books/perception/perception_E01.jsonl --intent outputs/results/books/E01/showintent.jsonl --out outputs/E01_preview.mp4
 ```
 
-已有真实视频及对应 A/B 输出时，可生成预览：
+预览会保留音轨并记录裁剪信息。模型检测类别有限，仍可能出现漏检、书籍误识别、目标绑定失败或确认偏晚。
 
-```bash
-python -m src.camera.run --video data/A01.mp4 --perception data/perception_A01.jsonl --intent outputs/intent_A01.jsonl --out outputs/shot_A01.jsonl --overlay-out outputs/preview_A01.mp4
-```
+## 四种视觉模型对比
 
-视频渲染需要 A/C 的视觉依赖。C 按 `state` 控制镜头：`NONE/CANDIDATE` 不开启新特写，`SHOWING` 跟随 `target_id`，`ENDING` 平滑退回全景。目标短暂缺失时有限保持，不能自行换成其他物体。完整约定见 [B/C 接口说明](docs/intent_camera_interface.md)。
+项目包含YOLO11n、YOLO11m、YOLO11l和RT-DETR-L四种闭集检测器的对比，覆盖水果、书籍、水杯、饮料四个场景。实现、配置和16份评价JSON均已包含，权重另行下载。
 
-## 开发与验证
+- [四场景结果表、实验说明与运行命令](docs/model_comparison.md)
+- 结果：`outputs/benchmarks/<场景>/<模型>/evaluation.json`
+- 运行：`scripts/run_closed_set_benchmark.py`
+- 配置：`configs/closed_set_benchmark.json`
 
-安装测试依赖并运行：
+## 文档与目录
 
-```bash
-python -m pip install -r requirements-b-dev.txt
-python -m pytest -q
-```
+完整目录及每个文件用途见[项目结构与逐文件说明](docs/project_structure.md)。
 
-生成独立 Mock、检查主方法在不同采样率下的行为：
+- [A：检测、手部与追踪](docs/A.md)
+- [B：展示意图与语言融合](docs/B.md)
+- [C：简易预览与正式交付](docs/C.md)
+- [D：语音转写与语言线索](docs/D.md)
+- [评价规范与22段逐视频指标](docs/evaluation.md)
+- [闭集模型对比](docs/model_comparison.md)
+- [上传GitHub](docs/publishing.md)
 
-```bash
-python -m src.intent.mock_scenarios --out outputs/intent_mock --fps 30
-python -m src.intent.diagnose --out outputs/intent_diagnostics --fps 5 15 30 --modes showintent --strict
-```
-
-提供本地真实感知数据后，可额外运行真实回归：
-
-```bash
-SHOWINTENT_PERCEPTION_DIR=data/perception python -m pytest -q
-```
-
-这条环境变量写法适用于 Bash；其他终端可先设置同名变量。未提供真实数据时，相应测试会明确跳过。
-
-## 当前效果与边界
-
-当前实现能在开发素材中区分多种展示、搬运和普通持物行为，并处理有限的漏检与跟踪 ID 变化。部分片段仍有确认偏晚、展示中断和同类实例歧义。开发区间的抽帧复核不是完整事件真值，不能据此声明通用准确率。
-
-后续自然语音线索由 D 提供，B 保持最终状态与目标决定权。语音缺失时视觉路径仍可运行，语音提到物品名称也不应独立触发镜头。
-
-- [B 的方法、配置与运行说明](docs/presentation_intent.md)
-- [B→C 交接与消息契约](docs/intent_camera_interface.md)
-- [开发评价口径](docs/evaluation.md)
-- [提交 GitHub 前的文件清单](docs/publishing.md)
-
-## 原有交付物
-
-以下文件保留原仓库内容，记录早期实现和历史实验；当前 B 的方法与结果以本文链接的新说明为准。
-
-- [A 的视觉感知报告](docs/perception_video_report.md)
-- [书本检测微调试验与下一批标注说明](docs/book_detector_training_pilot.md)
-- [原 P0 评价报告](docs/p0_evaluation_report.md)及[中文阅读版](docs/p0_evaluation_report.zh-CN.md)
-- [原仓库逐项核对记录](docs/original_repository_inventory.md)
-
-原有统计入口 `python -m scripts.p0_stats --help` 和早期原型也保留，未被当前正式入口调用。
+src为实现，scripts保留10个功能入口；evaluation保存标注与清单；outputs/cache保存A/D输入，outputs/results保存正式结果，outputs/benchmarks保存模型对比评价。视频和模型不随仓库分发。
