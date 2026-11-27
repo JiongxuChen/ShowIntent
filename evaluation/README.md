@@ -6,4 +6,6 @@ fruit、books、cups、drinks四个目录分别保存对应场景的数据清单
 
 split_manifest.csv仅为评分器兼容元数据，不用于展示场景汇总。cups、drinks还含annotation_record.json，记录标签冻结哈希和标注状态。metadata保存名称映射、排除记录、复核记录与时间核验。
 
-时间评价入口为python -m scripts.run_refined_b --out outputs/replay；规范和完整指标见docs/evaluation.md。
+时间评价入口为python -m scripts.run_refined_b --out outputs/replay；规范和完整指标见docs/stream.md。
+
+书籍标注与其余场景采用相同格式。

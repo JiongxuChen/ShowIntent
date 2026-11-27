@@ -1,0 +1,106 @@
+{
+  "showintent": {
+    "temporal_events": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "positive_ms": 22900,
+    "negative_ms": 17430,
+    "showing_ms": 21765,
+    "false_showing_ms": 1661,
+    "matched_boundary_errors": [
+      {
+        "event_id": "E01_draft_2",
+        "start_error_ms": 599,
+        "end_error_ms": 1364
+      },
+      {
+        "event_id": "E01_draft_4",
+        "start_error_ms": 2197,
+        "end_error_ms": 297
+      }
+    ],
+    "predicted_episodes": [
+      {
+        "start_ms": 10999,
+        "end_ms": 23364,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      },
+      {
+        "start_ms": 26997,
+        "end_ms": 36397,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      }
+    ]
+  },
+  "visual-only": {
+    "temporal_events": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "positive_ms": 22900,
+    "negative_ms": 17430,
+    "showing_ms": 21765,
+    "false_showing_ms": 1661,
+    "matched_boundary_errors": [
+      {
+        "event_id": "E01_draft_2",
+        "start_error_ms": 599,
+        "end_error_ms": 1364
+      },
+      {
+        "event_id": "E01_draft_4",
+        "start_error_ms": 2197,
+        "end_error_ms": 297
+      }
+    ],
+    "predicted_episodes": [
+      {
+        "start_ms": 10999,
+        "end_ms": 23364,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      },
+      {
+        "start_ms": 26997,
+        "end_ms": 36397,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      }
+    ]
+  },
+  "audio-only": {
+    "temporal_events": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    },
+    "positive_ms": 22900,
+    "negative_ms": 17430,
+    "showing_ms": 8000,
+    "false_showing_ms": 2800,
+    "matched_boundary_errors": [
+      {
+        "event_id": "E01_draft_4",
+        "start_error_ms": -3269,
+        "end_error_ms": -6569
+      }
+    ],
+    "predicted_episodes": [
+      {
+        "start_ms": 21531,
+        "end_ms": 29531,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      }
+    ]
+  }
+}

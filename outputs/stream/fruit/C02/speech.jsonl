@@ -1,0 +1,11 @@
+{"start_ms": 1230, "end_ms": 4000, "available_at_ms": 6089, "text": "好,我們先看一下這個屏幕", "mentioned_classes": [], "cue_types": ["PRESENTATION_LANGUAGE", "REFERENCE_LANGUAGE", "INTRODUCTION_LANGUAGE"], "is_final": true, "wall_ready_ms": 6088.984591886401}
+{"start_ms": 4110, "end_ms": 6110, "available_at_ms": 10450, "text": "他也是非常心眼", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 10449.679860845208}
+{"start_ms": 6110, "end_ms": 8000, "available_at_ms": 10450, "text": "我給他轉過來看", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 10449.679860845208}
+{"start_ms": 8000, "end_ms": 9000, "available_at_ms": 14488, "text": "看另一面", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 14487.66146786511}
+{"start_ms": 9640, "end_ms": 11440, "available_at_ms": 14488, "text": "好 苹果现在放到这里", "mentioned_classes": ["apple"], "cue_types": [], "is_final": true, "wall_ready_ms": 14487.66146786511}
+{"start_ms": 12000, "end_ms": 14000, "available_at_ms": 18657, "text": "我们看局子", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 18656.11263178289}
+{"start_ms": 14000, "end_ms": 16000, "available_at_ms": 18657, "text": "局子的表面就要评过很贵", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 18656.11263178289}
+{"start_ms": 16000, "end_ms": 18000, "available_at_ms": 22578, "text": "能看到很多細小的文臨", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 22577.741496264935}
+{"start_ms": 18000, "end_ms": 20000, "available_at_ms": 22578, "text": "我也給大家站起來", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 22577.741496264935}
+{"start_ms": 20000, "end_ms": 24000, "available_at_ms": 26252, "text": "試一下", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 26251.953419297934}
+{"start_ms": 24110, "end_ms": 26110, "available_at_ms": 30241, "text": "洋葱水果都介绍完了", "mentioned_classes": [], "cue_types": ["ENDING_LANGUAGE"], "is_final": true, "wall_ready_ms": 30240.565825253725}

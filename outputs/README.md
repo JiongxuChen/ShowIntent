@@ -1,7 +1,8 @@
-# 离线产物
+# 发布结果
 
-- cache/<场景>/{perception,speech_raw,timestamps}：A/D输入与媒体时钟。
-- results/<场景>/<视频>：正式三模式B输出；results/evaluation.json：四场景评价。
-- benchmarks/<场景>/<模型>/evaluation.json：该场景的闭集模型对比分数。
+- cache：仅默认YOLO11m的感知、原始ASR和时间轴，供B离线重放。
+- results：当前默认23段三模态逐帧输出及评价。
+- benchmarks：四场景×五模型评分、预测事件区间及统一汇总，不含其余模型逐帧缓存。
+- stream：23段实际播放状态、语音可用时间、三模态评分及汇总。
 
-场景均为fruit、books、cups、drinks。两组模型对比的B配置不同，详见docs/model_comparison.md；目录按场景组织不代表它们采用同一配置。
+不包含原视频、权重、失败试验或训练日志。新运行请使用新的输出目录；原始结果不覆盖。

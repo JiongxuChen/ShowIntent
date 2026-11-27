@@ -4,7 +4,7 @@ B负责展示时机和目标选择，C负责构图、放大、平滑和异常回
 
 ## 交付文件
 
-全部22段正式B输出在`outputs/results/<场景>/<编号>/showintent.jsonl`。场景目录为fruit、books、cups、drinks。请使用showintent，不要误用visual-only或audio-only。
+全部23段正式B输出在`outputs/results/<场景>/<编号>/showintent.jsonl`。场景目录为fruit、books、cups、drinks。请使用showintent，不要误用visual-only或audio-only。
 
 配套A文件在`outputs/cache/<场景>/perception/perception_<编号>.jsonl`。配置是configs/presentation_intent.json和configs/semantic_priority_fusion.json。标注和原视频路径见evaluation/<场景>/dataset_manifest.csv以及evaluation/cups、drinks_v1内的manifest；编号映射见evaluation/metadata/video_name_mapping.csv。原视频另行提供，仓库不包含视频。
 
@@ -34,8 +34,8 @@ python -m src.camera.run --perception outputs/cache/books/perception/perception_
 
 ## 验收清单
 
-1. 22段均正确对齐，不混用感知运行的ID。
-2. 六个纯负例B01/B02/B03/F03/F04/G04保持全景。
+1. 23段均正确对齐，不混用感知运行的ID。
+2. 七个纯负例B01/B02/B03/E04/F03/F04/G04保持全景。
 3. 展示时裁剪不越界，目标可见，倍率有上限，展示与放回时平滑过渡。
 4. 检查E02/E03的多书籍切换、F01的连续换杯、G01的换物；记录已知B漏检，不用C重新判断来掩盖。
 5. 检查音画同步、方向、完整时长和帧率；评价C时另报目标保留率、裁剪抖动、倍率变化、过渡时长和人工观看结果。
@@ -61,4 +61,4 @@ PreviewFraming在一段SHOWING开始时根据近期约500ms的目标框历史取
 
 ## 测试素材
 
-小型接口样例位于tests/fixtures/demo_object_show，供自动化测试验证A/B/C字段、行序与入口联通，不作为真实视频准确率证据。完整联调使用outputs/cache与outputs/results的对应22段，原视频另行提供。
+小型接口样例位于tests/fixtures/demo_object_show，供自动化测试验证A/B/C字段、行序与入口联通，不作为真实视频准确率证据。完整联调使用outputs/cache与outputs/results的对应23段，原视频另行提供。

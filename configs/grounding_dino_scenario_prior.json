@@ -1,0 +1,62 @@
+{
+  "version": "grounding-dino-scenario-prior-v2",
+  "model": "models/grounding-dino-tiny",
+  "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+  "box_threshold": 0.25,
+  "text_threshold": 0.25,
+  "classes_per_prompt": 80,
+  "imgsz": 1280,
+  "crop_imgsz": 960,
+  "hand_crops": true,
+  "scope": "Scenario prior supplied before inference; same prompts for all positives and negatives in a scene; extra information compared with fixed COCO80, not a fair information-budget detector ranking",
+  "scene_queries": {
+    "fruit": [
+      {
+        "label": "person",
+        "text": "person"
+      },
+      {
+        "label": "apple",
+        "text": "apple"
+      },
+      {
+        "label": "orange",
+        "text": "orange"
+      }
+    ],
+    "books": [
+      {
+        "label": "person",
+        "text": "person"
+      },
+      {
+        "label": "book",
+        "text": "book"
+      }
+    ],
+    "cups": [
+      {
+        "label": "person",
+        "text": "person"
+      },
+      {
+        "label": "cup",
+        "text": "cup"
+      },
+      {
+        "label": "bottle",
+        "text": "bottle"
+      }
+    ],
+    "drinks": [
+      {
+        "label": "person",
+        "text": "person"
+      },
+      {
+        "label": "bottle",
+        "text": "bottle"
+      }
+    ]
+  }
+}

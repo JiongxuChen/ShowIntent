@@ -1,0 +1,319 @@
+{
+  "model": "grounding-dino-tiny-prior",
+  "scene": "cups",
+  "summary": {
+    "visual-only": {
+      "events": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 3,
+        "precision": 0.5,
+        "recall": 0.25,
+        "f1": 0.3333333333333333
+      },
+      "temporal_coverage": 0.9279239766081872,
+      "false_seconds": 8.147,
+      "false_seconds_per_negative_minute": 10.361844197138314,
+      "boundary_mae_ms": {
+        "start": 2099.0,
+        "end": 347.0
+      }
+    },
+    "audio-only": {
+      "events": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666
+      },
+      "temporal_coverage": 0.5000584795321638,
+      "false_seconds": 4.087,
+      "false_seconds_per_negative_minute": 5.198092209856916,
+      "boundary_mae_ms": {
+        "start": 2174.0,
+        "end": 2043.5
+      }
+    },
+    "showintent": {
+      "events": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 3,
+        "precision": 0.5,
+        "recall": 0.25,
+        "f1": 0.3333333333333333
+      },
+      "temporal_coverage": 0.9279239766081872,
+      "false_seconds": 8.147,
+      "false_seconds_per_negative_minute": 10.361844197138314,
+      "boundary_mae_ms": {
+        "start": 2099.0,
+        "end": 347.0
+      }
+    }
+  },
+  "clips": {
+    "F04": {
+      "showintent": {
+        "temporal_events": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "positive_ms": 0,
+        "negative_ms": 14200,
+        "showing_ms": 0,
+        "false_showing_ms": 0,
+        "matched_boundary_errors": [],
+        "predicted_episodes": []
+      },
+      "visual-only": {
+        "temporal_events": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "positive_ms": 0,
+        "negative_ms": 14200,
+        "showing_ms": 0,
+        "false_showing_ms": 0,
+        "matched_boundary_errors": [],
+        "predicted_episodes": []
+      },
+      "audio-only": {
+        "temporal_events": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "positive_ms": 0,
+        "negative_ms": 14200,
+        "showing_ms": 0,
+        "false_showing_ms": 0,
+        "matched_boundary_errors": [],
+        "predicted_episodes": []
+      }
+    },
+    "F03": {
+      "showintent": {
+        "temporal_events": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "positive_ms": 0,
+        "negative_ms": 16600,
+        "showing_ms": 0,
+        "false_showing_ms": 0,
+        "matched_boundary_errors": [],
+        "predicted_episodes": []
+      },
+      "visual-only": {
+        "temporal_events": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "positive_ms": 0,
+        "negative_ms": 16600,
+        "showing_ms": 0,
+        "false_showing_ms": 0,
+        "matched_boundary_errors": [],
+        "predicted_episodes": []
+      },
+      "audio-only": {
+        "temporal_events": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "positive_ms": 0,
+        "negative_ms": 16600,
+        "showing_ms": 0,
+        "false_showing_ms": 0,
+        "matched_boundary_errors": [],
+        "predicted_episodes": []
+      }
+    },
+    "F02": {
+      "showintent": {
+        "temporal_events": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "positive_ms": 14200,
+        "negative_ms": 4075,
+        "showing_ms": 12448,
+        "false_showing_ms": 347,
+        "matched_boundary_errors": [
+          {
+            "event_id": "F02_2",
+            "start_error_ms": 2099,
+            "end_error_ms": 347
+          }
+        ],
+        "predicted_episodes": [
+          {
+            "start_ms": 2999,
+            "end_ms": 15447,
+            "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+          }
+        ]
+      },
+      "visual-only": {
+        "temporal_events": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "positive_ms": 14200,
+        "negative_ms": 4075,
+        "showing_ms": 12448,
+        "false_showing_ms": 347,
+        "matched_boundary_errors": [
+          {
+            "event_id": "F02_2",
+            "start_error_ms": 2099,
+            "end_error_ms": 347
+          }
+        ],
+        "predicted_episodes": [
+          {
+            "start_ms": 2999,
+            "end_ms": 15447,
+            "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+          }
+        ]
+      },
+      "audio-only": {
+        "temporal_events": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "positive_ms": 14200,
+        "negative_ms": 4075,
+        "showing_ms": 12689,
+        "false_showing_ms": 1037,
+        "matched_boundary_errors": [
+          {
+            "event_id": "F02_2",
+            "start_error_ms": 2548,
+            "end_error_ms": 1037
+          }
+        ],
+        "predicted_episodes": [
+          {
+            "start_ms": 3448,
+            "end_ms": 16137,
+            "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+          }
+        ]
+      }
+    },
+    "F01": {
+      "showintent": {
+        "temporal_events": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "positive_ms": 20000,
+        "negative_ms": 12300,
+        "showing_ms": 27434,
+        "false_showing_ms": 7800,
+        "matched_boundary_errors": [],
+        "predicted_episodes": [
+          {
+            "start_ms": 4866,
+            "end_ms": 32300,
+            "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+          }
+        ]
+      },
+      "visual-only": {
+        "temporal_events": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "positive_ms": 20000,
+        "negative_ms": 12300,
+        "showing_ms": 27434,
+        "false_showing_ms": 7800,
+        "matched_boundary_errors": [],
+        "predicted_episodes": [
+          {
+            "start_ms": 4866,
+            "end_ms": 32300,
+            "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+          }
+        ]
+      },
+      "audio-only": {
+        "temporal_events": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "f1": 0.5
+        },
+        "positive_ms": 20000,
+        "negative_ms": 12300,
+        "showing_ms": 8500,
+        "false_showing_ms": 3050,
+        "matched_boundary_errors": [
+          {
+            "event_id": "F01_6",
+            "start_error_ms": 1800,
+            "end_error_ms": 3050
+          }
+        ],
+        "predicted_episodes": [
+          {
+            "start_ms": 23800,
+            "end_ms": 32300,
+            "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+          }
+        ]
+      }
+    }
+  }
+}

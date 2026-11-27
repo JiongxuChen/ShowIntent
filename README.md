@@ -1,77 +1,83 @@
 # ShowIntent
 
-数据用途按场景区分：水果组用于开发；书籍、水杯、饮料三组用于评价。指标仍按四个场景分别报告。
+ShowIntent根据手物交互、物体轨迹和语音证据判断何时展示物品，向C镜头模块输出展示状态与目标框。提供当前离线方式和6秒缓冲的延时流式原型。
 
-ShowIntent根据讲解者的手部动作、物体轨迹和语音线索，判断何时展示哪个物品，并生成平滑放大的离线预览。
+仅水果场景用于开发，书籍、水杯、饮料用于评价。共23段视频、31个展示事件：水果11段，书籍E01–E04、水杯F01–F04、饮料G01–G04；视频与权重暂不发布，标注、预测和评价已提供。
 
-- A：全类别物体检测、手部感知、交互关系和追踪。
-- B：视觉为主、语音辅助的展示意图判断，当前使用`semantic-priority-rest`。
-- 简易C：根据B的目标生成保持、缩放和退出预览，供观察触发效果；不是最终镜头模块。
-- D：Whisper语音转写与轻量展示语言分析，不依赖语言大模型。
+## 安装
 
-## 数据与结果
-
-| 目录 | 场景 | 视频编号 |
-|---|---|---|
-| Example_Data1 | 水果 | A01–A03、B01–B03、C01–C04、D01，共11段；排除A04 |
-| Example_Data2 | 书籍 | E01–E03 |
-| Example_Data3 | 水杯 | F01–F04 |
-| Example_Data4 | 饮料 | G01–G04 |
-
-视频和模型权重不随仓库分发。原名对应关系见[evaluation/metadata/video_name_mapping.csv](evaluation/metadata/video_name_mapping.csv)。仓库包含22段的标注、缓存感知、语音事件、逐帧B结果及评价，可直接重放B。
-
-[逐视频指标](docs/evaluation.md)列出纯视觉、纯语音、视听三种模式。全量覆盖率分别为85.73%、54.89%、88.10%；视听事件F1为0.9508。覆盖率仅表示展示时间覆盖，不表示目标身份或放大框正确率。水杯、饮料标签仍待复核。
-
-## 快速复现B（无需视频、模型或GPU）
-
-在仓库根目录使用Python 3.10或3.11：
-
-```bash
-python -m scripts.run_refined_b --profile semantic-priority-rest --out outputs/replay
-```
-
-输出目录必须是新目录。三个模式分别输出为`visual-only.jsonl`、`audio-only.jsonl`、`showintent.jsonl`，另有`evaluation.json`。B重放只需标准库；测试可安装`requirements-b-dev.txt`后运行`python -m pytest -q`。
-
-## 从原视频运行A与D
-
-完整流程需要自行准备视频及模型。建议新建Python 3.10或3.11虚拟环境，按PyTorch官方说明安装适合设备的PyTorch，再安装：
+使用Python 3.10或3.11，先安装适合本机的PyTorch，再执行：
 
 ```bash
 python -m pip install -r requirements.txt
-python -m scripts.run_complementary --input-dir Example_Data2 --out outputs/new_books --vision-model models/yolo11m.pt --speech-model models/faster-whisper-large-v3
+python -m pip install -r requirements-open-vocabulary.txt
 ```
 
-视觉权重使用YOLO11m；ASR目录需为可供faster-whisper加载的本地large-v3模型。该入口生成感知、语音及原融合流程结果；其内置B属于较早基线，当前v3重放以上节入口为准。迁入当前数据集时需先在manifest登记新缓存路径，再运行v3，不能把旧入口的B评分当作当前v3。
+无需模型的B缓存重放只使用标准库。GPU推理还需要与本机CUDA和CTranslate2兼容的运行库。
 
-## 生成简易C预览
-
-本地放好E01.mp4后：
+## 离线：当前B与三模态
 
 ```bash
-python -m scripts.render_b_preview --video Example_Data2/E01.mp4 --perception outputs/cache/books/perception/perception_E01.jsonl --intent outputs/results/books/E01/showintent.jsonl --out outputs/E01_preview.mp4
+python -m scripts.run_refined_b --out outputs/new_replay
 ```
 
-预览会保留音轨并记录裁剪信息。模型检测类别有限，仍可能出现漏检、书籍误识别、目标绑定失败或确认偏晚。
+从`outputs/cache/<场景>`读取默认YOLO11m感知、原始large-v3语音及时间轴，重放展示意图状态机，生成23段纯视觉、纯语音和视听结果。先验证E04可加`--clips E04`。输出目录必须是新目录。
 
-## 四种视觉模型对比
+正式结果在`outputs/results`。五模型对比在`outputs/benchmarks`：YOLO11n、YOLO11m、YOLO11l、RT-DETR-L、场景先验Grounding DINO Tiny。DINO获知候选物品范围，属于额外场景信息，不能宣称等信息模型排名。
 
-项目包含YOLO11n、YOLO11m、YOLO11l和RT-DETR-L四种闭集检测器的对比，覆盖水果、书籍、水杯、饮料四个场景。实现、配置和16份评价JSON均已包含，权重另行下载。
+## 五模型重新推理
 
-- [四场景结果表、实验说明与运行命令](docs/model_comparison.md)
-- 结果：`outputs/benchmarks/<场景>/<模型>/evaluation.json`
-- 运行：`scripts/run_closed_set_benchmark.py`
-- 配置：`configs/closed_set_benchmark.json`
+自行准备Example_Data1～4及对应当前编号视频，下载权重：
 
-## 文档与目录
+```bash
+python -m scripts.download_closed_set_models
+python -m scripts.download_grounding_dino
+python -m scripts.download_joint_models --models speech
+python -m scripts.run_closed_set_benchmark --out outputs/new_benchmark
+```
 
-完整目录及每个文件用途见[项目结构与逐文件说明](docs/project_structure.md)。
+该入口对五模型重新做增强视觉检测，再用相同已发布ASR和当前B完成三模态评价；仅跑书籍负例可加`--clips E04`。为控制仓库大小，仅默认YOLO11m的感知缓存随仓库发布，其余模型的完整评分及预测事件区间均在benchmark报告中。重新检测需要原视频和权重。
 
-- [A：检测、手部与追踪](docs/A.md)
-- [B：展示意图与语言融合](docs/B.md)
-- [C：简易预览与正式交付](docs/C.md)
-- [D：语音转写与语言线索](docs/D.md)
-- [评价规范与22段逐视频指标](docs/evaluation.md)
-- [闭集模型对比](docs/model_comparison.md)
-- [上传GitHub](docs/publishing.md)
+若要重做ASR：
 
-src为实现，scripts保留10个功能入口；evaluation保存标注与清单；outputs/cache保存A/D输入，outputs/results保存正式结果，outputs/benchmarks保存模型对比评价。视频和模型不随仓库分发。
+```bash
+python -m scripts.run_speech --audio Example_Data2/E04.mp4 \
+  --model models/faster-whisper-large-v3 --out outputs/new_speech_E04.jsonl \
+  --mode offline --window-ms 6000 --context-ms 1500 --beam-size 5 \
+  --device cuda --compute-type float32
+```
+
+重新识别语音属于新实验；五模型对比默认复用相同语音，避免混淆变量。
+
+## 延时流式
+
+准备原视频、`models/yolo11m.pt`和`models/faster-whisper-base`：
+
+```bash
+python -m scripts.run_stream_collection --suite all \
+  --out outputs/new_stream
+```
+
+默认增强视觉1280、检测10Hz、6秒缓冲、base CPU int8/beam1、4秒音频块、adapted B。可加`--clips A02 E03 E04`做小集合验证。流式内部调度、进程和代理视频工具集中在`src/streaming`。
+
+单视频也可执行：
+
+```bash
+python -m src.streaming.prepare_stream_proxy \
+  --video Example_Data4/G04.mp4 --out outputs/input_G04.mp4
+python -m scripts.run_delayed_stream \
+  --video outputs/input_G04.mp4 --out outputs/new_G04 --device cuda
+```
+
+本机必须有足够吞吐才能维持固定播放缓冲；模型预热时间另计。不能只凭输出文件存在宣称实时。23段已完成流式的实际播放状态、语音完成时间及评价保存在`outputs/stream`。纯语音输出只有时间意图，没有物体框。
+
+## 文档和结果
+
+- [A视觉](docs/A.md)、[B当前方法及流式差异](docs/B.md)、[C接口与呈现](docs/C.md)、[D语音](docs/D.md)
+- [评价协议与流式69条逐视频指标](docs/stream.md)
+- [离线五模型345条逐视频模态指标](docs/offline.md)
+- [目录结构](docs/project_structure.md)、[发布操作](docs/publishing.md)
+
+默认YOLO11m视听事件F1为0.935、覆盖率88.10%；场景先验DINO为0.889、95.22%；延时流式YOLO11m为0.935、83.73%。覆盖率高也可能将多次展示合并，必须同时查看事件计数、误触发时间和边界误差。语音增益有限，详见正式评价，不宣称已经实现显著全场景互补。
+
+测试：`python -m pytest -q`。原始视频、模型权重、运行环境及重复试验不随仓库提交。

@@ -1,0 +1,62 @@
+{
+  "showintent": {
+    "temporal_events": {
+      "tp": 0,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": null,
+      "f1": 0.0
+    },
+    "positive_ms": 0,
+    "negative_ms": 13733,
+    "showing_ms": 266,
+    "false_showing_ms": 266,
+    "matched_boundary_errors": [],
+    "predicted_episodes": [
+      {
+        "start_ms": 10300,
+        "end_ms": 10566,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      }
+    ]
+  },
+  "visual-only": {
+    "temporal_events": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": null,
+      "recall": null,
+      "f1": null
+    },
+    "positive_ms": 0,
+    "negative_ms": 13733,
+    "showing_ms": 0,
+    "false_showing_ms": 0,
+    "matched_boundary_errors": [],
+    "predicted_episodes": []
+  },
+  "audio-only": {
+    "temporal_events": {
+      "tp": 0,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": null,
+      "f1": 0.0
+    },
+    "positive_ms": 0,
+    "negative_ms": 13733,
+    "showing_ms": 4367,
+    "false_showing_ms": 4367,
+    "matched_boundary_errors": [],
+    "predicted_episodes": [
+      {
+        "start_ms": 9366,
+        "end_ms": 13733,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      }
+    ]
+  }
+}

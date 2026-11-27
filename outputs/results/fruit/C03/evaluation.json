@@ -1,0 +1,101 @@
+{
+  "showintent": {
+    "temporal_events": {
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    "positive_ms": 13100,
+    "negative_ms": 6494,
+    "showing_ms": 13363,
+    "false_showing_ms": 1063,
+    "matched_boundary_errors": [
+      {
+        "event_id": "C03_draft_2",
+        "start_error_ms": -108,
+        "end_error_ms": -3411
+      }
+    ],
+    "predicted_episodes": [
+      {
+        "start_ms": 2592,
+        "end_ms": 12389,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      },
+      {
+        "start_ms": 13189,
+        "end_ms": 16755,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      }
+    ]
+  },
+  "visual-only": {
+    "temporal_events": {
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    "positive_ms": 13100,
+    "negative_ms": 6494,
+    "showing_ms": 13363,
+    "false_showing_ms": 1063,
+    "matched_boundary_errors": [
+      {
+        "event_id": "C03_draft_2",
+        "start_error_ms": -108,
+        "end_error_ms": -3411
+      }
+    ],
+    "predicted_episodes": [
+      {
+        "start_ms": 2592,
+        "end_ms": 12389,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      },
+      {
+        "start_ms": 13189,
+        "end_ms": 16755,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      }
+    ]
+  },
+  "audio-only": {
+    "temporal_events": {
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    "positive_ms": 13100,
+    "negative_ms": 6494,
+    "showing_ms": 12930,
+    "false_showing_ms": 3887,
+    "matched_boundary_errors": [
+      {
+        "event_id": "C03_draft_2",
+        "start_error_ms": 625,
+        "end_error_ms": -4477
+      }
+    ],
+    "predicted_episodes": [
+      {
+        "start_ms": 3325,
+        "end_ms": 11323,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      },
+      {
+        "start_ms": 14755,
+        "end_ms": 19687,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      }
+    ]
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "showintent": {
+    "temporal_events": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "positive_ms": 11750,
+    "negative_ms": 21850,
+    "showing_ms": 12834,
+    "false_showing_ms": 1916,
+    "matched_boundary_errors": [
+      {
+        "event_id": "G01_2",
+        "start_error_ms": 166,
+        "end_error_ms": 900
+      },
+      {
+        "event_id": "G01_4",
+        "start_error_ms": 666,
+        "end_error_ms": 1016
+      }
+    ],
+    "predicted_episodes": [
+      {
+        "start_ms": 11166,
+        "end_ms": 17200,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      },
+      {
+        "start_ms": 18366,
+        "end_ms": 25166,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      }
+    ]
+  },
+  "visual-only": {
+    "temporal_events": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "positive_ms": 11750,
+    "negative_ms": 21850,
+    "showing_ms": 11000,
+    "false_showing_ms": 1916,
+    "matched_boundary_errors": [
+      {
+        "event_id": "G01_2",
+        "start_error_ms": 1366,
+        "end_error_ms": 900
+      },
+      {
+        "event_id": "G01_4",
+        "start_error_ms": 1300,
+        "end_error_ms": 1016
+      }
+    ],
+    "predicted_episodes": [
+      {
+        "start_ms": 12366,
+        "end_ms": 17200,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      },
+      {
+        "start_ms": 19000,
+        "end_ms": 25166,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      }
+    ]
+  },
+  "audio-only": {
+    "temporal_events": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    },
+    "positive_ms": 11750,
+    "negative_ms": 21850,
+    "showing_ms": 19867,
+    "false_showing_ms": 9050,
+    "matched_boundary_errors": [
+      {
+        "event_id": "G01_4",
+        "start_error_ms": -5767,
+        "end_error_ms": 7650
+      }
+    ],
+    "predicted_episodes": [
+      {
+        "start_ms": 11933,
+        "end_ms": 31800,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      }
+    ]
+  }
+}

@@ -15,3 +15,7 @@ outputs/*
 !outputs/cache/
 !outputs/results/
 !outputs/benchmarks/
+!outputs/stream/
+*.safetensors
+core
+core.*

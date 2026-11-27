@@ -1,0 +1,4 @@
+{"start_ms": 1100, "end_ms": 3980, "available_at_ms": 6511, "text": "關於三個杯子,我就先分享到這裡", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 6510.456556454301}
+{"start_ms": 4000, "end_ms": 7160, "available_at_ms": 10658, "text": "接下来我把桌子上的东西收拾一下", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 10657.597925513983}
+{"start_ms": 7160, "end_ms": 7920, "available_at_ms": 10658, "text": "给大家", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 10657.597925513983}
+{"start_ms": 8000, "end_ms": 10000, "available_at_ms": 14259, "text": "我想起大風情", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 14258.609367534518}

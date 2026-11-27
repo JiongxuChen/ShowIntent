@@ -1,0 +1,5 @@
+{"start_ms": 1170, "end_ms": 4000, "available_at_ms": 6112, "text": "大家好 先给大家看这个评传", "mentioned_classes": [], "cue_types": ["PRESENTATION_LANGUAGE", "REFERENCE_LANGUAGE"], "is_final": true, "wall_ready_ms": 6111.300304532051}
+{"start_ms": 4000, "end_ms": 7520, "available_at_ms": 10348, "text": "你們看它的顏色表面比較光芒", "mentioned_classes": [], "cue_types": ["ATTRIBUTE_LANGUAGE"], "is_final": true, "wall_ready_ms": 10347.393713891506}
+{"start_ms": 8000, "end_ms": 9540, "available_at_ms": 14451, "text": "我慢慢找過來", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 14450.234923511744}
+{"start_ms": 9800, "end_ms": 11340, "available_at_ms": 14451, "text": "讓大家看看背面", "mentioned_classes": [], "cue_types": ["PRESENTATION_LANGUAGE"], "is_final": true, "wall_ready_ms": 14450.234923511744}
+{"start_ms": 12300, "end_ms": 14300, "available_at_ms": 17147, "text": "这个苹果先半这里", "mentioned_classes": ["apple"], "cue_types": ["REFERENCE_LANGUAGE"], "is_final": true, "wall_ready_ms": 17146.210020408034}

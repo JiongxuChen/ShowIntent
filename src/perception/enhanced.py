@@ -85,7 +85,8 @@ def main():
     parser.add_argument('--out',type=Path,required=True)
     parser.add_argument('--metrics-out',type=Path,required=True)
     parser.add_argument('--yolo-model',type=Path,default=Path('models/yolo11m.pt'))
-    parser.add_argument('--detector-backend',choices=['yolo','rtdetr'],default=None,help='Optional closed-set comparison adapter')
+    parser.add_argument('--detector-backend',choices=['yolo','rtdetr','grounding-dino'],default=None,help='Optional detector comparison adapter')
+    parser.add_argument('--prompt-config',type=Path,help='Frozen vocabulary/threshold configuration for open-vocabulary detection')
     parser.add_argument('--device',default='0')
     parser.add_argument('--crop-imgsz',type=int,default=960)
     parser.add_argument('--confidence',type=float,default=.25)
@@ -95,9 +96,13 @@ def main():
     parser.add_argument('--no-hand-crops',action='store_true')
     args=parser.parse_args()
     if args.out.exists() or args.metrics_out.exists():parser.error('output exists; use new paths')
-    if not args.yolo_model.is_file():parser.error('local detector weights missing')
+    if not (args.yolo_model.is_dir() if args.detector_backend=='grounding-dino' else args.yolo_model.is_file()):parser.error('local detector weights missing')
     timestamps=load_timestamps(args.timestamp_map)
-    if args.detector_backend:
+    if args.detector_backend=='grounding-dino':
+        if args.prompt_config is None:parser.error('--prompt-config required')
+        from .open_vocabulary import GroundingDinoModels
+        models=GroundingDinoModels(args.yolo_model,args.confidence,True,device=args.device,prompt_config=args.prompt_config)
+    elif args.detector_backend:
         from .closed_set import ClosedSetModels
         models=ClosedSetModels(args.yolo_model,args.confidence,True,backend=args.detector_backend,device=args.device)
     else:models=PerceptionModels(str(args.yolo_model),args.confidence,True)
@@ -146,6 +151,12 @@ def main():
                  detector_classes=list(models.yolo.names.values()),timestamp_source='decoded_video_pts',
                  crop_inference_calls=crop_calls,rotation_applied=name,width=width,height=height,
                  yolo_model=str(args.yolo_model),imgsz=args.imgsz,crop_imgsz=args.crop_imgsz,detector_backend=args.detector_backend or 'original_yolo',device=args.device if args.detector_backend else 'automatic')
+    if args.detector_backend=='grounding-dino':
+        metrics.update(class_policy='fixed_text_prompt_queries',prompt_config=str(args.prompt_config),
+                       prompt_groups=len(models.groups),model_forward_calls=models.forward_calls,
+                       decoder='max token probability per prompt phrase; one canonical class per query',
+                       resize_policy='preserve aspect ratio, long edge at most imgsz; processor do_resize=False')
+        if models.hands is not None:models.hands.close()
     args.metrics_out.parent.mkdir(parents=True,exist_ok=True)
     args.metrics_out.write_text(json.dumps(metrics,ensure_ascii=False,indent=2)+'\n')
     print(f'Completed {count} frames in {elapsed:.1f}s',flush=True)

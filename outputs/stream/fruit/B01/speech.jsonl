@@ -1,0 +1,6 @@
+{"start_ms": 1330, "end_ms": 4000, "available_at_ms": 6175, "text": "今天做上準備了蘋果和橘子", "mentioned_classes": ["apple", "orange"], "cue_types": [], "is_final": true, "wall_ready_ms": 6174.822060391307}
+{"start_ms": 4020, "end_ms": 6500, "available_at_ms": 10572, "text": "這是大家平時最常見的水果", "mentioned_classes": [], "cue_types": ["REFERENCE_LANGUAGE"], "is_final": true, "wall_ready_ms": 10571.254521608353}
+{"start_ms": 6500, "end_ms": 8000, "available_at_ms": 10572, "text": "我們等一下會分別進", "mentioned_classes": [], "cue_types": ["NON_CURRENT_LANGUAGE"], "is_final": true, "wall_ready_ms": 10571.254521608353}
+{"start_ms": 8000, "end_ms": 10000, "available_at_ms": 14511, "text": "在上面的外光和一些徹底", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 14510.523987933993}
+{"start_ms": 10000, "end_ms": 12000, "available_at_ms": 14511, "text": "後面我們再拿起來", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 14510.523987933993}
+{"start_ms": 12000, "end_ms": 13000, "available_at_ms": 16828, "text": "看", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 16827.433858066797}

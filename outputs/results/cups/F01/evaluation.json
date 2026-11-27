@@ -1,0 +1,106 @@
+{
+  "showintent": {
+    "temporal_events": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8
+    },
+    "positive_ms": 20000,
+    "negative_ms": 12300,
+    "showing_ms": 13732,
+    "false_showing_ms": 2282,
+    "matched_boundary_errors": [
+      {
+        "event_id": "F01_4",
+        "start_error_ms": 2050,
+        "end_error_ms": 1766
+      },
+      {
+        "event_id": "F01_6",
+        "start_error_ms": 1500,
+        "end_error_ms": 516
+      }
+    ],
+    "predicted_episodes": [
+      {
+        "start_ms": 13800,
+        "end_ms": 21266,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      },
+      {
+        "start_ms": 23500,
+        "end_ms": 29766,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      }
+    ]
+  },
+  "visual-only": {
+    "temporal_events": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8
+    },
+    "positive_ms": 20000,
+    "negative_ms": 12300,
+    "showing_ms": 13732,
+    "false_showing_ms": 2282,
+    "matched_boundary_errors": [
+      {
+        "event_id": "F01_4",
+        "start_error_ms": 2050,
+        "end_error_ms": 1766
+      },
+      {
+        "event_id": "F01_6",
+        "start_error_ms": 1500,
+        "end_error_ms": 516
+      }
+    ],
+    "predicted_episodes": [
+      {
+        "start_ms": 13800,
+        "end_ms": 21266,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      },
+      {
+        "start_ms": 23500,
+        "end_ms": 29766,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      }
+    ]
+  },
+  "audio-only": {
+    "temporal_events": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 2,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5
+    },
+    "positive_ms": 20000,
+    "negative_ms": 12300,
+    "showing_ms": 8500,
+    "false_showing_ms": 3050,
+    "matched_boundary_errors": [
+      {
+        "event_id": "F01_6",
+        "start_error_ms": 1800,
+        "end_error_ms": 3050
+      }
+    ],
+    "predicted_episodes": [
+      {
+        "start_ms": 23800,
+        "end_ms": 32300,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      }
+    ]
+  }
+}

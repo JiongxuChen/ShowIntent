@@ -1,0 +1,50 @@
+{
+  "showintent": {
+    "temporal_events": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": null,
+      "recall": null,
+      "f1": null
+    },
+    "positive_ms": 0,
+    "negative_ms": 14200,
+    "showing_ms": 0,
+    "false_showing_ms": 0,
+    "matched_boundary_errors": [],
+    "predicted_episodes": []
+  },
+  "visual-only": {
+    "temporal_events": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": null,
+      "recall": null,
+      "f1": null
+    },
+    "positive_ms": 0,
+    "negative_ms": 14200,
+    "showing_ms": 0,
+    "false_showing_ms": 0,
+    "matched_boundary_errors": [],
+    "predicted_episodes": []
+  },
+  "audio-only": {
+    "temporal_events": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": null,
+      "recall": null,
+      "f1": null
+    },
+    "positive_ms": 0,
+    "negative_ms": 14200,
+    "showing_ms": 0,
+    "false_showing_ms": 0,
+    "matched_boundary_errors": [],
+    "predicted_episodes": []
+  }
+}

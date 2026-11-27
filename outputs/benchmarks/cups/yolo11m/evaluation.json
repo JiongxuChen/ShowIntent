@@ -1,174 +1,6 @@
 {
-  "scope": "BINARY_TEMPORAL_DETECTOR_COMPARISON_NOT_mAP_NOT_INSTANCE_ACCURACY",
-  "physical_metrics": null,
-  "physical_metric_status": "NEW_DETECTOR_MAPPING_PENDING",
-  "b_profile": "persistent",
-  "hand_memory_ms": 3000,
-  "collection": "cups",
-  "clips": {
-    "F04": {
-      "visual-only": {
-        "temporal_events": {
-          "tp": 0,
-          "fp": 0,
-          "fn": 0,
-          "precision": null,
-          "recall": null,
-          "f1": null
-        },
-        "positive_ms": 0,
-        "negative_ms": 14200,
-        "false_showing_ms": 0,
-        "showing_ms": 0,
-        "matched_boundary_errors": []
-      },
-      "showintent": {
-        "temporal_events": {
-          "tp": 0,
-          "fp": 0,
-          "fn": 0,
-          "precision": null,
-          "recall": null,
-          "f1": null
-        },
-        "positive_ms": 0,
-        "negative_ms": 14200,
-        "false_showing_ms": 0,
-        "showing_ms": 0,
-        "matched_boundary_errors": []
-      }
-    },
-    "F03": {
-      "visual-only": {
-        "temporal_events": {
-          "tp": 0,
-          "fp": 0,
-          "fn": 0,
-          "precision": null,
-          "recall": null,
-          "f1": null
-        },
-        "positive_ms": 0,
-        "negative_ms": 16600,
-        "false_showing_ms": 0,
-        "showing_ms": 0,
-        "matched_boundary_errors": []
-      },
-      "showintent": {
-        "temporal_events": {
-          "tp": 0,
-          "fp": 0,
-          "fn": 0,
-          "precision": null,
-          "recall": null,
-          "f1": null
-        },
-        "positive_ms": 0,
-        "negative_ms": 16600,
-        "false_showing_ms": 0,
-        "showing_ms": 0,
-        "matched_boundary_errors": []
-      }
-    },
-    "F02": {
-      "visual-only": {
-        "temporal_events": {
-          "tp": 1,
-          "fp": 0,
-          "fn": 0,
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1": 1.0
-        },
-        "positive_ms": 14200,
-        "negative_ms": 4075,
-        "false_showing_ms": 416,
-        "showing_ms": 12517,
-        "matched_boundary_errors": [
-          {
-            "event_id": "F02_2",
-            "start_error_ms": 2099,
-            "end_error_ms": 416
-          }
-        ]
-      },
-      "showintent": {
-        "temporal_events": {
-          "tp": 1,
-          "fp": 0,
-          "fn": 0,
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1": 1.0
-        },
-        "positive_ms": 14200,
-        "negative_ms": 4075,
-        "false_showing_ms": 416,
-        "showing_ms": 12517,
-        "matched_boundary_errors": [
-          {
-            "event_id": "F02_2",
-            "start_error_ms": 2099,
-            "end_error_ms": 416
-          }
-        ]
-      }
-    },
-    "F01": {
-      "visual-only": {
-        "temporal_events": {
-          "tp": 2,
-          "fp": 0,
-          "fn": 1,
-          "precision": 1.0,
-          "recall": 0.6666666666666666,
-          "f1": 0.8
-        },
-        "positive_ms": 20000,
-        "negative_ms": 12300,
-        "false_showing_ms": 2282,
-        "showing_ms": 13732,
-        "matched_boundary_errors": [
-          {
-            "event_id": "F01_4",
-            "start_error_ms": 2050,
-            "end_error_ms": 1766
-          },
-          {
-            "event_id": "F01_6",
-            "start_error_ms": 1500,
-            "end_error_ms": 516
-          }
-        ]
-      },
-      "showintent": {
-        "temporal_events": {
-          "tp": 2,
-          "fp": 0,
-          "fn": 1,
-          "precision": 1.0,
-          "recall": 0.6666666666666666,
-          "f1": 0.8
-        },
-        "positive_ms": 20000,
-        "negative_ms": 12300,
-        "false_showing_ms": 2416,
-        "showing_ms": 13866,
-        "matched_boundary_errors": [
-          {
-            "event_id": "F01_4",
-            "start_error_ms": 2050,
-            "end_error_ms": 1766
-          },
-          {
-            "event_id": "F01_6",
-            "start_error_ms": 1500,
-            "end_error_ms": 650
-          }
-        ]
-      }
-    }
-  },
+  "model": "yolo11m",
+  "scene": "cups",
   "summary": {
     "visual-only": {
       "events": {
@@ -187,6 +19,23 @@
         "end": 899.3333333333334
       }
     },
+    "audio-only": {
+      "events": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666
+      },
+      "temporal_coverage": 0.5000584795321638,
+      "false_seconds": 4.087,
+      "false_seconds_per_negative_minute": 5.198092209856916,
+      "boundary_mae_ms": {
+        "start": 2174.0,
+        "end": 2043.5
+      }
+    },
     "showintent": {
       "events": {
         "tp": 3,
@@ -197,425 +46,306 @@
         "f1": 0.8571428571428571
       },
       "temporal_coverage": 0.688625730994152,
-      "false_seconds": 2.832,
-      "false_seconds_per_negative_minute": 3.601907790143084,
+      "false_seconds": 2.698,
+      "false_seconds_per_negative_minute": 3.4314785373608903,
       "boundary_mae_ms": {
         "start": 1883.0,
-        "end": 944.0
+        "end": 899.3333333333334
       }
     }
   },
-  "processing_metrics": {
+  "clips": {
     "F04": {
-      "frames_processed": 427,
-      "elapsed_seconds": 116.39339487999678,
-      "processing_fps": 3.6685930541010765,
-      "class_policy": "all_detector_classes",
-      "adapter": "enhanced_hand_crops_appearance",
-      "detector_classes": [
-        "person",
-        "bicycle",
-        "car",
-        "motorcycle",
-        "airplane",
-        "bus",
-        "train",
-        "truck",
-        "boat",
-        "traffic light",
-        "fire hydrant",
-        "stop sign",
-        "parking meter",
-        "bench",
-        "bird",
-        "cat",
-        "dog",
-        "horse",
-        "sheep",
-        "cow",
-        "elephant",
-        "bear",
-        "zebra",
-        "giraffe",
-        "backpack",
-        "umbrella",
-        "handbag",
-        "tie",
-        "suitcase",
-        "frisbee",
-        "skis",
-        "snowboard",
-        "sports ball",
-        "kite",
-        "baseball bat",
-        "baseball glove",
-        "skateboard",
-        "surfboard",
-        "tennis racket",
-        "bottle",
-        "wine glass",
-        "cup",
-        "fork",
-        "knife",
-        "spoon",
-        "bowl",
-        "banana",
-        "apple",
-        "sandwich",
-        "orange",
-        "broccoli",
-        "carrot",
-        "hot dog",
-        "pizza",
-        "donut",
-        "cake",
-        "chair",
-        "couch",
-        "potted plant",
-        "bed",
-        "dining table",
-        "toilet",
-        "tv",
-        "laptop",
-        "mouse",
-        "remote",
-        "keyboard",
-        "cell phone",
-        "microwave",
-        "oven",
-        "toaster",
-        "sink",
-        "refrigerator",
-        "book",
-        "clock",
-        "vase",
-        "scissors",
-        "teddy bear",
-        "hair drier",
-        "toothbrush"
-      ],
-      "timestamp_source": "decoded_video_pts",
-      "crop_inference_calls": 290,
-      "rotation_applied": "none",
-      "width": 2160,
-      "height": 3840,
-      "yolo_model": "models/yolo11m.pt",
-      "imgsz": 1280,
-      "crop_imgsz": 960,
-      "detector_backend": "yolo",
-      "device": "0"
+      "showintent": {
+        "temporal_events": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "positive_ms": 0,
+        "negative_ms": 14200,
+        "showing_ms": 0,
+        "false_showing_ms": 0,
+        "matched_boundary_errors": [],
+        "predicted_episodes": []
+      },
+      "visual-only": {
+        "temporal_events": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "positive_ms": 0,
+        "negative_ms": 14200,
+        "showing_ms": 0,
+        "false_showing_ms": 0,
+        "matched_boundary_errors": [],
+        "predicted_episodes": []
+      },
+      "audio-only": {
+        "temporal_events": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "positive_ms": 0,
+        "negative_ms": 14200,
+        "showing_ms": 0,
+        "false_showing_ms": 0,
+        "matched_boundary_errors": [],
+        "predicted_episodes": []
+      }
     },
     "F03": {
-      "frames_processed": 499,
-      "elapsed_seconds": 163.94861825928092,
-      "processing_fps": 3.043636508182357,
-      "class_policy": "all_detector_classes",
-      "adapter": "enhanced_hand_crops_appearance",
-      "detector_classes": [
-        "person",
-        "bicycle",
-        "car",
-        "motorcycle",
-        "airplane",
-        "bus",
-        "train",
-        "truck",
-        "boat",
-        "traffic light",
-        "fire hydrant",
-        "stop sign",
-        "parking meter",
-        "bench",
-        "bird",
-        "cat",
-        "dog",
-        "horse",
-        "sheep",
-        "cow",
-        "elephant",
-        "bear",
-        "zebra",
-        "giraffe",
-        "backpack",
-        "umbrella",
-        "handbag",
-        "tie",
-        "suitcase",
-        "frisbee",
-        "skis",
-        "snowboard",
-        "sports ball",
-        "kite",
-        "baseball bat",
-        "baseball glove",
-        "skateboard",
-        "surfboard",
-        "tennis racket",
-        "bottle",
-        "wine glass",
-        "cup",
-        "fork",
-        "knife",
-        "spoon",
-        "bowl",
-        "banana",
-        "apple",
-        "sandwich",
-        "orange",
-        "broccoli",
-        "carrot",
-        "hot dog",
-        "pizza",
-        "donut",
-        "cake",
-        "chair",
-        "couch",
-        "potted plant",
-        "bed",
-        "dining table",
-        "toilet",
-        "tv",
-        "laptop",
-        "mouse",
-        "remote",
-        "keyboard",
-        "cell phone",
-        "microwave",
-        "oven",
-        "toaster",
-        "sink",
-        "refrigerator",
-        "book",
-        "clock",
-        "vase",
-        "scissors",
-        "teddy bear",
-        "hair drier",
-        "toothbrush"
-      ],
-      "timestamp_source": "decoded_video_pts",
-      "crop_inference_calls": 1,
-      "rotation_applied": "none",
-      "width": 2160,
-      "height": 3840,
-      "yolo_model": "models/yolo11m.pt",
-      "imgsz": 1280,
-      "crop_imgsz": 960,
-      "detector_backend": "yolo",
-      "device": "0"
+      "showintent": {
+        "temporal_events": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "positive_ms": 0,
+        "negative_ms": 16600,
+        "showing_ms": 0,
+        "false_showing_ms": 0,
+        "matched_boundary_errors": [],
+        "predicted_episodes": []
+      },
+      "visual-only": {
+        "temporal_events": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "positive_ms": 0,
+        "negative_ms": 16600,
+        "showing_ms": 0,
+        "false_showing_ms": 0,
+        "matched_boundary_errors": [],
+        "predicted_episodes": []
+      },
+      "audio-only": {
+        "temporal_events": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "positive_ms": 0,
+        "negative_ms": 16600,
+        "showing_ms": 0,
+        "false_showing_ms": 0,
+        "matched_boundary_errors": [],
+        "predicted_episodes": []
+      }
     },
     "F02": {
-      "frames_processed": 531,
-      "elapsed_seconds": 116.33369286544621,
-      "processing_fps": 4.564455807434608,
-      "class_policy": "all_detector_classes",
-      "adapter": "enhanced_hand_crops_appearance",
-      "detector_classes": [
-        "person",
-        "bicycle",
-        "car",
-        "motorcycle",
-        "airplane",
-        "bus",
-        "train",
-        "truck",
-        "boat",
-        "traffic light",
-        "fire hydrant",
-        "stop sign",
-        "parking meter",
-        "bench",
-        "bird",
-        "cat",
-        "dog",
-        "horse",
-        "sheep",
-        "cow",
-        "elephant",
-        "bear",
-        "zebra",
-        "giraffe",
-        "backpack",
-        "umbrella",
-        "handbag",
-        "tie",
-        "suitcase",
-        "frisbee",
-        "skis",
-        "snowboard",
-        "sports ball",
-        "kite",
-        "baseball bat",
-        "baseball glove",
-        "skateboard",
-        "surfboard",
-        "tennis racket",
-        "bottle",
-        "wine glass",
-        "cup",
-        "fork",
-        "knife",
-        "spoon",
-        "bowl",
-        "banana",
-        "apple",
-        "sandwich",
-        "orange",
-        "broccoli",
-        "carrot",
-        "hot dog",
-        "pizza",
-        "donut",
-        "cake",
-        "chair",
-        "couch",
-        "potted plant",
-        "bed",
-        "dining table",
-        "toilet",
-        "tv",
-        "laptop",
-        "mouse",
-        "remote",
-        "keyboard",
-        "cell phone",
-        "microwave",
-        "oven",
-        "toaster",
-        "sink",
-        "refrigerator",
-        "book",
-        "clock",
-        "vase",
-        "scissors",
-        "teddy bear",
-        "hair drier",
-        "toothbrush"
-      ],
-      "timestamp_source": "decoded_video_pts",
-      "crop_inference_calls": 126,
-      "rotation_applied": "none",
-      "width": 2160,
-      "height": 3840,
-      "yolo_model": "models/yolo11m.pt",
-      "imgsz": 1280,
-      "crop_imgsz": 960,
-      "detector_backend": "yolo",
-      "device": "0"
+      "showintent": {
+        "temporal_events": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "positive_ms": 14200,
+        "negative_ms": 4075,
+        "showing_ms": 12517,
+        "false_showing_ms": 416,
+        "matched_boundary_errors": [
+          {
+            "event_id": "F02_2",
+            "start_error_ms": 2099,
+            "end_error_ms": 416
+          }
+        ],
+        "predicted_episodes": [
+          {
+            "start_ms": 2999,
+            "end_ms": 15516,
+            "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+          }
+        ]
+      },
+      "visual-only": {
+        "temporal_events": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "positive_ms": 14200,
+        "negative_ms": 4075,
+        "showing_ms": 12517,
+        "false_showing_ms": 416,
+        "matched_boundary_errors": [
+          {
+            "event_id": "F02_2",
+            "start_error_ms": 2099,
+            "end_error_ms": 416
+          }
+        ],
+        "predicted_episodes": [
+          {
+            "start_ms": 2999,
+            "end_ms": 15516,
+            "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+          }
+        ]
+      },
+      "audio-only": {
+        "temporal_events": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "positive_ms": 14200,
+        "negative_ms": 4075,
+        "showing_ms": 12689,
+        "false_showing_ms": 1037,
+        "matched_boundary_errors": [
+          {
+            "event_id": "F02_2",
+            "start_error_ms": 2548,
+            "end_error_ms": 1037
+          }
+        ],
+        "predicted_episodes": [
+          {
+            "start_ms": 3448,
+            "end_ms": 16137,
+            "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+          }
+        ]
+      }
     },
     "F01": {
-      "frames_processed": 970,
-      "elapsed_seconds": 178.93389315716922,
-      "processing_fps": 5.420996452293061,
-      "class_policy": "all_detector_classes",
-      "adapter": "enhanced_hand_crops_appearance",
-      "detector_classes": [
-        "person",
-        "bicycle",
-        "car",
-        "motorcycle",
-        "airplane",
-        "bus",
-        "train",
-        "truck",
-        "boat",
-        "traffic light",
-        "fire hydrant",
-        "stop sign",
-        "parking meter",
-        "bench",
-        "bird",
-        "cat",
-        "dog",
-        "horse",
-        "sheep",
-        "cow",
-        "elephant",
-        "bear",
-        "zebra",
-        "giraffe",
-        "backpack",
-        "umbrella",
-        "handbag",
-        "tie",
-        "suitcase",
-        "frisbee",
-        "skis",
-        "snowboard",
-        "sports ball",
-        "kite",
-        "baseball bat",
-        "baseball glove",
-        "skateboard",
-        "surfboard",
-        "tennis racket",
-        "bottle",
-        "wine glass",
-        "cup",
-        "fork",
-        "knife",
-        "spoon",
-        "bowl",
-        "banana",
-        "apple",
-        "sandwich",
-        "orange",
-        "broccoli",
-        "carrot",
-        "hot dog",
-        "pizza",
-        "donut",
-        "cake",
-        "chair",
-        "couch",
-        "potted plant",
-        "bed",
-        "dining table",
-        "toilet",
-        "tv",
-        "laptop",
-        "mouse",
-        "remote",
-        "keyboard",
-        "cell phone",
-        "microwave",
-        "oven",
-        "toaster",
-        "sink",
-        "refrigerator",
-        "book",
-        "clock",
-        "vase",
-        "scissors",
-        "teddy bear",
-        "hair drier",
-        "toothbrush"
-      ],
-      "timestamp_source": "decoded_video_pts",
-      "crop_inference_calls": 1250,
-      "rotation_applied": "none",
-      "width": 2160,
-      "height": 3840,
-      "yolo_model": "models/yolo11m.pt",
-      "imgsz": 1280,
-      "crop_imgsz": 960,
-      "detector_backend": "yolo",
-      "device": "0"
+      "showintent": {
+        "temporal_events": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.6666666666666666,
+          "f1": 0.8
+        },
+        "positive_ms": 20000,
+        "negative_ms": 12300,
+        "showing_ms": 13732,
+        "false_showing_ms": 2282,
+        "matched_boundary_errors": [
+          {
+            "event_id": "F01_4",
+            "start_error_ms": 2050,
+            "end_error_ms": 1766
+          },
+          {
+            "event_id": "F01_6",
+            "start_error_ms": 1500,
+            "end_error_ms": 516
+          }
+        ],
+        "predicted_episodes": [
+          {
+            "start_ms": 13800,
+            "end_ms": 21266,
+            "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+          },
+          {
+            "start_ms": 23500,
+            "end_ms": 29766,
+            "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+          }
+        ]
+      },
+      "visual-only": {
+        "temporal_events": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.6666666666666666,
+          "f1": 0.8
+        },
+        "positive_ms": 20000,
+        "negative_ms": 12300,
+        "showing_ms": 13732,
+        "false_showing_ms": 2282,
+        "matched_boundary_errors": [
+          {
+            "event_id": "F01_4",
+            "start_error_ms": 2050,
+            "end_error_ms": 1766
+          },
+          {
+            "event_id": "F01_6",
+            "start_error_ms": 1500,
+            "end_error_ms": 516
+          }
+        ],
+        "predicted_episodes": [
+          {
+            "start_ms": 13800,
+            "end_ms": 21266,
+            "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+          },
+          {
+            "start_ms": 23500,
+            "end_ms": 29766,
+            "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+          }
+        ]
+      },
+      "audio-only": {
+        "temporal_events": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "f1": 0.5
+        },
+        "positive_ms": 20000,
+        "negative_ms": 12300,
+        "showing_ms": 8500,
+        "false_showing_ms": 3050,
+        "matched_boundary_errors": [
+          {
+            "event_id": "F01_6",
+            "start_error_ms": 1800,
+            "end_error_ms": 3050
+          }
+        ],
+        "predicted_episodes": [
+          {
+            "start_ms": 23800,
+            "end_ms": 32300,
+            "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+          }
+        ]
+      }
     }
-  },
-  "annotation_review_status": {
-    "F04": [
-      "PENDING"
-    ],
-    "F03": [
-      "PENDING"
-    ],
-    "F02": [
-      "PENDING"
-    ],
-    "F01": [
-      "PENDING"
-    ]
-  },
-  "evaluation_scope": "Fixed detector comparison configuration; see docs/model_comparison.md"
+  }
 }

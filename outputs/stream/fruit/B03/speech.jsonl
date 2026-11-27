@@ -1,0 +1,3 @@
+{"start_ms": 940, "end_ms": 3940, "available_at_ms": 6247, "text": "這個直播間的蘋果是我們的注銅產品", "mentioned_classes": ["apple"], "cue_types": ["REFERENCE_LANGUAGE"], "is_final": true, "wall_ready_ms": 6246.15116417408}
+{"start_ms": 4000, "end_ms": 8000, "available_at_ms": 10465, "text": "為了優惠心好合佈,此刻正推出", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 10464.735567569733}
+{"start_ms": 8000, "end_ms": 11000, "available_at_ms": 14165, "text": "福利將一斤三塊兩斤五塊", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 14164.12684135139}

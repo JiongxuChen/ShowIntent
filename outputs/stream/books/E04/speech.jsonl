@@ -1,0 +1,5 @@
+{"start_ms": 1520, "end_ms": 4000, "available_at_ms": 6153, "text": "就周五我从来会对别的这", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 6152.562670409679}
+{"start_ms": 4000, "end_ms": 6000, "available_at_ms": 10574, "text": "自此的書", "mentioned_classes": ["book"], "cue_types": [], "is_final": true, "wall_ready_ms": 10573.465226218104}
+{"start_ms": 6000, "end_ms": 7000, "available_at_ms": 10574, "text": "發現了", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 10573.465226218104}
+{"start_ms": 7000, "end_ms": 8000, "available_at_ms": 10574, "text": "這本書", "mentioned_classes": ["book"], "cue_types": ["REFERENCE_LANGUAGE"], "is_final": true, "wall_ready_ms": 10573.465226218104}
+{"start_ms": 8000, "end_ms": 12000, "available_at_ms": 14417, "text": "是對於學習現心代數和危機分的出學者最", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 14416.702890768647}

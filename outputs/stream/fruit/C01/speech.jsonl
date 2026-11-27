@@ -1,0 +1,7 @@
+{"start_ms": 4000, "end_ms": 5280, "available_at_ms": 12749, "text": "顏色非常薄满", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 12748.423237353563}
+{"start_ms": 5540, "end_ms": 6300, "available_at_ms": 12749, "text": "吃起来呀", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 12748.423237353563}
+{"start_ms": 7080, "end_ms": 7840, "available_at_ms": 12749, "text": "汁水十足", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 12748.423237353563}
+{"start_ms": 8000, "end_ms": 10580, "available_at_ms": 15221, "text": "三田可口 進康又名位", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 15220.070488750935}
+{"start_ms": 11340, "end_ms": 11840, "available_at_ms": 15221, "text": "好了", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 15220.070488750935}
+{"start_ms": 12000, "end_ms": 14000, "available_at_ms": 18467, "text": "這個蘋果就先介紹到那邊", "mentioned_classes": ["apple"], "cue_types": ["REFERENCE_LANGUAGE"], "is_final": true, "wall_ready_ms": 18466.280533000827}
+{"start_ms": 14000, "end_ms": 16000, "available_at_ms": 18467, "text": "我們繼續聊聊其他東西", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 18466.280533000827}

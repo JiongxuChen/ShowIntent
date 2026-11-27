@@ -1,0 +1,25 @@
+{"start_ms": 1040, "end_ms": 4000, "available_at_ms": 6185, "text": "大家好,今天我們來簡單", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 6184.33391302824}
+{"start_ms": 4000, "end_ms": 8000, "available_at_ms": 10463, "text": "看一下两种日常水果,就是苹果和橘子", "mentioned_classes": ["apple", "orange"], "cue_types": [], "is_final": true, "wall_ready_ms": 10462.676519528031}
+{"start_ms": 8270, "end_ms": 12000, "available_at_ms": 14533, "text": "我们先来看在它们的外观,等会在比较有什么会议。", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 14532.127285376191}
+{"start_ms": 12690, "end_ms": 15170, "available_at_ms": 18370, "text": "新給大家看一下這個蘋果", "mentioned_classes": ["apple"], "cue_types": ["PRESENTATION_LANGUAGE", "REFERENCE_LANGUAGE"], "is_final": true, "wall_ready_ms": 18369.860587641597}
+{"start_ms": 15170, "end_ms": 16000, "available_at_ms": 18370, "text": "你們可以看", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 18369.860587641597}
+{"start_ms": 16000, "end_ms": 18000, "available_at_ms": 22487, "text": "他臉字非常鮮豔", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 22486.329400911927}
+{"start_ms": 18000, "end_ms": 20000, "available_at_ms": 22487, "text": "表面看起來非常", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 22486.329400911927}
+{"start_ms": 20560, "end_ms": 22560, "available_at_ms": 26511, "text": "我把蘋果慢慢撞過來", "mentioned_classes": ["apple"], "cue_types": [], "is_final": true, "wall_ready_ms": 26510.82668825984}
+{"start_ms": 22560, "end_ms": 24000, "available_at_ms": 26511, "text": "大家可以看看房地", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 26510.82668825984}
+{"start_ms": 24000, "end_ms": 28000, "available_at_ms": 30645, "text": "整體上看,這個蘋果的形狀非常遠暖", "mentioned_classes": ["apple"], "cue_types": ["REFERENCE_LANGUAGE"], "is_final": true, "wall_ready_ms": 30644.36294697225}
+{"start_ms": 29230, "end_ms": 32000, "available_at_ms": 34468, "text": "好,蘋果的外方,我們先介紹到這裡", "mentioned_classes": [], "cue_types": ["ENDING_LANGUAGE"], "is_final": true, "wall_ready_ms": 34467.16331318021}
+{"start_ms": 32000, "end_ms": 34000, "available_at_ms": 38545, "text": "接下来我们看一下这个曲子", "mentioned_classes": [], "cue_types": ["PRESENTATION_LANGUAGE", "REFERENCE_LANGUAGE", "INTRODUCTION_LANGUAGE"], "is_final": true, "wall_ready_ms": 38544.35463808477}
+{"start_ms": 34720, "end_ms": 35720, "available_at_ms": 38545, "text": "大家可以看到", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 38544.35463808477}
+{"start_ms": 36000, "end_ms": 40000, "available_at_ms": 42713, "text": "和苹果相比,局势的表面就要很多細小的班点", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 42712.75554224849}
+{"start_ms": 40460, "end_ms": 42460, "available_at_ms": 46680, "text": "我们来转动一下", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 46679.078409448266}
+{"start_ms": 42460, "end_ms": 44000, "available_at_ms": 46680, "text": "让大家看看局子的", "mentioned_classes": [], "cue_types": ["PRESENTATION_LANGUAGE"], "is_final": true, "wall_ready_ms": 46679.078409448266}
+{"start_ms": 44000, "end_ms": 45000, "available_at_ms": 50630, "text": "不同角度", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 50629.4708289206}
+{"start_ms": 45480, "end_ms": 48000, "available_at_ms": 50630, "text": "大家可以看到側面其實也有很多", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 50629.4708289206}
+{"start_ms": 48000, "end_ms": 50000, "available_at_ms": 54817, "text": "用了类似的半点", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 54816.97336770594}
+{"start_ms": 50000, "end_ms": 52000, "available_at_ms": 54817, "text": "但这东完全不影响橘子的品质", "mentioned_classes": ["orange"], "cue_types": [], "is_final": true, "wall_ready_ms": 54816.97336770594}
+{"start_ms": 52000, "end_ms": 56000, "available_at_ms": 58490, "text": "这两种水果都是大家比较熟悉", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 58489.33732882142}
+{"start_ms": 56000, "end_ms": 60000, "available_at_ms": 62417, "text": "但他們的表面文理和身體外觀還是", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 62416.474882513285}
+{"start_ms": 60000, "end_ms": 61800, "available_at_ms": 66719, "text": "使用明顯區別的", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 66718.77891011536}
+{"start_ms": 61800, "end_ms": 64000, "available_at_ms": 66719, "text": "今天就先給大家展示吧", "mentioned_classes": [], "cue_types": ["PRESENTATION_LANGUAGE"], "is_final": true, "wall_ready_ms": 66718.77891011536}
+{"start_ms": 64000, "end_ms": 64840, "available_at_ms": 69087, "text": "我真的沒", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 69086.36960946023}

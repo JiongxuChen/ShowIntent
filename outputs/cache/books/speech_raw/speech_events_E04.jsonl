@@ -1,0 +1,5 @@
+{"start_ms": 1520, "end_ms": 4740, "available_at_ms": 90096, "text": "这周我综合对比了这四本书", "mentioned_classes": ["book"], "cue_types": [], "is_final": true}
+{"start_ms": 6120, "end_ms": 6220, "available_at_ms": 100998, "text": "呢", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 6780, "end_ms": 9340, "available_at_ms": 100998, "text": "这本书是对于学习", "mentioned_classes": ["book"], "cue_types": ["REFERENCE_LANGUAGE"], "is_final": true}
+{"start_ms": 9340, "end_ms": 11700, "available_at_ms": 100998, "text": "现金代数和微积分的初学者", "mentioned_classes": [], "cue_types": [], "is_final": true}
+{"start_ms": 12000, "end_ms": 12340, "available_at_ms": 101272, "text": "用的", "mentioned_classes": [], "cue_types": [], "is_final": true}

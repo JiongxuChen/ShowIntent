@@ -2,3 +2,4 @@ clip_id,source_path,perception_path,result_root,eval_start_ms,eval_end_ms,source
 E01,Example_Data2/E01.mp4,outputs/cache/books/perception/perception_E01.jsonl,outputs/stable_books_current,0,40330,books_original,true,0,false,60b7edfba27d22c39e28e3964b27a43847a720d61c4998802cd0743452876417,206626165,,original_media_pts,true
 E02,Example_Data2/E02.mp4,outputs/cache/books/perception/perception_E02.jsonl,outputs/stable_books_current,0,82860,books_original,true,0,false,39c59b4841fe11f1f6a0586e659805725907f7d1b9e5fa5c3f6099808b9cc226,429083608,,original_media_pts,true
 E03,Example_Data2/E03.mp4,outputs/cache/books/perception/perception_E03.jsonl,outputs/stable_books_current,0,56562,books_original,true,0,false,1fa1b15caa4874e07d29e644d282572c24137426f944349fcba49ea1cf8f5e50,313694456,,original_media_pts,true
+E04,Example_Data2/E04.mp4,outputs/cache/books/perception/perception_E04.jsonl,outputs/results/books,0,13733,books_original,false,,,,35545240,,original_media_pts,true

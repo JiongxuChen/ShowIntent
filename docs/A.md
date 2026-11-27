@@ -1,53 +1,28 @@
-# A：增强视觉感知
+# A：视觉感知
 
-A将原视频转换为逐帧视觉事实，供B判断展示意图。正式入口是`src/perception/enhanced.py`，使用全类别检测、手部局部复检、颜色外观特征与短期实例追踪。它不直接判断是否展示。
+视觉模块将视频帧转为带媒体时间戳的物体、手部、轨迹及交互关系，为B提供可连续追踪的候选物品。模型并不直接决定是否放大，展示状态由B结合时间证据判断。
 
-## 输入、输出与时间基准
+## 帧处理流程
 
-输入为视频、原始解码PTS清单和本地检测权重。先用extract_video_timestamps抽取时间戳，感知按同序解码；视频解码帧数必须与PTS清单一致，完整运行不允许悄悄截短。
+1. 解码视频并读取真实媒体PTS，统一旋转方向，保留原画面坐标系。
+2. 对全帧运行物体检测；长边设为1280，保持宽高比。
+3. 检测手部位置，并围绕手部生成局部区域，以长边960再次检测，补充被手遮挡或全帧下较小的物体。
+4. 合并全帧和局部结果，将局部坐标映射回原画面，去除重复与不可靠边界框。
+5. 计算物体外观、手物接近关系及运动信息，以外观与几何信息维持轨迹ID。
+6. 输出逐帧JSONL；每个包携带timestamp_ms、frame_id、objects、hands、relations。
 
-程序关闭OpenCV自动方向处理，读取旋转元数据后显式旋正一次。物体框和手框均相对于旋正后的画面，以[x1,y1,x2,y2]归一化至[0,1]。timestamp_ms采用原媒体毫秒，不由处理耗时或帧序号推算。
+## 五种检测配置
 
-## 逐帧处理
+闭集方法为YOLO11n、YOLO11m、YOLO11l和RT-DETR-L，共享后续手部增强、关系计算和追踪流程。默认采用YOLO11m。检测器输出全部可识别类别，不为书籍等类别单独设置允许列表。
 
-1. **手部检测**：通过PerceptionModels调用MediaPipe，给左右手及同帧手实例建立唯一hand_id，输出手部包围框。手部分数不能解释为经校准的真实置信度。
-2. **全帧物体检测**：默认YOLO11m、imgsz=1280、confidence=0.25，保留检测器支持的全部类别。无需提前为书、水杯或饮料新增白名单；类别范围仍受预训练检测器限制。
-3. **手部区域复检**：以每只手和双手联合区域建立裁剪。宽高至少占对应整图方向的0.32，或扩至手框的2.8倍；重复区域IoU>0.7时去重，最多3个区域。每个区域用imgsz=960检测。
-4. **映射与去重**：局部检测映射回整图；局部person不加入候选，距人工裁剪边缘不足3像素的截断框被拒绝。同类别框按分数排序，IoU>0.45时合并筛除重复。
-5. **外观描述**：从框内部去掉12%边缘，缩放为48×48，计算12×4的色相/饱和度直方图与8档亮度分布，权重0.7/0.3。颜色占比超过0.22时取最多两种颜色。这不是分割或材质识别，背景仍可能影响结果。
-6. **实例关联**：AppearanceTracker结合类别、位置、重叠、运动预测与外观距离，输出item_编号。不为暂时失检目标虚构当前框。
-7. **手物关系**：计算手框中心到物体框的最短归一化距离，距离<0.09时建立关系，score=1-distance/0.12。person不作为手持物品关联对象。
+Grounding DINO Tiny采用场景候选词：水果apple/orange、书籍book、水杯cup/bottle、饮料bottle，各场景保留person。同场景正负例使用相同提示，不提供目标位置、展示次数或时间。阈值为0.25，权重及revision见configs/grounding_dino_scenario_prior.json。它获得额外类别信息，因此五种方法是系统配置比较，不是等信息模型排名。
 
-## 追踪细节
+## 与B的接口
 
-轨迹默认保留1500ms。仅同类别候选可关联，运动预测时间最大0.3秒；中心距离>0.18或外观距离>0.5时拒绝。重叠<0.05且距离>0.08时，还要求外观距离不超过0.35。
+物体含track_id、class_name、bbox_norm和score；手部含hand_id及归一化框；relations连接手与物体。track_id只在同一次感知运行内有效，不能跨模型直接比较。person用于场景上下文，不作为B展示目标。所有状态以timestamp_ms对齐，不能用包序号假设固定帧率。
 
-符合条件的关联按`2×距离+0.25×(1-IoU)+0.7×外观距离`排序，逐一分配，确保检测与旧ID一对一。新目标分配新ID。速度按媒体时间更新并限制到每方向[-1,1]。这些约束用于短时关联，不是可靠的长期重识别。
+实现入口为src/perception/enhanced.py，开放词汇适配器为src/perception/open_vocabulary.py。模型对比运行及详细指标见[离线评价](offline.md)与根目录README。
 
-## PerceptionPacket接口
+## 局限
 
-每行JSON包含：
-
-| 字段 | 内容 |
-|---|---|
-| timestamp_ms / frame_id | 媒体时间 / 解码序号 |
-| objects | class_name、track_id、bbox_norm、score、appearance、attributes.colors |
-| hands | hand_id、bbox_norm、score |
-| relations | hand_id、object_id、type、score |
-
-关系名near_or_moving_together在当前适配器中由空间邻近产生，没有验证共同运动，也不表示抓取、举起或展示。B需要进一步累积动作证据。
-
-## 独立运行
-
-```bash
-python -m scripts.extract_video_timestamps --input Example_Data2/E01.mp4 --out outputs/E01_pts.json
-python -m src.perception.enhanced --input Example_Data2/E01.mp4 --timestamp-map outputs/E01_pts.json --yolo-model models/yolo11m.pt --out outputs/E01_perception.jsonl --metrics-out outputs/E01_perception_metrics.json
-```
-
-需要自行提供视频和模型，并安装README中的完整依赖；输出路径不能已存在。完整A/D处理也可使用scripts.run_complementary，命令见README。
-
-现有输入位于outputs/cache/<场景>/perception；配套时间戳位于timestamps。运行指标记录帧数、总耗时、适配器处理FPS、裁剪推理次数、旋转方式和尺寸；这个FPS包含检测、手部、追踪及写盘，不是裸检测器速度。
-
-## 已知限制
-
-同类密集、堆叠书籍、局部遮挡、封面图案及短暂误分类可能造成漏框、误框或ID变化。颜色只是弱属性。局部复检不能保证恢复每个物体，框更多也不等于更准确。后端可选RT-DETR，模型对比见[model_comparison](model_comparison.md)。
+类别识别正确不代表展示意图正确。遮挡、相似外观、物体放回桌面和重新拿起可能造成轨迹断裂或合并；DINO较高时间覆盖率也不保证事件分段正确。当前评价主要测展示时间，不等价于检测mAP或实例身份准确率。

@@ -1,0 +1,9 @@
+{"start_ms": 590, "end_ms": 3750, "available_at_ms": 6247, "text": "这是我平常信用门三个杯子", "mentioned_classes": ["cup"], "cue_types": ["REFERENCE_LANGUAGE"], "is_final": true, "wall_ready_ms": 6246.113097295165}
+{"start_ms": 4000, "end_ms": 6760, "available_at_ms": 10759, "text": "最大的這個看起來比較困難", "mentioned_classes": [], "cue_types": ["REFERENCE_LANGUAGE"], "is_final": true, "wall_ready_ms": 10758.846776559949}
+{"start_ms": 6760, "end_ms": 8000, "available_at_ms": 10759, "text": "旁邊還有一個", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 10758.846776559949}
+{"start_ms": 8000, "end_ms": 11700, "available_at_ms": 14438, "text": "黑色的提手", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 14437.437592074275}
+{"start_ms": 12000, "end_ms": 16000, "available_at_ms": 18758, "text": "就請坐一些蓋子旁邊也有調繩子", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 18757.26393982768}
+{"start_ms": 16000, "end_ms": 19840, "available_at_ms": 22753, "text": "要是出門帶著,我可能會更偏向這種小的", "mentioned_classes": [], "cue_types": ["REFERENCE_LANGUAGE"], "is_final": true, "wall_ready_ms": 22752.69423611462}
+{"start_ms": 21550, "end_ms": 24000, "available_at_ms": 26451, "text": "最后这个新的咖啡杯", "mentioned_classes": [], "cue_types": ["REFERENCE_LANGUAGE"], "is_final": true, "wall_ready_ms": 26450.129659846425}
+{"start_ms": 24080, "end_ms": 27920, "available_at_ms": 30772, "text": "前面有一个蓝色的小团,有一个背套", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 30771.82699367404}
+{"start_ms": 28000, "end_ms": 30000, "available_at_ms": 33832, "text": "那前来比较舒服", "mentioned_classes": [], "cue_types": [], "is_final": true, "wall_ready_ms": 33831.16242103279}

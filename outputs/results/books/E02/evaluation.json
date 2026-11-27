@@ -1,0 +1,145 @@
+{
+  "showintent": {
+    "temporal_events": {
+      "tp": 4,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.8,
+      "f1": 0.8888888888888888
+    },
+    "positive_ms": 41600,
+    "negative_ms": 41260,
+    "showing_ms": 37832,
+    "false_showing_ms": 5864,
+    "matched_boundary_errors": [
+      {
+        "event_id": "E02_draft_2",
+        "start_error_ms": 632,
+        "end_error_ms": 1465
+      },
+      {
+        "event_id": "E02_draft_4",
+        "start_error_ms": -69,
+        "end_error_ms": 1097
+      },
+      {
+        "event_id": "E02_draft_6",
+        "start_error_ms": -470,
+        "end_error_ms": 1563
+      },
+      {
+        "event_id": "E02_draft_8",
+        "start_error_ms": -38,
+        "end_error_ms": 1162
+      }
+    ],
+    "predicted_episodes": [
+      {
+        "start_ms": 10032,
+        "end_ms": 19465,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      },
+      {
+        "start_ms": 21331,
+        "end_ms": 31597,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      },
+      {
+        "start_ms": 35030,
+        "end_ms": 44163,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      },
+      {
+        "start_ms": 50962,
+        "end_ms": 59962,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      }
+    ]
+  },
+  "visual-only": {
+    "temporal_events": {
+      "tp": 4,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.8,
+      "f1": 0.8888888888888888
+    },
+    "positive_ms": 41600,
+    "negative_ms": 41260,
+    "showing_ms": 37832,
+    "false_showing_ms": 5864,
+    "matched_boundary_errors": [
+      {
+        "event_id": "E02_draft_2",
+        "start_error_ms": 632,
+        "end_error_ms": 1465
+      },
+      {
+        "event_id": "E02_draft_4",
+        "start_error_ms": -69,
+        "end_error_ms": 1097
+      },
+      {
+        "event_id": "E02_draft_6",
+        "start_error_ms": -470,
+        "end_error_ms": 1563
+      },
+      {
+        "event_id": "E02_draft_8",
+        "start_error_ms": -38,
+        "end_error_ms": 1162
+      }
+    ],
+    "predicted_episodes": [
+      {
+        "start_ms": 10032,
+        "end_ms": 19465,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      },
+      {
+        "start_ms": 21331,
+        "end_ms": 31597,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      },
+      {
+        "start_ms": 35030,
+        "end_ms": 44163,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      },
+      {
+        "start_ms": 50962,
+        "end_ms": 59962,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      }
+    ]
+  },
+  "audio-only": {
+    "temporal_events": {
+      "tp": 0,
+      "fp": 2,
+      "fn": 5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "positive_ms": 41600,
+    "negative_ms": 41260,
+    "showing_ms": 16000,
+    "false_showing_ms": 10104,
+    "matched_boundary_errors": [],
+    "predicted_episodes": [
+      {
+        "start_ms": 17198,
+        "end_ms": 25198,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      },
+      {
+        "start_ms": 44296,
+        "end_ms": 52296,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      }
+    ]
+  }
+}

@@ -29,10 +29,10 @@ class SemanticPriorityIntentStateMachine(SemanticBranchIntentStateMachine):
     It preserves visual SHOWING and targets, but cannot promise unseen-data
     precision: an added early start still needs independent evaluation.
     """
-    def __init__(self,*args,fusion_config=None,hand_memory_ms=3000,min_audio_lead_ms=200,**kwargs):
+    def __init__(self,*args,fusion_config=None,hand_memory_ms=3000,min_audio_lead_ms=200,visual_engine_cls=PersistentIntentStateMachine,**kwargs):
         super().__init__(*args,fusion_config=fusion_config,hand_memory_ms=hand_memory_ms,**kwargs)
         if min_audio_lead_ms<0:raise ValueError('min_audio_lead_ms must be non-negative')
-        self.visual_engine=PersistentIntentStateMachine(*args,hand_memory_ms=hand_memory_ms,**kwargs)
+        self.visual_engine=visual_engine_cls(*args,hand_memory_ms=hand_memory_ms,**kwargs)
         self.min_audio_lead_ms=min_audio_lead_ms
         self._previous_visual=None;self._closed_targets=set();self._admitted=None
 

@@ -22,3 +22,4 @@ E03,E03_draft_4,22500,33800,book_2,book,SHOWING,MEDIUM,REVIEWED,依据原视频5
 E03,E03_draft_5,33800,39600,,,NON_SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。,assistant_original_video_review,project_owner
 E03,E03_draft_6,39600,50200,book_3,book,SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。,assistant_original_video_review,project_owner
 E03,E03_draft_7,50200,56562,,,NON_SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。,assistant_original_video_review,project_owner
+E04,E04_negative_1,0,13733,,,NON_SHOWING,HIGH,PENDING,"Original video review: sorting stacked books, turning pages at desk; no deliberate raised detail display. User-designated negative; assistant visual verification before inference.",assistant_original_video_review,

@@ -1,0 +1,6 @@
+# Optional Grounding DINO support; install alongside existing CUDA PyTorch.
+# Current joint environment already provides these versions; no upgrade needed.
+transformers==4.51.3
+safetensors==0.5.3
+huggingface-hub==0.36.2
+Pillow>=10.0

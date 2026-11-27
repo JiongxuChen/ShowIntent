@@ -1,0 +1,86 @@
+{
+  "showintent": {
+    "temporal_events": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "positive_ms": 17750,
+    "negative_ms": 15416,
+    "showing_ms": 17400,
+    "false_showing_ms": 650,
+    "matched_boundary_errors": [
+      {
+        "event_id": "G02_2",
+        "start_error_ms": 1000,
+        "end_error_ms": 650
+      }
+    ],
+    "predicted_episodes": [
+      {
+        "start_ms": 5400,
+        "end_ms": 22800,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      }
+    ]
+  },
+  "visual-only": {
+    "temporal_events": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "positive_ms": 17750,
+    "negative_ms": 15416,
+    "showing_ms": 16434,
+    "false_showing_ms": 650,
+    "matched_boundary_errors": [
+      {
+        "event_id": "G02_2",
+        "start_error_ms": 1966,
+        "end_error_ms": 650
+      }
+    ],
+    "predicted_episodes": [
+      {
+        "start_ms": 6366,
+        "end_ms": 22800,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      }
+    ]
+  },
+  "audio-only": {
+    "temporal_events": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "positive_ms": 17750,
+    "negative_ms": 15416,
+    "showing_ms": 24533,
+    "false_showing_ms": 7416,
+    "matched_boundary_errors": [
+      {
+        "event_id": "G02_2",
+        "start_error_ms": 633,
+        "end_error_ms": 7416
+      }
+    ],
+    "predicted_episodes": [
+      {
+        "start_ms": 5033,
+        "end_ms": 29566,
+        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+      }
+    ]
+  }
+}
