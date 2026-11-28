@@ -19,3 +19,7 @@ outputs/*
 *.safetensors
 core
 core.*
+
+/Example_Data[1-4]
+
+outputs/stream_media/

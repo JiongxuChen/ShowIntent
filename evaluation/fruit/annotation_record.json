@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "scene": "fruit",
+  "label_source": "Original-video observations; review completion is recorded per clip",
+  "annotations_sha256": "ec571104896cfa9f0994b0c650ecdfac4baf81b0cc6d02288059fedf2da018f7",
+  "video_sha256": {
+    "A01": "4f5d1737871812561fefcbd8e2aacf84fd093bfe2569012abb82e2544e99523d",
+    "A02": "754a1fae7c86d7c16b61bac61ef5763abe313b1de4370da0eb1a8c496ff0f13b",
+    "A03": "7ed54f400e18527d9bdc999b754bd5a4037fdb47f3847f53200db90c4a6b6802",
+    "B01": "4871a127a7e840fb951434eb357b831b9f579adcdd8330a3a26da08cd37aa6fe",
+    "B02": "7fdf7b7873aafd3365d8ebcebef65de628a2231cb76fcf023940a18d333677fc",
+    "B03": "57ef7e66b7e80b6b6dfb9df607465c7e6163c59667ea9f8e255195dcf8efbe6d",
+    "C01": "b4a04acf2db9a49546ef6884dcf927175621db387078d0ee6cd12f6a46709afb",
+    "C02": "9b0f50eefe29b77002eb5c5385f1dddb988e5f51a1b8b8a80c528255e237e9db",
+    "C03": "db02d40b84d9bb04ddfedc1f1724c0a32d580f6020e6fd6a66af2bdff429e52f",
+    "C04": "a2cdcd72c83917c3a7341106939ce850d39b16f539a51724c870e5a9a4b1cf78",
+    "D01": "fc2ecd01503218cfae5561a277c30fa7c4cba96853b5c2f95c430c9cd24858ad"
+  },
+  "review_status": {
+    "A01": [
+      "REVIEWED"
+    ],
+    "A02": [
+      "REVIEWED"
+    ],
+    "A03": [
+      "REVIEWED"
+    ],
+    "B01": [
+      "REVIEWED"
+    ],
+    "B02": [
+      "REVIEWED"
+    ],
+    "B03": [
+      "REVIEWED"
+    ],
+    "C01": [
+      "REVIEWED"
+    ],
+    "C02": [
+      "REVIEWED"
+    ],
+    "C03": [
+      "REVIEWED"
+    ],
+    "C04": [
+      "REVIEWED"
+    ],
+    "D01": [
+      "REVIEWED"
+    ]
+  },
+  "clip_notes": {
+    "D01": "56.200–67.459秒仅持物而未举起展示，标为NON_SHOWING。"
+  },
+  "provenance": {
+    "D01_review": {
+      "date": "2026-11-28",
+      "start_ms": 56200,
+      "end_ms": 67459,
+      "label": "NON_SHOWING",
+      "reason": "User confirms holding both fruits without raising for presentation"
+    }
+  }
+}

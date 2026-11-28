@@ -1,0 +1,190 @@
+{
+  "version": 1,
+  "clips": {
+    "books/E01": {
+      "source": "Example_Data2/E01.mp4",
+      "source_sha256": "669608adf34966c6109667b7ba770f5ce9d466dedf8369796104590801645d45",
+      "proxy": "outputs/stream_media/books/E01.mp4",
+      "proxy_sha256": "40a166206190f3d587691c5b3e30d8856ffb386c02e5e23a7ec7ff4b27b2fd6f",
+      "height": 1280,
+      "fps": 15
+    },
+    "books/E02": {
+      "source": "Example_Data2/E02.mp4",
+      "source_sha256": "3e1e0165520858be4ddfc20f8ba926d5a3c06ce8a54430d308880f97084f3a44",
+      "proxy": "outputs/stream_media/books/E02.mp4",
+      "proxy_sha256": "8da864f377e8487d87657a00121567264dab75bb8a1f69bb154fb69d411fe1e6",
+      "height": 1280,
+      "fps": 15
+    },
+    "books/E03": {
+      "source": "Example_Data2/E03.mp4",
+      "source_sha256": "90a42c5affcdc16889c2f7208a56f530582e698de1e11a883c3a6351be284976",
+      "proxy": "outputs/stream_media/books/E03.mp4",
+      "proxy_sha256": "46c5ed5963b28ceab3628d883d0a97f36225f16652e1c430fab03b2ad68eb745",
+      "height": 1280,
+      "fps": 15
+    },
+    "books/E04": {
+      "source": "Example_Data2/E04.mp4",
+      "source_sha256": "f42692d31bb051e6b1d51db190aabee15acc5b1eae90a3f2fa57a38b143d9155",
+      "proxy": "outputs/stream_media/books/E04.mp4",
+      "proxy_sha256": "1767173efecca673b94b12b85847bcd39afa2097d70340123e9795fd1a065c45",
+      "height": 1280,
+      "fps": 15
+    },
+    "cups/F01": {
+      "source": "Example_Data3/F01.mp4",
+      "source_sha256": "9dd94cc7906869427facd159a5a3cb42886f87713bda6e19480e1ff1a1acaf0e",
+      "proxy": "outputs/stream_media/cups/F01.mp4",
+      "proxy_sha256": "28ea5bb0628506ffa3431db7294113e33aeaf7f1c049e72e6a9ab8ff8b979d23",
+      "height": 1280,
+      "fps": 15
+    },
+    "cups/F02": {
+      "source": "Example_Data3/F02.mp4",
+      "source_sha256": "608569edfd609ba41d6b2105b0386ee185842260bc3f60e9277ef9fe088e9dd5",
+      "proxy": "outputs/stream_media/cups/F02.mp4",
+      "proxy_sha256": "1490325a4006b9f31f10f05175aee30652991506796f57bdbf7b20ea71a68d89",
+      "height": 1280,
+      "fps": 15
+    },
+    "cups/F03": {
+      "source": "Example_Data3/F03.mp4",
+      "source_sha256": "6599df8a0a20aca1829870c05b72e8b4c84244ff5f6e5a022f165cc07cc941df",
+      "proxy": "outputs/stream_media/cups/F03.mp4",
+      "proxy_sha256": "be850e599abf92ffda5692c93576ab6bea20437ab835646ad7fc80a9818bb59b",
+      "height": 1280,
+      "fps": 15
+    },
+    "cups/F04": {
+      "source": "Example_Data3/F04.mp4",
+      "source_sha256": "da76fcb35d29c8362bfa61b5008e4cd5a8c0d150aea360d0c95f110654191af0",
+      "proxy": "outputs/stream_media/cups/F04.mp4",
+      "proxy_sha256": "37a7315a15b27276193e9f62efe39932691a70c3d7e4edc82aba4c27e7be7192",
+      "height": 1280,
+      "fps": 15
+    },
+    "drinks/G01": {
+      "source": "Example_Data4/G01.mp4",
+      "source_sha256": "4fc789f76cbab65f3b9fe70949386490804eb54cb3c3918117b48273bc57dfd6",
+      "proxy": "outputs/stream_media/drinks/G01.mp4",
+      "proxy_sha256": "dbbf7999629f123ef0332e5e063c383cec09790b8e3954969a01f83c132fe680",
+      "height": 1280,
+      "fps": 15
+    },
+    "drinks/G02": {
+      "source": "Example_Data4/G02.mp4",
+      "source_sha256": "3e04c757f52a07d560d7a1085fe13193eb27e416e8e2a87dbbbd18dd31912372",
+      "proxy": "outputs/stream_media/drinks/G02.mp4",
+      "proxy_sha256": "df1b76806c5655f6bfde38ce9cc4ee7f74fb22a015e352ab1da263c1c95fc3ca",
+      "height": 1280,
+      "fps": 15
+    },
+    "drinks/G03": {
+      "source": "Example_Data4/G03.mp4",
+      "source_sha256": "7c6e5ed7cfe821f3626facee0fffd734e3fb600230589ab2603fa06f67340228",
+      "proxy": "outputs/stream_media/drinks/G03.mp4",
+      "proxy_sha256": "718f36d0e4e2b3fa58657b9751d5a326afd89ec2f6ee7c609f9711240c0f88e7",
+      "height": 1280,
+      "fps": 15
+    },
+    "drinks/G04": {
+      "source": "Example_Data4/G04.mp4",
+      "source_sha256": "e55feb45c0f0462bc5b2eb49719f793596bc5dd77dfd1c9b8a1480b12fb6d22d",
+      "proxy": "outputs/stream_media/drinks/G04.mp4",
+      "proxy_sha256": "8417581ea1381e439c24a46f33ef63b743b8e07f544f468bf43f4d1a7e1c1671",
+      "height": 1280,
+      "fps": 15
+    },
+    "fruit/A01": {
+      "source": "Example_Data1/A01.mp4",
+      "source_sha256": "4f5d1737871812561fefcbd8e2aacf84fd093bfe2569012abb82e2544e99523d",
+      "proxy": "outputs/stream_media/fruit/A01.mp4",
+      "proxy_sha256": "47c7322f2461c877c823dfdf6de042077bc2dc05c95df65f682fbca606e5117c",
+      "height": 1280,
+      "fps": 15
+    },
+    "fruit/A02": {
+      "source": "Example_Data1/A02.mp4",
+      "source_sha256": "754a1fae7c86d7c16b61bac61ef5763abe313b1de4370da0eb1a8c496ff0f13b",
+      "proxy": "outputs/stream_media/fruit/A02.mp4",
+      "proxy_sha256": "6d54d911f21529accefcd043ef0d6110644b762ceac6f03bf90b01bcec2de203",
+      "height": 1280,
+      "fps": 15
+    },
+    "fruit/A03": {
+      "source": "Example_Data1/A03.mp4",
+      "source_sha256": "7ed54f400e18527d9bdc999b754bd5a4037fdb47f3847f53200db90c4a6b6802",
+      "proxy": "outputs/stream_media/fruit/A03.mp4",
+      "proxy_sha256": "e4ef447204e6e0b93a12a6471906e0bebe1ff52916679e60667400da0c442a08",
+      "height": 1280,
+      "fps": 15
+    },
+    "fruit/B01": {
+      "source": "Example_Data1/B01.mp4",
+      "source_sha256": "4871a127a7e840fb951434eb357b831b9f579adcdd8330a3a26da08cd37aa6fe",
+      "proxy": "outputs/stream_media/fruit/B01.mp4",
+      "proxy_sha256": "78ecdeb1f302f571b4344b87d38e365b841ac8d5b8536cd54fffd0c69d3405a2",
+      "height": 1280,
+      "fps": 15
+    },
+    "fruit/B02": {
+      "source": "Example_Data1/B02.mp4",
+      "source_sha256": "7fdf7b7873aafd3365d8ebcebef65de628a2231cb76fcf023940a18d333677fc",
+      "proxy": "outputs/stream_media/fruit/B02.mp4",
+      "proxy_sha256": "ad9ef2d40048f4fa44f0773a1a2010c66207494a2063116d290329dbb190ef85",
+      "height": 1280,
+      "fps": 15
+    },
+    "fruit/B03": {
+      "source": "Example_Data1/B03.mp4",
+      "source_sha256": "57ef7e66b7e80b6b6dfb9df607465c7e6163c59667ea9f8e255195dcf8efbe6d",
+      "proxy": "outputs/stream_media/fruit/B03.mp4",
+      "proxy_sha256": "d2cda9ac9a7d4ad6957b8a12f453eec09f8c40cf68c46c7bc506c84949224f6e",
+      "height": 1280,
+      "fps": 15
+    },
+    "fruit/C01": {
+      "source": "Example_Data1/C01.mp4",
+      "source_sha256": "b4a04acf2db9a49546ef6884dcf927175621db387078d0ee6cd12f6a46709afb",
+      "proxy": "outputs/stream_media/fruit/C01.mp4",
+      "proxy_sha256": "aa017223a20980d06c21eb696d8bd0aeb647bf05cd946285eca6af368c549581",
+      "height": 1280,
+      "fps": 15
+    },
+    "fruit/C02": {
+      "source": "Example_Data1/C02.mp4",
+      "source_sha256": "9b0f50eefe29b77002eb5c5385f1dddb988e5f51a1b8b8a80c528255e237e9db",
+      "proxy": "outputs/stream_media/fruit/C02.mp4",
+      "proxy_sha256": "0aeea886aef75a8d99a3f729a925fee34ef1246c6a9dd383b5402aa7eec9070f",
+      "height": 1280,
+      "fps": 15
+    },
+    "fruit/C03": {
+      "source": "Example_Data1/C03.mp4",
+      "source_sha256": "db02d40b84d9bb04ddfedc1f1724c0a32d580f6020e6fd6a66af2bdff429e52f",
+      "proxy": "outputs/stream_media/fruit/C03.mp4",
+      "proxy_sha256": "e463f48b71481998583cc65be999dc5372a667547495ff3308224b374ae54b64",
+      "height": 1280,
+      "fps": 15
+    },
+    "fruit/C04": {
+      "source": "Example_Data1/C04.mp4",
+      "source_sha256": "a2cdcd72c83917c3a7341106939ce850d39b16f539a51724c870e5a9a4b1cf78",
+      "proxy": "outputs/stream_media/fruit/C04.mp4",
+      "proxy_sha256": "5a22c794e785e3ffd77488f1091153a0678eac95d53b3c9a9392a558907bdb1f",
+      "height": 1280,
+      "fps": 15
+    },
+    "fruit/D01": {
+      "source": "Example_Data1/D01.mp4",
+      "source_sha256": "fc2ecd01503218cfae5561a277c30fa7c4cba96853b5c2f95c430c9cd24858ad",
+      "proxy": "outputs/stream_media/fruit/D01.mp4",
+      "proxy_sha256": "32dea8eebd0748c72a86f0dc11bb1fac32a93adee5ce7d94f53b7483234494f4",
+      "height": 1280,
+      "fps": 15
+    }
+  },
+  "policy": "Video proxies are local ignored assets; recreate from supplied original videos when absent"
+}

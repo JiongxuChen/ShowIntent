@@ -91,7 +91,7 @@ def related_context(box, target_id, packet):
 class CameraController:
     def __init__(self, aspect=1., margin_ratio=DEFAULT_MARGIN_RATIO, smoothing=.20, converge_eps=.008,
                  miss_hold_frames=15, min_crop_size=.12, *, max_zoom=DEFAULT_MAX_ZOOM,
-                 miss_hold_ms=None, exit_hold_ms=200, max_edge_speed=1.6):
+                 miss_hold_ms=None, exit_hold_ms=200, max_edge_speed=1.6, exit_edge_speed=None):
         if not all(isfinite(x) and x > 0 for x in (aspect, max_edge_speed, min_crop_size, converge_eps)):
             raise ValueError("aspect, speed, crop size and tolerance must be positive")
         if not (isfinite(max_zoom) and max_zoom >= 1 and 0 < smoothing <= 1
@@ -108,6 +108,9 @@ class CameraController:
         self.smoothing = smoothing
         self.converge_eps = converge_eps
         self.speed = max_edge_speed
+        self.exit_speed = max_edge_speed if exit_edge_speed is None else exit_edge_speed
+        if not isfinite(self.exit_speed) or self.exit_speed <= 0:
+            raise ValueError('exit speed must be positive')
         self.exit_hold_ms = exit_hold_ms
         self.current = list(self.wide)
         self.target_id = None
@@ -195,8 +198,9 @@ class CameraController:
             # Bound movement even after a long gap in delivery.
             step_ms = min(dt, 100)
             alpha = 1 - (1-self.smoothing)**(step_ms*30/1000)
-            step = min(alpha*distance, self.speed*step_ms/1000)
-            if distance <= min(self.converge_eps, self.speed*step_ms/1000):
+            speed = self.exit_speed if self.target_id is None else self.speed
+            step = min(alpha*distance, speed*step_ms/1000)
+            if distance <= min(self.converge_eps, speed*step_ms/1000):
                 step = distance
             self.current = list(goal) if step == distance else [
                 a + (b-a)*step/distance for a, b in zip(self.current, goal)]
@@ -213,3 +217,12 @@ class CameraController:
         zoom = self.wide_w / (self.current[2]-self.current[0])
         return ShotPacket(ts, self.mode, None if self.mode == "WIDE" else self.target_id, list(self.current), zoom,
                           self.manual_override or self.paused).to_dict()
+
+
+class StreamingCameraController(CameraController):
+    """Keep framing through the same bounded observation gaps as stream B."""
+    def __init__(self, **kwargs):
+        kwargs.setdefault('miss_hold_ms', 1000)
+        kwargs.setdefault('exit_hold_ms', 200)
+        kwargs.setdefault('exit_edge_speed', .8)
+        super().__init__(**kwargs)
