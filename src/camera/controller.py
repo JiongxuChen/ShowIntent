@@ -161,8 +161,7 @@ class CameraController:
         context = related_context(box, tid, packet)
         desired = compute_crop(context, self.aspect, self.margin_ratio, self.min_width)
         width = desired[2] - desired[0]
-        # The original 96% wide-shot rule at 30% padding corresponds to an
-        # unpadded span of 60%. Keep this large-subject decision independent of padding.
+        # Use the unpadded subject span so the wide-shot threshold is independent of padding.
         if self.aspect == 1. and max(context[2]-context[0], context[3]-context[1]) >= .60:
             width = self.wide_w
         # Keep scale stable within an episode; widen when a growing object needs room.

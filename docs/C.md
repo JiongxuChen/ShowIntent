@@ -1,55 +1,73 @@
-# Member C · Camera & Rendering
+# Member C · 自动取景与视频导出
 
-C 接收 A 的候选框与 B 的展示状态，输出可播放的取景视频、逐帧 ShotPacket 和测量结果。团队的正式离线输入为 `outputs/cache/<场景>/perception/perception_<编号>.jsonl` 与 `outputs/results/<场景>/<编号>/showintent.jsonl`。书籍 E01–E04、水杯 F01–F04 和饮料 G01–G04 与水果共 23 段。原视频路径见各场景的 `evaluation/<场景>/dataset_manifest.csv`，旧文件名映射见 `evaluation/metadata/video_name_mapping.csv`。早期的 `scripts/render_b_preview.py` 仍可复现 B 的诊断预览。
+C 根据 A 提供的物体框和 B 确认的展示目标自动取景。离线导出直接读取仓库里的 A/B 结果，在 CPU 上即可生成带原声的 MP4。
 
-## 从哪里开始
+## 安装与原片
 
-以下命令在仓库根目录执行。普通渲染只需 `requirements-c.txt`；本次已在 Conda 环境 `showintent-c` 安装。输出使用新文件名，避免覆盖以前的导出。
+首次使用，在 PowerShell 中克隆仓库并安装离线依赖。已有仓库的组员可在本地 `main` 上运行 `git pull --ff-only origin main`。下文命令均在仓库根目录运行。
 
 ```powershell
+git clone https://github.com/JiongxuChen/ShowIntent.git
+cd ShowIntent
+conda create -n showintent-c python=3.11 pip -y
 conda activate showintent-c
-python -m scripts.camera_mock --out outputs/my_mock
-python -m scripts.run_camera_collection --out outputs/my_camera --render
-python -m scripts.verify_camera_collection --root outputs/my_camera
+python -m pip install -r requirements-c.txt
 ```
 
-第一条 Python 命令用团队的合成杯子和苹果轨迹、视觉 B 和正式 C 写出可播放 MP4。第二条遍历 manifest，保存每个片段的 `shots.jsonl` 和有原片时的 `camera.mp4`。第三条复查完整导出集的帧数、时间戳、方向、音频包、时长和镜头指标。指定 `--clips C02 F01` 可运行子集；省略 `--render` 可仅检查 23 条结构化轨迹。只有数据包时，默认输入输出宽高比相同。
+从组内共享取得要渲染的原片，按下表放置。例如 C02 的路径是 `Example_Data1/C02.mp4`。早期文件名见[编号映射](../evaluation/metadata/video_name_mapping.csv)。
 
-在新环境安装可执行 `conda create -n showintent-c python=3.11 pip`，激活后执行 `python -m pip install -r requirements-c.txt pytest`。重跑测试使用 `python -X utf8 -m pytest -q tests/test_camera_controller.py tests/test_camera_rendering.py`。
+| 仓库内目录 | MP4 编号 |
+|---|---|
+| `Example_Data1/` 水果 | A01–A03、B01–B03、C01–C04、D01 |
+| `Example_Data2/` 书籍 | E01–E04，E04 可使用组内提供的 720×1280 副本 |
+| `Example_Data3/` 水杯 | F01–F04 |
+| `Example_Data4/` 饮料 | G01–G04 |
 
-## 单段渲染与演示
+没有原片也可运行 `python -m scripts.camera_mock --out outputs/camera_mock`，打开 `outputs/camera_mock/camera.mp4` 查看合成双目标演示。
+
+## 导出成片
 
 ```powershell
-python -m src.camera.run --video Example_Data1/C02.mp4 --perception outputs/cache/fruit/perception/perception_C02.jsonl --intent outputs/results/fruit/C02/showintent.jsonl --out outputs/my_C02/shots.jsonl --video-out outputs/my_C02/camera.mp4
+python -m scripts.run_camera_collection --out outputs/camera --render
+python -m scripts.verify_camera_collection --root outputs/camera
 ```
 
-默认输出干净画面。用 `--compare` 导出左侧固定全景和右侧 C 结果的同步分屏。用 `--hud` 叠加镜头模式、ID、倍率及目标框。 `--out-height 1920 --out-width 1080` 可将竖屏 4K 原片导出为竖屏 1080p。默认长边至多 1280 像素并保留正立原片比例。若显式指定不同宽高比，全景采用源画面中央能容纳的最大同形裁剪，`zoom` 相对这个裁剪计量，极宽物体可能无法完整放入。配套输出的 `crop_norm` 始终指向原始正立画面。单段命令只给 `--perception --intent --out` 时可直接输出镜头日志。
+成片在 `outputs/camera/<编号>/camera.mp4`，同目录的 `shots.jsonl` 记录逐帧镜头。备齐原片后，核验应输出 `Verified 23 movies and 23 shot traces`。`outputs/camera/` 下的 `metrics.json` 记录渲染与取景指标，`media_audit.json` 和 `shot_metrics.json` 分别记录音画与逐片构图核验结果。
 
-## 实时摄像头与控制
+只做 C02 和 D01 的展示时，可单独运行 `python -m scripts.run_camera_collection --out outputs/selected --render --clips C02 D01`。缺少原片的片段只生成日志，终端显示 `packets only`。全量核验需要全部 23 份镜头日志。重复导出时请使用新的输出目录。
 
-实时模式复用团队的 `EnhancedStreamPerception` 与 `SparseVisualIntentStateMachine`，本地运行 YOLO11n、MediaPipe Hands 和纯视觉 B；异步检测每次只接收一张最新可用帧。预览持续对当前帧应用同一个 C 控制器和渲染函数。可分别测量画面帧率、已收到的检测频率、采样到检测结果被消费的延迟。摄像头模式默认只保存结构化日志与指标。
+## 制作 PPT 素材
+
+用 C02 展示从苹果切换到橙子的过程。下面的命令只需 C02 原片，生成左侧固定全景、右侧自动取景的同步分屏，保留原声。
+
+```powershell
+python -m src.camera.run --video Example_Data1/C02.mp4 --perception outputs/cache/fruit/perception/perception_C02.jsonl --intent outputs/results/fruit/C02/showintent.jsonl --out outputs/slides/C02.jsonl --video-out outputs/slides/C02.mp4 --compare --out-height 960
+```
+
+以下命令导出第 8 秒的苹果截图、第 17 秒的橙子截图和第 5–19 秒的短片。替换 `-ss` 可选取其他时间点，`-t` 指定片段时长，单位均为秒。
+
+```powershell
+python -m pip install "imageio-ffmpeg>=0.5,<0.7"
+$ffmpeg = python -c "import imageio_ffmpeg; print(imageio_ffmpeg.get_ffmpeg_exe())"
+& $ffmpeg -v error -n -i outputs/slides/C02.mp4 -ss 8 -frames:v 1 outputs/slides/C02_08s_apple.png
+& $ffmpeg -v error -n -i outputs/slides/C02.mp4 -ss 17 -frames:v 1 outputs/slides/C02_17s_orange.png
+& $ffmpeg -v error -n -i outputs/slides/C02.mp4 -ss 5 -t 14 -c:v libx264 -pix_fmt yuv420p -c:a aac -movflags +faststart outputs/slides/C02_05s_to_19s.mp4
+```
+
+D01 适合说明普通持物时镜头如何处理。56.200 秒至片尾始终保持全景。全量渲染后，可用同一条截图命令，将输入改为 `outputs/camera/D01/camera.mp4`，时间改为 `63`，输出改为 `outputs/slides/D01_63s_wide.png`。
+
+## 取景与日志
+
+- A/B 包按同一媒体时间对齐。C 在 `SHOWING` 时跟随 B 指定的 `target_id`，将目标和邻近的关联手部纳入构图框，每侧按相应边长留 **13%**，最大放大 **3.0 倍**。默认成片保持原片正立宽高比，长边至多 1280 像素。
+- `NONE` 和 `CANDIDATE` 以全景为终点。目标短时失检最多保持 500 ms，`ENDING` 保持最后构图 200 ms 后平滑退出。
+- `shots.jsonl` 记录 `timestamp_ms`、镜头模式 `mode`、目标 ID、源画面归一化裁剪框 `crop_norm`、倍率 `zoom` 和决策原因 `reason`。目标保留率按 B 请求展示且 A 有对应可见框的帧计算，缺框另计。
+
+## 实时摄像头（可选）
 
 ```powershell
 python -m pip install "ultralytics>=8.3,<9" "mediapipe==0.10.21" "opencv-contrib-python>=4.8,<4.12"
 python -m scripts.download_closed_set_models --models yolo11n
-python -m src.camera.live --source 0 --out outputs/my_live/shots.jsonl
+python -m src.camera.live --source 0 --out outputs/live/shots.jsonl
 ```
 
-在预览窗口中，**W** 立即强制全景，**P** 暂停或继续自动构图，**R** 恢复自动控制，**V** 切换原图与结果的分屏，**Q / Esc** 退出。强制全景优先于暂停。用 `--source 视频路径` 将本地视频作为按播放时钟输入的摄像头替身。若 4K 解码跟不上，可先用仓库的 `python -m src.streaming.prepare_stream_proxy --video Example_Data1/C02.mp4 --out outputs/my_C02_proxy.mp4 --height 960 --fps 15`，该工具另需 `imageio-ffmpeg`。用 `--headless --seconds 6` 做有时限的硬件冒烟测试。实时指标记录在日志同目录的 `*.metrics.json`。最新检测超过保留时限时回全景。
-
-## 输入、画面和时序
-
-- A/B 两个 JSONL 必须同一运行、行数相同、媒体毫秒相等且严格递增。原片方向只旋转一次。对每个视频 PTS 使用已到达的最近一对包，首包前为全景；稀疏输入也会导出完整源帧序列。正式批量验收另将两个包的时间与仓库的逐帧 PTS 地图核对。
-- `SHOWING` 时只按 B 的 `target_id` 查同包对象。先纳入近处已关联的手，每侧最多向外扩展该轴物体边长的 0.35 倍，再按所得构图框的宽、高在每侧预留 **13%**。例如，宽 100 像素的构图框在左右各留 13 像素，宽度为 126 像素，再适配输出宽高比。每次确认新 ID 时重新定尺度，持续跟随时只按需要放宽。
-- 默认最大 **3.0 倍**。边距从 20% 收到 13% 后，未触顶的特写理论线性倍率增加约 11.1%（1.40 ÷ 1.26）。上限从 2.7 调到 3.0，原先触顶的小物体也能获得同等增幅。输入输出宽高比相同时，若加边距前的构图框宽或高占源画面对应维度的 60% 及以上，或裁剪请求宽度达到全幅的 96%，该次展示使用全景。
-- 平滑系数按 30 FPS 时的 0.20 换算为实际媒体时间，每边最多移动每秒 1.6 个归一化单位。跟随和退回全景时，只要当前仍有有效目标框，边界修正就会在同一速度预算内尽量保全目标。新目标从现有构图平滑过渡。
-- `NONE` 与 `CANDIDATE` 均以全景为终点。`ENDING` 先固定最后构图 200 ms，再平滑退场；缺失已确认目标最多保持到上次观测后 500 ms。可用 `--margin --max-zoom --miss-hold-ms --exit-hold-ms --force-wide` 调整。手动暂停固定当前构图，强制全景立即生效。
-- 在源文件的时间基上编码 H.264，逐包复用原音轨，使用精细 MP4 媒体时钟保留手机视频的非零起点和可变帧间隔。固定全景、候选、失检或切换都保留真实时长。
-
-## 日志与评分
-
-E04 支持使用团队提供的 720×1280 版本。书籍 manifest 的 `render_copy_sha256` 标识这份视频，`video_size_bytes` 记录原始标注版大小。两版对应同一组 413 个媒体时间戳。D01 使用当前离线 B 输出；团队已将 56.200 秒至片尾标为 NON_SHOWING，可在逐帧日志中核对这段的全景与 1.0 倍倍率。
-
-基本字段为 `timestamp_ms / mode / target_id / crop_norm / zoom / manual_override`。日志另含 `intent_state / intent_target_id`（B 原始请求）、`reason`（如 ACQUIRE、TRACK、TARGET_MISSING_HOLD、TARGET_UNAVAILABLE、FULL_FRAME_FIT、FORCED_WIDE）、`target_bbox_norm`、`packet_timestamp_ms` 与 A 的 `frame_id`；渲染时还记录 `source_frame_id`。模式包括 WIDE、TRANSITION_IN、CLOSEUP、TRANSITION_OUT。
-
-几何目标保留率的分母为 B 请求 SHOWING 且 A 中指定 ID 有有效框的帧。分子为整个可见框都在实际归一化裁剪内的帧。缺框单列。稳定性报告相邻帧最大边位移、倍率差、稳定跟随中心移动速度、中心位置相对前两帧恒速外推的偏差，以及过渡次数和时长。位置误差单位为源宽高归一化坐标。每个已结束的过渡进入统计；片尾尚未完成的过渡可在逐帧日志查看。纯负例以实际输出是否全程 WIDE 单独检查。物理实例准确率、上游动作识别延迟和观众打分需要各自的标注或实验。
+在预览窗口按 **W** 强制全景，**P** 暂停或继续构图，**R** 恢复自动控制，**V** 切换分屏，**Q / Esc** 退出。实时模式使用摄像头上的视觉检测与意图状态，日志和运行指标写入 `outputs/live/`。
