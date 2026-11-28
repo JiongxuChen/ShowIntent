@@ -1,64 +1,52 @@
-# 交付C：正式镜头模块接入指南
+# Member C · Camera & Rendering
 
-B负责展示时机和目标选择，C负责构图、放大、平滑和异常回退。现有render_b_preview只作为效果参考，正式C可以独立实现。
+C 接收 A 的候选框与 B 的展示状态，输出可播放的取景视频、逐帧 ShotPacket 和测量结果。团队的正式离线输入为 `outputs/cache/<场景>/perception/perception_<编号>.jsonl` 与 `outputs/results/<场景>/<编号>/showintent.jsonl`。书籍 E01–E04、水杯 F01–F04 和饮料 G01–G04 与水果共 23 段。原视频路径见各场景的 `evaluation/<场景>/dataset_manifest.csv`，旧文件名映射见 `evaluation/metadata/video_name_mapping.csv`。早期的 `scripts/render_b_preview.py` 仍可复现 B 的诊断预览。
 
-## 交付文件
+## 从哪里开始
 
-全部23段正式B输出在`outputs/results/<场景>/<编号>/showintent.jsonl`。场景目录为fruit、books、cups、drinks。请使用showintent，不要误用visual-only或audio-only。
+以下命令在仓库根目录执行。普通渲染只需 `requirements-c.txt`；本次已在 Conda 环境 `showintent-c` 安装。输出使用新文件名，避免覆盖以前的导出。
 
-配套A文件在`outputs/cache/<场景>/perception/perception_<编号>.jsonl`。配置是configs/presentation_intent.json和configs/semantic_priority_fusion.json。标注和原视频路径见evaluation/<场景>/dataset_manifest.csv以及evaluation/cups、drinks_v1内的manifest；编号映射见evaluation/metadata/video_name_mapping.csv。原视频另行提供，仓库不包含视频。
-
-例如E01这一组是：
-
-- 视频：Example_Data2/E01.mp4。
-- A：outputs/cache/books/perception/perception_E01.jsonl。
-- B：outputs/results/books/E01/showintent.jsonl。
-
-## 对齐与取景规则
-
-逐行检查A、B的timestamp_ms相等、严格递增且行数相同。时间戳为媒体毫秒，不保证从零开始；渲染时按媒体时间匹配，不能把每行当作固定帧率。画面按旋转元数据保持正立，只旋转一次。
-
-SHOWING时用target_id查同包objects中的track_id，再读取bbox_norm=[x1,y1,x2,y2]。它是正立画面的归一化物体框，C自行计算符合输出宽高比、边界和最大倍率约束的裁剪框。禁止改选同类别或最高分物体。
-
-NONE维持全景；CANDIDATE不发起新特写；ENDING平滑退场。短暂找不到指定目标时有限保持上次构图，超过C设置的超时则回全景并记录原因。ID变化需要平滑衔接，不能直接跳切。人工强制全景优先。
-
-## 开发起点
-
-仓库现有src/camera为基础镜头实现，scripts/render_b_preview.py提供带原音轨的参考渲染。先用E01验证联结，再覆盖同类多物体、遮挡、放回、切换和纯负例。
-
-```bash
-python -m src.camera.run --perception outputs/cache/books/perception/perception_E01.jsonl --intent outputs/results/books/E01/showintent.jsonl --out outputs/E01_shots.jsonl
+```powershell
+conda activate showintent-c
+python -m scripts.camera_mock --out outputs/my_mock
+python -m scripts.run_camera_collection --out outputs/my_camera --render
+python -m scripts.verify_camera_collection --root outputs/my_camera
 ```
 
-结构化镜头输出可在没有视频时检查；视觉验收需要另行放好原视频。参考预览命令见README。正式C应输出镜头日志，至少记录媒体时间、目标、裁剪框、倍率、状态及回退原因。
+第一条 Python 命令用团队的合成杯子和苹果轨迹、视觉 B 和正式 C 写出可播放 MP4。第二条遍历 manifest，保存每个片段的 `shots.jsonl` 和有原片时的 `camera.mp4`。第三条复查完整导出集的帧数、时间戳、方向、音频包、时长和镜头指标。指定 `--clips C02 F01` 可运行子集；省略 `--render` 可仅检查 23 条结构化轨迹。只有数据包时，默认输入输出宽高比相同。
 
-## 验收清单
+在新环境安装可执行 `conda create -n showintent-c python=3.11 pip`，激活后执行 `python -m pip install -r requirements-c.txt pytest`。重跑测试使用 `python -X utf8 -m pytest -q tests/test_camera_controller.py tests/test_camera_rendering.py`。
 
-1. 23段均正确对齐，不混用感知运行的ID。
-2. 七个纯负例B01/B02/B03/E04/F03/F04/G04保持全景。
-3. 展示时裁剪不越界，目标可见，倍率有上限，展示与放回时平滑过渡。
-4. 检查E02/E03的多书籍切换、F01的连续换杯、G01的换物；记录已知B漏检，不用C重新判断来掩盖。
-5. 检查音画同步、方向、完整时长和帧率；评价C时另报目标保留率、裁剪抖动、倍率变化、过渡时长和人工观看结果。
+## 单段渲染与演示
 
-当前B覆盖率只评价展示时间，不代表实例身份或框准确。C的构图评价需要独立完成。更详细字段见[intent_camera_interface](C.md)。
+```powershell
+python -m src.camera.run --video Example_Data1/C02.mp4 --perception outputs/cache/fruit/perception/perception_C02.jsonl --intent outputs/results/fruit/C02/showintent.jsonl --out outputs/my_C02/shots.jsonl --video-out outputs/my_C02/camera.mp4
+```
 
+默认输出干净画面。用 `--compare` 导出左侧固定全景和右侧 C 结果的同步分屏。用 `--hud` 叠加镜头模式、ID、倍率及目标框。 `--out-height 1920 --out-width 1080` 可将竖屏 4K 原片导出为竖屏 1080p。默认长边至多 1280 像素并保留正立原片比例。若显式指定不同宽高比，全景采用源画面中央能容纳的最大同形裁剪，`zoom` 相对这个裁剪计量，极宽物体可能无法完整放入。配套输出的 `crop_norm` 始终指向原始正立画面。单段命令只给 `--perception --intent --out` 时可直接输出镜头日志。
 
-## 输出字段
+## 实时摄像头与控制
 
-IntentPacket含timestamp_ms、state、target_id、score、reason_codes；timestamp_ms为媒体毫秒，score为启发式强度。NONE时target_id为空，其他状态可携带候选或旧目标。C只在SHOWING且指定目标可用时发起特写，不依赖固定reason_codes列表。
+实时模式复用团队的 `EnhancedStreamPerception` 与 `SparseVisualIntentStateMachine`，本地运行 YOLO11n、MediaPipe Hands 和纯视觉 B；异步检测每次只接收一张最新可用帧。预览持续对当前帧应用同一个 C 控制器和渲染函数。可分别测量画面帧率、已收到的检测频率、采样到检测结果被消费的延迟。摄像头模式默认只保存结构化日志与指标。
 
-## 简易预览的实际实现
+```powershell
+python -m pip install "ultralytics>=8.3,<9" "mediapipe==0.10.21" "opencv-contrib-python>=4.8,<4.12"
+python -m scripts.download_closed_set_models --models yolo11n
+python -m src.camera.live --source 0 --out outputs/my_live/shots.jsonl
+```
 
-PreviewFraming在一段SHOWING开始时根据近期约500ms的目标框历史取尺寸中值，锁定该段的裁剪尺度，并平滑更新位置。默认最大放大5倍、目标边距系数1.35；框的宽高及输出比例共同限制裁剪大小。这样可减轻放回过程中的忽大忽小，但不代表正式C已完成。
+在预览窗口中，**W** 立即强制全景，**P** 暂停或继续自动构图，**R** 恢复自动控制，**V** 切换原图与结果的分屏，**Q / Esc** 退出。强制全景优先于暂停。用 `--source 视频路径` 将本地视频作为按播放时钟输入的摄像头替身。若 4K 解码跟不上，可先用仓库的 `python -m src.streaming.prepare_stream_proxy --video Example_Data1/C02.mp4 --out outputs/my_C02_proxy.mp4 --height 960 --fps 15`，该工具另需 `imageio-ffmpeg`。用 `--headless --seconds 6` 做有时限的硬件冒烟测试。实时指标记录在日志同目录的 `*.metrics.json`。最新检测超过保留时限时回全景。
 
-退出时默认保留最后取景300ms再平滑恢复全景，不持续追随正在放下的物品。程序按原媒体时间渲染并保留原音轨，同时记录实际裁剪，便于区分B状态与C构图的差异。
+## 输入、画面和时序
 
-## 正式C可自行选择的参数
+- A/B 两个 JSONL 必须同一运行、行数相同、媒体毫秒相等且严格递增。原片方向只旋转一次。对每个视频 PTS 使用已到达的最近一对包，首包前为全景；稀疏输入也会导出完整源帧序列。正式批量验收另将两个包的时间与仓库的逐帧 PTS 地图核对。
+- `SHOWING` 时只按 B 的 `target_id` 查同包对象。目标框四周留 30% 边距，附近已关联的手可在每轴额外贡献最多 0.35 个物体边长的构图范围。每次确认新 ID 时重新定尺度，持续跟随时只按需要放宽，缩小的框不会反复拉近镜头。
+- 默认最大 2.5 倍，相同宽高比下请求宽度已达全幅 96% 时使用全景。平滑系数按 30 FPS 时的 0.20 换算为实际媒体时间，每边最多移动每秒 1.6 个归一化单位。边界修正在同一速度预算内保留可见目标。新目标也从现有构图过渡。
+- `NONE` 与 `CANDIDATE` 均以全景为终点。`ENDING` 先固定最后构图 200 ms，再平滑退场；缺失已确认目标最多保持到上次观测后 500 ms。可用 `--margin --max-zoom --miss-hold-ms --exit-hold-ms --force-wide` 调整。手动暂停固定当前构图，强制全景立即生效。
+- 在源文件的时间基上编码 H.264，逐包复用原音轨，使用精细 MP4 媒体时钟保留手机视频的非零起点和可变帧间隔。固定全景、候选、失检或切换都保留真实时长。
 
-正式C应明确配置输出比例、最大倍率、位置与尺度平滑速度、边界约束、目标缺失容忍、进入/退出时长、人工覆盖和日志格式。不要把B的候选门槛复制进C重新作展示判断。
+## 日志与评分
 
-当目标ID变化时，先检查新框是否与现有镜头连续；必要时过渡或回全景，避免跳到另一实例。B在SHOWING时偶发目标不可见，C应有限保持后回退，不能用旧框无限放大。
+基本字段为 `timestamp_ms / mode / target_id / crop_norm / zoom / manual_override`。日志另含 `intent_state / intent_target_id`（B 原始请求）、`reason`（如 ACQUIRE、TRACK、TARGET_MISSING_HOLD、TARGET_UNAVAILABLE、FULL_FRAME_FIT、FORCED_WIDE）、`target_bbox_norm`、`packet_timestamp_ms` 与 A 的 `frame_id`；渲染时还记录 `source_frame_id`。模式包括 WIDE、TRANSITION_IN、CLOSEUP、TRANSITION_OUT。
 
-## 测试素材
-
-小型接口样例位于tests/fixtures/demo_object_show，供自动化测试验证A/B/C字段、行序与入口联通，不作为真实视频准确率证据。完整联调使用outputs/cache与outputs/results的对应23段，原视频另行提供。
+几何目标保留率的分母为 B 请求 SHOWING 且 A 中指定 ID 有有效框的帧。分子为整个可见框都在实际归一化裁剪内的帧。缺框单列。稳定性报告相邻帧最大边位移、倍率差、稳定跟随中心移动速度、中心位置相对前两帧恒速外推的偏差，以及过渡次数和时长。位置误差单位为源宽高归一化坐标。每个已结束的过渡进入统计；片尾尚未完成的过渡可在逐帧日志查看。纯负例以实际输出是否全程 WIDE 单独检查。物理实例准确率、上游动作识别延迟和观众打分需要各自的标注或实验。

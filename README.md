@@ -73,6 +73,8 @@ python -m scripts.run_delayed_stream \
 
 ## 文档和结果
 
+正式 C 镜头可直接使用已发布的 A/B 缓存。运行 `python -m scripts.run_camera_collection --out outputs/my_camera --render` 可导出每段的镜头日志和带原声的 MP4。无原视频时可用 `python -m scripts.camera_mock --out outputs/my_mock` 检查双目标切换。摄像头预览、人工覆盖和独立复核命令见 [C 模块指南](docs/C.md)。
+
 - [A视觉](docs/A.md)、[B当前方法及流式差异](docs/B.md)、[C接口与呈现](docs/C.md)、[D语音](docs/D.md)
 - [评价协议与流式69条逐视频指标](docs/stream.md)
 - [离线五模型345条逐视频模态指标](docs/offline.md)
