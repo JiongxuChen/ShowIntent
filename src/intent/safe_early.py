@@ -10,7 +10,7 @@ class SafeEarlyIntentStateMachine(RestAwareIntentStateMachine):
         if visual['state']=='SHOWING':return result
         if result['state']=='SHOWING':
             obj=next((o for o in packet['objects'] if o['track_id']==result['target_id']),None)
-            if obj is None or bbox_center(obj['bbox_norm'])[1]>=self.config.display_region_max_y:
+            if obj is None or bbox_center(obj['bbox_norm'])[1]>=self.config.display_region_max_y or self._low_side_hold(*bbox_center(obj['bbox_norm'])):
                 self.fusion.diagnostics['early_geometry_rejected']=True
                 return dict(visual)
         return result

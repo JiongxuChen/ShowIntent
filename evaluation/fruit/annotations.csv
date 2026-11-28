@@ -30,4 +30,4 @@ D01,D01_draft_2,14600,28700,apple_1,apple,SHOWING,MEDIUM,REVIEWED,依据原视�
 D01,D01_draft_3,28700,34700,,,NON_SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。,assistant_original_video_review,project_owner
 D01,D01_draft_4,34700,52300,orange_1,orange,SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。,assistant_original_video_review,project_owner
 D01,D01_draft_5,52300,56200,,,NON_SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。,assistant_original_video_review,project_owner
-D01,D01_draft_6,56200,67459,fruit_pair_1,fruit_group,SHOWING,MEDIUM,REVIEWED,依据原视频500毫秒抽帧逐页初标；过渡边界为明确估计；用户已复核通过。双手同时展示apple_1与orange_1，确认为展示；fruit_pair_1是组合目标，不可按单一物品身份评分。,assistant_original_video_review,project_owner
+D01,D01_draft_6,56200,67459,,,NON_SHOWING,MEDIUM,REVIEWED,用户复核：同时拿着苹果和橘子，未举起展示；本段不应触发。,assistant_original_video_review,project_owner

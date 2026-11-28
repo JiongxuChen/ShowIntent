@@ -1,19 +1,51 @@
-# 更新GitHub
+# 推送到GitHub的main分支
 
-在本仓库根目录执行。先检查文件及指标，再提交到当前分支；推送前确认远端和分支。
+以下命令在本仓库根目录执行。更新直接推送到远端main。
+
+## 提交本地更新
 
 ```bash
+git switch main
 git status --short
 git diff --stat
-python -m pytest -q
-python -m scripts.run_refined_b --clips E04 --out outputs/release_check_e04
-git add README.md .gitignore requirements*.txt pytest.ini src scripts configs tests evaluation docs outputs release_manifest.json ShowIntent_*.md
+git add -A
 git diff --cached --stat
-git status --short
-git commit -m "Update offline five-method evaluation and delayed streaming prototype"
-git remote -v
-git branch --show-current
-git push
+git diff --cached --name-only
+git commit -m "Refine presentation intent and update evaluation reports"
 ```
 
-仓库不发布原视频、权重、虚拟环境或新生成媒体。`outputs`中只对本次选定证据目录开放跟踪，新增运行默认忽略。提交前检查`git diff --cached --name-only`，确认没有个人路径、凭据、媒体或模型文件。项目文档只使用相对路径。
+提交前确认清单中没有原视频、模型权重、虚拟环境或个人路径。如果没有待提交内容，跳过commit步骤。如果切换main时提示本地改动会被覆盖，先处理这些改动，不要使用强制切换。
+
+## 合并远端更新并推送
+
+```bash
+git fetch origin
+git merge --no-edit origin/main
+git push origin main
+```
+
+只有merge成功后才执行push。远端没有额外更新时，merge会提示已经是最新状态；存在可自动合并的更新时，Git会保留双方提交。
+
+## 如果出现合并冲突
+
+查看冲突文件：
+
+```bash
+git status
+```
+
+逐个编辑冲突文件，删除冲突标记并保留正确的实现。视觉模型、B逻辑发生冲突时，需要核对接口与评价结果，不能直接用一方的整个文件覆盖另一方。
+
+解决后执行：
+
+```bash
+git add -A
+git diff --cached --check
+python -m pytest -q
+git commit --no-edit
+git push origin main
+```
+
+如果暂时不准备解决冲突，可以用`git merge --abort`撤销本次合并，本地已完成的提交仍会保留。
+
+如果push再次提示fetch first，说明其他成员在此期间又更新了main，重新执行fetch和merge，再推送。不要使用强制推送覆盖远端。

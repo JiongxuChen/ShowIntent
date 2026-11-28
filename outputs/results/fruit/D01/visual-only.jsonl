@@ -1689,329 +1689,329 @@
 {"timestamp_ms": 56529, "state": "CANDIDATE", "target_id": "item_1", "score": 0.523, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 56562, "state": "CANDIDATE", "target_id": "item_1", "score": 0.588, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 56595, "state": "CANDIDATE", "target_id": "item_1", "score": 0.625, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 56629, "state": "CANDIDATE", "target_id": "item_1", "score": 0.667, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 56662, "state": "CANDIDATE", "target_id": "item_1", "score": 0.69, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 56695, "state": "CANDIDATE", "target_id": "item_1", "score": 0.707, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 56728, "state": "CANDIDATE", "target_id": "item_1", "score": 0.7, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 56762, "state": "CANDIDATE", "target_id": "item_1", "score": 0.69, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 56795, "state": "CANDIDATE", "target_id": "item_1", "score": 0.691, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 56828, "state": "CANDIDATE", "target_id": "item_1", "score": 0.685, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 56862, "state": "CANDIDATE", "target_id": "item_1", "score": 0.669, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 56895, "state": "CANDIDATE", "target_id": "item_1", "score": 0.675, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 56928, "state": "CANDIDATE", "target_id": "item_1", "score": 0.657, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 56962, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["CANDIDATE_REPLACED", "HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME", "TEMPORAL_HOLD"]}
-{"timestamp_ms": 56995, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME", "TEMPORAL_HOLD"]}
-{"timestamp_ms": 57028, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 57062, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 57095, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 57128, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 57162, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 57195, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 57228, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 57262, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 57295, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 57328, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 57362, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 57395, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 57428, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 57462, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 57495, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 57528, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 57562, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 57595, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 57628, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 57662, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 57695, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 57728, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 57761, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 57795, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 57828, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 57861, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 57895, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 57928, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 57961, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 57995, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 58028, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 58061, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 58095, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 58128, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 58161, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 58195, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 58228, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 58261, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 58295, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 58328, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 58361, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 58395, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 58428, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 58461, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 58495, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 58528, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 58561, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 58595, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 58628, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 58661, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 58695, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 58728, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 58761, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 58795, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 58828, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 58861, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 58895, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 58928, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 58961, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 58995, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 59028, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 59061, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 59094, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 59128, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 59161, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 59194, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 59228, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 59261, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 59294, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 59328, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 59361, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 59394, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 59428, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 59461, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 59494, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 59528, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 59561, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 59594, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 59628, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 59661, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 59694, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 59728, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 59761, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 59794, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 59828, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 59861, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 59894, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 59928, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 59961, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 59994, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 60028, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 60061, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 60094, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 60128, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 60161, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 60194, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 60228, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 60261, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 60294, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 60328, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 60361, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 60394, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 60427, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 60461, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 60494, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 60527, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 60561, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 60594, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 60627, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 60661, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 60694, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 60727, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 60761, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 60794, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 60827, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 60861, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 60894, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 60927, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 60961, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 60994, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 61027, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 61061, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 61094, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 61127, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 61161, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 61194, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 61227, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 61261, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 61294, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 61327, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 61361, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 61394, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 61427, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 61461, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 61494, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 61527, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 61561, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 61594, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 61627, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 61661, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 61694, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 61727, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 61760, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 61794, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 61827, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 61860, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 61894, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 61927, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 61960, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 61994, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 62027, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 62060, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 62094, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 62127, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 62160, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 62194, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 62227, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 62260, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 62294, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 62327, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 62360, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 62394, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 62427, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 62460, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 62494, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 62527, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 62560, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 62594, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 62627, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 62660, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 62694, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 62727, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 62760, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 62794, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 62827, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 62860, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 62894, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 62927, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 62960, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 62994, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 63027, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 63060, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 63093, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 63127, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 63160, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 63193, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 63227, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 63260, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 63293, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 63327, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 63360, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 63393, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 63427, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 63460, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 63493, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 63527, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 63560, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 63593, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 63627, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 63660, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 63693, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 63727, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 63760, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 63793, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 63827, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
-{"timestamp_ms": 63860, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 63893, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 63927, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 63960, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 63993, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 64027, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 64060, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 64093, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 64127, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 64160, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 64193, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 64227, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 64260, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 64293, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 64327, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 64360, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 64393, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 64426, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 64460, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 64493, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 64526, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 64560, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 64593, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 64626, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 64660, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 64693, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 64726, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 64760, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 64793, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 64826, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 64860, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 64893, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 64926, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 64960, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 64993, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 65026, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 65060, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 65093, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 65126, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 65160, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 65193, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 65226, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 65260, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 65293, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 65326, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 65360, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 65393, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 65426, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 65460, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 65493, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 65526, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 65560, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 65593, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 65626, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 65660, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 65693, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 65726, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 65759, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 65793, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 65826, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 65859, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 65893, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 65926, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 65959, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 65993, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 66026, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 66059, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 66093, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 66126, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 66159, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 66193, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 66226, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 66259, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 66293, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 66326, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 66359, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 66393, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 66426, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 66459, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 66493, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 66526, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 66559, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 66593, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 66626, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 66659, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 66693, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 66726, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 66759, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 66793, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 66826, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 66859, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 66893, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 66926, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 66959, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 66993, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 67026, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 67059, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 67092, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 67126, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 67159, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 67192, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 67226, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 67259, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 67292, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 67326, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 67359, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 67392, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 67426, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 67459, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 56629, "state": "CANDIDATE", "target_id": "item_1", "score": 0.667, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 56662, "state": "CANDIDATE", "target_id": "item_1", "score": 0.69, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 56695, "state": "CANDIDATE", "target_id": "item_1", "score": 0.707, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 56728, "state": "CANDIDATE", "target_id": "item_1", "score": 0.7, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 56762, "state": "CANDIDATE", "target_id": "item_1", "score": 0.69, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 56795, "state": "CANDIDATE", "target_id": "item_1", "score": 0.691, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 56828, "state": "CANDIDATE", "target_id": "item_1", "score": 0.685, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 56862, "state": "CANDIDATE", "target_id": "item_1", "score": 0.669, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 56895, "state": "CANDIDATE", "target_id": "item_1", "score": 0.675, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 56928, "state": "CANDIDATE", "target_id": "item_1", "score": 0.657, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 56962, "state": "CANDIDATE", "target_id": "item_1", "score": 0.652, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 56995, "state": "CANDIDATE", "target_id": "item_1", "score": 0.663, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 57028, "state": "CANDIDATE", "target_id": "item_1", "score": 0.668, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 57062, "state": "CANDIDATE", "target_id": "item_1", "score": 0.68, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 57095, "state": "CANDIDATE", "target_id": "item_1", "score": 0.691, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 57128, "state": "CANDIDATE", "target_id": "item_1", "score": 0.68, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 57162, "state": "CANDIDATE", "target_id": "item_1", "score": 0.681, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 57195, "state": "CANDIDATE", "target_id": "item_1", "score": 0.677, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 57228, "state": "CANDIDATE", "target_id": "item_1", "score": 0.675, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 57262, "state": "CANDIDATE", "target_id": "item_1", "score": 0.67, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 57295, "state": "CANDIDATE", "target_id": "item_1", "score": 0.649, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 57328, "state": "CANDIDATE", "target_id": "item_1", "score": 0.631, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 57362, "state": "CANDIDATE", "target_id": "item_1", "score": 0.625, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 57395, "state": "CANDIDATE", "target_id": "item_1", "score": 0.62, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 57428, "state": "CANDIDATE", "target_id": "item_1", "score": 0.611, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 57462, "state": "CANDIDATE", "target_id": "item_1", "score": 0.605, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 57495, "state": "CANDIDATE", "target_id": "item_1", "score": 0.6, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 57528, "state": "CANDIDATE", "target_id": "item_1", "score": 0.61, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 57562, "state": "CANDIDATE", "target_id": "item_1", "score": 0.614, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 57595, "state": "CANDIDATE", "target_id": "item_1", "score": 0.611, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 57628, "state": "CANDIDATE", "target_id": "item_1", "score": 0.623, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 57662, "state": "CANDIDATE", "target_id": "item_1", "score": 0.612, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 57695, "state": "CANDIDATE", "target_id": "item_1", "score": 0.605, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 57728, "state": "CANDIDATE", "target_id": "item_1", "score": 0.604, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 57761, "state": "CANDIDATE", "target_id": "item_1", "score": 0.608, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 57795, "state": "CANDIDATE", "target_id": "item_1", "score": 0.596, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 57828, "state": "CANDIDATE", "target_id": "item_1", "score": 0.596, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 57861, "state": "CANDIDATE", "target_id": "item_1", "score": 0.578, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 57895, "state": "CANDIDATE", "target_id": "item_1", "score": 0.575, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 57928, "state": "CANDIDATE", "target_id": "item_1", "score": 0.577, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 57961, "state": "CANDIDATE", "target_id": "item_1", "score": 0.58, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 57995, "state": "CANDIDATE", "target_id": "item_1", "score": 0.59, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 58028, "state": "CANDIDATE", "target_id": "item_1", "score": 0.596, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 58061, "state": "CANDIDATE", "target_id": "item_1", "score": 0.608, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 58095, "state": "CANDIDATE", "target_id": "item_1", "score": 0.609, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 58128, "state": "CANDIDATE", "target_id": "item_1", "score": 0.625, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 58161, "state": "CANDIDATE", "target_id": "item_1", "score": 0.628, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 58195, "state": "CANDIDATE", "target_id": "item_1", "score": 0.625, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 58228, "state": "CANDIDATE", "target_id": "item_1", "score": 0.638, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 58261, "state": "CANDIDATE", "target_id": "item_1", "score": 0.648, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 58295, "state": "CANDIDATE", "target_id": "item_1", "score": 0.672, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 58328, "state": "CANDIDATE", "target_id": "item_1", "score": 0.667, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 58361, "state": "CANDIDATE", "target_id": "item_1", "score": 0.679, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 58395, "state": "CANDIDATE", "target_id": "item_1", "score": 0.689, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 58428, "state": "CANDIDATE", "target_id": "item_1", "score": 0.702, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 58461, "state": "CANDIDATE", "target_id": "item_1", "score": 0.721, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 58495, "state": "CANDIDATE", "target_id": "item_1", "score": 0.732, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 58528, "state": "CANDIDATE", "target_id": "item_1", "score": 0.785, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 58561, "state": "CANDIDATE", "target_id": "item_1", "score": 0.737, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 58595, "state": "CANDIDATE", "target_id": "item_1", "score": 0.732, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 58628, "state": "CANDIDATE", "target_id": "item_1", "score": 0.739, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 58661, "state": "CANDIDATE", "target_id": "item_1", "score": 0.716, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 58695, "state": "CANDIDATE", "target_id": "item_1", "score": 0.707, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 58728, "state": "CANDIDATE", "target_id": "item_1", "score": 0.703, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 58761, "state": "CANDIDATE", "target_id": "item_1", "score": 0.701, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 58795, "state": "CANDIDATE", "target_id": "item_1", "score": 0.694, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 58828, "state": "CANDIDATE", "target_id": "item_1", "score": 0.705, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 58861, "state": "CANDIDATE", "target_id": "item_1", "score": 0.698, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 58895, "state": "CANDIDATE", "target_id": "item_1", "score": 0.703, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 58928, "state": "CANDIDATE", "target_id": "item_1", "score": 0.706, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 58961, "state": "CANDIDATE", "target_id": "item_1", "score": 0.681, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 58995, "state": "CANDIDATE", "target_id": "item_1", "score": 0.676, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 59028, "state": "CANDIDATE", "target_id": "item_1", "score": 0.677, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 59061, "state": "CANDIDATE", "target_id": "item_1", "score": 0.67, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 59094, "state": "CANDIDATE", "target_id": "item_1", "score": 0.668, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 59128, "state": "CANDIDATE", "target_id": "item_1", "score": 0.671, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 59161, "state": "CANDIDATE", "target_id": "item_1", "score": 0.668, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 59194, "state": "CANDIDATE", "target_id": "item_1", "score": 0.667, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 59228, "state": "CANDIDATE", "target_id": "item_1", "score": 0.672, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 59261, "state": "CANDIDATE", "target_id": "item_1", "score": 0.669, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 59294, "state": "CANDIDATE", "target_id": "item_1", "score": 0.665, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 59328, "state": "CANDIDATE", "target_id": "item_1", "score": 0.655, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 59361, "state": "CANDIDATE", "target_id": "item_1", "score": 0.647, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 59394, "state": "CANDIDATE", "target_id": "item_1", "score": 0.652, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 59428, "state": "CANDIDATE", "target_id": "item_1", "score": 0.656, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 59461, "state": "CANDIDATE", "target_id": "item_1", "score": 0.648, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 59494, "state": "CANDIDATE", "target_id": "item_1", "score": 0.651, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 59528, "state": "CANDIDATE", "target_id": "item_1", "score": 0.651, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 59561, "state": "CANDIDATE", "target_id": "item_1", "score": 0.639, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 59594, "state": "CANDIDATE", "target_id": "item_1", "score": 0.634, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 59628, "state": "CANDIDATE", "target_id": "item_1", "score": 0.647, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 59661, "state": "CANDIDATE", "target_id": "item_1", "score": 0.644, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 59694, "state": "CANDIDATE", "target_id": "item_1", "score": 0.653, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 59728, "state": "CANDIDATE", "target_id": "item_1", "score": 0.645, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 59761, "state": "CANDIDATE", "target_id": "item_1", "score": 0.636, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 59794, "state": "CANDIDATE", "target_id": "item_1", "score": 0.634, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 59828, "state": "CANDIDATE", "target_id": "item_1", "score": 0.63, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 59861, "state": "CANDIDATE", "target_id": "item_1", "score": 0.626, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 59894, "state": "CANDIDATE", "target_id": "item_1", "score": 0.631, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 59928, "state": "CANDIDATE", "target_id": "item_1", "score": 0.622, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 59961, "state": "CANDIDATE", "target_id": "item_1", "score": 0.624, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 59994, "state": "CANDIDATE", "target_id": "item_1", "score": 0.623, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 60028, "state": "CANDIDATE", "target_id": "item_1", "score": 0.615, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 60061, "state": "CANDIDATE", "target_id": "item_1", "score": 0.621, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 60094, "state": "CANDIDATE", "target_id": "item_1", "score": 0.617, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 60128, "state": "CANDIDATE", "target_id": "item_1", "score": 0.615, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 60161, "state": "CANDIDATE", "target_id": "item_1", "score": 0.62, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 60194, "state": "CANDIDATE", "target_id": "item_1", "score": 0.614, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 60228, "state": "CANDIDATE", "target_id": "item_1", "score": 0.621, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 60261, "state": "CANDIDATE", "target_id": "item_1", "score": 0.62, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 60294, "state": "CANDIDATE", "target_id": "item_1", "score": 0.617, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 60328, "state": "CANDIDATE", "target_id": "item_1", "score": 0.624, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 60361, "state": "CANDIDATE", "target_id": "item_1", "score": 0.626, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 60394, "state": "CANDIDATE", "target_id": "item_1", "score": 0.625, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 60427, "state": "CANDIDATE", "target_id": "item_1", "score": 0.624, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 60461, "state": "CANDIDATE", "target_id": "item_1", "score": 0.631, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 60494, "state": "CANDIDATE", "target_id": "item_1", "score": 0.631, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 60527, "state": "CANDIDATE", "target_id": "item_1", "score": 0.643, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 60561, "state": "CANDIDATE", "target_id": "item_1", "score": 0.642, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 60594, "state": "CANDIDATE", "target_id": "item_1", "score": 0.645, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 60627, "state": "CANDIDATE", "target_id": "item_1", "score": 0.651, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 60661, "state": "CANDIDATE", "target_id": "item_1", "score": 0.654, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 60694, "state": "CANDIDATE", "target_id": "item_1", "score": 0.66, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 60727, "state": "CANDIDATE", "target_id": "item_1", "score": 0.664, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 60761, "state": "CANDIDATE", "target_id": "item_1", "score": 0.666, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 60794, "state": "CANDIDATE", "target_id": "item_1", "score": 0.663, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 60827, "state": "CANDIDATE", "target_id": "item_1", "score": 0.662, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 60861, "state": "CANDIDATE", "target_id": "item_1", "score": 0.657, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 60894, "state": "CANDIDATE", "target_id": "item_1", "score": 0.654, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 60927, "state": "CANDIDATE", "target_id": "item_1", "score": 0.656, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 60961, "state": "CANDIDATE", "target_id": "item_1", "score": 0.644, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 60994, "state": "CANDIDATE", "target_id": "item_1", "score": 0.653, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 61027, "state": "CANDIDATE", "target_id": "item_1", "score": 0.647, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 61061, "state": "CANDIDATE", "target_id": "item_1", "score": 0.645, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 61094, "state": "CANDIDATE", "target_id": "item_1", "score": 0.649, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 61127, "state": "CANDIDATE", "target_id": "item_1", "score": 0.662, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 61161, "state": "CANDIDATE", "target_id": "item_1", "score": 0.659, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 61194, "state": "CANDIDATE", "target_id": "item_1", "score": 0.654, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 61227, "state": "CANDIDATE", "target_id": "item_1", "score": 0.651, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 61261, "state": "CANDIDATE", "target_id": "item_1", "score": 0.649, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 61294, "state": "CANDIDATE", "target_id": "item_1", "score": 0.632, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 61327, "state": "CANDIDATE", "target_id": "item_1", "score": 0.638, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 61361, "state": "CANDIDATE", "target_id": "item_1", "score": 0.632, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 61394, "state": "CANDIDATE", "target_id": "item_1", "score": 0.636, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 61427, "state": "CANDIDATE", "target_id": "item_1", "score": 0.62, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 61461, "state": "CANDIDATE", "target_id": "item_1", "score": 0.625, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 61494, "state": "CANDIDATE", "target_id": "item_1", "score": 0.625, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 61527, "state": "CANDIDATE", "target_id": "item_1", "score": 0.622, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 61561, "state": "CANDIDATE", "target_id": "item_1", "score": 0.629, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 61594, "state": "CANDIDATE", "target_id": "item_1", "score": 0.626, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 61627, "state": "CANDIDATE", "target_id": "item_1", "score": 0.627, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 61661, "state": "CANDIDATE", "target_id": "item_1", "score": 0.627, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 61694, "state": "CANDIDATE", "target_id": "item_1", "score": 0.624, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 61727, "state": "CANDIDATE", "target_id": "item_1", "score": 0.626, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 61760, "state": "CANDIDATE", "target_id": "item_1", "score": 0.627, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 61794, "state": "CANDIDATE", "target_id": "item_1", "score": 0.633, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 61827, "state": "CANDIDATE", "target_id": "item_1", "score": 0.635, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 61860, "state": "CANDIDATE", "target_id": "item_1", "score": 0.635, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 61894, "state": "CANDIDATE", "target_id": "item_1", "score": 0.633, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 61927, "state": "CANDIDATE", "target_id": "item_1", "score": 0.637, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 61960, "state": "CANDIDATE", "target_id": "item_1", "score": 0.641, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 61994, "state": "CANDIDATE", "target_id": "item_1", "score": 0.639, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 62027, "state": "CANDIDATE", "target_id": "item_1", "score": 0.636, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 62060, "state": "CANDIDATE", "target_id": "item_1", "score": 0.636, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 62094, "state": "CANDIDATE", "target_id": "item_1", "score": 0.633, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 62127, "state": "CANDIDATE", "target_id": "item_1", "score": 0.647, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 62160, "state": "CANDIDATE", "target_id": "item_1", "score": 0.637, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 62194, "state": "CANDIDATE", "target_id": "item_1", "score": 0.645, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 62227, "state": "CANDIDATE", "target_id": "item_1", "score": 0.633, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 62260, "state": "CANDIDATE", "target_id": "item_1", "score": 0.638, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 62294, "state": "CANDIDATE", "target_id": "item_1", "score": 0.641, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 62327, "state": "CANDIDATE", "target_id": "item_1", "score": 0.64, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 62360, "state": "CANDIDATE", "target_id": "item_1", "score": 0.646, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 62394, "state": "CANDIDATE", "target_id": "item_1", "score": 0.648, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 62427, "state": "CANDIDATE", "target_id": "item_1", "score": 0.652, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 62460, "state": "CANDIDATE", "target_id": "item_1", "score": 0.637, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 62494, "state": "CANDIDATE", "target_id": "item_1", "score": 0.646, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 62527, "state": "CANDIDATE", "target_id": "item_1", "score": 0.641, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 62560, "state": "CANDIDATE", "target_id": "item_1", "score": 0.644, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 62594, "state": "CANDIDATE", "target_id": "item_1", "score": 0.642, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 62627, "state": "CANDIDATE", "target_id": "item_1", "score": 0.638, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 62660, "state": "CANDIDATE", "target_id": "item_1", "score": 0.639, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 62694, "state": "CANDIDATE", "target_id": "item_1", "score": 0.643, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 62727, "state": "CANDIDATE", "target_id": "item_1", "score": 0.64, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 62760, "state": "CANDIDATE", "target_id": "item_1", "score": 0.643, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 62794, "state": "CANDIDATE", "target_id": "item_1", "score": 0.636, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 62827, "state": "CANDIDATE", "target_id": "item_1", "score": 0.635, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 62860, "state": "CANDIDATE", "target_id": "item_1", "score": 0.63, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 62894, "state": "CANDIDATE", "target_id": "item_1", "score": 0.634, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 62927, "state": "CANDIDATE", "target_id": "item_1", "score": 0.639, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 62960, "state": "CANDIDATE", "target_id": "item_1", "score": 0.647, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 62994, "state": "CANDIDATE", "target_id": "item_1", "score": 0.659, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 63027, "state": "CANDIDATE", "target_id": "item_1", "score": 0.657, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 63060, "state": "CANDIDATE", "target_id": "item_1", "score": 0.66, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 63093, "state": "CANDIDATE", "target_id": "item_1", "score": 0.667, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 63127, "state": "CANDIDATE", "target_id": "item_1", "score": 0.68, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 63160, "state": "CANDIDATE", "target_id": "item_1", "score": 0.681, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 63193, "state": "CANDIDATE", "target_id": "item_1", "score": 0.698, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 63227, "state": "CANDIDATE", "target_id": "item_1", "score": 0.703, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 63260, "state": "CANDIDATE", "target_id": "item_1", "score": 0.701, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 63293, "state": "CANDIDATE", "target_id": "item_1", "score": 0.699, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 63327, "state": "CANDIDATE", "target_id": "item_1", "score": 0.691, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 63360, "state": "CANDIDATE", "target_id": "item_1", "score": 0.686, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 63393, "state": "CANDIDATE", "target_id": "item_1", "score": 0.675, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 63427, "state": "CANDIDATE", "target_id": "item_1", "score": 0.672, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 63460, "state": "CANDIDATE", "target_id": "item_1", "score": 0.655, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 63493, "state": "CANDIDATE", "target_id": "item_1", "score": 0.612, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 63527, "state": "CANDIDATE", "target_id": "item_1", "score": 0.558, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 63560, "state": "CANDIDATE", "target_id": "item_1", "score": 0.512, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 63593, "state": "CANDIDATE", "target_id": "item_1", "score": 0.462, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 63627, "state": "CANDIDATE", "target_id": "item_1", "score": 0.375, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 63660, "state": "CANDIDATE", "target_id": "item_1", "score": 0.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
+{"timestamp_ms": 63693, "state": "CANDIDATE", "target_id": "item_1", "score": 0.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
+{"timestamp_ms": 63727, "state": "CANDIDATE", "target_id": "item_1", "score": 0.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
+{"timestamp_ms": 63760, "state": "CANDIDATE", "target_id": "item_1", "score": 0.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
+{"timestamp_ms": 63793, "state": "CANDIDATE", "target_id": "item_1", "score": 0.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
+{"timestamp_ms": 63827, "state": "CANDIDATE", "target_id": "item_1", "score": 0.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
+{"timestamp_ms": 63860, "state": "CANDIDATE", "target_id": "item_1", "score": 0.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
+{"timestamp_ms": 63893, "state": "CANDIDATE", "target_id": "item_1", "score": 0.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
+{"timestamp_ms": 63927, "state": "CANDIDATE", "target_id": "item_1", "score": 0.361, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 63960, "state": "CANDIDATE", "target_id": "item_1", "score": 0.503, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 63993, "state": "CANDIDATE", "target_id": "item_1", "score": 0.65, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 64027, "state": "CANDIDATE", "target_id": "item_1", "score": 0.775, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 64060, "state": "CANDIDATE", "target_id": "item_1", "score": 0.866, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 64093, "state": "CANDIDATE", "target_id": "item_1", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 64127, "state": "CANDIDATE", "target_id": "item_1", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 64160, "state": "CANDIDATE", "target_id": "item_1", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 64193, "state": "CANDIDATE", "target_id": "item_1", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 64227, "state": "CANDIDATE", "target_id": "item_1", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 64260, "state": "CANDIDATE", "target_id": "item_1", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 64293, "state": "CANDIDATE", "target_id": "item_1", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 64327, "state": "CANDIDATE", "target_id": "item_1", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 64360, "state": "CANDIDATE", "target_id": "item_1", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 64393, "state": "CANDIDATE", "target_id": "item_1", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 64426, "state": "CANDIDATE", "target_id": "item_1", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 64460, "state": "CANDIDATE", "target_id": "item_1", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 64493, "state": "CANDIDATE", "target_id": "item_1", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 64526, "state": "CANDIDATE", "target_id": "item_1", "score": 0.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
+{"timestamp_ms": 64560, "state": "CANDIDATE", "target_id": "item_1", "score": 0.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
+{"timestamp_ms": 64593, "state": "CANDIDATE", "target_id": "item_1", "score": 0.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
+{"timestamp_ms": 64626, "state": "CANDIDATE", "target_id": "item_1", "score": 0.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
+{"timestamp_ms": 64660, "state": "CANDIDATE", "target_id": "item_1", "score": 0.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
+{"timestamp_ms": 64693, "state": "CANDIDATE", "target_id": "item_1", "score": 0.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
+{"timestamp_ms": 64726, "state": "CANDIDATE", "target_id": "item_1", "score": 0.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
+{"timestamp_ms": 64760, "state": "CANDIDATE", "target_id": "item_1", "score": 0.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
+{"timestamp_ms": 64793, "state": "CANDIDATE", "target_id": "item_1", "score": 0.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
+{"timestamp_ms": 64826, "state": "NONE", "target_id": null, "score": 0.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
+{"timestamp_ms": 64860, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 64893, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 64926, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 64960, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 64993, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 65026, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 65060, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 65093, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 65126, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 65160, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 65193, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 65226, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 65260, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 65293, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 65326, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 65360, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 65393, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 65426, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 65460, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 65493, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 65526, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 65560, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 65593, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 65626, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 65660, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 65693, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 65726, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 65759, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 65793, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 65826, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 65859, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 65893, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 65926, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 65959, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 65993, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 66026, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 66059, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 66093, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 66126, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 66159, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 66193, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 66226, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 66259, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 66293, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 66326, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 66359, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 66393, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 66426, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 66459, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 66493, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 66526, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 66559, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 66593, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 66626, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 66659, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 66693, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 66726, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 66759, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 66793, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 66826, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 66859, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 66893, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 66926, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 66959, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 66993, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 67026, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 67059, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 67092, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 67126, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 67159, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 67192, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 67226, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 67259, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 67292, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 67326, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 67359, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 67392, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 67426, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
+{"timestamp_ms": 67459, "state": "CANDIDATE", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}

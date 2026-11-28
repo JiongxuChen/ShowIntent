@@ -26,16 +26,16 @@
   "scores": {
     "stream_av": {
       "temporal_events": {
-        "tp": 3,
+        "tp": 2,
         "fp": 0,
         "fn": 0,
         "precision": 1.0,
         "recall": 1.0,
         "f1": 1.0
       },
-      "positive_ms": 42959,
-      "negative_ms": 24457,
-      "showing_ms": 43392,
+      "positive_ms": 31700,
+      "negative_ms": 35716,
+      "showing_ms": 33333,
       "false_showing_ms": 3066,
       "matched_boundary_errors": [
         {
@@ -47,11 +47,6 @@
           "event_id": "D01_draft_4",
           "start_error_ms": 433,
           "end_error_ms": 1233
-        },
-        {
-          "event_id": "D01_draft_6",
-          "start_error_ms": 1200,
-          "end_error_ms": null
         }
       ],
       "predicted_episodes": [
@@ -64,26 +59,21 @@
           "start_ms": 35133,
           "end_ms": 53533,
           "identity_key": "UNMAPPED:TEMPORAL_ONLY"
-        },
-        {
-          "start_ms": 57400,
-          "end_ms": 67459,
-          "identity_key": "UNMAPPED:TEMPORAL_ONLY"
         }
       ]
     },
     "stream_visual": {
       "temporal_events": {
-        "tp": 3,
+        "tp": 2,
         "fp": 0,
         "fn": 0,
         "precision": 1.0,
         "recall": 1.0,
         "f1": 1.0
       },
-      "positive_ms": 42959,
-      "negative_ms": 24457,
-      "showing_ms": 41792,
+      "positive_ms": 31700,
+      "negative_ms": 35716,
+      "showing_ms": 31733,
       "false_showing_ms": 3066,
       "matched_boundary_errors": [
         {
@@ -95,11 +85,6 @@
           "event_id": "D01_draft_4",
           "start_error_ms": 700,
           "end_error_ms": 1233
-        },
-        {
-          "event_id": "D01_draft_6",
-          "start_error_ms": 1200,
-          "end_error_ms": null
         }
       ],
       "predicted_episodes": [
@@ -111,11 +96,6 @@
         {
           "start_ms": 35400,
           "end_ms": 53533,
-          "identity_key": "UNMAPPED:TEMPORAL_ONLY"
-        },
-        {
-          "start_ms": 57400,
-          "end_ms": 67459,
           "identity_key": "UNMAPPED:TEMPORAL_ONLY"
         }
       ]
@@ -354,5 +334,191 @@
     "playback_lateness_p50_ms": 12.921000272035599,
     "playback_lateness_p95_ms": 32.036199793219566,
     "playback_lateness_over_100ms_frames": 0
-  }
+  },
+  "annotation_revision": "D01 final holding interval is NON_SHOWING",
+  "actual_execution_scores": {
+    "stream_av": {
+      "temporal_events": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8
+      },
+      "positive_ms": 31700,
+      "negative_ms": 35716,
+      "showing_ms": 43392,
+      "false_showing_ms": 13125,
+      "matched_boundary_errors": [
+        {
+          "event_id": "D01_draft_2",
+          "start_error_ms": 1000,
+          "end_error_ms": 1833
+        },
+        {
+          "event_id": "D01_draft_4",
+          "start_error_ms": 433,
+          "end_error_ms": 1233
+        }
+      ],
+      "predicted_episodes": [
+        {
+          "start_ms": 15600,
+          "end_ms": 30533,
+          "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+        },
+        {
+          "start_ms": 35133,
+          "end_ms": 53533,
+          "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+        },
+        {
+          "start_ms": 57400,
+          "end_ms": 67459,
+          "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+        }
+      ]
+    },
+    "stream_visual": {
+      "temporal_events": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8
+      },
+      "positive_ms": 31700,
+      "negative_ms": 35716,
+      "showing_ms": 41792,
+      "false_showing_ms": 13125,
+      "matched_boundary_errors": [
+        {
+          "event_id": "D01_draft_2",
+          "start_error_ms": 2333,
+          "end_error_ms": 1833
+        },
+        {
+          "event_id": "D01_draft_4",
+          "start_error_ms": 700,
+          "end_error_ms": 1233
+        }
+      ],
+      "predicted_episodes": [
+        {
+          "start_ms": 16933,
+          "end_ms": 30533,
+          "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+        },
+        {
+          "start_ms": 35400,
+          "end_ms": 53533,
+          "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+        },
+        {
+          "start_ms": 57400,
+          "end_ms": 67459,
+          "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+        }
+      ]
+    },
+    "offline_showintent": {
+      "temporal_events": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "positive_ms": 42959,
+      "negative_ms": 24457,
+      "showing_ms": 42193,
+      "false_showing_ms": 1400,
+      "matched_boundary_errors": [
+        {
+          "event_id": "D01_draft_2",
+          "start_error_ms": 533,
+          "end_error_ms": 767
+        },
+        {
+          "event_id": "D01_draft_4",
+          "start_error_ms": 833,
+          "end_error_ms": 633
+        },
+        {
+          "event_id": "D01_draft_6",
+          "start_error_ms": 800,
+          "end_error_ms": null
+        }
+      ],
+      "predicted_episodes": [
+        {
+          "start_ms": 15133,
+          "end_ms": 29467,
+          "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+        },
+        {
+          "start_ms": 35533,
+          "end_ms": 52933,
+          "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+        },
+        {
+          "start_ms": 57000,
+          "end_ms": 67459,
+          "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+        }
+      ]
+    },
+    "offline_visual-only": {
+      "temporal_events": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "positive_ms": 42959,
+      "negative_ms": 24457,
+      "showing_ms": 41393,
+      "false_showing_ms": 1400,
+      "matched_boundary_errors": [
+        {
+          "event_id": "D01_draft_2",
+          "start_error_ms": 1333,
+          "end_error_ms": 767
+        },
+        {
+          "event_id": "D01_draft_4",
+          "start_error_ms": 833,
+          "end_error_ms": 633
+        },
+        {
+          "event_id": "D01_draft_6",
+          "start_error_ms": 800,
+          "end_error_ms": null
+        }
+      ],
+      "predicted_episodes": [
+        {
+          "start_ms": 15933,
+          "end_ms": 29467,
+          "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+        },
+        {
+          "start_ms": 35533,
+          "end_ms": 52933,
+          "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+        },
+        {
+          "start_ms": 57000,
+          "end_ms": 67459,
+          "identity_key": "UNMAPPED:TEMPORAL_ONLY"
+        }
+      ]
+    }
+  },
+  "validation_kind": "Controlled B replay; runtime metadata refers to the measured execution"
 }

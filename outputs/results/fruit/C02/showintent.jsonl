@@ -311,34 +311,34 @@
 {"timestamp_ms": 10424, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
 {"timestamp_ms": 10457, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
 {"timestamp_ms": 10491, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
-{"timestamp_ms": 10524, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 10557, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 10591, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 10624, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 10524, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
+{"timestamp_ms": 10557, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
+{"timestamp_ms": 10591, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
+{"timestamp_ms": 10624, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
 {"timestamp_ms": 10657, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
 {"timestamp_ms": 10691, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
 {"timestamp_ms": 10724, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
 {"timestamp_ms": 10757, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
 {"timestamp_ms": 10791, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
 {"timestamp_ms": 10824, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
-{"timestamp_ms": 10857, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
-{"timestamp_ms": 10891, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
-{"timestamp_ms": 10924, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["TARGET_LOST"]}
-{"timestamp_ms": 10957, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["TARGET_LOST"]}
-{"timestamp_ms": 10991, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["TARGET_LOST"]}
-{"timestamp_ms": 11024, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["TARGET_LOST"]}
-{"timestamp_ms": 11057, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["TARGET_LOST"]}
-{"timestamp_ms": 11091, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["TARGET_LOST"]}
-{"timestamp_ms": 11124, "state": "SHOWING", "target_id": "item_6", "score": 1.0, "reason_codes": ["TARGET_LOST"]}
-{"timestamp_ms": 11157, "state": "SHOWING", "target_id": "item_6", "score": 0.902, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
-{"timestamp_ms": 11191, "state": "SHOWING", "target_id": "item_6", "score": 0.858, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
-{"timestamp_ms": 11224, "state": "SHOWING", "target_id": "item_6", "score": 0.856, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
-{"timestamp_ms": 11257, "state": "ENDING", "target_id": "item_6", "score": 0.872, "reason_codes": ["PRESENTATION_EVIDENCE_LOST"]}
-{"timestamp_ms": 11291, "state": "ENDING", "target_id": "item_6", "score": 0.872, "reason_codes": ["PRESENTATION_EVIDENCE_LOST"]}
-{"timestamp_ms": 11324, "state": "ENDING", "target_id": "item_6", "score": 0.872, "reason_codes": ["PRESENTATION_EVIDENCE_LOST"]}
-{"timestamp_ms": 11357, "state": "ENDING", "target_id": "item_6", "score": 0.872, "reason_codes": ["TARGET_LOST"]}
-{"timestamp_ms": 11391, "state": "ENDING", "target_id": "item_6", "score": 0.872, "reason_codes": ["TARGET_LOST"]}
-{"timestamp_ms": 11424, "state": "NONE", "target_id": null, "score": 0.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
+{"timestamp_ms": 10857, "state": "ENDING", "target_id": "item_6", "score": 1.0, "reason_codes": ["PRESENTATION_EVIDENCE_LOST"]}
+{"timestamp_ms": 10891, "state": "ENDING", "target_id": "item_6", "score": 1.0, "reason_codes": ["PRESENTATION_EVIDENCE_LOST"]}
+{"timestamp_ms": 10924, "state": "ENDING", "target_id": "item_6", "score": 1.0, "reason_codes": ["TARGET_LOST"]}
+{"timestamp_ms": 10957, "state": "ENDING", "target_id": "item_6", "score": 1.0, "reason_codes": ["TARGET_LOST"]}
+{"timestamp_ms": 10991, "state": "ENDING", "target_id": "item_6", "score": 1.0, "reason_codes": ["TARGET_LOST"]}
+{"timestamp_ms": 11024, "state": "NONE", "target_id": null, "score": 0.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
+{"timestamp_ms": 11057, "state": "CANDIDATE", "target_id": "item_35", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "NO_OBSERVED_LIFT"]}
+{"timestamp_ms": 11091, "state": "CANDIDATE", "target_id": "item_35", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "NO_OBSERVED_LIFT"]}
+{"timestamp_ms": 11124, "state": "CANDIDATE", "target_id": "item_35", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "NO_OBSERVED_LIFT"]}
+{"timestamp_ms": 11157, "state": "CANDIDATE", "target_id": "item_35", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "NO_OBSERVED_LIFT", "TRANSPORT_MOTION"]}
+{"timestamp_ms": 11191, "state": "CANDIDATE", "target_id": "item_35", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "NO_OBSERVED_LIFT", "TRANSPORT_MOTION"]}
+{"timestamp_ms": 11224, "state": "CANDIDATE", "target_id": "item_35", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "NO_OBSERVED_LIFT", "TRANSPORT_MOTION"]}
+{"timestamp_ms": 11257, "state": "CANDIDATE", "target_id": "item_35", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "NO_OBSERVED_LIFT", "TRANSPORT_MOTION"]}
+{"timestamp_ms": 11291, "state": "CANDIDATE", "target_id": "item_35", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "NO_OBSERVED_LIFT"]}
+{"timestamp_ms": 11324, "state": "CANDIDATE", "target_id": "item_35", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "NO_OBSERVED_LIFT", "TRANSPORT_MOTION"]}
+{"timestamp_ms": 11357, "state": "CANDIDATE", "target_id": "item_35", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "NO_OBSERVED_LIFT", "TRANSPORT_MOTION"]}
+{"timestamp_ms": 11391, "state": "CANDIDATE", "target_id": "item_35", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "NO_OBSERVED_LIFT", "TRANSPORT_MOTION"]}
+{"timestamp_ms": 11424, "state": "CANDIDATE", "target_id": "item_35", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "NO_OBSERVED_LIFT", "TRANSPORT_MOTION"]}
 {"timestamp_ms": 11457, "state": "CANDIDATE", "target_id": "item_35", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "NO_OBSERVED_LIFT"]}
 {"timestamp_ms": 11490, "state": "CANDIDATE", "target_id": "item_35", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "NO_OBSERVED_LIFT"]}
 {"timestamp_ms": 11524, "state": "CANDIDATE", "target_id": "item_35", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "NO_OBSERVED_LIFT"]}

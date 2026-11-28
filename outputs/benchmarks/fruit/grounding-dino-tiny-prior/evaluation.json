@@ -4,33 +4,33 @@
   "summary": {
     "visual-only": {
       "events": {
-        "tp": 11,
+        "tp": 10,
         "fp": 2,
         "fn": 0,
-        "precision": 0.8461538461538461,
+        "precision": 0.8333333333333334,
         "recall": 1.0,
-        "f1": 0.9166666666666666
+        "f1": 0.9090909090909091
       },
-      "temporal_coverage": 0.9463862227166498,
-      "false_seconds": 10.994,
-      "false_seconds_per_negative_minute": 5.258483932941655,
+      "temporal_coverage": 0.9463037249283668,
+      "false_seconds": 10.561,
+      "false_seconds_per_negative_minute": 4.635338180860558,
       "boundary_mae_ms": {
-        "start": 803.2727272727273,
-        "end": 1201.4
+        "start": 824.1,
+        "end": 1158.1
       }
     },
     "audio-only": {
       "events": {
         "tp": 7,
         "fp": 2,
-        "fn": 4,
+        "fn": 3,
         "precision": 0.7777777777777778,
-        "recall": 0.6363636363636364,
-        "f1": 0.7
+        "recall": 0.7,
+        "f1": 0.7368421052631579
       },
-      "temporal_coverage": 0.7094059107098198,
+      "temporal_coverage": 0.7856924546322828,
       "false_seconds": 26.378,
-      "false_seconds_per_negative_minute": 12.616726321915133,
+      "false_seconds_per_negative_minute": 11.57759213471639,
       "boundary_mae_ms": {
         "start": 1226.7142857142858,
         "end": 5435.0
@@ -38,19 +38,19 @@
     },
     "showintent": {
       "events": {
-        "tp": 11,
+        "tp": 10,
         "fp": 2,
         "fn": 0,
-        "precision": 0.8461538461538461,
+        "precision": 0.8333333333333334,
         "recall": 1.0,
-        "f1": 0.9166666666666666
+        "f1": 0.9090909090909091
       },
-      "temporal_coverage": 0.9711104787036797,
-      "false_seconds": 10.994,
-      "false_seconds_per_negative_minute": 5.258483932941655,
+      "temporal_coverage": 0.973686723973257,
+      "false_seconds": 10.561,
+      "false_seconds_per_negative_minute": 4.635338180860558,
       "boundary_mae_ms": {
-        "start": 542.6363636363636,
-        "end": 1201.4
+        "start": 537.4,
+        "end": 1158.1
       }
     }
   },
@@ -549,13 +549,13 @@
         },
         "positive_ms": 15250,
         "negative_ms": 13543,
-        "showing_ms": 16262,
-        "false_showing_ms": 1828,
+        "showing_ms": 15829,
+        "false_showing_ms": 1395,
         "matched_boundary_errors": [
           {
             "event_id": "C02_draft_2",
             "start_error_ms": 559,
-            "end_error_ms": 1074
+            "end_error_ms": 641
           },
           {
             "event_id": "C02_draft_4",
@@ -566,7 +566,7 @@
         "predicted_episodes": [
           {
             "start_ms": 4959,
-            "end_ms": 11524,
+            "end_ms": 11091,
             "identity_key": "UNMAPPED:TEMPORAL_ONLY"
           },
           {
@@ -587,13 +587,13 @@
         },
         "positive_ms": 15250,
         "negative_ms": 13543,
-        "showing_ms": 16262,
-        "false_showing_ms": 1828,
+        "showing_ms": 15829,
+        "false_showing_ms": 1395,
         "matched_boundary_errors": [
           {
             "event_id": "C02_draft_2",
             "start_error_ms": 559,
-            "end_error_ms": 1074
+            "end_error_ms": 641
           },
           {
             "event_id": "C02_draft_4",
@@ -604,7 +604,7 @@
         "predicted_episodes": [
           {
             "start_ms": 4959,
-            "end_ms": 11524,
+            "end_ms": 11091,
             "identity_key": "UNMAPPED:TEMPORAL_ONLY"
           },
           {
@@ -848,16 +848,16 @@
     "D01": {
       "showintent": {
         "temporal_events": {
-          "tp": 3,
+          "tp": 2,
           "fp": 0,
           "fn": 0,
           "precision": 1.0,
           "recall": 1.0,
           "f1": 1.0
         },
-        "positive_ms": 42959,
-        "negative_ms": 24457,
-        "showing_ms": 44555,
+        "positive_ms": 31700,
+        "negative_ms": 35716,
+        "showing_ms": 33891,
         "false_showing_ms": 2392,
         "matched_boundary_errors": [
           {
@@ -869,11 +869,6 @@
             "event_id": "D01_draft_4",
             "start_error_ms": 201,
             "end_error_ms": 1129
-          },
-          {
-            "event_id": "D01_draft_6",
-            "start_error_ms": 595,
-            "end_error_ms": null
           }
         ],
         "predicted_episodes": [
@@ -885,27 +880,22 @@
           {
             "start_ms": 34901,
             "end_ms": 53429,
-            "identity_key": "UNMAPPED:TEMPORAL_ONLY"
-          },
-          {
-            "start_ms": 56795,
-            "end_ms": 67459,
             "identity_key": "UNMAPPED:TEMPORAL_ONLY"
           }
         ]
       },
       "visual-only": {
         "temporal_events": {
-          "tp": 3,
+          "tp": 2,
           "fp": 0,
           "fn": 0,
           "precision": 1.0,
           "recall": 1.0,
           "f1": 1.0
         },
-        "positive_ms": 42959,
-        "negative_ms": 24457,
-        "showing_ms": 44555,
+        "positive_ms": 31700,
+        "negative_ms": 35716,
+        "showing_ms": 33891,
         "false_showing_ms": 2392,
         "matched_boundary_errors": [
           {
@@ -917,11 +907,6 @@
             "event_id": "D01_draft_4",
             "start_error_ms": 201,
             "end_error_ms": 1129
-          },
-          {
-            "event_id": "D01_draft_6",
-            "start_error_ms": 595,
-            "end_error_ms": null
           }
         ],
         "predicted_episodes": [
@@ -933,11 +918,6 @@
           {
             "start_ms": 34901,
             "end_ms": 53429,
-            "identity_key": "UNMAPPED:TEMPORAL_ONLY"
-          },
-          {
-            "start_ms": 56795,
-            "end_ms": 67459,
             "identity_key": "UNMAPPED:TEMPORAL_ONLY"
           }
         ]
@@ -946,13 +926,13 @@
         "temporal_events": {
           "tp": 1,
           "fp": 0,
-          "fn": 2,
+          "fn": 1,
           "precision": 1.0,
-          "recall": 0.3333333333333333,
-          "f1": 0.5
+          "recall": 0.5,
+          "f1": 0.6666666666666666
         },
-        "positive_ms": 42959,
-        "negative_ms": 24457,
+        "positive_ms": 31700,
+        "negative_ms": 35716,
         "showing_ms": 45622,
         "false_showing_ms": 13922,
         "matched_boundary_errors": [
