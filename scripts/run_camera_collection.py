@@ -22,6 +22,8 @@ def main():
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--clips", nargs="+")
     parser.add_argument("--render", action="store_true", help="Render each available source")
+    parser.add_argument("--compare", action="store_true",
+                        help="Render fixed wide and automatic framing side by side at 960px high")
     args = parser.parse_args()
     requested = set(args.clips or [])
     clips = []
@@ -41,10 +43,12 @@ def main():
         target = args.out/clip
         log = target/"shots.jsonl"
         stats = {}
-        if args.render and video.exists():
+        if (args.render or args.compare) and video.exists():
             from src.camera.render import export
             check_render_source(video, row)
-            stats = export(video, load_pair(per, intent), log, target/"camera.mp4")
+            movie = target/("compare.mp4" if args.compare else "camera.mp4")
+            stats = export(video, load_pair(per, intent), log, movie,
+                           compare=args.compare, height=960 if args.compare else None)
         else:
             run(per, intent, log)
         metrics[clip] = dict(scene=scene, rendered=bool(stats), render=stats,
@@ -52,6 +56,9 @@ def main():
         print(f"{clip}: {metrics[clip]['frames']} frames, {stats or 'packets only'}", flush=True)
     with new_outputs(args.out/"metrics.json") as (path,):
         path.write_text(json.dumps(metrics, indent=2)+"\n", encoding="utf8")
+    if args.compare:
+        rendered = sum(item["rendered"] for item in metrics.values())
+        print(f"Exported {rendered}/{len(clips)} split-screen videos to {args.out}")
 
 
 if __name__ == "__main__":

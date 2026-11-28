@@ -38,23 +38,31 @@ python -m scripts.verify_camera_collection --root outputs/camera
 
 ## 制作 PPT 素材
 
-用 C02 展示从苹果切换到橙子的过程。下面的命令只需 C02 原片，生成左侧固定全景、右侧自动取景的同步分屏，保留原声。
+备齐原片后，在仓库根目录运行一次即可生成全部 23 段完整的同步分屏视频。每段左侧是固定全景，右侧是自动取景，保留原声。此命令直接读取原片和 A/B 缓存，可独立运行。
 
 ```powershell
-python -m src.camera.run --video Example_Data1/C02.mp4 --perception outputs/cache/fruit/perception/perception_C02.jsonl --intent outputs/results/fruit/C02/showintent.jsonl --out outputs/slides/C02.jsonl --video-out outputs/slides/C02.mp4 --compare --out-height 960
+python -m scripts.run_camera_collection --out outputs/slides --compare
 ```
 
-以下命令导出第 8 秒的苹果截图、第 17 秒的橙子截图和第 5–19 秒的短片。替换 `-ss` 可选取其他时间点，`-t` 指定片段时长，单位均为秒。
+终端显示 `Exported 23/23 split-screen videos` 后，可打开 `outputs/slides/<编号>/compare.mp4` 挑选画面。若只备了部分原片，终端会列出实际导出数量。
+
+下面以 C02 第 8 秒的苹果截图和第 5–19 秒的有声短片为例。更换素材时，只需改视频编号、截图时间、短片起点和时长。时间单位均为秒。
 
 ```powershell
 python -m pip install "imageio-ffmpeg>=0.5,<0.7"
 $ffmpeg = python -c "import imageio_ffmpeg; print(imageio_ffmpeg.get_ffmpeg_exe())"
-& $ffmpeg -v error -n -i outputs/slides/C02.mp4 -ss 8 -frames:v 1 outputs/slides/C02_08s_apple.png
-& $ffmpeg -v error -n -i outputs/slides/C02.mp4 -ss 17 -frames:v 1 outputs/slides/C02_17s_orange.png
-& $ffmpeg -v error -n -i outputs/slides/C02.mp4 -ss 5 -t 14 -c:v libx264 -pix_fmt yuv420p -c:a aac -movflags +faststart outputs/slides/C02_05s_to_19s.mp4
+
+$clip = "C02"
+$shotSec = 8
+$startSec = 5
+$durationSec = 14
+
+$folder = "outputs/slides/$clip"
+& $ffmpeg -v error -n -i "$folder/compare.mp4" -ss $shotSec -frames:v 1 "$folder/frame_${shotSec}s.png"
+& $ffmpeg -v error -n -i "$folder/compare.mp4" -ss $startSec -t $durationSec -c:v libx264 -pix_fmt yuv420p -c:a aac -movflags +faststart "$folder/clip_${startSec}s_${durationSec}s.mp4"
 ```
 
-D01 适合说明普通持物时镜头如何处理。56.200 秒至片尾始终保持全景。全量渲染后，可用同一条截图命令，将输入改为 `outputs/camera/D01/camera.mp4`，时间改为 `63`，输出改为 `outputs/slides/D01_63s_wide.png`。
+C02 第 17 秒可截到橙子特写。要展示普通持物时镜头保持全景，可选 D01 第 63 秒。
 
 ## 取景与日志
 
