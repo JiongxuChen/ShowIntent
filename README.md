@@ -85,3 +85,6 @@ C 镜头使用仓库内的 A/B 缓存。备齐组内原片后，运行 `python -
 测试：`python -m pytest -q`。原始视频、模型权重、运行环境及重复试验不随仓库提交。
 
 流式评价同时区分实测执行记录与B受控回放。当前B的回放结果不代表重新完成了端到端推理或延迟测量。
+
+
+延时分屏导出：`python -m scripts.export_delayed_split --out outputs/delayed_split`。记录随仓库提供，视频代理在本地缓存，缺少时根据自备原视频自动生成。详见[延时分屏说明](docs/C.md#延时流式左右分屏导出)。

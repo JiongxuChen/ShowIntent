@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "scene": "books",
+  "label_source": "Original-video observations; review completion is recorded per clip",
+  "annotations_sha256": "f4df5b284a3d9f448cb534a869811fa614f6fa9b3a511d8662120d44567efdac",
+  "video_sha256": {
+    "E01": "669608adf34966c6109667b7ba770f5ce9d466dedf8369796104590801645d45",
+    "E02": "3e1e0165520858be4ddfc20f8ba926d5a3c06ce8a54430d308880f97084f3a44",
+    "E03": "90a42c5affcdc16889c2f7208a56f530582e698de1e11a883c3a6351be284976",
+    "E04": "f42692d31bb051e6b1d51db190aabee15acc5b1eae90a3f2fa57a38b143d9155"
+  },
+  "review_status": {
+    "E01": [
+      "REVIEWED"
+    ],
+    "E02": [
+      "REVIEWED"
+    ],
+    "E03": [
+      "REVIEWED"
+    ],
+    "E04": [
+      "PENDING"
+    ]
+  },
+  "clip_notes": {
+    "E04": "全程非展示。"
+  },
+  "provenance": {
+    "E04_labeling": {
+      "phase": "BEFORE_MODEL_INFERENCE",
+      "human_review": false,
+      "label_source": "Original video contact sheet; no ASR or B predictions",
+      "sampling_ms": 1000,
+      "review_notes": "Reviewed all sampled original frames; sorting and opening books on desk, no presentation hold. Boundaries full clip exact decoded PTS."
+    }
+  }
+}

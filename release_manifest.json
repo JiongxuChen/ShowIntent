@@ -19,12 +19,12 @@
     "grounding-dino-tiny-prior"
   ],
   "counts": {
-    "scripts": 14,
+    "scripts": 18,
     "docs": 8,
     "evaluation": 30,
-    "outputs": 325,
-    "src": 63,
-    "tests": 43
+    "outputs": 605,
+    "src": 65,
+    "tests": 46
   },
   "validation": {
     "offline_pairs": 115,
@@ -33,7 +33,7 @@
     "stream_validation": "Controlled B replay; not a new end-to-end execution",
     "source_tests_passed": 349,
     "source_tests_skipped": 9,
-    "release_tests_passed": 298,
+    "release_tests_passed": 328,
     "release_tests_skipped": 9
   },
   "excluded": [
@@ -53,5 +53,39 @@
     "project_structure.md",
     "publishing.md"
   ],
-  "annotation_revision": "D01 final holding interval is NON_SHOWING"
+  "annotation_revision": "D01 final holding interval is NON_SHOWING",
+  "evaluation_layout": {
+    "fruit": [
+      "annotation_record.json",
+      "annotations.csv",
+      "dataset_manifest.csv",
+      "protocol.json",
+      "split_manifest.csv",
+      "track_mapping.csv"
+    ],
+    "books": [
+      "annotation_record.json",
+      "annotations.csv",
+      "dataset_manifest.csv",
+      "protocol.json",
+      "split_manifest.csv",
+      "track_mapping.csv"
+    ],
+    "cups": [
+      "annotation_record.json",
+      "annotations.csv",
+      "dataset_manifest.csv",
+      "protocol.json",
+      "split_manifest.csv",
+      "track_mapping.csv"
+    ],
+    "drinks": [
+      "annotation_record.json",
+      "annotations.csv",
+      "dataset_manifest.csv",
+      "protocol.json",
+      "split_manifest.csv",
+      "track_mapping.csv"
+    ]
+  }
 }

@@ -176,3 +176,35 @@ def test_widening_keeps_a_reachable_subject_edge_visible():
     next_shot = controller.update(intent(t+40, "SHOWING", "subject"),
                                   perception([obj("subject", box)], ts=t+40))
     assert next_shot["crop_norm"][0] == pytest.approx(0.)
+
+
+def test_stream_holds_same_target_through_sparse_detection_and_preserves_scale():
+    from src.camera.controller import StreamingCameraController
+    c=StreamingCameraController()
+    def step(t,observed,visible=True,state='SHOWING'):
+        per=dict(timestamp_ms=observed,objects=[dict(track_id='x',bbox_norm=[.4,.4,.6,.6])] if visible else [],hands=[],relations=[])
+        return c.update(dict(timestamp_ms=t,state=state,target_id='x'),per)
+    for t in range(0,1001,100):step(t,t)
+    width=c.lock_width
+    for t in range(1100,2001,100):
+        shot=step(t,1000)
+        assert c.target_id=='x' and c.reason!='TARGET_UNAVAILABLE'
+    step(2100,2100)
+    assert c.reason=='TRACK' and c.lock_width==width
+    step(2200,2200,False)
+    assert c.reason=='TARGET_MISSING_HOLD'
+    step(3200,3200,False)
+    assert c.reason=='TARGET_UNAVAILABLE'
+
+
+def test_stream_explicit_nonshow_exits_without_missing_target_grace():
+    from src.camera.controller import StreamingCameraController
+    c=StreamingCameraController()
+    per=dict(timestamp_ms=0,objects=[dict(track_id='x',bbox_norm=[.4,.4,.6,.6])])
+    for t in range(0,1001,100):
+        per['timestamp_ms']=t
+        c.update(dict(timestamp_ms=t,state='SHOWING',target_id='x'),per)
+    before=list(c.current)
+    c.update(dict(timestamp_ms=1100,state='NONE',target_id=None),dict(timestamp_ms=1100,objects=[]))
+    assert c.target_id is None and c.reason=='NONE'
+    assert max(abs(x-y) for x,y in zip(c.current,before))<=.08+1e-9

@@ -1,0 +1,618 @@
+{
+  "validation_kind": "Camera-only replay on identical B outputs and recorded perception availability; no fresh inference",
+  "clips": {
+    "A01": {
+      "before": {
+        "NONE": 8,
+        "CANDIDATE": 87,
+        "ACQUIRE": 3,
+        "TRACK": 122,
+        "TARGET_UNAVAILABLE": 8,
+        "same_b_reacquire_exit": 5,
+        "ENDING": 3
+      },
+      "after": {
+        "NONE": 8,
+        "CANDIDATE": 87,
+        "ACQUIRE": 1,
+        "TRACK": 132,
+        "ENDING_HOLD": 3
+      },
+      "visible": [
+        133,
+        133
+      ],
+      "retained": [
+        133,
+        133
+      ],
+      "d01_tail_wide": true
+    },
+    "A02": {
+      "before": {
+        "NONE": 7,
+        "CANDIDATE": 145,
+        "ACQUIRE": 2,
+        "TRACK": 100,
+        "TARGET_MISSING_HOLD": 2,
+        "TARGET_UNAVAILABLE": 16,
+        "same_b_reacquire_exit": 3,
+        "ENDING": 3
+      },
+      "after": {
+        "NONE": 7,
+        "CANDIDATE": 145,
+        "ACQUIRE": 1,
+        "TRACK": 105,
+        "TARGET_MISSING_HOLD": 13,
+        "TARGET_UNAVAILABLE": 1,
+        "same_b_reacquire_exit": 1,
+        "ENDING": 3
+      },
+      "visible": [
+        106,
+        106
+      ],
+      "retained": [
+        106,
+        106
+      ],
+      "d01_tail_wide": true
+    },
+    "A03": {
+      "before": {
+        "NONE": 6,
+        "CANDIDATE": 106,
+        "ACQUIRE": 1,
+        "TRACK": 109,
+        "ENDING_HOLD": 3
+      },
+      "after": {
+        "NONE": 6,
+        "CANDIDATE": 106,
+        "ACQUIRE": 1,
+        "TRACK": 109,
+        "ENDING_HOLD": 3
+      },
+      "visible": [
+        110,
+        110
+      ],
+      "retained": [
+        110,
+        110
+      ],
+      "d01_tail_wide": true
+    },
+    "B01": {
+      "before": {
+        "NONE": 54,
+        "CANDIDATE": 176
+      },
+      "after": {
+        "NONE": 54,
+        "CANDIDATE": 176
+      },
+      "visible": [
+        0,
+        0
+      ],
+      "retained": [
+        0,
+        0
+      ],
+      "d01_tail_wide": true
+    },
+    "B02": {
+      "before": {
+        "NONE": 48,
+        "CANDIDATE": 152
+      },
+      "after": {
+        "NONE": 48,
+        "CANDIDATE": 152
+      },
+      "visible": [
+        0,
+        0
+      ],
+      "retained": [
+        0,
+        0
+      ],
+      "d01_tail_wide": true
+    },
+    "B03": {
+      "before": {
+        "NONE": 6,
+        "CANDIDATE": 190
+      },
+      "after": {
+        "NONE": 6,
+        "CANDIDATE": 190
+      },
+      "visible": [
+        0,
+        0
+      ],
+      "retained": [
+        0,
+        0
+      ],
+      "d01_tail_wide": true
+    },
+    "C01": {
+      "before": {
+        "NONE": 12,
+        "CANDIDATE": 81,
+        "ACQUIRE": 4,
+        "TRACK": 154,
+        "TARGET_UNAVAILABLE": 9,
+        "same_b_reacquire_exit": 6,
+        "ENDING_HOLD": 3,
+        "ENDING": 3
+      },
+      "after": {
+        "NONE": 12,
+        "CANDIDATE": 81,
+        "ACQUIRE": 1,
+        "TRACK": 166,
+        "ENDING_HOLD": 3,
+        "ENDING": 3
+      },
+      "visible": [
+        167,
+        167
+      ],
+      "retained": [
+        167,
+        167
+      ],
+      "d01_tail_wide": true
+    },
+    "C02": {
+      "before": {
+        "NONE": 93,
+        "CANDIDATE": 130,
+        "ACQUIRE": 3,
+        "TRACK": 175,
+        "TARGET_MISSING_HOLD": 14,
+        "TARGET_UNAVAILABLE": 8,
+        "same_b_reacquire_exit": 3,
+        "ENDING": 8,
+        "ENDING_HOLD": 3
+      },
+      "after": {
+        "NONE": 93,
+        "CANDIDATE": 130,
+        "ACQUIRE": 2,
+        "TRACK": 177,
+        "TARGET_MISSING_HOLD": 21,
+        "ENDING_HOLD": 6,
+        "ENDING": 5
+      },
+      "visible": [
+        179,
+        179
+      ],
+      "retained": [
+        179,
+        179
+      ],
+      "d01_tail_wide": true
+    },
+    "C03": {
+      "before": {
+        "NONE": 11,
+        "CANDIDATE": 58,
+        "ACQUIRE": 5,
+        "TRACK": 191,
+        "TARGET_UNAVAILABLE": 19,
+        "same_b_reacquire_exit": 8,
+        "TARGET_MISSING_HOLD": 7,
+        "ENDING_HOLD": 3,
+        "ENDING": 2
+      },
+      "after": {
+        "NONE": 11,
+        "CANDIDATE": 58,
+        "ACQUIRE": 2,
+        "TRACK": 196,
+        "TARGET_MISSING_HOLD": 19,
+        "TARGET_UNAVAILABLE": 5,
+        "same_b_reacquire_exit": 2,
+        "ENDING_HOLD": 3,
+        "ENDING": 2
+      },
+      "visible": [
+        198,
+        198
+      ],
+      "retained": [
+        198,
+        198
+      ],
+      "d01_tail_wide": true
+    },
+    "C04": {
+      "before": {
+        "NONE": 10,
+        "CANDIDATE": 89,
+        "ACQUIRE": 2,
+        "TRACK": 164,
+        "TARGET_UNAVAILABLE": 2,
+        "same_b_reacquire_exit": 2,
+        "ENDING_HOLD": 3
+      },
+      "after": {
+        "NONE": 10,
+        "CANDIDATE": 89,
+        "ACQUIRE": 1,
+        "TRACK": 167,
+        "ENDING_HOLD": 3
+      },
+      "visible": [
+        168,
+        168
+      ],
+      "retained": [
+        168,
+        168
+      ],
+      "d01_tail_wide": true
+    },
+    "D01": {
+      "before": {
+        "NONE": 24,
+        "CANDIDATE": 470,
+        "ACQUIRE": 11,
+        "TRACK": 475,
+        "TARGET_UNAVAILABLE": 14,
+        "same_b_reacquire_exit": 18,
+        "ENDING_HOLD": 6,
+        "ENDING": 12
+      },
+      "after": {
+        "NONE": 24,
+        "CANDIDATE": 470,
+        "ACQUIRE": 2,
+        "TRACK": 498,
+        "ENDING_HOLD": 6,
+        "ENDING": 12
+      },
+      "visible": [
+        500,
+        500
+      ],
+      "retained": [
+        500,
+        500
+      ],
+      "d01_tail_wide": true
+    },
+    "E01": {
+      "before": {
+        "NONE": 49,
+        "CANDIDATE": 218,
+        "ACQUIRE": 7,
+        "TRACK": 230,
+        "TARGET_MISSING_HOLD": 36,
+        "TARGET_UNAVAILABLE": 51,
+        "same_b_reacquire_exit": 11,
+        "ENDING": 14
+      },
+      "after": {
+        "NONE": 49,
+        "CANDIDATE": 218,
+        "ACQUIRE": 4,
+        "TRACK": 233,
+        "TARGET_MISSING_HOLD": 78,
+        "TARGET_UNAVAILABLE": 9,
+        "same_b_reacquire_exit": 4,
+        "ENDING": 11,
+        "ENDING_HOLD": 3
+      },
+      "visible": [
+        237,
+        237
+      ],
+      "retained": [
+        237,
+        237
+      ],
+      "d01_tail_wide": true
+    },
+    "E02": {
+      "before": {
+        "NONE": 277,
+        "CANDIDATE": 297,
+        "ACQUIRE": 17,
+        "TRACK": 518,
+        "TARGET_UNAVAILABLE": 70,
+        "same_b_reacquire_exit": 27,
+        "TARGET_MISSING_HOLD": 48,
+        "ENDING": 10,
+        "ENDING_HOLD": 6
+      },
+      "after": {
+        "NONE": 277,
+        "CANDIDATE": 297,
+        "ACQUIRE": 6,
+        "TRACK": 541,
+        "TARGET_MISSING_HOLD": 104,
+        "ENDING_HOLD": 15,
+        "ENDING": 1,
+        "TARGET_UNAVAILABLE": 2,
+        "same_b_reacquire_exit": 2
+      },
+      "visible": [
+        547,
+        547
+      ],
+      "retained": [
+        545,
+        546
+      ],
+      "d01_tail_wide": true
+    },
+    "E03": {
+      "before": {
+        "NONE": 284,
+        "CANDIDATE": 64,
+        "ACQUIRE": 10,
+        "TRACK": 403,
+        "TARGET_UNAVAILABLE": 42,
+        "same_b_reacquire_exit": 17,
+        "TARGET_MISSING_HOLD": 14,
+        "ENDING": 29,
+        "FULL_FRAME_FIT": 3
+      },
+      "after": {
+        "NONE": 284,
+        "CANDIDATE": 64,
+        "ACQUIRE": 3,
+        "TRACK": 426,
+        "TARGET_MISSING_HOLD": 40,
+        "ENDING_HOLD": 9,
+        "ENDING": 20,
+        "FULL_FRAME_FIT": 3
+      },
+      "visible": [
+        432,
+        432
+      ],
+      "retained": [
+        432,
+        432
+      ],
+      "d01_tail_wide": true
+    },
+    "E04": {
+      "before": {
+        "NONE": 12,
+        "CANDIDATE": 195
+      },
+      "after": {
+        "NONE": 12,
+        "CANDIDATE": 195
+      },
+      "visible": [
+        0,
+        0
+      ],
+      "retained": [
+        0,
+        0
+      ],
+      "d01_tail_wide": true
+    },
+    "F01": {
+      "before": {
+        "NONE": 174,
+        "CANDIDATE": 82,
+        "ACQUIRE": 3,
+        "TRACK": 213,
+        "TARGET_MISSING_HOLD": 5,
+        "TARGET_UNAVAILABLE": 1,
+        "same_b_reacquire_exit": 2,
+        "ENDING_HOLD": 6,
+        "ENDING": 1
+      },
+      "after": {
+        "NONE": 174,
+        "CANDIDATE": 82,
+        "ACQUIRE": 2,
+        "TRACK": 214,
+        "TARGET_MISSING_HOLD": 6,
+        "ENDING_HOLD": 6,
+        "ENDING": 1
+      },
+      "visible": [
+        216,
+        216
+      ],
+      "retained": [
+        216,
+        216
+      ],
+      "d01_tail_wide": true
+    },
+    "F02": {
+      "before": {
+        "NONE": 38,
+        "CANDIDATE": 39,
+        "ACQUIRE": 1,
+        "TRACK": 189,
+        "TARGET_MISSING_HOLD": 5,
+        "ENDING_HOLD": 3
+      },
+      "after": {
+        "NONE": 38,
+        "CANDIDATE": 39,
+        "ACQUIRE": 1,
+        "TRACK": 189,
+        "TARGET_MISSING_HOLD": 5,
+        "ENDING_HOLD": 3
+      },
+      "visible": [
+        190,
+        190
+      ],
+      "retained": [
+        190,
+        190
+      ],
+      "d01_tail_wide": true
+    },
+    "F03": {
+      "before": {
+        "NONE": 250
+      },
+      "after": {
+        "NONE": 250
+      },
+      "visible": [
+        0,
+        0
+      ],
+      "retained": [
+        0,
+        0
+      ],
+      "d01_tail_wide": true
+    },
+    "F04": {
+      "before": {
+        "NONE": 166,
+        "CANDIDATE": 48
+      },
+      "after": {
+        "NONE": 166,
+        "CANDIDATE": 48
+      },
+      "visible": [
+        0,
+        0
+      ],
+      "retained": [
+        0,
+        0
+      ],
+      "d01_tail_wide": true
+    },
+    "G01": {
+      "before": {
+        "NONE": 32,
+        "CANDIDATE": 293,
+        "ACQUIRE": 4,
+        "TRACK": 164,
+        "TARGET_UNAVAILABLE": 5,
+        "same_b_reacquire_exit": 4,
+        "ENDING_HOLD": 6,
+        "ENDING": 1
+      },
+      "after": {
+        "NONE": 32,
+        "CANDIDATE": 293,
+        "ACQUIRE": 2,
+        "TRACK": 171,
+        "ENDING_HOLD": 6,
+        "ENDING": 1
+      },
+      "visible": [
+        173,
+        173
+      ],
+      "retained": [
+        172,
+        172
+      ],
+      "d01_tail_wide": true
+    },
+    "G02": {
+      "before": {
+        "NONE": 29,
+        "CANDIDATE": 221,
+        "ACQUIRE": 3,
+        "TRACK": 236,
+        "TARGET_UNAVAILABLE": 6,
+        "same_b_reacquire_exit": 4,
+        "ENDING_HOLD": 3
+      },
+      "after": {
+        "NONE": 29,
+        "CANDIDATE": 221,
+        "ACQUIRE": 1,
+        "TRACK": 244,
+        "ENDING_HOLD": 3
+      },
+      "visible": [
+        245,
+        245
+      ],
+      "retained": [
+        245,
+        245
+      ],
+      "d01_tail_wide": true
+    },
+    "G03": {
+      "before": {
+        "NONE": 115,
+        "CANDIDATE": 302,
+        "ACQUIRE": 4,
+        "TRACK": 374,
+        "TARGET_UNAVAILABLE": 15,
+        "same_b_reacquire_exit": 3,
+        "TARGET_MISSING_HOLD": 1,
+        "ENDING": 6,
+        "ENDING_HOLD": 6
+      },
+      "after": {
+        "NONE": 115,
+        "CANDIDATE": 302,
+        "ACQUIRE": 3,
+        "TRACK": 377,
+        "TARGET_MISSING_HOLD": 9,
+        "TARGET_UNAVAILABLE": 5,
+        "same_b_reacquire_exit": 1,
+        "ENDING": 6,
+        "ENDING_HOLD": 6
+      },
+      "visible": [
+        380,
+        380
+      ],
+      "retained": [
+        380,
+        380
+      ],
+      "d01_tail_wide": true
+    },
+    "G04": {
+      "before": {
+        "NONE": 8,
+        "CANDIDATE": 516
+      },
+      "after": {
+        "NONE": 8,
+        "CANDIDATE": 516
+      },
+      "visible": [
+        0,
+        0
+      ],
+      "retained": [
+        0,
+        0
+      ],
+      "d01_tail_wide": true
+    }
+  },
+  "tests_passed": 38,
+  "same_b_camera_switches_before": 113,
+  "same_b_camera_switches_after": 10,
+  "visible_frames": 3981,
+  "retained_before": 3978,
+  "retained_after": 3979
+}
