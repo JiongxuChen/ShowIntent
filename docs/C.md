@@ -36,6 +36,16 @@ python -m scripts.verify_camera_collection --root outputs/camera
 
 只做 C02 和 D01 的展示时，可单独运行 `python -m scripts.run_camera_collection --out outputs/selected --render --clips C02 D01`。缺少原片的片段只生成日志，终端显示 `packets only`。全量核验需要全部 23 份镜头日志。重复导出时请使用新的输出目录。
 
+### 高清特写（可选）
+
+```powershell
+python -m scripts.run_camera_collection --out outputs/camera_enhanced --render --enhance
+```
+
+`--enhance` 从原片裁剪，默认以最长边 1920 像素导出，受原片尺寸限制。镜头推近时逐渐增强亮度边缘，限制平坦区域的噪点与强边缘的光晕，并以 H.264 CRF 17 编码。13% 边距和 3.0× 上限与普通成片相同。拍摄时已经失焦或运动拖影的文字，清晰度仍受原片限制。
+
+输出位于 `outputs/camera_enhanced/<编号>/camera.mp4`。检查音画同步可运行 `python -m scripts.verify_camera_collection --root outputs/camera_enhanced`。需要高清分屏时，用 `python -m scripts.run_camera_collection --out outputs/slides_enhanced --compare --enhance`。实时摄像头命令也支持 `--enhance`，按原预览尺寸显示。
+
 ## 制作 PPT 素材
 
 备齐原片后，在仓库根目录运行一次即可生成全部 23 段完整的同步分屏视频。每段左侧是固定全景，右侧是自动取景，保留原声。此命令直接读取原片和 A/B 缓存，可独立运行。

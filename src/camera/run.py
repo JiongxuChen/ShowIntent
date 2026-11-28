@@ -85,6 +85,7 @@ def main():
     parser.add_argument("--overlay-out", "--video-out", type=Path, help="Rendered MP4 with source audio")
     parser.add_argument("--hud", action="store_true", help="Draw target and shot state on output")
     parser.add_argument("--compare", action="store_true", help="Export fixed wide and rendered shot side by side")
+    parser.add_argument("--enhance", action="store_true", help="Export higher-quality video with zoom-dependent sharpening")
     parser.add_argument("--out-width", type=int)
     parser.add_argument("--out-height", type=int)
     parser.add_argument("--rotate", default="auto", choices=["auto", "cw", "ccw", "180", "none"])
@@ -103,11 +104,11 @@ def main():
         pairs = load_pair(args.perception, args.intent)
         stats = export(args.video, pairs, args.out, args.overlay_out, width=args.out_width,
                        height=args.out_height, rotate=args.rotate, force_wide=args.force_wide,
-                       hud=args.hud, compare=args.compare, **options)
+                       hud=args.hud, compare=args.compare, enhance=args.enhance, **options)
         print(json.dumps(stats))
     else:
-        if args.out_width or args.out_height:
-            parser.error("a source video is required to resolve output dimensions")
+        if args.out_width or args.out_height or args.enhance:
+            parser.error("output dimensions and enhancement require --video and --video-out")
         shots = run(args.perception, args.intent, args.out, args.force_wide, **options)
         print(f"Wrote {len(shots)} ShotPackets -> {args.out}")
 

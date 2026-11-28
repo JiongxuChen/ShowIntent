@@ -39,7 +39,8 @@ def visual_pipeline(weights, device, imgsz):
     return infer
 
 
-def preview(source, infer, *, out, headless=False, seconds=None, detect_hz=10, force_wide=False):
+def preview(source, infer, *, out, headless=False, seconds=None, detect_hz=10, force_wide=False,
+            enhance=False):
     if detect_hz <= 0 or (seconds is not None and seconds <= 0):
         raise ValueError("duration and detection rate must be positive")
     webcam = isinstance(source, int)
@@ -100,7 +101,7 @@ def preview(source, infer, *, out, headless=False, seconds=None, detect_hz=10, f
                 pending = pool.submit(infer, ts, frames, sample)
                 last_submit = ts
             shot = shot_at(controller, ts, per, intent)
-            canvas = render_frame(frame, shot, size, hud=True)
+            canvas = render_frame(frame, shot, size, hud=True, enhance=enhance)
             if not headless:
                 cv2.imshow(window, compare_views(frame, canvas) if compare else canvas)
                 key = cv2.waitKey(1) & 0xff
@@ -140,12 +141,14 @@ def main():
     parser.add_argument("--seconds", type=float)
     parser.add_argument("--headless", action="store_true")
     parser.add_argument("--force-wide", action="store_true")
+    parser.add_argument("--enhance", action="store_true", help="Sharpen zoomed views in the preview")
     parser.add_argument("--out", required=True, type=Path)
     args = parser.parse_args()
     infer = visual_pipeline(args.weights, args.device, args.imgsz)
     source = int(args.source) if args.source.isdigit() else args.source
     print(json.dumps(preview(source, infer, out=args.out, headless=args.headless,
-                             seconds=args.seconds, detect_hz=args.detect_hz, force_wide=args.force_wide)))
+                             seconds=args.seconds, detect_hz=args.detect_hz, force_wide=args.force_wide,
+                             enhance=args.enhance)))
 
 
 if __name__ == "__main__":

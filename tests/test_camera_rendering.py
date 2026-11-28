@@ -101,6 +101,23 @@ def test_render_uses_the_applied_crop():
     assert joined.shape == (32,96,3) and np.all(joined[-1,64:,2] == 255)
 
 
+def test_enhancement_follows_zoom_and_limits_luma_boost():
+    image = np.full((48, 80, 3), (55, 85, 115), np.uint8)
+    image[:, 40:] += 75
+    size = (80, 48)
+    shot = {"crop_norm": FULL_CROP, "zoom": 1.}
+    assert np.array_equal(render_frame(image, shot, size, enhance=True), image)
+    shot["zoom"] = 2.
+    enhanced = render_frame(image, shot, size, enhance=True)
+    delta = enhanced.astype(np.int16) - image.astype(np.int16)
+    assert delta.min() == -10 and delta.max() == 10
+    assert np.array_equal(delta[:,:,0], delta[:,:,2])
+    assert not delta[:, :30].any()
+    shot["zoom"] = 1.25
+    mid = render_frame(image, shot, size, enhance=True)
+    assert 0 < np.abs(mid.astype(np.int16) - image).max() < delta.max()
+
+
 def test_full_frame_fit_records_reason_and_force_wide_beats_pause():
     c = CameraController()
     for ts in range(0,1000,40):
