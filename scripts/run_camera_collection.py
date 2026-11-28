@@ -4,8 +4,17 @@ import csv
 import json
 from pathlib import Path
 
+from scripts.run_complementary import digest
 from src.camera.evaluate import measure
 from src.camera.run import load_jsonl, load_pair, new_outputs, run
+
+
+def check_render_source(video, row):
+    expected_size = row.get("video_size_bytes")
+    if expected_size and video.stat().st_size != int(expected_size):
+        copy_hash = row.get("render_copy_sha256")
+        if not copy_hash or digest(video) != copy_hash:
+            raise ValueError(f"Unrecognized source video for {row['clip_id']}")
 
 
 def main():
@@ -34,8 +43,7 @@ def main():
         stats = {}
         if args.render and video.exists():
             from src.camera.render import export
-            if row.get("video_size_bytes") and video.stat().st_size != int(row["video_size_bytes"]):
-                raise ValueError(f"Wrong source size for {clip}")
+            check_render_source(video, row)
             stats = export(video, load_pair(per, intent), log, target/"camera.mp4")
         else:
             run(per, intent, log)

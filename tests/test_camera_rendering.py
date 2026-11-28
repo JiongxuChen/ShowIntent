@@ -1,5 +1,6 @@
 import json
 from fractions import Fraction
+from hashlib import sha256
 
 import av
 import numpy as np
@@ -124,3 +125,18 @@ def test_concurrent_output_name_collision_preserves_winner(tmp_path):
             b.write_bytes(b"mine")
             video.write_bytes(b"winner")
     assert not log.exists() and video.read_bytes() == b"winner"
+
+
+def test_collection_accepts_registered_copy_and_rejects_other_same_size_copy(tmp_path):
+    from scripts.run_camera_collection import check_render_source
+
+    video = tmp_path/"clip.mp4"
+    video.write_bytes(b"approved copy")
+    row = {"clip_id": "sample", "video_size_bytes": "100",
+           "render_copy_sha256": sha256(video.read_bytes()).hexdigest()}
+    check_render_source(video, row)
+    video.write_bytes(b"modified copy")
+    with pytest.raises(ValueError, match="Unrecognized source video"):
+        check_render_source(video, row)
+    video.write_bytes(bytes(100))
+    check_render_source(video, row)

@@ -8,7 +8,7 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 
 from src.perception.timing import validate_timestamps
-from .controller import CameraController, visible_box
+from .controller import DEFAULT_MARGIN_RATIO, DEFAULT_MAX_ZOOM, CameraController, visible_box
 
 
 def load_jsonl(path):
@@ -88,8 +88,8 @@ def main():
     parser.add_argument("--out-width", type=int)
     parser.add_argument("--out-height", type=int)
     parser.add_argument("--rotate", default="auto", choices=["auto", "cw", "ccw", "180", "none"])
-    parser.add_argument("--max-zoom", type=float, default=2.5)
-    parser.add_argument("--margin", type=float, default=.30)
+    parser.add_argument("--max-zoom", type=float, default=DEFAULT_MAX_ZOOM)
+    parser.add_argument("--margin", type=float, default=DEFAULT_MARGIN_RATIO)
     parser.add_argument("--miss-hold-ms", type=int, default=500)
     parser.add_argument("--exit-hold-ms", type=int, default=200)
     parser.add_argument("--force-wide", action="store_true")

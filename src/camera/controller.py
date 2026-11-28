@@ -6,6 +6,8 @@ from math import isfinite
 
 MODES = ("WIDE", "TRANSITION_IN", "CLOSEUP", "TRANSITION_OUT")
 FULL_CROP = (0.0, 0.0, 1.0, 1.0)
+DEFAULT_MARGIN_RATIO = .13
+DEFAULT_MAX_ZOOM = 3.0
 
 
 @dataclass(frozen=True)
@@ -37,7 +39,7 @@ def centered_crop(cx, cy, width, height):
     return [left, top, min(1., left + width), min(1., top + height)]
 
 
-def compute_crop(bbox, aspect, margin_ratio=0.30, min_size=0.12):
+def compute_crop(bbox, aspect, margin_ratio=DEFAULT_MARGIN_RATIO, min_size=0.12):
     """aspect = output pixel aspect / upright source pixel aspect."""
     x1, y1, x2, y2 = bbox
     wide_w = min(1., aspect)
@@ -87,8 +89,8 @@ def related_context(box, target_id, packet):
 
 
 class CameraController:
-    def __init__(self, aspect=1., margin_ratio=.30, smoothing=.20, converge_eps=.008,
-                 miss_hold_frames=15, min_crop_size=.12, *, max_zoom=2.5,
+    def __init__(self, aspect=1., margin_ratio=DEFAULT_MARGIN_RATIO, smoothing=.20, converge_eps=.008,
+                 miss_hold_frames=15, min_crop_size=.12, *, max_zoom=DEFAULT_MAX_ZOOM,
                  miss_hold_ms=None, exit_hold_ms=200, max_edge_speed=1.6):
         if not all(isfinite(x) and x > 0 for x in (aspect, max_edge_speed, min_crop_size, converge_eps)):
             raise ValueError("aspect, speed, crop size and tolerance must be positive")
@@ -159,6 +161,10 @@ class CameraController:
         context = related_context(box, tid, packet)
         desired = compute_crop(context, self.aspect, self.margin_ratio, self.min_width)
         width = desired[2] - desired[0]
+        # The original 96% wide-shot rule at 30% padding corresponds to an
+        # unpadded span of 60%. Keep this large-subject decision independent of padding.
+        if self.aspect == 1. and max(context[2]-context[0], context[3]-context[1]) >= .60:
+            width = self.wide_w
         # Keep scale stable within an episode; widen when a growing object needs room.
         self.lock_width = width if new_target else max(self.lock_width, width)
         # A nearly full-sized crop adds imperceptible magnification. With matching
@@ -195,7 +201,7 @@ class CameraController:
                 step = distance
             self.current = list(goal) if step == distance else [
                 a + (b-a)*step/distance for a, b in zip(self.current, goal)]
-        if self.visible and dt and reason != "FULL_FRAME_FIT":
+        if self.visible and dt:
             # Project each axis toward a containing window. Respect the same edge
             # speed budget if the ID jumps too far to reach in a single frame.
             keep_visible(self.current, old, self.visible, self.speed * min(dt, 100) / 1000)

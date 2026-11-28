@@ -1,5 +1,7 @@
 """Tests for the C module camera controller."""
 
+import pytest
+
 from src.camera.controller import FULL_CROP, CameraController, compute_crop
 
 
@@ -131,3 +133,46 @@ def test_compute_crop_unit_edges():
     assert 0.0 <= x1 < x2 <= 1.0
     assert 0.0 <= y1 < y2 <= 1.0
     assert abs((x2 - x1) / (y2 - y1) - 16 / 9) < 0.05
+
+
+def test_default_margin_and_zoom_cover_medium_and_small_targets():
+    medium = bbox_at((.5, .5), (.4, .2))
+    assert compute_crop(medium, 1.) == pytest.approx([.248, .248, .752, .752])
+    for box, expected in [(medium, 1/.504), (bbox_at((.5, .5), (.1, .1)), 3.0)]:
+        # Isolate framing geometry from the standard tracking deadband.
+        controller = CameraController(smoothing=1.)
+        for t in range(0, 2000, 40):
+            shot = controller.update(intent(t, "SHOWING", "subject"),
+                                     perception([obj("subject", box)], ts=t))
+        assert shot["zoom"] == pytest.approx(expected)
+
+
+@pytest.mark.parametrize("padding", [0., .13, .2, .3])
+def test_large_subject_stays_wide_independently_of_padding(padding):
+    controller = CameraController(margin_ratio=padding)
+    box = bbox_at((.5, .5), (.2, .61))
+    for t in range(0, 800, 40):
+        shot = controller.update(intent(t, "SHOWING", "subject"),
+                                 perception([obj("subject", box)], ts=t))
+        assert shot["mode"] == "WIDE"
+        assert controller.reason == "FULL_FRAME_FIT"
+
+
+def test_widening_keeps_a_reachable_subject_edge_visible():
+    controller = CameraController()
+    for t in range(0, 1600, 40):
+        previous = controller.update(intent(t, "SHOWING", "subject"),
+                                     perception([obj("subject", [.14, .4, .69, .6])], ts=t))
+    box = [0., .4, .61, .6]
+    t = 1600
+    shot = controller.update(intent(t, "SHOWING", "subject"),
+                             perception([obj("subject", box)], ts=t))
+    assert controller.reason == "FULL_FRAME_FIT" and shot["mode"] == "TRANSITION_OUT"
+    # Move as far as needed or allowed in 40 ms. A tighter preceding
+    # close-up can leave a small distance to cover on the following frame.
+    assert shot["crop_norm"][0] == pytest.approx(max(0., previous["crop_norm"][0] - .064))
+    assert shot["crop_norm"][2] >= box[2]
+    assert max(abs(a-b) for a,b in zip(shot["crop_norm"], previous["crop_norm"])) <= .064 + 1e-9
+    next_shot = controller.update(intent(t+40, "SHOWING", "subject"),
+                                  perception([obj("subject", box)], ts=t+40))
+    assert next_shot["crop_norm"][0] == pytest.approx(0.)
