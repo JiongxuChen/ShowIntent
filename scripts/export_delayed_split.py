@@ -5,7 +5,7 @@ from dataclasses import replace
 
 
 def read(path):
-    return [json.loads(s) for s in Path(path).read_text().splitlines() if s.strip()]
+    return [json.loads(s) for s in Path(path).read_text(encoding='utf-8').splitlines() if s.strip()]
 
 
 def source_time(ms):
@@ -106,7 +106,7 @@ class FrameReader:
 def export(run,out,args):
     import av,cv2,numpy as np
     from src.camera.controller import StreamingCameraController
-    from src.camera.render import render_frame
+    from src.camera.render import CAMERA_CRF,render_frame
     from src.camera.run import shot_at
     cv2.setNumThreads(2)
     metrics=json.loads((run/'metrics.json').read_text())
@@ -133,10 +133,10 @@ def export(run,out,args):
     silent=out/'split_silent.mp4';controller=StreamingCameraController()
     pi=-1;ri=-1;cached_right=None;cached_source=None;cached_shot=None
     try:
-        with av.open(str(silent),'w') as dest,(out/'split.jsonl').open('w') as log:
+        with av.open(str(silent),'w') as dest,(out/'split.jsonl').open('w',encoding='utf-8') as log:
             from fractions import Fraction
             stream=dest.add_stream('libx264',rate=Fraction(str(fps)).limit_denominator(100000))
-            stream.width,stream.height=size;stream.pix_fmt='yuv420p';stream.options={'preset':'veryfast','crf':'22'};stream.codec_context.thread_count=2
+            stream.width,stream.height=size;stream.pix_fmt='yuv420p';stream.options={'preset':'veryfast','crf':CAMERA_CRF};stream.codec_context.thread_count=2
             for index in range(count):
                 wall=index*1000/fps;latest=bisect.bisect_right(due,wall)-1
                 while ri<latest:

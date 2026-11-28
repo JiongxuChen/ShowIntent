@@ -106,15 +106,15 @@ def test_enhancement_follows_zoom_and_limits_luma_boost():
     image[:, 40:] += 75
     size = (80, 48)
     shot = {"crop_norm": FULL_CROP, "zoom": 1.}
-    assert np.array_equal(render_frame(image, shot, size, enhance=True), image)
+    assert np.array_equal(render_frame(image, shot, size), image)
     shot["zoom"] = 2.
-    enhanced = render_frame(image, shot, size, enhance=True)
+    enhanced = render_frame(image, shot, size)
     delta = enhanced.astype(np.int16) - image.astype(np.int16)
     assert delta.min() == -10 and delta.max() == 10
     assert np.array_equal(delta[:,:,0], delta[:,:,2])
     assert not delta[:, :30].any()
     shot["zoom"] = 1.25
-    mid = render_frame(image, shot, size, enhance=True)
+    mid = render_frame(image, shot, size)
     assert 0 < np.abs(mid.astype(np.int16) - image).max() < delta.max()
 
 

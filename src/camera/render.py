@@ -16,6 +16,9 @@ from .controller import CameraController
 from .run import new_outputs, shot_at
 
 
+CAMERA_CRF = "17"
+
+
 def crop_frame(frame, crop_norm):
     h, w = frame.shape[:2]
     x1, y1, x2, y2 = crop_norm
@@ -52,14 +55,13 @@ def sharpen_focus(canvas, zoom):
     return cv2.addWeighted(canvas, 1., adjustment, 1., -128.)
 
 
-def render_frame(upright, shot, size, hud=False, *, enhance=False):
+def render_frame(upright, shot, size, hud=False):
     part = crop_frame(upright, shot["crop_norm"])
     interpolation = cv2.INTER_AREA
     if part.shape[1] < size[0]:
-        interpolation = cv2.INTER_CUBIC if enhance else cv2.INTER_LINEAR
+        interpolation = cv2.INTER_CUBIC
     canvas = cv2.resize(part, size, interpolation=interpolation)
-    if enhance:
-        canvas = sharpen_focus(canvas, shot.get("zoom", 1.))
+    canvas = sharpen_focus(canvas, shot.get("zoom", 1.))
     if hud:
         draw_hud(canvas, shot, shot.get("target_bbox_norm"), shot["crop_norm"])
     return canvas
@@ -80,7 +82,7 @@ def compare_views(upright, camera):
     return joined
 
 
-def output_size(w, h, width, height, *, max_long_edge=1280):
+def output_size(w, h, width, height, *, max_long_edge=1920):
     if width is None and height is None:
         if w >= h:
             width = min(w, max_long_edge)
@@ -113,7 +115,7 @@ def render_preview(video_path, shot_packets, out_path, objects_by_frame=None,
 
 
 def export(video, pairs, shot_path, mp4_path, *, width=None, height=None, rotate="auto",
-           force_wide=False, hud=False, compare=False, enhance=False, precomputed=False, **options):
+           force_wide=False, hud=False, compare=False, precomputed=False, **options):
     """Use the most recent A/B observation at or before each decoded frame PTS."""
     started = perf_counter()
     frame_count = 0
@@ -131,7 +133,7 @@ def export(video, pairs, shot_path, mp4_path, *, width=None, height=None, rotate
             vout = dest.add_stream("libx264", rate=vin.average_rate or 30)
             vout.time_base = vout.codec_context.time_base = vin.time_base
             vout.pix_fmt = "yuv420p"
-            vout.options = {"preset": "veryfast", "crf": "17" if enhance else "21"}
+            vout.options = {"preset": "veryfast", "crf": CAMERA_CRF}
             vout.codec_context.thread_count = 4
             aout = dest.add_stream_from_template(audio) if audio else None
             # Muxing any audio starts the MP4 header. Initialize dimensions before demux.
@@ -141,7 +143,7 @@ def export(video, pairs, shot_path, mp4_path, *, width=None, height=None, rotate
                 w, h = first.width, first.height
             if name in ("cw", "ccw"):
                 w, h = h, w
-            size = output_size(w, h, width, height, max_long_edge=1920 if enhance else 1280)
+            size = output_size(w, h, width, height)
             vout.width, vout.height = size
             if compare:
                 joined_width = size[0] + round(size[1]*w/h)
@@ -168,7 +170,7 @@ def export(video, pairs, shot_path, mp4_path, *, width=None, height=None, rotate
                             shot = shot_at(controller, ts, per, intent)
                         shot["source_frame_id"] = frame_count
                         pixels = apply_rotation(frame.to_ndarray(format="bgr24"), rotation)
-                        canvas = render_frame(pixels, shot, size, hud, enhance=enhance)
+                        canvas = render_frame(pixels, shot, size, hud)
                         if compare:
                             canvas = compare_views(pixels, canvas)
                         out = av.VideoFrame.from_ndarray(canvas, format="bgr24")
@@ -187,5 +189,5 @@ def export(video, pairs, shot_path, mp4_path, *, width=None, height=None, rotate
             for encoded in vout.encode():
                 dest.mux(encoded)
     return {"frames": frame_count, "packets": cursor, "width": encoded_width, "height": size[1],
-            "rotation": name, "audio_copied": audio is not None, "enhanced": enhance,
+            "rotation": name, "audio_copied": audio is not None, "enhanced": True,
             "render_fps": round(frame_count/(perf_counter()-started), 2)}

@@ -24,11 +24,7 @@ def main():
     parser.add_argument("--render", action="store_true", help="Render each available source")
     parser.add_argument("--compare", action="store_true",
                         help="Render fixed wide and automatic framing side by side")
-    parser.add_argument("--enhance", action="store_true",
-                        help="Use higher-quality encoding and sharpen zoomed views")
     args = parser.parse_args()
-    if args.enhance and not (args.render or args.compare):
-        parser.error("--enhance requires --render or --compare")
     requested = set(args.clips or [])
     clips = []
     for manifest in sorted(Path("evaluation").glob("*/dataset_manifest.csv")):
@@ -51,9 +47,7 @@ def main():
             from src.camera.render import export
             check_render_source(video, row)
             movie = target/("compare.mp4" if args.compare else "camera.mp4")
-            stats = export(video, load_pair(per, intent), log, movie,
-                           compare=args.compare, enhance=args.enhance,
-                           height=960 if args.compare and not args.enhance else None)
+            stats = export(video, load_pair(per, intent), log, movie, compare=args.compare)
         else:
             run(per, intent, log)
         metrics[clip] = dict(scene=scene, rendered=bool(stats), render=stats,
