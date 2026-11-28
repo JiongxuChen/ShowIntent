@@ -171,7 +171,16 @@ class TemporalIntentStateMachine:
         self.state, self.target_id, self._state_since = state, target, ts
         self._candidate_lost_since = self._putdown_since = self._weak_since = None
 
+    def _low_side_hold(self, x, y):
+        box=getattr(self,'_presenter_box',None)
+        if box is None or not getattr(self,'_bilateral_low_hold',False):return False
+        left,top,right,bottom=box
+        # Bilateral lower-side posture: reject resting holds, not raised side displays.
+        side=x<left+.25*(right-left) or x>right-.25*(right-left)
+        return side and y>top+.72*(bottom-top)
+
     def _raised(self, track: _Track) -> bool:
+        if track.points and self._low_side_hold(track.points[-1][1],track.points[-1][2]):return False
         margin = self.config.putdown_margin if track.lift_seen else self.config.raise_margin
         return bool(track.points) and track.points[-1][2] < track.anchor_y - margin
 
@@ -383,6 +392,20 @@ class TemporalIntentStateMachine:
         return best
 
     def update(self, packet: dict, *, speech_evidence: dict | None = None) -> dict:
+        people=[o['bbox_norm'] for o in packet['objects'] if o.get('class_name')=='person']
+        self._presenter_box=max(people,key=lambda b:(b[2]-b[0])*(b[3]-b[1])) if people else None
+        self._bilateral_low_hold=False
+        if self._presenter_box is not None:
+            left,top,right,bottom=self._presenter_box
+            low=top+.72*(bottom-top);upper_limit=bottom-.02*(bottom-top)
+            sides=set()
+            for obj in packet['objects']:
+                if obj.get('class_name')=='person':continue
+                x,y=bbox_center(obj['bbox_norm'])
+                if low<y<upper_limit:
+                    if x<left+.25*(right-left):sides.add('left')
+                    if x>right-.25*(right-left):sides.add('right')
+            self._bilateral_low_hold=len(sides)==2
         ts = packet.get("timestamp_ms")
         if isinstance(ts, bool) or not isinstance(ts, int) or ts < 0:
             raise ValueError("timestamp_ms must be a non-negative integer")

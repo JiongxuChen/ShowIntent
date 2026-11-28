@@ -1,5 +1,5 @@
 {
-  "version": "offline-five-and-delayed-stream",
+  "version": "offline-five-bilateral-hold-and-delayed-stream",
   "layout": "original repository layout; stream internals in src/streaming",
   "clips": 23,
   "development_scenes": [
@@ -21,20 +21,20 @@
   "counts": {
     "scripts": 14,
     "docs": 8,
-    "evaluation": 29,
-    "outputs": 323,
+    "evaluation": 30,
+    "outputs": 325,
     "src": 63,
-    "tests": 42
+    "tests": 43
   },
   "validation": {
-    "tests_passed": 296,
-    "tests_skipped": 9,
-    "offline_replay_clips": [
-      "E04",
-      "C03"
-    ],
-    "offline_replay_exact": true,
-    "stream_all_23_scores_exact": true
+    "offline_pairs": 115,
+    "offline_event_regressions": 0,
+    "stream_replay_scores_exact": true,
+    "stream_validation": "Controlled B replay; not a new end-to-end execution",
+    "source_tests_passed": 349,
+    "source_tests_skipped": 9,
+    "release_tests_passed": 298,
+    "release_tests_skipped": 9
   },
   "excluded": [
     "videos",
@@ -52,5 +52,6 @@
     "stream.md",
     "project_structure.md",
     "publishing.md"
-  ]
+  ],
+  "annotation_revision": "D01 final holding interval is NON_SHOWING"
 }

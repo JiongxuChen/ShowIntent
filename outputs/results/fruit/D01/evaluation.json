@@ -1,16 +1,16 @@
 {
   "showintent": {
     "temporal_events": {
-      "tp": 3,
+      "tp": 2,
       "fp": 0,
       "fn": 0,
       "precision": 1.0,
       "recall": 1.0,
       "f1": 1.0
     },
-    "positive_ms": 42959,
-    "negative_ms": 24457,
-    "showing_ms": 42155,
+    "positive_ms": 31700,
+    "negative_ms": 35716,
+    "showing_ms": 31691,
     "false_showing_ms": 1298,
     "matched_boundary_errors": [
       {
@@ -22,11 +22,6 @@
         "event_id": "D01_draft_4",
         "start_error_ms": 801,
         "end_error_ms": 596
-      },
-      {
-        "event_id": "D01_draft_6",
-        "start_error_ms": 795,
-        "end_error_ms": null
       }
     ],
     "predicted_episodes": [
@@ -39,26 +34,21 @@
         "start_ms": 35501,
         "end_ms": 52896,
         "identity_key": "UNMAPPED:TEMPORAL_ONLY"
-      },
-      {
-        "start_ms": 56995,
-        "end_ms": 67459,
-        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
       }
     ]
   },
   "visual-only": {
     "temporal_events": {
-      "tp": 3,
+      "tp": 2,
       "fp": 0,
       "fn": 0,
       "precision": 1.0,
       "recall": 1.0,
       "f1": 1.0
     },
-    "positive_ms": 42959,
-    "negative_ms": 24457,
-    "showing_ms": 41389,
+    "positive_ms": 31700,
+    "negative_ms": 35716,
+    "showing_ms": 30925,
     "false_showing_ms": 1298,
     "matched_boundary_errors": [
       {
@@ -70,11 +60,6 @@
         "event_id": "D01_draft_4",
         "start_error_ms": 801,
         "end_error_ms": 596
-      },
-      {
-        "event_id": "D01_draft_6",
-        "start_error_ms": 795,
-        "end_error_ms": null
       }
     ],
     "predicted_episodes": [
@@ -87,11 +72,6 @@
         "start_ms": 35501,
         "end_ms": 52896,
         "identity_key": "UNMAPPED:TEMPORAL_ONLY"
-      },
-      {
-        "start_ms": 56995,
-        "end_ms": 67459,
-        "identity_key": "UNMAPPED:TEMPORAL_ONLY"
       }
     ]
   },
@@ -99,13 +79,13 @@
     "temporal_events": {
       "tp": 1,
       "fp": 0,
-      "fn": 2,
+      "fn": 1,
       "precision": 1.0,
-      "recall": 0.3333333333333333,
-      "f1": 0.5
+      "recall": 0.5,
+      "f1": 0.6666666666666666
     },
-    "positive_ms": 42959,
-    "negative_ms": 24457,
+    "positive_ms": 31700,
+    "negative_ms": 35716,
     "showing_ms": 45622,
     "false_showing_ms": 13922,
     "matched_boundary_errors": [

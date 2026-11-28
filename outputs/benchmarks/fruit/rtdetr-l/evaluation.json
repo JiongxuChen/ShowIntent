@@ -4,33 +4,33 @@
   "summary": {
     "visual-only": {
       "events": {
-        "tp": 11,
+        "tp": 10,
         "fp": 0,
         "fn": 0,
         "precision": 1.0,
         "recall": 1.0,
         "f1": 1.0
       },
-      "temporal_coverage": 0.9446097327503686,
-      "false_seconds": 11.833,
-      "false_seconds_per_negative_minute": 5.659781733536347,
+      "temporal_coverage": 0.9446513849092646,
+      "false_seconds": 11.433,
+      "false_seconds_per_negative_minute": 5.018068499363579,
       "boundary_mae_ms": {
-        "start": 590.7272727272727,
-        "end": 1175.8
+        "start": 587.0,
+        "end": 1135.8
       }
     },
     "audio-only": {
       "events": {
         "tp": 7,
         "fp": 2,
-        "fn": 4,
+        "fn": 3,
         "precision": 0.7777777777777778,
-        "recall": 0.6363636363636364,
-        "f1": 0.7
+        "recall": 0.7,
+        "f1": 0.7368421052631579
       },
-      "temporal_coverage": 0.7094059107098198,
+      "temporal_coverage": 0.7856924546322828,
       "false_seconds": 26.378,
-      "false_seconds_per_negative_minute": 12.616726321915133,
+      "false_seconds_per_negative_minute": 11.57759213471639,
       "boundary_mae_ms": {
         "start": 1226.7142857142858,
         "end": 5435.0
@@ -38,19 +38,19 @@
     },
     "showintent": {
       "events": {
-        "tp": 11,
+        "tp": 10,
         "fp": 0,
         "fn": 0,
         "precision": 1.0,
         "recall": 1.0,
         "f1": 1.0
       },
-      "temporal_coverage": 0.9506463491406445,
-      "false_seconds": 11.833,
-      "false_seconds_per_negative_minute": 5.659781733536347,
+      "temporal_coverage": 0.9513371537726839,
+      "false_seconds": 11.433,
+      "false_seconds_per_negative_minute": 5.018068499363579,
       "boundary_mae_ms": {
-        "start": 527.0909090909091,
-        "end": 1175.8
+        "start": 517.0,
+        "end": 1135.8
       }
     }
   },
@@ -549,28 +549,28 @@
         },
         "positive_ms": 15250,
         "negative_ms": 13543,
-        "showing_ms": 15830,
-        "false_showing_ms": 1995,
+        "showing_ms": 15396,
+        "false_showing_ms": 1595,
         "matched_boundary_errors": [
           {
             "event_id": "C02_draft_2",
             "start_error_ms": 1092,
-            "end_error_ms": 1074
+            "end_error_ms": 674
           },
           {
             "event_id": "C02_draft_4",
-            "start_error_ms": 323,
+            "start_error_ms": 357,
             "end_error_ms": 921
           }
         ],
         "predicted_episodes": [
           {
             "start_ms": 5492,
-            "end_ms": 11524,
+            "end_ms": 11124,
             "identity_key": "UNMAPPED:TEMPORAL_ONLY"
           },
           {
-            "start_ms": 13523,
+            "start_ms": 13557,
             "end_ms": 23321,
             "identity_key": "UNMAPPED:TEMPORAL_ONLY"
           }
@@ -587,28 +587,28 @@
         },
         "positive_ms": 15250,
         "negative_ms": 13543,
-        "showing_ms": 15830,
-        "false_showing_ms": 1995,
+        "showing_ms": 15396,
+        "false_showing_ms": 1595,
         "matched_boundary_errors": [
           {
             "event_id": "C02_draft_2",
             "start_error_ms": 1092,
-            "end_error_ms": 1074
+            "end_error_ms": 674
           },
           {
             "event_id": "C02_draft_4",
-            "start_error_ms": 323,
+            "start_error_ms": 357,
             "end_error_ms": 921
           }
         ],
         "predicted_episodes": [
           {
             "start_ms": 5492,
-            "end_ms": 11524,
+            "end_ms": 11124,
             "identity_key": "UNMAPPED:TEMPORAL_ONLY"
           },
           {
-            "start_ms": 13523,
+            "start_ms": 13557,
             "end_ms": 23321,
             "identity_key": "UNMAPPED:TEMPORAL_ONLY"
           }
@@ -828,16 +828,16 @@
     "D01": {
       "showintent": {
         "temporal_events": {
-          "tp": 3,
+          "tp": 2,
           "fp": 0,
           "fn": 0,
           "precision": 1.0,
           "recall": 1.0,
           "f1": 1.0
         },
-        "positive_ms": 42959,
-        "negative_ms": 24457,
-        "showing_ms": 43255,
+        "positive_ms": 31700,
+        "negative_ms": 35716,
+        "showing_ms": 32658,
         "false_showing_ms": 2265,
         "matched_boundary_errors": [
           {
@@ -849,11 +849,6 @@
             "event_id": "D01_draft_4",
             "start_error_ms": 801,
             "end_error_ms": 1063
-          },
-          {
-            "event_id": "D01_draft_6",
-            "start_error_ms": 662,
-            "end_error_ms": null
           }
         ],
         "predicted_episodes": [
@@ -866,26 +861,21 @@
             "start_ms": 35501,
             "end_ms": 53363,
             "identity_key": "UNMAPPED:TEMPORAL_ONLY"
-          },
-          {
-            "start_ms": 56862,
-            "end_ms": 67459,
-            "identity_key": "UNMAPPED:TEMPORAL_ONLY"
           }
         ]
       },
       "visual-only": {
         "temporal_events": {
-          "tp": 3,
+          "tp": 2,
           "fp": 0,
           "fn": 0,
           "precision": 1.0,
           "recall": 1.0,
           "f1": 1.0
         },
-        "positive_ms": 42959,
-        "negative_ms": 24457,
-        "showing_ms": 42555,
+        "positive_ms": 31700,
+        "negative_ms": 35716,
+        "showing_ms": 31958,
         "false_showing_ms": 2265,
         "matched_boundary_errors": [
           {
@@ -897,11 +887,6 @@
             "event_id": "D01_draft_4",
             "start_error_ms": 801,
             "end_error_ms": 1063
-          },
-          {
-            "event_id": "D01_draft_6",
-            "start_error_ms": 662,
-            "end_error_ms": null
           }
         ],
         "predicted_episodes": [
@@ -914,11 +899,6 @@
             "start_ms": 35501,
             "end_ms": 53363,
             "identity_key": "UNMAPPED:TEMPORAL_ONLY"
-          },
-          {
-            "start_ms": 56862,
-            "end_ms": 67459,
-            "identity_key": "UNMAPPED:TEMPORAL_ONLY"
           }
         ]
       },
@@ -926,13 +906,13 @@
         "temporal_events": {
           "tp": 1,
           "fp": 0,
-          "fn": 2,
+          "fn": 1,
           "precision": 1.0,
-          "recall": 0.3333333333333333,
-          "f1": 0.5
+          "recall": 0.5,
+          "f1": 0.6666666666666666
         },
-        "positive_ms": 42959,
-        "negative_ms": 24457,
+        "positive_ms": 31700,
+        "negative_ms": 35716,
         "showing_ms": 45622,
         "false_showing_ms": 13922,
         "matched_boundary_errors": [

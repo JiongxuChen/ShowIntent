@@ -652,9 +652,9 @@
 {"timestamp_ms": 21700, "state": "CANDIDATE", "target_id": "item_1", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "NO_OBSERVED_LIFT"]}
 {"timestamp_ms": 21733, "state": "CANDIDATE", "target_id": "item_1", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "NO_OBSERVED_LIFT", "TRANSPORT_MOTION"]}
 {"timestamp_ms": 21766, "state": "CANDIDATE", "target_id": "item_1", "score": 0.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
-{"timestamp_ms": 21800, "state": "CANDIDATE", "target_id": "item_1", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME", "TRANSPORT_MOTION"]}
-{"timestamp_ms": 21833, "state": "CANDIDATE", "target_id": "item_1", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME", "TRANSPORT_MOTION"]}
-{"timestamp_ms": 21866, "state": "CANDIDATE", "target_id": "item_1", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME", "TRANSPORT_MOTION"]}
+{"timestamp_ms": 21800, "state": "CANDIDATE", "target_id": "item_1", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "TRANSPORT_MOTION"]}
+{"timestamp_ms": 21833, "state": "CANDIDATE", "target_id": "item_1", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "TRANSPORT_MOTION"]}
+{"timestamp_ms": 21866, "state": "CANDIDATE", "target_id": "item_1", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "TRANSPORT_MOTION"]}
 {"timestamp_ms": 21900, "state": "CANDIDATE", "target_id": "item_1", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME", "TRANSPORT_MOTION"]}
 {"timestamp_ms": 21933, "state": "CANDIDATE", "target_id": "item_1", "score": 0.833, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME", "TRANSPORT_MOTION"]}
 {"timestamp_ms": 21966, "state": "CANDIDATE", "target_id": "item_1", "score": 0.93, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME", "TRANSPORT_MOTION"]}

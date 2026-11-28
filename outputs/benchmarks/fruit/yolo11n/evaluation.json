@@ -4,18 +4,18 @@
   "summary": {
     "visual-only": {
       "events": {
-        "tp": 11,
+        "tp": 10,
         "fp": 2,
         "fn": 0,
-        "precision": 0.8461538461538461,
+        "precision": 0.8333333333333334,
         "recall": 1.0,
-        "f1": 0.9166666666666666
+        "f1": 0.9090909090909091
       },
-      "temporal_coverage": 0.9084848955234177,
+      "temporal_coverage": 0.9087870105062082,
       "false_seconds": 10.558,
-      "false_seconds_per_negative_minute": 5.049943002000909,
+      "false_seconds_per_negative_minute": 4.6340214481134145,
       "boundary_mae_ms": {
-        "start": 743.6363636363636,
+        "start": 711.8,
         "end": 1612.6
       }
     },
@@ -23,14 +23,14 @@
       "events": {
         "tp": 7,
         "fp": 2,
-        "fn": 4,
+        "fn": 3,
         "precision": 0.7777777777777778,
-        "recall": 0.6363636363636364,
-        "f1": 0.7
+        "recall": 0.7,
+        "f1": 0.7368421052631579
       },
-      "temporal_coverage": 0.7094059107098198,
+      "temporal_coverage": 0.7856924546322828,
       "false_seconds": 26.378,
-      "false_seconds_per_negative_minute": 12.616726321915133,
+      "false_seconds_per_negative_minute": 11.57759213471639,
       "boundary_mae_ms": {
         "start": 1226.7142857142858,
         "end": 5435.0
@@ -38,18 +38,18 @@
     },
     "showintent": {
       "events": {
-        "tp": 11,
+        "tp": 10,
         "fp": 3,
         "fn": 0,
-        "precision": 0.7857142857142857,
+        "precision": 0.7692307692307693,
         "recall": 1.0,
-        "f1": 0.88
+        "f1": 0.8695652173913043
       },
-      "temporal_coverage": 0.9254391638423926,
+      "temporal_coverage": 0.9275644699140401,
       "false_seconds": 10.558,
-      "false_seconds_per_negative_minute": 5.049943002000909,
+      "false_seconds_per_negative_minute": 4.6340214481134145,
       "boundary_mae_ms": {
-        "start": 567.9090909090909,
+        "start": 518.5,
         "end": 1612.6
       }
     }
@@ -564,7 +564,7 @@
         },
         "positive_ms": 15250,
         "negative_ms": 13543,
-        "showing_ms": 15396,
+        "showing_ms": 15363,
         "false_showing_ms": 1528,
         "matched_boundary_errors": [
           {
@@ -574,7 +574,7 @@
           },
           {
             "event_id": "C02_draft_4",
-            "start_error_ms": 390,
+            "start_error_ms": 423,
             "end_error_ms": 1154
           }
         ],
@@ -585,7 +585,7 @@
             "identity_key": "UNMAPPED:TEMPORAL_ONLY"
           },
           {
-            "start_ms": 13590,
+            "start_ms": 13623,
             "end_ms": 23554,
             "identity_key": "UNMAPPED:TEMPORAL_ONLY"
           }
@@ -602,7 +602,7 @@
         },
         "positive_ms": 15250,
         "negative_ms": 13543,
-        "showing_ms": 15396,
+        "showing_ms": 15363,
         "false_showing_ms": 1528,
         "matched_boundary_errors": [
           {
@@ -612,7 +612,7 @@
           },
           {
             "event_id": "C02_draft_4",
-            "start_error_ms": 390,
+            "start_error_ms": 423,
             "end_error_ms": 1154
           }
         ],
@@ -623,7 +623,7 @@
             "identity_key": "UNMAPPED:TEMPORAL_ONLY"
           },
           {
-            "start_ms": 13590,
+            "start_ms": 13623,
             "end_ms": 23554,
             "identity_key": "UNMAPPED:TEMPORAL_ONLY"
           }
@@ -853,16 +853,16 @@
     "D01": {
       "showintent": {
         "temporal_events": {
-          "tp": 3,
+          "tp": 2,
           "fp": 0,
           "fn": 0,
           "precision": 1.0,
           "recall": 1.0,
           "f1": 1.0
         },
-        "positive_ms": 42959,
-        "negative_ms": 24457,
-        "showing_ms": 42389,
+        "positive_ms": 31700,
+        "negative_ms": 35716,
+        "showing_ms": 32225,
         "false_showing_ms": 1798,
         "matched_boundary_errors": [
           {
@@ -874,11 +874,6 @@
             "event_id": "D01_draft_4",
             "start_error_ms": 767,
             "end_error_ms": 596
-          },
-          {
-            "event_id": "D01_draft_6",
-            "start_error_ms": 1095,
-            "end_error_ms": null
           }
         ],
         "predicted_episodes": [
@@ -891,26 +886,21 @@
             "start_ms": 35467,
             "end_ms": 52896,
             "identity_key": "UNMAPPED:TEMPORAL_ONLY"
-          },
-          {
-            "start_ms": 57295,
-            "end_ms": 67459,
-            "identity_key": "UNMAPPED:TEMPORAL_ONLY"
           }
         ]
       },
       "visual-only": {
         "temporal_events": {
-          "tp": 3,
+          "tp": 2,
           "fp": 0,
           "fn": 0,
           "precision": 1.0,
           "recall": 1.0,
           "f1": 1.0
         },
-        "positive_ms": 42959,
-        "negative_ms": 24457,
-        "showing_ms": 41856,
+        "positive_ms": 31700,
+        "negative_ms": 35716,
+        "showing_ms": 31692,
         "false_showing_ms": 1798,
         "matched_boundary_errors": [
           {
@@ -922,11 +912,6 @@
             "event_id": "D01_draft_4",
             "start_error_ms": 767,
             "end_error_ms": 596
-          },
-          {
-            "event_id": "D01_draft_6",
-            "start_error_ms": 1095,
-            "end_error_ms": null
           }
         ],
         "predicted_episodes": [
@@ -939,11 +924,6 @@
             "start_ms": 35467,
             "end_ms": 52896,
             "identity_key": "UNMAPPED:TEMPORAL_ONLY"
-          },
-          {
-            "start_ms": 57295,
-            "end_ms": 67459,
-            "identity_key": "UNMAPPED:TEMPORAL_ONLY"
           }
         ]
       },
@@ -951,13 +931,13 @@
         "temporal_events": {
           "tp": 1,
           "fp": 0,
-          "fn": 2,
+          "fn": 1,
           "precision": 1.0,
-          "recall": 0.3333333333333333,
-          "f1": 0.5
+          "recall": 0.5,
+          "f1": 0.6666666666666666
         },
-        "positive_ms": 42959,
-        "negative_ms": 24457,
+        "positive_ms": 31700,
+        "negative_ms": 35716,
         "showing_ms": 45622,
         "false_showing_ms": 13922,
         "matched_boundary_errors": [

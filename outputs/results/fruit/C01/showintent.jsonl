@@ -275,7 +275,7 @@
 {"timestamp_ms": 9197, "state": "SHOWING", "target_id": "item_7", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 9231, "state": "SHOWING", "target_id": "item_7", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 9264, "state": "SHOWING", "target_id": "item_7", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 9297, "state": "SHOWING", "target_id": "item_7", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 9297, "state": "SHOWING", "target_id": "item_7", "score": 1.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
 {"timestamp_ms": 9330, "state": "SHOWING", "target_id": "item_7", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 9364, "state": "SHOWING", "target_id": "item_7", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 9397, "state": "SHOWING", "target_id": "item_7", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
@@ -341,8 +341,8 @@
 {"timestamp_ms": 11397, "state": "SHOWING", "target_id": "item_7", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 11430, "state": "SHOWING", "target_id": "item_7", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 11463, "state": "SHOWING", "target_id": "item_7", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 11497, "state": "SHOWING", "target_id": "item_7", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 11530, "state": "SHOWING", "target_id": "item_7", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 11497, "state": "SHOWING", "target_id": "item_7", "score": 1.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
+{"timestamp_ms": 11530, "state": "SHOWING", "target_id": "item_7", "score": 1.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
 {"timestamp_ms": 11563, "state": "SHOWING", "target_id": "item_7", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 11597, "state": "SHOWING", "target_id": "item_7", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 11630, "state": "SHOWING", "target_id": "item_7", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "RAISED_IN_FRAME"]}

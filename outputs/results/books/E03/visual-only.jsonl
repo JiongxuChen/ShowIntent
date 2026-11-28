@@ -1060,7 +1060,7 @@
 {"timestamp_ms": 35297, "state": "ENDING", "target_id": "item_12", "score": 1.0, "reason_codes": ["PRESENTATION_EVIDENCE_LOST"]}
 {"timestamp_ms": 35330, "state": "NONE", "target_id": null, "score": 0.0, "reason_codes": ["INSUFFICIENT_EVIDENCE"]}
 {"timestamp_ms": 35363, "state": "CANDIDATE", "target_id": "item_12", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 35397, "state": "CANDIDATE", "target_id": "item_12", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 35397, "state": "CANDIDATE", "target_id": "item_12", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE"]}
 {"timestamp_ms": 35430, "state": "CANDIDATE", "target_id": "item_12", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 35463, "state": "CANDIDATE", "target_id": "item_12", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 35497, "state": "CANDIDATE", "target_id": "item_12", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "APPROACH_SCALE", "RAISED_IN_FRAME"]}

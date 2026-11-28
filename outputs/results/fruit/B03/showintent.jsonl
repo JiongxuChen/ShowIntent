@@ -136,7 +136,7 @@
 {"timestamp_ms": 4498, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 4532, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 4565, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 4598, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 4598, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
 {"timestamp_ms": 4632, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 4665, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 4698, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
@@ -145,7 +145,7 @@
 {"timestamp_ms": 4798, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 4832, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 4865, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 4898, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 4898, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
 {"timestamp_ms": 4932, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 4965, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 4998, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
@@ -170,7 +170,7 @@
 {"timestamp_ms": 5631, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 5665, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 5698, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 5731, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 5731, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
 {"timestamp_ms": 5765, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 5798, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 5831, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
@@ -178,7 +178,7 @@
 {"timestamp_ms": 5898, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 5931, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 5965, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 5998, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 5998, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
 {"timestamp_ms": 6031, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 6065, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 6098, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
@@ -222,9 +222,9 @@
 {"timestamp_ms": 7364, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 7398, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 7431, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 7464, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 7498, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 7531, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 7464, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 7498, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 7531, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
 {"timestamp_ms": 7564, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 7598, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 7631, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
@@ -274,47 +274,47 @@
 {"timestamp_ms": 9097, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME", "TRANSPORT_MOTION"]}
 {"timestamp_ms": 9130, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME", "TRANSPORT_MOTION"]}
 {"timestamp_ms": 9164, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 9197, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 9230, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 9264, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 9297, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 9330, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 9364, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 9397, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 9430, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 9464, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 9497, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 9530, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 9564, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME", "TRANSPORT_MOTION"]}
-{"timestamp_ms": 9597, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME", "TRANSPORT_MOTION"]}
-{"timestamp_ms": 9630, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 9664, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 9697, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 9730, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 9764, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 9797, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 9830, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 9864, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 9897, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 9930, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 9964, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 9997, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 10030, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 10064, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 10097, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 10130, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 10164, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 10197, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 10230, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 10264, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 10297, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 10330, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME", "TRANSPORT_MOTION"]}
-{"timestamp_ms": 10363, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME", "TRANSPORT_MOTION"]}
-{"timestamp_ms": 10397, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME", "TRANSPORT_MOTION"]}
-{"timestamp_ms": 10430, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME", "TRANSPORT_MOTION"]}
-{"timestamp_ms": 10463, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME", "TRANSPORT_MOTION"]}
-{"timestamp_ms": 10497, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME", "TRANSPORT_MOTION"]}
-{"timestamp_ms": 10530, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME", "TRANSPORT_MOTION"]}
+{"timestamp_ms": 9197, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 9230, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 9264, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 9297, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 9330, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 9364, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 9397, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 9430, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 9464, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 9497, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 9530, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 9564, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "TRANSPORT_MOTION"]}
+{"timestamp_ms": 9597, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "TRANSPORT_MOTION"]}
+{"timestamp_ms": 9630, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 9664, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 9697, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 9730, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 9764, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 9797, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 9830, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 9864, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 9897, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 9930, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 9964, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 9997, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 10030, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 10064, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 10097, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 10130, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 10164, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 10197, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 10230, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 10264, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 10297, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
+{"timestamp_ms": 10330, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "TRANSPORT_MOTION"]}
+{"timestamp_ms": 10363, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "TRANSPORT_MOTION"]}
+{"timestamp_ms": 10397, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "TRANSPORT_MOTION"]}
+{"timestamp_ms": 10430, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "TRANSPORT_MOTION"]}
+{"timestamp_ms": 10463, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "TRANSPORT_MOTION"]}
+{"timestamp_ms": 10497, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "TRANSPORT_MOTION"]}
+{"timestamp_ms": 10530, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "TRANSPORT_MOTION"]}
 {"timestamp_ms": 10563, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME", "TRANSPORT_MOTION"]}
 {"timestamp_ms": 10597, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME", "TRANSPORT_MOTION"]}
 {"timestamp_ms": 10630, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
@@ -351,7 +351,7 @@
 {"timestamp_ms": 11663, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 11696, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 11730, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
-{"timestamp_ms": 11763, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
+{"timestamp_ms": 11763, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT"]}
 {"timestamp_ms": 11796, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 11830, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}
 {"timestamp_ms": 11863, "state": "CANDIDATE", "target_id": "item_4", "score": 1.0, "reason_codes": ["HAND_OBJECT_ASSOCIATED", "HAND_LIFT_CONTEXT", "RAISED_IN_FRAME"]}

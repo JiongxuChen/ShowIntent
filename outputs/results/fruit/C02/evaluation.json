@@ -10,13 +10,13 @@
     },
     "positive_ms": 15250,
     "negative_ms": 13543,
-    "showing_ms": 15362,
-    "false_showing_ms": 1728,
+    "showing_ms": 14962,
+    "false_showing_ms": 1328,
     "matched_boundary_errors": [
       {
         "event_id": "C02_draft_2",
         "start_error_ms": 1259,
-        "end_error_ms": 807
+        "end_error_ms": 407
       },
       {
         "event_id": "C02_draft_4",
@@ -27,7 +27,7 @@
     "predicted_episodes": [
       {
         "start_ms": 5659,
-        "end_ms": 11257,
+        "end_ms": 10857,
         "identity_key": "UNMAPPED:TEMPORAL_ONLY"
       },
       {
@@ -48,13 +48,13 @@
     },
     "positive_ms": 15250,
     "negative_ms": 13543,
-    "showing_ms": 15362,
-    "false_showing_ms": 1728,
+    "showing_ms": 14962,
+    "false_showing_ms": 1328,
     "matched_boundary_errors": [
       {
         "event_id": "C02_draft_2",
         "start_error_ms": 1259,
-        "end_error_ms": 807
+        "end_error_ms": 407
       },
       {
         "event_id": "C02_draft_4",
@@ -65,7 +65,7 @@
     "predicted_episodes": [
       {
         "start_ms": 5659,
-        "end_ms": 11257,
+        "end_ms": 10857,
         "identity_key": "UNMAPPED:TEMPORAL_ONLY"
       },
       {
